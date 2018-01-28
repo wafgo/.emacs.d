@@ -1,0 +1,37 @@
+sudo apt install libclang
+sudo apt search libclang
+sudo apt install libclang-dev
+cd ..
+gtags -v
+ls
+ls
+cd ..
+ls
+cd devel/boards/ZedBoard/linux/
+ls
+rm GSYMS 
+rm GTAGS 
+rm GRTAGS 
+ls
+cd ..
+gtags
+ls
+ls
+rm GRTAGS GSYMS GTAGS 
+make gtags
+ls
+rm GTAGS GPATH
+make V=2 gtags
+make V=1 gtags
+ls
+make gtags
+ls
+rm GTAGS GPATH 
+make gtags
+ls
+ls
+which clang
+which clang
+sudo apt-install clang-format
+sudo apt install clang-format
+man clang-format
