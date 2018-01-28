@@ -1,0 +1,1988 @@
+;; Object linux/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "linux/"
+  :tables
+  (list
+    (semanticdb-table "unistd.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_LINUX_UNISTD_H_" variable (:constant-flag t) nil [34 50])
+            ("asm/unistd.h" include (:system-flag t) nil [103 126]))          
+      :file "unistd.h"
+      :pointmax 158
+      :fsize 157
+      :lastmodtime '(22567 40897 842856 648000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_LINUX_UNISTD_H_")
+          )
+)
+    (semanticdb-table "utime.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_LINUX_UTIME_H" variable (:constant-flag t) nil [32 46])
+            ("linux/types.h" include (:system-flag t) nil [48 72])
+            ("utimbuf" type
+               (:members 
+                  ( ("actime" variable (:type ("__kernel_time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [92 115])
+                    ("modtime" variable (:type ("__kernel_time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [117 141]))                  
+                :type "struct")
+                nil [74 144]))          
+      :file "utime.h"
+      :pointmax 153
+      :fsize 152
+      :lastmodtime '(22567 40897 842856 648000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_LINUX_UTIME_H")
+          )
+)
+    (semanticdb-table "fiemap.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_LINUX_FIEMAP_H" variable (:constant-flag t) nil [282 297])
+            ("linux/types.h" include (:system-flag t) nil [299 323])
+            ("fiemap_extent" type
+               (:members 
+                  ( ("fe_logical" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [349 366])
+                    ("fe_physical" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [467 485])
+                    ("fe_length" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [586 602])
+                    ("fe_reserved64" variable
+                       (:dereference 1
+                        :type ("__u64" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [644 667])
+                    ("fe_flags" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [669 684])
+                    ("fe_reserved" variable
+                       (:dereference 1
+                        :type ("__u32" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [733 754]))                  
+                :type "struct")
+                nil [325 757])
+            ("fiemap" type
+               (:members 
+                  ( ("fm_start" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [776 791])
+                    ("fm_length" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [865 881])
+                    ("fm_flags" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [949 964])
+                    ("fm_mapped_extents" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1014 1038])
+                    ("fm_extent_count" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1086 1108])
+                    ("fm_reserved" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1147 1165])
+                    ("fm_extents" variable
+                       (:dereference 1
+                        :type ("fiemap_extent" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1167 1202]))                  
+                :type "struct")
+                nil [759 1241])
+            ("FIEMAP_MAX_OFFSET" variable (:constant-flag t) nil [1251 1268])
+            ("FIEMAP_FLAG_SYNC" variable (:constant-flag t) nil [1286 1302])
+            ("FIEMAP_FLAG_XATTR" variable (:constant-flag t) nil [1354 1371])
+            ("FIEMAP_FLAG_CACHE" variable (:constant-flag t) nil [1425 1442])
+            ("FIEMAP_FLAGS_COMPAT" variable (:constant-flag t) nil [1500 1519])
+            ("FIEMAP_EXTENT_LAST" variable (:constant-flag t) nil [1568 1586])
+            ("FIEMAP_EXTENT_UNKNOWN" variable (:constant-flag t) nil [1634 1655])
+            ("FIEMAP_EXTENT_DELALLOC" variable (:constant-flag t) nil [1705 1727])
+            ("FIEMAP_EXTENT_ENCODED" variable (:constant-flag t) nil [1811 1832])
+            ("FIEMAP_EXTENT_DATA_ENCRYPTED" variable (:constant-flag t) nil [1914 1942])
+            ("FIEMAP_EXTENT_NOT_ALIGNED" variable (:constant-flag t) nil [2028 2053])
+            ("FIEMAP_EXTENT_DATA_INLINE" variable (:constant-flag t) nil [2132 2157])
+            ("FIEMAP_EXTENT_DATA_TAIL" variable (:constant-flag t) nil [2245 2268])
+            ("FIEMAP_EXTENT_UNWRITTEN" variable (:constant-flag t) nil [2356 2379])
+            ("FIEMAP_EXTENT_MERGED" variable (:constant-flag t) nil [2460 2480])
+            ("FIEMAP_EXTENT_SHARED" variable (:constant-flag t) nil [2601 2621]))          
+      :file "fiemap.h"
+      :pointmax 2713
+      :fsize 2712
+      :lastmodtime '(22567 40897 814845 504000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("FIEMAP_EXTENT_LAST" . ((number "0x00000001" 1588 . 1598)))
+          ("FIEMAP_EXTENT_SHARED" . ((number "0x00002000" 2623 . 2633)))
+          ("FIEMAP_FLAG_SYNC" . ((number "0x00000001" 1303 . 1313)))
+          ("FIEMAP_EXTENT_DATA_TAIL" . ((number "0x00000400" 2270 . 2280)))
+          ("_LINUX_FIEMAP_H")
+          ("FIEMAP_FLAG_CACHE" . ((number "0x00000004" 1443 . 1453)))
+          ("FIEMAP_EXTENT_UNWRITTEN" . ((number "0x00000800" 2381 . 2391)))
+          ("FIEMAP_EXTENT_ENCODED" . ((number "0x00000008" 1834 . 1844)))
+          ("FIEMAP_EXTENT_DELALLOC" . ((number "0x00000004" 1729 . 1739)))
+          ("FIEMAP_EXTENT_NOT_ALIGNED" . ((number "0x00000100" 2054 . 2064)))
+          ("FIEMAP_FLAGS_COMPAT" . ((semantic-list "(FIEMAP_FLAG_SYNC | FIEMAP_FLAG_XATTR)" 1520 . 1558)))
+          ("FIEMAP_FLAG_XATTR" . ((number "0x00000002" 1372 . 1382)))
+          ("FIEMAP_EXTENT_DATA_INLINE" . ((number "0x00000200" 2158 . 2168)))
+          ("FIEMAP_MAX_OFFSET" . ((semantic-list "(~0ULL)" 1269 . 1276)))
+          ("FIEMAP_EXTENT_UNKNOWN" . ((number "0x00000002" 1657 . 1667)))
+          ("FIEMAP_EXTENT_DATA_ENCRYPTED" . ((number "0x00000080" 1943 . 1953)))
+          ("FIEMAP_EXTENT_MERGED" . ((number "0x00001000" 2482 . 2492)))
+          )
+)
+    (semanticdb-table "fs.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_UAPI_LINUX_FS_H" variable (:constant-flag t) nil [34 50])
+            ("linux/limits.h" include (:system-flag t) nil [359 384])
+            ("linux/ioctl.h" include (:system-flag t) nil [385 409])
+            ("linux/types.h" include (:system-flag t) nil [410 434])
+            ("INR_OPEN_CUR" variable (:constant-flag t) nil [872 884])
+            ("INR_OPEN_MAX" variable (:constant-flag t) nil [938 950])
+            ("BLOCK_SIZE_BITS" variable (:constant-flag t) nil [1000 1015])
+            ("BLOCK_SIZE" variable (:constant-flag t) nil [1027 1037])
+            ("SEEK_SET" variable (:constant-flag t) nil [1068 1076])
+            ("SEEK_CUR" variable (:constant-flag t) nil [1128 1136])
+            ("SEEK_END" variable (:constant-flag t) nil [1192 1200])
+            ("SEEK_DATA" variable (:constant-flag t) nil [1246 1255])
+            ("SEEK_HOLE" variable (:constant-flag t) nil [1294 1303])
+            ("SEEK_MAX" variable (:constant-flag t) nil [1342 1350])
+            ("RENAME_NOREPLACE" variable (:constant-flag t) nil [1370 1386])
+            ("RENAME_EXCHANGE" variable (:constant-flag t) nil [1433 1448])
+            ("RENAME_WHITEOUT" variable (:constant-flag t) nil [1498 1513])
+            ("file_clone_range" type
+               (:members 
+                  ( ("src_fd" variable (:type ("__s64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1574 1587])
+                    ("src_offset" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1589 1606])
+                    ("src_length" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1608 1625])
+                    ("dest_offset" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1627 1645]))                  
+                :type "struct")
+                nil [1547 1648])
+            ("fstrim_range" type
+               (:members 
+                  ( ("start" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1673 1685])
+                    ("len" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1687 1697])
+                    ("minlen" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1699 1712]))                  
+                :type "struct")
+                nil [1650 1715])
+            ("FILE_DEDUPE_RANGE_SAME" variable (:constant-flag t) nil [1805 1827])
+            ("FILE_DEDUPE_RANGE_DIFFERS" variable (:constant-flag t) nil [1839 1864])
+            ("file_dedupe_range_info" type
+               (:members 
+                  ( ("dest_fd" variable (:type ("__s64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1953 1967])
+                    ("dest_offset" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1998 2016])
+                    ("bytes_deduped" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2060 2080])
+                    ("status" variable (:type ("__s32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2315 2328])
+                    ("reserved" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2365 2380]))                  
+                :type "struct")
+                nil [1920 2403])
+            ("file_dedupe_range" type
+               (:members 
+                  ( ("src_offset" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2485 2502])
+                    ("src_length" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2541 2558])
+                    ("dest_count" variable (:type ("__u16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2588 2605])
+                    ("reserved1" variable (:type ("__u16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2647 2663])
+                    ("reserved2" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2684 2700])
+                    ("info" variable
+                       (:dereference 1
+                        :type ("file_dedupe_range_info" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2721 2759]))                  
+                :type "struct")
+                nil [2457 2762])
+            ("files_stat_struct" type
+               (:members 
+                  ( ("nr_files" variable (:type "unsigned long") (reparse-symbol classsubparts) [2843 2866])
+                    ("nr_free_files" variable (:type "unsigned long") (reparse-symbol classsubparts) [2885 2913])
+                    ("max_files" variable (:type "unsigned long") (reparse-symbol classsubparts) [2931 2955]))                  
+                :type "struct")
+                nil [2815 2973])
+            ("inodes_stat_t" type
+               (:members 
+                  ( ("nr_inodes" variable (:type "long") (reparse-symbol classsubparts) [2999 3014])
+                    ("nr_unused" variable (:type "long") (reparse-symbol classsubparts) [3016 3031])
+                    ("dummy" variable
+                       (:dereference 1
+                        :type "long")
+                        (reparse-symbol classsubparts) [3033 3047]))                  
+                :type "struct")
+                nil [2975 3094])
+            ("NR_FILE" variable (:constant-flag t) nil [3105 3112])
+            ("MS_RDONLY" variable (:constant-flag t) nil [3259 3268])
+            ("MS_NOSUID" variable (:constant-flag t) nil [3302 3311])
+            ("MS_NODEV" variable (:constant-flag t) nil [3355 3363])
+            ("MS_NOEXEC" variable (:constant-flag t) nil [3421 3430])
+            ("MS_SYNCHRONOUS" variable (:constant-flag t) nil [3475 3489])
+            ("MS_REMOUNT" variable (:constant-flag t) nil [3533 3543])
+            ("MS_MANDLOCK" variable (:constant-flag t) nil [3589 3600])
+            ("MS_DIRSYNC" variable (:constant-flag t) nil [3649 3659])
+            ("MS_NOATIME" variable (:constant-flag t) nil [3718 3728])
+            ("MS_NODIRATIME" variable (:constant-flag t) nil [3776 3789])
+            ("MS_BIND" variable (:constant-flag t) nil [3846 3853])
+            ("MS_MOVE" variable (:constant-flag t) nil [3868 3875])
+            ("MS_REC" variable (:constant-flag t) nil [3890 3896])
+            ("MS_VERBOSE" variable (:constant-flag t) nil [3912 3922])
+            ("MS_SILENT" variable (:constant-flag t) nil [4012 4021])
+            ("MS_POSIXACL" variable (:constant-flag t) nil [4036 4047])
+            ("MS_UNBINDABLE" variable (:constant-flag t) nil [4099 4112])
+            ("MS_PRIVATE" variable (:constant-flag t) nil [4156 4166])
+            ("MS_SLAVE" variable (:constant-flag t) nil [4207 4215])
+            ("MS_SHARED" variable (:constant-flag t) nil [4254 4263])
+            ("MS_RELATIME" variable (:constant-flag t) nil [4303 4314])
+            ("MS_KERNMOUNT" variable (:constant-flag t) nil [4375 4387])
+            ("MS_I_VERSION" variable (:constant-flag t) nil [4436 4448])
+            ("MS_STRICTATIME" variable (:constant-flag t) nil [4500 4514])
+            ("MS_LAZYTIME" variable (:constant-flag t) nil [4566 4577])
+            ("MS_NOSEC" variable (:constant-flag t) nil [4686 4694])
+            ("MS_BORN" variable (:constant-flag t) nil [4711 4718])
+            ("MS_ACTIVE" variable (:constant-flag t) nil [4736 4745])
+            ("MS_NOUSER" variable (:constant-flag t) nil [4762 4771])
+            ("MS_RMT_MASK" variable (:constant-flag t) nil [4850 4861])
+            ("MS_MGC_VAL" variable (:constant-flag t) nil [4981 4991])
+            ("MS_MGC_MSK" variable (:constant-flag t) nil [5011 5021])
+            ("fsxattr" type
+               (:members 
+                  ( ("fsx_xflags" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5120 5138])
+                    ("fsx_extsize" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5175 5194])
+                    ("fsx_nextents" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5231 5251])
+                    ("fsx_projid" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5286 5304])
+                    ("fsx_pad" variable
+                       (:dereference 1
+                        :type "unsigned char")
+                        (reparse-symbol classsubparts) [5341 5367]))                  
+                :type "struct")
+                nil [5102 5370])
+            ("FS_XFLAG_REALTIME" variable (:constant-flag t) nil [5421 5438])
+            ("FS_XFLAG_PREALLOC" variable (:constant-flag t) nil [5488 5505])
+            ("FS_XFLAG_IMMUTABLE" variable (:constant-flag t) nil [5557 5575])
+            ("FS_XFLAG_APPEND" variable (:constant-flag t) nil [5625 5640])
+            ("FS_XFLAG_SYNC" variable (:constant-flag t) nil [5685 5698])
+            ("FS_XFLAG_NOATIME" variable (:constant-flag t) nil [5748 5764])
+            ("FS_XFLAG_NODUMP" variable (:constant-flag t) nil [5816 5831])
+            ("FS_XFLAG_RTINHERIT" variable (:constant-flag t) nil [5884 5902])
+            ("FS_XFLAG_PROJINHERIT" variable (:constant-flag t) nil [5951 5971])
+            ("FS_XFLAG_NOSYMLINKS" variable (:constant-flag t) nil [6024 6043])
+            ("FS_XFLAG_EXTSIZE" variable (:constant-flag t) nil [6095 6111])
+            ("FS_XFLAG_EXTSZINHERIT" variable (:constant-flag t) nil [6164 6185])
+            ("FS_XFLAG_NODEFRAG" variable (:constant-flag t) nil [6237 6254])
+            ("FS_XFLAG_FILESTREAM" variable (:constant-flag t) nil [6298 6317])
+            ("FS_XFLAG_DAX" variable (:constant-flag t) nil [6368 6380])
+            ("FS_XFLAG_HASATTR" variable (:constant-flag t) nil [6422 6438])
+            ("BLKROSET" variable (:constant-flag t) nil [6634 6642])
+            ("BLKROGET" variable (:constant-flag t) nil [6710 6718])
+            ("BLKRRPART" variable (:constant-flag t) nil [6786 6795])
+            ("BLKGETSIZE" variable (:constant-flag t) nil [6848 6858])
+            ("BLKFLSBUF" variable (:constant-flag t) nil [6922 6931])
+            ("BLKRASET" variable (:constant-flag t) nil [6979 6987])
+            ("BLKRAGET" variable (:constant-flag t) nil [7049 7057])
+            ("BLKFRASET" variable (:constant-flag t) nil [7118 7127])
+            ("BLKFRAGET" variable (:constant-flag t) nil [7197 7206])
+            ("BLKSECTSET" variable (:constant-flag t) nil [7276 7286])
+            ("BLKSECTGET" variable (:constant-flag t) nil [7356 7366])
+            ("BLKSSZGET" variable (:constant-flag t) nil [7436 7445])
+            ("BLKBSZGET" variable (:constant-flag t) nil [7937 7946])
+            ("BLKBSZSET" variable (:constant-flag t) nil [7978 7987])
+            ("BLKGETSIZE64" variable (:constant-flag t) nil [8019 8031])
+            ("BLKTRACESETUP" variable (:constant-flag t) nil [8107 8120])
+            ("BLKTRACESTART" variable (:constant-flag t) nil [8173 8186])
+            ("BLKTRACESTOP" variable (:constant-flag t) nil [8209 8221])
+            ("BLKTRACETEARDOWN" variable (:constant-flag t) nil [8244 8260])
+            ("BLKDISCARD" variable (:constant-flag t) nil [8283 8293])
+            ("BLKIOMIN" variable (:constant-flag t) nil [8316 8324])
+            ("BLKIOOPT" variable (:constant-flag t) nil [8347 8355])
+            ("BLKALIGNOFF" variable (:constant-flag t) nil [8378 8389])
+            ("BLKPBSZGET" variable (:constant-flag t) nil [8412 8422])
+            ("BLKDISCARDZEROES" variable (:constant-flag t) nil [8445 8461])
+            ("BLKSECDISCARD" variable (:constant-flag t) nil [8484 8497])
+            ("BLKROTATIONAL" variable (:constant-flag t) nil [8520 8533])
+            ("BLKZEROOUT" variable (:constant-flag t) nil [8556 8566])
+            ("BLKDAXGET" variable (:constant-flag t) nil [8589 8598])
+            ("BMAP_IOCTL" variable (:constant-flag t) nil [8622 8632])
+            ("FIBMAP" variable (:constant-flag t) nil [8684 8690])
+            ("FIGETBSZ" variable (:constant-flag t) nil [8732 8740])
+            ("FIFREEZE" variable (:constant-flag t) nil [8802 8810])
+            ("FITHAW" variable (:constant-flag t) nil [8853 8859])
+            ("FITRIM" variable (:constant-flag t) nil [8901 8907])
+            ("FICLONE" variable (:constant-flag t) nil [8965 8972])
+            ("FICLONERANGE" variable (:constant-flag t) nil [9001 9013])
+            ("FIDEDUPERANGE" variable (:constant-flag t) nil [9062 9075])
+            ("FS_IOC_GETFLAGS" variable (:constant-flag t) nil [9127 9142])
+            ("FS_IOC_SETFLAGS" variable (:constant-flag t) nil [9172 9187])
+            ("FS_IOC_GETVERSION" variable (:constant-flag t) nil [9217 9234])
+            ("FS_IOC_SETVERSION" variable (:constant-flag t) nil [9263 9280])
+            ("FS_IOC_FIEMAP" variable (:constant-flag t) nil [9309 9322])
+            ("FS_IOC32_GETFLAGS" variable (:constant-flag t) nil [9363 9380])
+            ("FS_IOC32_SETFLAGS" variable (:constant-flag t) nil [9408 9425])
+            ("FS_IOC32_GETVERSION" variable (:constant-flag t) nil [9453 9472])
+            ("FS_IOC32_SETVERSION" variable (:constant-flag t) nil [9500 9519])
+            ("FS_IOC_FSGETXATTR" variable (:constant-flag t) nil [9547 9564])
+            ("FS_IOC_FSSETXATTR" variable (:constant-flag t) nil [9605 9622])
+            ("FS_KEY_DESCRIPTOR_SIZE" variable (:constant-flag t) nil [9765 9787])
+            ("version" variable (:type ("__u8" type (:type "class") nil nil)) nil [9816 9829])
+            ("contents_encryption_mode" variable (:type ("__u8" type (:type "class") nil nil)) nil [9831 9861])
+            ("filenames_encryption_mode" variable (:type ("__u8" type (:type "class") nil nil)) nil [9863 9894])
+            ("flags" variable (:type ("__u8" type (:type "class") nil nil)) nil [9896 9907])
+            ("__packed" variable (:type "int") nil [9963 9972])
+            ("FS_IOC_SET_ENCRYPTION_POLICY" variable (:constant-flag t) nil [9982 10010])
+            ("FS_IOC_GET_ENCRYPTION_PWSALT" variable (:constant-flag t) nil [10056 10084])
+            ("FS_IOC_GET_ENCRYPTION_POLICY" variable (:constant-flag t) nil [10117 10145])
+            ("FS_SECRM_FL" variable (:constant-flag t) nil [11153 11164])
+            ("FS_UNRM_FL" variable (:constant-flag t) nil [11208 11218])
+            ("FS_COMPR_FL" variable (:constant-flag t) nil [11255 11266])
+            ("FS_SYNC_FL" variable (:constant-flag t) nil [11308 11318])
+            ("FS_IMMUTABLE_FL" variable (:constant-flag t) nil [11366 11381])
+            ("FS_APPEND_FL" variable (:constant-flag t) nil [11424 11436])
+            ("FS_NODUMP_FL" variable (:constant-flag t) nil [11495 11507])
+            ("FS_NOATIME_FL" variable (:constant-flag t) nil [11552 11565])
+            ("FS_DIRTY_FL" variable (:constant-flag t) nil [11653 11664])
+            ("FS_COMPRBLK_FL" variable (:constant-flag t) nil [11686 11700])
+            ("FS_NOCOMP_FL" variable (:constant-flag t) nil [11760 11772])
+            ("FS_ENCRYPT_FL" variable (:constant-flag t) nil [11866 11879])
+            ("FS_BTREE_FL" variable (:constant-flag t) nil [11922 11933])
+            ("FS_INDEX_FL" variable (:constant-flag t) nil [11978 11989])
+            ("FS_IMAGIC_FL" variable (:constant-flag t) nil [12040 12052])
+            ("FS_JOURNAL_DATA_FL" variable (:constant-flag t) nil [12094 12112])
+            ("FS_NOTAIL_FL" variable (:constant-flag t) nil [12157 12169])
+            ("FS_DIRSYNC_FL" variable (:constant-flag t) nil [12228 12241])
+            ("FS_TOPDIR_FL" variable (:constant-flag t) nil [12306 12318])
+            ("FS_HUGE_FILE_FL" variable (:constant-flag t) nil [12374 12389])
+            ("FS_EXTENT_FL" variable (:constant-flag t) nil [12435 12447])
+            ("FS_EA_INODE_FL" variable (:constant-flag t) nil [12483 12497])
+            ("FS_EOFBLOCKS_FL" variable (:constant-flag t) nil [12549 12564])
+            ("FS_NOCOW_FL" variable (:constant-flag t) nil [12610 12621])
+            ("FS_INLINE_DATA_FL" variable (:constant-flag t) nil [12665 12682])
+            ("FS_PROJINHERIT_FL" variable (:constant-flag t) nil [12727 12744])
+            ("FS_RESERVED_FL" variable (:constant-flag t) nil [12798 12812])
+            ("FS_FL_USER_VISIBLE" variable (:constant-flag t) nil [12863 12881])
+            ("FS_FL_USER_MODIFIABLE" variable (:constant-flag t) nil [12927 12948])
+            ("SYNC_FILE_RANGE_WAIT_BEFORE" variable (:constant-flag t) nil [12999 13026])
+            ("SYNC_FILE_RANGE_WRITE" variable (:constant-flag t) nil [13037 13058])
+            ("SYNC_FILE_RANGE_WAIT_AFTER" variable (:constant-flag t) nil [13070 13096])
+            ("RWF_HIPRI" variable (:constant-flag t) nil [13142 13151]))          
+      :file "fs.h"
+      :pointmax 13242
+      :fsize 13241
+      :lastmodtime '(22567 40897 814845 504000)
+      :unmatched-syntax '((close-paren 9961 . 9962) (punctuation 9959 . 9960) (close-paren 9958 . 9959) (number "8" 9936 . 9958) (open-paren 9935 . 9936) (symbol 9914 . 9935) (symbol 9909 . 9913) (open-paren 9813 . 9814) (symbol 9798 . 9812) (STRUCT 9791 . 9797) (close-paren 7459 . 7460) (close-paren 7379 . 7380) (close-paren 7299 . 7300) (close-paren 7220 . 7221) (close-paren 7141 . 7142))
+      :lexical-table 
+        '(("FILE_DEDUPE_RANGE_DIFFERS" . ((number "1" 1865 . 1866)))
+          ("MS_BORN" . ((semantic-list "(1<<29)" 4720 . 4727)))
+          ("FS_XFLAG_NODEFRAG" . ((number "0x00002000" 6255 . 6265)))
+          ("BLKGETSIZE64" . ((symbol "_IOR" 8032 . 8036) (semantic-list "(0x12,114,size_t)" 8036 . 8053)))
+          ("BLKALIGNOFF" . ((symbol "_IO" 8390 . 8393) (semantic-list "(0x12,122)" 8393 . 8403)))
+          ("FS_IOC_SETFLAGS" . ((symbol "_IOW" 9190 . 9194) (semantic-list "('f', 2, long)" 9194 . 9208)))
+          ("FS_IOC_SETVERSION" . ((symbol "_IOW" 9282 . 9286) (semantic-list "('v', 2, long)" 9286 . 9300)))
+          ("SYNC_FILE_RANGE_WAIT_BEFORE" . ((number "1" 13027 . 13028)))
+          ("MS_NOATIME" . ((number "1024" 3729 . 3733)))
+          ("MS_MOVE" . ((number "8192" 3877 . 3881)))
+          ("MS_SLAVE" . ((semantic-list "(1<<19)" 4216 . 4223)))
+          ("MS_KERNMOUNT" . ((semantic-list "(1<<22)" 4388 . 4395)))
+          ("BLKFLSBUF" . ((symbol "_IO" 6933 . 6936) (semantic-list "(0x12,97)" 6936 . 6945)))
+          ("BLKSSZGET" . ((symbol "_IO" 7447 . 7450) (semantic-list "(0x12,104" 7450 . 7459)))
+          ("BLKIOMIN" . ((symbol "_IO" 8325 . 8328) (semantic-list "(0x12,120)" 8328 . 8338)))
+          ("FIGETBSZ" . ((symbol "_IO" 8743 . 8746) (semantic-list "(0x00,2)" 8746 . 8754)))
+          ("FS_IOC_GETVERSION" . ((symbol "_IOR" 9236 . 9240) (semantic-list "('v', 1, long)" 9240 . 9254)))
+          ("FS_IOC32_GETFLAGS" . ((symbol "_IOR" 9382 . 9386) (semantic-list "('f', 1, int)" 9386 . 9399)))
+          ("FS_NOTAIL_FL" . ((number "0x00008000" 12172 . 12182)))
+          ("FS_HUGE_FILE_FL" . ((number "0x00040000" 12392 . 12402)))
+          ("INR_OPEN_MAX" . ((number "4096" 951 . 955)))
+          ("SEEK_CUR" . ((number "1" 1137 . 1138)))
+          ("SEEK_DATA" . ((number "3" 1256 . 1257)))
+          ("RENAME_WHITEOUT" . ((semantic-list "(1 << 2)" 1515 . 1523)))
+          ("MS_MANDLOCK" . ((number "64" 3601 . 3603)))
+          ("MS_DIRSYNC" . ((number "128" 3660 . 3663)))
+          ("MS_NODIRATIME" . ((number "2048" 3790 . 3794)))
+          ("MS_BIND" . ((number "4096" 3855 . 3859)))
+          ("MS_SILENT" . ((number "32768" 4022 . 4027)))
+          ("FS_XFLAG_REALTIME" . ((number "0x00000001" 5439 . 5449)))
+          ("FS_XFLAG_APPEND" . ((number "0x00000010" 5642 . 5652)))
+          ("FS_XFLAG_EXTSZINHERIT" . ((number "0x00001000" 6186 . 6196)))
+          ("BLKTRACESTART" . ((symbol "_IO" 8187 . 8190) (semantic-list "(0x12,116)" 8190 . 8200)))
+          ("BLKTRACETEARDOWN" . ((symbol "_IO" 8261 . 8264) (semantic-list "(0x12,118)" 8264 . 8274)))
+          ("BLKDISCARDZEROES" . ((symbol "_IO" 8462 . 8465) (semantic-list "(0x12,124)" 8465 . 8475)))
+          ("FIDEDUPERANGE" . ((symbol "_IOWR" 9076 . 9081) (semantic-list "(0x94, 54, struct file_dedupe_range)" 9081 . 9117)))
+          ("FS_ENCRYPT_FL" . ((number "0x00000800" 11882 . 11892)))
+          ("FS_IMAGIC_FL" . ((number "0x00002000" 12055 . 12065)))
+          ("FS_INLINE_DATA_FL" . ((number "0x10000000" 12684 . 12694)))
+          ("RWF_HIPRI" . ((number "0x00000001" 13154 . 13164)))
+          ("RENAME_NOREPLACE" . ((semantic-list "(1 << 0)" 1387 . 1395)))
+          ("FILE_DEDUPE_RANGE_SAME" . ((number "0" 1829 . 1830)))
+          ("MS_NOUSER" . ((semantic-list "(1<<31)" 4772 . 4779)))
+          ("BLKRRPART" . ((symbol "_IO" 6797 . 6800) (semantic-list "(0x12,95)" 6800 . 6809)))
+          ("BLKFRASET" . ((symbol "_IO" 7129 . 7132) (semantic-list "(0x12,100" 7132 . 7141)))
+          ("BLKDISCARD" . ((symbol "_IO" 8294 . 8297) (semantic-list "(0x12,119)" 8297 . 8307)))
+          ("FICLONE" . ((symbol "_IOW" 8974 . 8978) (semantic-list "(0x94, 9, int)" 8978 . 8992)))
+          ("FS_IOC_GETFLAGS" . ((symbol "_IOR" 9145 . 9149) (semantic-list "('f', 1, long)" 9149 . 9163)))
+          ("MS_NOSUID" . ((number "2" 3313 . 3314)))
+          ("MS_NOEXEC" . ((number "8" 3432 . 3433)))
+          ("FS_XFLAG_RTINHERIT" . ((number "0x00000100" 5903 . 5913)))
+          ("FS_XFLAG_PROJINHERIT" . ((number "0x00000200" 5972 . 5982)))
+          ("BLKBSZGET" . ((symbol "_IOR" 7948 . 7952) (semantic-list "(0x12,112,size_t)" 7952 . 7969)))
+          ("BLKTRACESTOP" . ((symbol "_IO" 8222 . 8225) (semantic-list "(0x12,117)" 8225 . 8235)))
+          ("BLKROTATIONAL" . ((symbol "_IO" 8534 . 8537) (semantic-list "(0x12,126)" 8537 . 8547)))
+          ("FIFREEZE" . ((symbol "_IOWR" 8811 . 8816) (semantic-list "('X', 119, int)" 8816 . 8831)))
+          ("FITHAW" . ((symbol "_IOWR" 8861 . 8866) (semantic-list "('X', 120, int)" 8866 . 8881)))
+          ("FITRIM" . ((symbol "_IOWR" 8909 . 8914) (semantic-list "('X', 121, struct fstrim_range)" 8914 . 8945)))
+          ("FS_IOC_GET_ENCRYPTION_PWSALT" . ((symbol "_IOW" 10085 . 10089) (semantic-list "('f', 20, __u8[16])" 10089 . 10108)))
+          ("FS_APPEND_FL" . ((number "0x00000020" 11439 . 11449)))
+          ("FS_NOATIME_FL" . ((number "0x00000080" 11568 . 11578)))
+          ("FS_EA_INODE_FL" . ((number "0x00200000" 12500 . 12510)))
+          ("INR_OPEN_CUR" . ((number "1024" 885 . 889)))
+          ("MS_PRIVATE" . ((semantic-list "(1<<18)" 4167 . 4174)))
+          ("MS_LAZYTIME" . ((semantic-list "(1<<25)" 4578 . 4585)))
+          ("MS_ACTIVE" . ((semantic-list "(1<<30)" 4746 . 4753)))
+          ("MS_MGC_MSK" . ((number "0xffff0000" 5022 . 5032)))
+          ("FS_XFLAG_DAX" . ((number "0x00008000" 6382 . 6392)))
+          ("BLKDAXGET" . ((symbol "_IO" 8599 . 8602) (semantic-list "(0x12,129)" 8602 . 8612)))
+          ("FS_DIRTY_FL" . ((number "0x00000100" 11667 . 11677)))
+          ("FS_DIRSYNC_FL" . ((number "0x00010000" 12244 . 12254)))
+          ("NR_FILE" . ((number "8192" 3114 . 3118)))
+          ("BLKRAGET" . ((symbol "_IO" 7060 . 7063) (semantic-list "(0x12,99)" 7063 . 7072)))
+          ("BLKPBSZGET" . ((symbol "_IO" 8423 . 8426) (semantic-list "(0x12,123)" 8426 . 8436)))
+          ("BLKZEROOUT" . ((symbol "_IO" 8567 . 8570) (semantic-list "(0x12,127)" 8570 . 8580)))
+          ("FS_TOPDIR_FL" . ((number "0x00020000" 12321 . 12331)))
+          ("FS_EXTENT_FL" . ((number "0x00080000" 12450 . 12460)))
+          ("FS_EOFBLOCKS_FL" . ((number "0x00400000" 12567 . 12577)))
+          ("FS_NOCOW_FL" . ((number "0x00800000" 12624 . 12634)))
+          ("FS_FL_USER_MODIFIABLE" . ((number "0x000380FF" 12950 . 12960)))
+          ("MS_REMOUNT" . ((number "32" 3544 . 3546)))
+          ("MS_STRICTATIME" . ((semantic-list "(1<<24)" 4515 . 4522)))
+          ("MS_NOSEC" . ((semantic-list "(1<<28)" 4695 . 4702)))
+          ("MS_MGC_VAL" . ((number "0xC0ED0000" 4992 . 5002)))
+          ("FS_XFLAG_IMMUTABLE" . ((number "0x00000008" 5576 . 5586)))
+          ("FS_XFLAG_HASATTR" . ((number "0x80000000" 6439 . 6449)))
+          ("BLKROGET" . ((symbol "_IO" 6721 . 6724) (semantic-list "(0x12,94)" 6724 . 6733)))
+          ("BLKTRACESETUP" . ((symbol "_IOWR" 8121 . 8126) (semantic-list "(0x12,115,struct blk_user_trace_setup)" 8126 . 8164)))
+          ("BLKIOOPT" . ((symbol "_IO" 8356 . 8359) (semantic-list "(0x12,121)" 8359 . 8369)))
+          ("FS_IOC32_SETVERSION" . ((symbol "_IOW" 9521 . 9525) (semantic-list "('v', 2, int)" 9525 . 9538)))
+          ("FS_IOC_SET_ENCRYPTION_POLICY" . ((symbol "_IOR" 10011 . 10015) (semantic-list "('f', 19, struct fscrypt_policy)" 10015 . 10047)))
+          ("BLOCK_SIZE_BITS" . ((number "10" 1016 . 1018)))
+          ("SEEK_HOLE" . ((number "4" 1304 . 1305)))
+          ("MS_NODEV" . ((number "4" 3365 . 3366)))
+          ("MS_SYNCHRONOUS" . ((number "16" 3490 . 3492)))
+          ("MS_REC" . ((number "16384" 3898 . 3903)))
+          ("FS_XFLAG_EXTSIZE" . ((number "0x00000800" 6112 . 6122)))
+          ("FS_XFLAG_FILESTREAM" . ((number "0x00004000" 6318 . 6328)))
+          ("BLKGETSIZE" . ((symbol "_IO" 6859 . 6862) (semantic-list "(0x12,96)" 6862 . 6871)))
+          ("BLKSECTGET" . ((symbol "_IO" 7367 . 7370) (semantic-list "(0x12,103" 7370 . 7379)))
+          ("BLKBSZSET" . ((symbol "_IOW" 7989 . 7993) (semantic-list "(0x12,113,size_t)" 7993 . 8010)))
+          ("FS_IOC32_GETVERSION" . ((symbol "_IOR" 9474 . 9478) (semantic-list "('v', 1, int)" 9478 . 9491)))
+          ("FS_IOC_FSSETXATTR" . ((symbol "_IOW" 9624 . 9628) (semantic-list "('X', 32, struct fsxattr)" 9629 . 9654)))
+          ("FS_JOURNAL_DATA_FL" . ((number "0x00004000" 12114 . 12124)))
+          ("SEEK_SET" . ((number "0" 1077 . 1078)))
+          ("MS_RDONLY" . ((number "1" 3270 . 3271)))
+          ("MS_I_VERSION" . ((semantic-list "(1<<23)" 4449 . 4456)))
+          ("MS_RMT_MASK" . ((semantic-list "(MS_RDONLY|MS_SYNCHRONOUS|MS_MANDLOCK|MS_I_VERSION|\\
+			 MS_LAZYTIME)" 4862 . 4931)))
+          ("FS_XFLAG_PREALLOC" . ((number "0x00000002" 5506 . 5516)))
+          ("FICLONERANGE" . ((symbol "_IOW" 9014 . 9018) (semantic-list "(0x94, 13, struct file_clone_range)" 9018 . 9053)))
+          ("FS_COMPR_FL" . ((number "0x00000004" 11269 . 11279)))
+          ("FS_SYNC_FL" . ((number "0x00000008" 11321 . 11331)))
+          ("FS_IMMUTABLE_FL" . ((number "0x00000010" 11384 . 11394)))
+          ("FS_COMPRBLK_FL" . ((number "0x00000200" 11703 . 11713)))
+          ("FS_NOCOMP_FL" . ((number "0x00000400" 11775 . 11785)))
+          ("FS_INDEX_FL" . ((number "0x00001000" 11992 . 12002)))
+          ("FS_PROJINHERIT_FL" . ((number "0x20000000" 12746 . 12756)))
+          ("FS_RESERVED_FL" . ((number "0x80000000" 12815 . 12825)))
+          ("FS_FL_USER_VISIBLE" . ((number "0x0003DFFF" 12883 . 12893)))
+          ("SYNC_FILE_RANGE_WRITE" . ((number "2" 13060 . 13061)))
+          ("MS_SHARED" . ((semantic-list "(1<<20)" 4264 . 4271)))
+          ("FS_XFLAG_SYNC" . ((number "0x00000020" 5700 . 5710)))
+          ("FS_XFLAG_NOATIME" . ((number "0x00000040" 5765 . 5775)))
+          ("FS_XFLAG_NODUMP" . ((number "0x00000080" 5833 . 5843)))
+          ("BLKRASET" . ((symbol "_IO" 6990 . 6993) (semantic-list "(0x12,98)" 6993 . 7002)))
+          ("FS_IOC_GET_ENCRYPTION_POLICY" . ((symbol "_IOW" 10146 . 10150) (semantic-list "('f', 21, struct fscrypt_policy)" 10150 . 10182)))
+          ("FS_SECRM_FL" . ((number "0x00000001" 11167 . 11177)))
+          ("FS_BTREE_FL" . ((number "0x00001000" 11936 . 11946)))
+          ("SYNC_FILE_RANGE_WAIT_AFTER" . ((number "4" 13097 . 13098)))
+          ("SEEK_END" . ((number "2" 1201 . 1202)))
+          ("MS_VERBOSE" . ((number "32768" 3923 . 3928)))
+          ("MS_POSIXACL" . ((semantic-list "(1<<16)" 4048 . 4055)))
+          ("MS_RELATIME" . ((semantic-list "(1<<21)" 4315 . 4322)))
+          ("FS_XFLAG_NOSYMLINKS" . ((number "0x00000400" 6044 . 6054)))
+          ("BLKROSET" . ((symbol "_IO" 6645 . 6648) (semantic-list "(0x12,93)" 6648 . 6657)))
+          ("BLKSECDISCARD" . ((symbol "_IO" 8498 . 8501) (semantic-list "(0x12,125)" 8501 . 8511)))
+          ("BMAP_IOCTL" . ((number "1" 8633 . 8634)))
+          ("FIBMAP" . ((symbol "_IO" 8694 . 8697) (semantic-list "(0x00,1)" 8697 . 8705)))
+          ("FS_IOC32_SETFLAGS" . ((symbol "_IOW" 9427 . 9431) (semantic-list "('f', 2, int)" 9431 . 9444)))
+          ("FS_IOC_FSGETXATTR" . ((symbol "_IOR" 9566 . 9570) (semantic-list "('X', 31, struct fsxattr)" 9571 . 9596)))
+          ("FS_KEY_DESCRIPTOR_SIZE" . ((number "8" 9788 . 9789)))
+          ("_UAPI_LINUX_FS_H")
+          ("BLOCK_SIZE" . ((semantic-list "(1<<BLOCK_SIZE_BITS)" 1038 . 1058)))
+          ("SEEK_MAX" . ((symbol "SEEK_HOLE" 1351 . 1360)))
+          ("RENAME_EXCHANGE" . ((semantic-list "(1 << 1)" 1450 . 1458)))
+          ("MS_UNBINDABLE" . ((semantic-list "(1<<17)" 4113 . 4120)))
+          ("BLKFRAGET" . ((symbol "_IO" 7208 . 7211) (semantic-list "(0x12,101" 7211 . 7220)))
+          ("BLKSECTSET" . ((symbol "_IO" 7287 . 7290) (semantic-list "(0x12,102" 7290 . 7299)))
+          ("FS_IOC_FIEMAP" . ((symbol "_IOWR" 9325 . 9330) (semantic-list "('f', 11, struct fiemap)" 9330 . 9354)))
+          ("FS_UNRM_FL" . ((number "0x00000002" 11221 . 11231)))
+          ("FS_NODUMP_FL" . ((number "0x00000040" 11510 . 11520)))
+          )
+)
+    (semanticdb-table "fcntl.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_UAPI_LINUX_FCNTL_H" variable (:constant-flag t) nil [37 56])
+            ("asm/fcntl.h" include (:system-flag t) nil [58 80])
+            ("F_SETLEASE" variable (:constant-flag t) nil [90 100])
+            ("F_GETLEASE" variable (:constant-flag t) nil [137 147])
+            ("F_CANCELLK" variable (:constant-flag t) nil [301 311])
+            ("F_DUPFD_CLOEXEC" variable (:constant-flag t) nil [401 416])
+            ("F_NOTIFY" variable (:constant-flag t) nil [546 554])
+            ("F_SETPIPE_SZ" variable (:constant-flag t) nil [636 648])
+            ("F_GETPIPE_SZ" variable (:constant-flag t) nil [685 697])
+            ("F_ADD_SEALS" variable (:constant-flag t) nil [759 770])
+            ("F_GET_SEALS" variable (:constant-flag t) nil [807 818])
+            ("F_SEAL_SEAL" variable (:constant-flag t) nil [882 893])
+            ("F_SEAL_SHRINK" variable (:constant-flag t) nil [952 965])
+            ("F_SEAL_GROW" variable (:constant-flag t) nil [1015 1026])
+            ("F_SEAL_WRITE" variable (:constant-flag t) nil [1074 1086])
+            ("DN_ACCESS" variable (:constant-flag t) nil [1242 1251])
+            ("DN_MODIFY" variable (:constant-flag t) nil [1291 1300])
+            ("DN_CREATE" variable (:constant-flag t) nil [1340 1349])
+            ("DN_DELETE" variable (:constant-flag t) nil [1388 1397])
+            ("DN_RENAME" variable (:constant-flag t) nil [1436 1445])
+            ("DN_ATTRIB" variable (:constant-flag t) nil [1484 1493])
+            ("DN_MULTISHOT" variable (:constant-flag t) nil [1542 1554])
+            ("AT_FDCWD" variable (:constant-flag t) nil [1603 1611])
+            ("AT_SYMLINK_NOFOLLOW" variable (:constant-flag t) nil [1801 1820])
+            ("AT_REMOVEDIR" variable (:constant-flag t) nil [1874 1886])
+            ("AT_SYMLINK_FOLLOW" variable (:constant-flag t) nil [1998 2015])
+            ("AT_NO_AUTOMOUNT" variable (:constant-flag t) nil [2062 2077])
+            ("AT_EMPTY_PATH" variable (:constant-flag t) nil [2137 2150]))          
+      :file "fcntl.h"
+      :pointmax 2230
+      :fsize 2229
+      :lastmodtime '(22567 40897 814845 504000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("F_SETLEASE" . ((semantic-list "(F_LINUX_SPECIFIC_BASE + 0)" 101 . 128)))
+          ("DN_MULTISHOT" . ((number "0x80000000" 1555 . 1565)))
+          ("F_GET_SEALS" . ((semantic-list "(F_LINUX_SPECIFIC_BASE + 10)" 819 . 847)))
+          ("F_SEAL_SHRINK" . ((number "0x0002" 966 . 972)))
+          ("DN_RENAME" . ((number "0x00000010" 1446 . 1456)))
+          ("AT_NO_AUTOMOUNT" . ((number "0x800" 2079 . 2084)))
+          ("F_SETPIPE_SZ" . ((semantic-list "(F_LINUX_SPECIFIC_BASE + 7)" 649 . 676)))
+          ("AT_EMPTY_PATH" . ((number "0x1000" 2152 . 2158)))
+          ("_UAPI_LINUX_FCNTL_H")
+          ("F_GETLEASE" . ((semantic-list "(F_LINUX_SPECIFIC_BASE + 1)" 148 . 175)))
+          ("F_CANCELLK" . ((semantic-list "(F_LINUX_SPECIFIC_BASE + 5)" 312 . 339)))
+          ("F_GETPIPE_SZ" . ((semantic-list "(F_LINUX_SPECIFIC_BASE + 8)" 698 . 725)))
+          ("DN_ACCESS" . ((number "0x00000001" 1252 . 1262)))
+          ("AT_FDCWD" . ((punctuation "-" 1613 . 1614) (number "100" 1614 . 1617)))
+          ("F_SEAL_SEAL" . ((number "0x0001" 894 . 900)))
+          ("AT_REMOVEDIR" . ((number "0x200" 1888 . 1893)))
+          ("F_ADD_SEALS" . ((semantic-list "(F_LINUX_SPECIFIC_BASE + 9)" 771 . 798)))
+          ("F_SEAL_GROW" . ((number "0x0004" 1027 . 1033)))
+          ("F_DUPFD_CLOEXEC" . ((semantic-list "(F_LINUX_SPECIFIC_BASE + 6)" 417 . 444)))
+          ("AT_SYMLINK_FOLLOW" . ((number "0x400" 2016 . 2021)))
+          ("F_NOTIFY" . ((semantic-list "(F_LINUX_SPECIFIC_BASE+2)" 555 . 580)))
+          ("DN_MODIFY" . ((number "0x00000002" 1301 . 1311)))
+          ("DN_CREATE" . ((number "0x00000004" 1350 . 1360)))
+          ("DN_DELETE" . ((number "0x00000008" 1398 . 1408)))
+          ("F_SEAL_WRITE" . ((number "0x0008" 1087 . 1093)))
+          ("AT_SYMLINK_NOFOLLOW" . ((number "0x100" 1821 . 1826)))
+          ("DN_ATTRIB" . ((number "0x00000020" 1494 . 1504)))
+          )
+)
+    (semanticdb-table "string.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_UAPI_LINUX_STRING_H_" variable (:constant-flag t) nil [39 60]))          
+      :file "string.h"
+      :pointmax 234
+      :fsize 233
+      :lastmodtime '(22567 40897 838855 56000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_UAPI_LINUX_STRING_H_")
+          )
+)
+    (semanticdb-table "aio_abi.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__LINUX__AIO_ABI_H" variable (:constant-flag t) nil [1189 1207])
+            ("linux/types.h" include (:system-flag t) nil [1209 1233])
+            ("asm/byteorder.h" include (:system-flag t) nil [1234 1260])
+            ("aio_context_t" type
+               (:typedef ("__kernel_ulong_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [1262 1301])
+            ("" type
+               (:members 
+                  ( ("IOCB_CMD_PREAD" variable
+                       (:constant-flag t
+                        :default-value (1328 1329)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1311 1329])
+                    ("IOCB_CMD_PWRITE" variable
+                       (:constant-flag t
+                        :default-value (1350 1351)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1332 1351])
+                    ("IOCB_CMD_FSYNC" variable
+                       (:constant-flag t
+                        :default-value (1371 1372)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1354 1372])
+                    ("IOCB_CMD_FDSYNC" variable
+                       (:constant-flag t
+                        :default-value (1393 1394)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1375 1394])
+                    ("IOCB_CMD_NOOP" variable
+                       (:constant-flag t
+                        :default-value (1498 1499)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1482 1499])
+                    ("IOCB_CMD_PREADV" variable
+                       (:constant-flag t
+                        :default-value (1520 1521)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1502 1521])
+                    ("IOCB_CMD_PWRITEV" variable
+                       (:constant-flag t
+                        :default-value (1543 1544)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [1524 1544]))                  
+                :type "enum")
+                nil [1303 1548])
+            ("IOCB_FLAG_RESFD" variable (:constant-flag t) nil [1735 1750])
+            ("io_event" type
+               (:members 
+                  ( ("data" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1834 1846])
+                    ("obj" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1884 1895])
+                    ("res" variable (:type ("__s64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1935 1946])
+                    ("res2" variable (:type ("__s64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1982 1994]))                  
+                :type "struct")
+                nil [1815 2021])
+            ("iocb" type
+               (:members 
+                  ( ("aio_data" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2505 2520])
+                    ("PADDED" function
+                       (:prototype-flag t
+                        :arguments 
+                          ( ("" variable (:type ("aio_key" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2577 2585])
+                            ("" variable (:type ("aio_reserved1" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2586 2600]))                          
+                        :type ("__u32" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [2564 2601])
+                    ("aio_lio_opcode" variable (:type ("__u16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2672 2693])
+                    ("aio_reqprio" variable (:type ("__s16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2721 2739])
+                    ("aio_fildes" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2741 2758])
+                    ("aio_buf" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2761 2775])
+                    ("aio_nbytes" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2777 2794])
+                    ("aio_offset" variable (:type ("__s64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2796 2813])
+                    ("aio_reserved2" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2840 2860])
+                    ("aio_flags" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2945 2961])
+                    ("aio_resfd" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3078 3094]))                  
+                :type "struct")
+                nil [2444 3097]))          
+      :file "aio_abi.h"
+      :pointmax 3177
+      :fsize 3176
+      :lastmodtime '(22567 40897 806842 319000)
+      :unmatched-syntax '((punctuation 2283 . 2284) (symbol 2274 . 2283) (symbol 2270 . 2273) (symbol 2265 . 2269) (FOR 2261 . 2264) (symbol 2256 . 2260) (symbol 2250 . 2255) (punctuation 2249 . 2250))
+      :lexical-table 
+        '(("__LINUX__AIO_ABI_H")
+          ("IOCB_FLAG_RESFD" . ((semantic-list "(1 << 0)" 1752 . 1760)))
+          )
+)
+    (semanticdb-table "kexec.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_UAPILINUX_KEXEC_H" variable (:constant-flag t) nil [36 54])
+            ("linux/types.h" include (:system-flag t) nil [233 257])
+            ("KEXEC_ON_CRASH" variable (:constant-flag t) nil [315 329])
+            ("KEXEC_PRESERVE_CONTEXT" variable (:constant-flag t) nil [350 372])
+            ("KEXEC_ARCH_MASK" variable (:constant-flag t) nil [392 407])
+            ("KEXEC_FILE_UNLOAD" variable (:constant-flag t) nil [723 740])
+            ("KEXEC_FILE_ON_CRASH" variable (:constant-flag t) nil [760 779])
+            ("KEXEC_FILE_NO_INITRAMFS" variable (:constant-flag t) nil [799 822])
+            ("KEXEC_ARCH_DEFAULT" variable (:constant-flag t) nil [968 986])
+            ("KEXEC_ARCH_386" variable (:constant-flag t) nil [1006 1020])
+            ("KEXEC_ARCH_68K" variable (:constant-flag t) nil [1044 1058])
+            ("KEXEC_ARCH_X86_64" variable (:constant-flag t) nil [1082 1099])
+            ("KEXEC_ARCH_PPC" variable (:constant-flag t) nil [1120 1134])
+            ("KEXEC_ARCH_PPC64" variable (:constant-flag t) nil [1158 1174])
+            ("KEXEC_ARCH_IA_64" variable (:constant-flag t) nil [1196 1212])
+            ("KEXEC_ARCH_ARM" variable (:constant-flag t) nil [1234 1248])
+            ("KEXEC_ARCH_S390" variable (:constant-flag t) nil [1272 1287])
+            ("KEXEC_ARCH_SH" variable (:constant-flag t) nil [1310 1323])
+            ("KEXEC_ARCH_MIPS_LE" variable (:constant-flag t) nil [1348 1366])
+            ("KEXEC_ARCH_MIPS" variable (:constant-flag t) nil [1386 1401])
+            ("KEXEC_SEGMENT_MAX" variable (:constant-flag t) nil [1498 1515]))          
+      :file "kexec.h"
+      :pointmax 1792
+      :fsize 1791
+      :lastmodtime '(22567 40897 822848 688000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("KEXEC_ARCH_DEFAULT" . ((semantic-list "( 0 << 16)" 987 . 997)))
+          ("KEXEC_ARCH_PPC" . ((semantic-list "(20 << 16)" 1139 . 1149)))
+          ("KEXEC_ARCH_68K" . ((semantic-list "( 4 << 16)" 1063 . 1073)))
+          ("KEXEC_ARCH_X86_64" . ((semantic-list "(62 << 16)" 1101 . 1111)))
+          ("KEXEC_FILE_NO_INITRAMFS" . ((number "0x00000004" 823 . 833)))
+          ("KEXEC_ARCH_MIPS" . ((semantic-list "( 8 << 16)" 1405 . 1415)))
+          ("KEXEC_ARCH_386" . ((semantic-list "( 3 << 16)" 1025 . 1035)))
+          ("KEXEC_PRESERVE_CONTEXT" . ((number "0x00000002" 373 . 383)))
+          ("KEXEC_FILE_UNLOAD" . ((number "0x00000001" 741 . 751)))
+          ("KEXEC_ARCH_IA_64" . ((semantic-list "(50 << 16)" 1215 . 1225)))
+          ("KEXEC_ARCH_S390" . ((semantic-list "(22 << 16)" 1291 . 1301)))
+          ("KEXEC_FILE_ON_CRASH" . ((number "0x00000002" 780 . 790)))
+          ("KEXEC_ARCH_SH" . ((semantic-list "(42 << 16)" 1329 . 1339)))
+          ("KEXEC_SEGMENT_MAX" . ((number "16" 1516 . 1518)))
+          ("_UAPILINUX_KEXEC_H")
+          ("KEXEC_ON_CRASH" . ((number "0x00000001" 331 . 341)))
+          ("KEXEC_ARCH_MASK" . ((number "0xffff0000" 409 . 419)))
+          ("KEXEC_ARCH_PPC64" . ((semantic-list "(21 << 16)" 1177 . 1187)))
+          ("KEXEC_ARCH_ARM" . ((semantic-list "(40 << 16)" 1253 . 1263)))
+          ("KEXEC_ARCH_MIPS_LE" . ((semantic-list "(10 << 16)" 1367 . 1377)))
+          )
+)
+    (semanticdb-table "types.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_UAPI_LINUX_TYPES_H" variable (:constant-flag t) nil [37 56])
+            ("asm/types.h" include (:system-flag t) nil [58 80])
+            ("linux/posix_types.h" include (:system-flag t) nil [294 324])
+            ("__bitwise__" variable (:constant-flag t) nil [537 548])
+            ("__bitwise" variable (:constant-flag t) nil [624 633])
+            ("__le16" type
+               (:typedef ("__u16" type (:type "class") nil nil)
+                :type "typedef")
+                nil [642 673])
+            ("__be16" type
+               (:typedef ("__u16" type (:type "class") nil nil)
+                :type "typedef")
+                nil [674 705])
+            ("__le32" type
+               (:typedef ("__u32" type (:type "class") nil nil)
+                :type "typedef")
+                nil [706 737])
+            ("__be32" type
+               (:typedef ("__u32" type (:type "class") nil nil)
+                :type "typedef")
+                nil [738 769])
+            ("__le64" type
+               (:typedef ("__u64" type (:type "class") nil nil)
+                :type "typedef")
+                nil [770 801])
+            ("__be64" type
+               (:typedef ("__u64" type (:type "class") nil nil)
+                :type "typedef")
+                nil [802 833])
+            ("__sum16" type
+               (:typedef ("__u16" type (:type "class") nil nil)
+                :type "typedef")
+                nil [835 867])
+            ("__wsum" type
+               (:typedef ("__u32" type (:type "class") nil nil)
+                :type "typedef")
+                nil [868 899])
+            ("__aligned_u64" variable (:constant-flag t) nil [1411 1424])
+            ("__aligned_be64" variable (:constant-flag t) nil [1467 1481])
+            ("__aligned_le64" variable (:constant-flag t) nil [1525 1539]))          
+      :file "types.h"
+      :pointmax 1636
+      :fsize 1635
+      :lastmodtime '(22567 40897 842856 648000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__aligned_u64" . 
+              ((symbol "__u64" 1425 . 1430) (symbol "__attribute__" 1431 . 1444) (semantic-list "((aligned(8)))" 1444 . 1458)))
+          ("__aligned_le64" . 
+              ((symbol "__le64" 1540 . 1546) (symbol "__attribute__" 1547 . 1560) (semantic-list "((aligned(8)))" 1560 . 1574)))
+          ("_UAPI_LINUX_TYPES_H")
+          ("__bitwise__")
+          ("__bitwise")
+          ("__aligned_be64" . 
+              ((symbol "__be64" 1482 . 1488) (symbol "__attribute__" 1489 . 1502) (semantic-list "((aligned(8)))" 1502 . 1516)))
+          )
+)
+    (semanticdb-table "wait.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_UAPI_LINUX_WAIT_H" variable (:constant-flag t) nil [36 54])
+            ("WNOHANG" variable (:constant-flag t) nil [64 71])
+            ("WUNTRACED" variable (:constant-flag t) nil [92 101])
+            ("WSTOPPED" variable (:constant-flag t) nil [121 129])
+            ("WEXITED" variable (:constant-flag t) nil [148 155])
+            ("WCONTINUED" variable (:constant-flag t) nil [176 186])
+            ("WNOWAIT" variable (:constant-flag t) nil [206 213])
+            ("__WNOTHREAD" variable (:constant-flag t) nil [272 283])
+            ("__WALL" variable (:constant-flag t) nil [363 369])
+            ("__WCLONE" variable (:constant-flag t) nil [437 445])
+            ("P_ALL" variable (:constant-flag t) nil [538 543])
+            ("P_PID" variable (:constant-flag t) nil [555 560])
+            ("P_PGID" variable (:constant-flag t) nil [572 578]))          
+      :file "wait.h"
+      :pointmax 616
+      :fsize 615
+      :lastmodtime '(22567 40897 846858 240000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("P_ALL" . ((number "0" 545 . 546)))
+          ("P_PID" . ((number "1" 562 . 563)))
+          ("WCONTINUED" . ((number "0x00000008" 187 . 197)))
+          ("WUNTRACED" . ((number "0x00000002" 102 . 112)))
+          ("WSTOPPED" . ((symbol "WUNTRACED" 130 . 139)))
+          ("__WNOTHREAD" . ((number "0x20000000" 284 . 294)))
+          ("WEXITED" . ((number "0x00000004" 157 . 167)))
+          ("P_PGID" . ((number "2" 580 . 581)))
+          ("_UAPI_LINUX_WAIT_H")
+          ("__WALL" . ((number "0x40000000" 371 . 381)))
+          ("__WCLONE" . ((number "0x80000000" 446 . 456)))
+          ("WNOHANG" . ((number "0x00000001" 73 . 83)))
+          ("WNOWAIT" . ((number "0x01000000" 215 . 225)))
+          )
+)
+    (semanticdb-table "kdev_t.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_UAPI_LINUX_KDEV_T_H" variable (:constant-flag t) nil [38 58]))          
+      :file "kdev_t.h"
+      :pointmax 379
+      :fsize 378
+      :lastmodtime '(22567 40897 822848 688000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_UAPI_LINUX_KDEV_T_H")
+          )
+)
+    (semanticdb-table "stat.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_UAPI_LINUX_STAT_H" variable (:constant-flag t) nil [36 54])
+            ("S_IFMT" variable (:constant-flag t) nil [132 138])
+            ("S_IFSOCK" variable (:constant-flag t) nil [157 165])
+            ("S_IFLNK" variable (:constant-flag t) nil [182 189])
+            ("S_IFREG" variable (:constant-flag t) nil [207 214])
+            ("S_IFBLK" variable (:constant-flag t) nil [232 239])
+            ("S_IFDIR" variable (:constant-flag t) nil [257 264])
+            ("S_IFCHR" variable (:constant-flag t) nil [282 289])
+            ("S_IFIFO" variable (:constant-flag t) nil [307 314])
+            ("S_ISUID" variable (:constant-flag t) nil [332 339])
+            ("S_ISGID" variable (:constant-flag t) nil [357 364])
+            ("S_ISVTX" variable (:constant-flag t) nil [382 389])
+            ("S_ISLNK" variable (:constant-flag t) nil [408 415])
+            ("S_ISREG" variable (:constant-flag t) nil [455 462])
+            ("S_ISDIR" variable (:constant-flag t) nil [502 509])
+            ("S_ISCHR" variable (:constant-flag t) nil [549 556])
+            ("S_ISBLK" variable (:constant-flag t) nil [596 603])
+            ("S_ISFIFO" variable (:constant-flag t) nil [643 651])
+            ("S_ISSOCK" variable (:constant-flag t) nil [691 699])
+            ("S_IRWXU" variable (:constant-flag t) nil [741 748])
+            ("S_IRUSR" variable (:constant-flag t) nil [763 770])
+            ("S_IWUSR" variable (:constant-flag t) nil [785 792])
+            ("S_IXUSR" variable (:constant-flag t) nil [807 814])
+            ("S_IRWXG" variable (:constant-flag t) nil [830 837])
+            ("S_IRGRP" variable (:constant-flag t) nil [852 859])
+            ("S_IWGRP" variable (:constant-flag t) nil [874 881])
+            ("S_IXGRP" variable (:constant-flag t) nil [896 903])
+            ("S_IRWXO" variable (:constant-flag t) nil [919 926])
+            ("S_IROTH" variable (:constant-flag t) nil [941 948])
+            ("S_IWOTH" variable (:constant-flag t) nil [963 970])
+            ("S_IXOTH" variable (:constant-flag t) nil [985 992]))          
+      :file "stat.h"
+      :pointmax 1041
+      :fsize 1040
+      :lastmodtime '(22567 40897 838855 56000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("S_IWUSR" . ((number "00200" 793 . 798)))
+          ("S_IXGRP" . ((number "00010" 904 . 909)))
+          ("S_ISVTX" . ((number "0001000" 391 . 398)))
+          ("S_IXUSR" . ((number "00100" 815 . 820)))
+          ("S_IFIFO" . ((number "0010000" 316 . 323)))
+          ("S_ISUID" . ((number "0004000" 341 . 348)))
+          ("S_ISFIFO" (spp-arg-list ("m") 651 . 654) . ((semantic-list "(((m) & S_IFMT) == S_IFIFO)" 655 . 682)))
+          ("S_IRWXG" . ((number "00070" 838 . 843)))
+          ("S_IWOTH" . ((number "00002" 971 . 976)))
+          ("S_IFBLK" . ((number "0060000" 241 . 248)))
+          ("S_ISBLK" (spp-arg-list ("m") 603 . 606) . ((semantic-list "(((m) & S_IFMT) == S_IFBLK)" 607 . 634)))
+          ("S_IRWXU" . ((number "00700" 749 . 754)))
+          ("S_IXOTH" . ((number "00001" 993 . 998)))
+          ("S_IFSOCK" . ((number "0140000" 166 . 173)))
+          ("S_ISSOCK" (spp-arg-list ("m") 699 . 702) . ((semantic-list "(((m) & S_IFMT) == S_IFSOCK)" 703 . 731)))
+          ("S_IFREG" . ((number "0100000" 216 . 223)))
+          ("S_ISREG" (spp-arg-list ("m") 462 . 465) . ((semantic-list "(((m) & S_IFMT) == S_IFREG)" 466 . 493)))
+          ("S_IRGRP" . ((number "00040" 860 . 865)))
+          ("S_IFDIR" . ((number "0040000" 266 . 273)))
+          ("S_ISGID" . ((number "0002000" 366 . 373)))
+          ("S_ISDIR" (spp-arg-list ("m") 509 . 512) . ((semantic-list "(((m) & S_IFMT) == S_IFDIR)" 513 . 540)))
+          ("S_IRUSR" . ((number "00400" 771 . 776)))
+          ("S_IFMT" . ((number "00170000" 140 . 148)))
+          ("S_IFCHR" . ((number "0020000" 291 . 298)))
+          ("S_ISCHR" (spp-arg-list ("m") 556 . 559) . ((semantic-list "(((m) & S_IFMT) == S_IFCHR)" 560 . 587)))
+          ("_UAPI_LINUX_STAT_H")
+          ("S_IFLNK" . ((number "0120000" 191 . 198)))
+          ("S_ISLNK" (spp-arg-list ("m") 415 . 418) . ((semantic-list "(((m) & S_IFMT) == S_IFLNK)" 419 . 446)))
+          ("S_IWGRP" . ((number "00020" 882 . 887)))
+          ("S_IRWXO" . ((number "00007" 927 . 932)))
+          ("S_IROTH" . ((number "00004" 949 . 954)))
+          )
+)
+    (semanticdb-table "kernel.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_UAPI_LINUX_KERNEL_H" variable (:constant-flag t) nil [38 58])
+            ("linux/sysinfo.h" include (:system-flag t) nil [60 86])
+            ("__ALIGN_KERNEL" variable (:constant-flag t) nil [166 180])
+            ("__ALIGN_KERNEL_MASK" variable (:constant-flag t) nil [239 258])
+            ("__KERNEL_DIV_ROUND_UP" variable (:constant-flag t) nil [304 325]))          
+      :file "kernel.h"
+      :pointmax 391
+      :fsize 390
+      :lastmodtime '(22567 40897 822848 688000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_UAPI_LINUX_KERNEL_H")
+          ("__KERNEL_DIV_ROUND_UP" (spp-arg-list ("n" "d") 325 . 331) . ((semantic-list "(((n) + (d) - 1) / (d))" 332 . 355)))
+          ("__ALIGN_KERNEL_MASK" (spp-arg-list ("x" "mask") 258 . 267) . ((semantic-list "(((x) + (mask)) & ~(mask))" 268 . 294)))
+          ("__ALIGN_KERNEL" (spp-arg-list ("x" "a") 180 . 186) . ((symbol "__ALIGN_KERNEL_MASK" 188 . 207) (semantic-list "(x, (typeof(x))(a) - 1)" 207 . 230)))
+          )
+)
+    (semanticdb-table "const.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_LINUX_CONST_H" variable (:constant-flag t) nil [84 98])
+            ("__AC" variable (:constant-flag t) nil [488 492])
+            ("_AC" variable (:constant-flag t) nil [513 516])
+            ("_AT" variable (:constant-flag t) nil [540 543])
+            ("_BITUL" variable (:constant-flag t) nil [574 580])
+            ("_BITULL" variable (:constant-flag t) nil [611 618]))          
+      :file "const.h"
+      :pointmax 674
+      :fsize 673
+      :lastmodtime '(22567 40897 810843 911000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__AC" (spp-arg-list ("X" "Y") 492 . 497) . ((semantic-list "(X##Y)" 498 . 504)))
+          ("_AT" (spp-arg-list ("T" "X") 543 . 548) . ((semantic-list "((T)(X))" 549 . 557)))
+          ("_BITUL" (spp-arg-list ("x") 580 . 583) . ((semantic-list "(_AC(1,UL) << (x))" 584 . 602)))
+          ("_LINUX_CONST_H")
+          ("_BITULL" (spp-arg-list ("x") 618 . 621) . ((semantic-list "(_AC(1,ULL) << (x))" 622 . 641)))
+          ("_AC" (spp-arg-list ("X" "Y") 516 . 521) . ((symbol "__AC" 522 . 526) (semantic-list "(X,Y)" 526 . 531)))
+          )
+)
+    (semanticdb-table "capability.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_UAPI_LINUX_CAPABILITY_H" variable (:constant-flag t) nil [367 391])
+            ("linux/types.h" include (:system-flag t) nil [393 417])
+            ("task_struct" type
+               (:prototype t
+                :type "struct")
+                nil [419 438])
+            ("_LINUX_CAPABILITY_VERSION_1" variable (:constant-flag t) nil [941 968])
+            ("_LINUX_CAPABILITY_U32S_1" variable (:constant-flag t) nil [989 1013])
+            ("_LINUX_CAPABILITY_VERSION_2" variable (:constant-flag t) nil [1029 1056])
+            ("_LINUX_CAPABILITY_U32S_2" variable (:constant-flag t) nil [1104 1128])
+            ("_LINUX_CAPABILITY_VERSION_3" variable (:constant-flag t) nil [1144 1171])
+            ("_LINUX_CAPABILITY_U32S_3" variable (:constant-flag t) nil [1192 1216])
+            ("cap_user_header_t" variable
+               (:pointer 1
+                :type ((((0) "__user")) type (:superclasses ("__user_cap_header_struct" type (:members (("version" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1267 1281]) ("pid" variable (:type "int") (reparse-symbol classsubparts) [1283 1291])) :type "struct") nil nil) :type "typedef") nil nil))
+                nil [1224 1320])
+            ("cap_user_data_t" variable
+               (:pointer 1
+                :type ((((0) "__user")) type (:superclasses ("__user_cap_data_struct" type (:members (("effective" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1370 1386]) ("permitted" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1395 1411]) ("inheritable" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1420 1438])) :type "struct") nil nil) :type "typedef") nil nil))
+                nil [1322 1465])
+            ("VFS_CAP_REVISION_MASK" variable (:constant-flag t) nil [1476 1497])
+            ("VFS_CAP_REVISION_SHIFT" variable (:constant-flag t) nil [1517 1539])
+            ("VFS_CAP_FLAGS_MASK" variable (:constant-flag t) nil [1551 1569])
+            ("VFS_CAP_FLAGS_EFFECTIVE" variable (:constant-flag t) nil [1601 1624])
+            ("VFS_CAP_REVISION_1" variable (:constant-flag t) nil [1643 1661])
+            ("VFS_CAP_U32_1" variable (:constant-flag t) nil [1681 1694])
+            ("XATTR_CAPS_SZ_1" variable (:constant-flag t) nil [1715 1730])
+            ("VFS_CAP_REVISION_2" variable (:constant-flag t) nil [1787 1805])
+            ("VFS_CAP_U32_2" variable (:constant-flag t) nil [1825 1838])
+            ("XATTR_CAPS_SZ_2" variable (:constant-flag t) nil [1859 1874])
+            ("XATTR_CAPS_SZ" variable (:constant-flag t) nil [1931 1944])
+            ("VFS_CAP_U32" variable (:constant-flag t) nil [1979 1990])
+            ("VFS_CAP_REVISION" variable (:constant-flag t) nil [2025 2041])
+            ("vfs_cap_data" type
+               (:members 
+                  ( ("magic_etc" variable (:type ("__le32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2085 2102])
+                    ("data" variable
+                       (:dereference 1
+                        :type ("" type
+                             (:members 
+                                ( ("permitted" variable (:type ("__le32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2146 2163])
+                                  ("inheritable" variable (:type ("__le32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2189 2208]))                                
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [2135 2251]))                  
+                :type "struct")
+                nil [2062 2254])
+            ("CAP_CHOWN" variable (:constant-flag t) nil [2792 2801])
+            ("CAP_DAC_OVERRIDE" variable (:constant-flag t) nil [2972 2988])
+            ("CAP_DAC_READ_SEARCH" variable (:constant-flag t) nil [3208 3227])
+            ("CAP_FOWNER" variable (:constant-flag t) nil [3450 3460])
+            ("CAP_FSETID" variable (:constant-flag t) nil [3895 3905])
+            ("CAP_KILL" variable (:constant-flag t) nil [4109 4117])
+            ("CAP_SETGID" variable (:constant-flag t) nil [4260 4270])
+            ("CAP_SETUID" variable (:constant-flag t) nil [4405 4415])
+            ("CAP_SETPCAP" variable (:constant-flag t) nil [4934 4945])
+            ("CAP_LINUX_IMMUTABLE" variable (:constant-flag t) nil [5036 5055])
+            ("CAP_NET_BIND_SERVICE" variable (:constant-flag t) nil [5162 5182])
+            ("CAP_NET_BROADCAST" variable (:constant-flag t) nil [5242 5259])
+            ("CAP_NET_ADMIN" variable (:constant-flag t) nil [5868 5881])
+            ("CAP_NET_RAW" variable (:constant-flag t) nil [6048 6059])
+            ("CAP_IPC_LOCK" variable (:constant-flag t) nil [6214 6226])
+            ("CAP_IPC_OWNER" variable (:constant-flag t) nil [6284 6297])
+            ("CAP_SYS_MODULE" variable (:constant-flag t) nil [6386 6400])
+            ("CAP_SYS_RAWIO" variable (:constant-flag t) nil [6516 6529])
+            ("CAP_SYS_CHROOT" variable (:constant-flag t) nil [6578 6592])
+            ("CAP_SYS_PTRACE" variable (:constant-flag t) nil [6648 6662])
+            ("CAP_SYS_PACCT" variable (:constant-flag t) nil [6730 6743])
+            ("CAP_SYS_ADMIN" variable (:constant-flag t) nil [8433 8446])
+            ("CAP_SYS_BOOT" variable (:constant-flag t) nil [8495 8507])
+            ("CAP_SYS_NICE" variable (:constant-flag t) nil [8816 8828])
+            ("CAP_SYS_RESOURCE" variable (:constant-flag t) nil [9387 9403])
+            ("CAP_SYS_TIME" variable (:constant-flag t) nil [9533 9545])
+            ("CAP_SYS_TTY_CONFIG" variable (:constant-flag t) nil [9637 9655])
+            ("CAP_MKNOD" variable (:constant-flag t) nil [9717 9726])
+            ("CAP_LEASE" variable (:constant-flag t) nil [9789 9798])
+            ("CAP_AUDIT_WRITE" variable (:constant-flag t) nil [9884 9899])
+            ("CAP_AUDIT_CONTROL" variable (:constant-flag t) nil [9980 9997])
+            ("CAP_SETFCAP" variable (:constant-flag t) nil [10013 10024])
+            ("CAP_MAC_OVERRIDE" variable (:constant-flag t) nil [10288 10304])
+            ("CAP_MAC_ADMIN" variable (:constant-flag t) nil [10648 10661])
+            ("CAP_SYSLOG" variable (:constant-flag t) nil [10745 10755])
+            ("CAP_WAKE_ALARM" variable (:constant-flag t) nil [10838 10852])
+            ("CAP_BLOCK_SUSPEND" variable (:constant-flag t) nil [10916 10933])
+            ("CAP_AUDIT_READ" variable (:constant-flag t) nil [11013 11027])
+            ("CAP_LAST_CAP" variable (:constant-flag t) nil [11042 11054])
+            ("cap_valid" variable (:constant-flag t) nil [11087 11096])
+            ("CAP_TO_INDEX" variable (:constant-flag t) nil [11226 11238])
+            ("CAP_TO_MASK" variable (:constant-flag t) nil [11302 11313]))          
+      :file "capability.h"
+      :pointmax 11409
+      :fsize 11408
+      :lastmodtime '(22567 40897 810843 911000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_LINUX_CAPABILITY_U32S_1" . ((number "1" 1018 . 1019)))
+          ("VFS_CAP_REVISION_1" . ((number "0x01000000" 1662 . 1672)))
+          ("VFS_CAP_U32" . ((symbol "VFS_CAP_U32_2" 2003 . 2016)))
+          ("CAP_SETGID" . ((number "6" 4281 . 4282)))
+          ("CAP_SETPCAP" . ((number "8" 4955 . 4956)))
+          ("CAP_IPC_OWNER" . ((number "15" 6305 . 6307)))
+          ("CAP_SYS_NICE" . ((number "23" 8837 . 8839)))
+          ("_LINUX_CAPABILITY_U32S_2" . ((number "2" 1133 . 1134)))
+          ("VFS_CAP_FLAGS_MASK" . ((punctuation "~" 1570 . 1571) (symbol "VFS_CAP_REVISION_MASK" 1571 . 1592)))
+          ("XATTR_CAPS_SZ_1" . ((semantic-list "(sizeof(__le32)*(1 + 2*VFS_CAP_U32_1))" 1739 . 1777)))
+          ("VFS_CAP_REVISION_2" . ((number "0x02000000" 1806 . 1816)))
+          ("CAP_CHOWN" . ((number "0" 2813 . 2814)))
+          ("CAP_FSETID" . ((number "4" 3916 . 3917)))
+          ("CAP_SYS_PTRACE" . ((number "19" 6669 . 6671)))
+          ("_LINUX_CAPABILITY_U32S_3" . ((number "2" 1221 . 1222)))
+          ("VFS_CAP_REVISION_MASK" . ((number "0xFF000000" 1498 . 1508)))
+          ("XATTR_CAPS_SZ_2" . ((semantic-list "(sizeof(__le32)*(1 + 2*VFS_CAP_U32_2))" 1883 . 1921)))
+          ("XATTR_CAPS_SZ" . ((symbol "XATTR_CAPS_SZ_2" 1955 . 1970)))
+          ("CAP_NET_BIND_SERVICE" . ((number "10" 5183 . 5185)))
+          ("CAP_SYS_RAWIO" . ((number "17" 6537 . 6539)))
+          ("CAP_SYS_BOOT" . ((number "22" 8516 . 8518)))
+          ("CAP_TO_INDEX" (spp-arg-list ("x") 11238 . 11241) . ((semantic-list "((x) >> 5)" 11246 . 11256)))
+          ("CAP_AUDIT_CONTROL" . ((number "30" 10001 . 10003)))
+          ("CAP_SETFCAP" . ((number "31" 10030 . 10032)))
+          ("_LINUX_CAPABILITY_VERSION_1" . ((number "0x19980330" 970 . 980)))
+          ("CAP_DAC_READ_SEARCH" . ((number "2" 3229 . 3230)))
+          ("CAP_MKNOD" . ((number "27" 9738 . 9740)))
+          ("CAP_BLOCK_SUSPEND" . ((number "36" 10937 . 10939)))
+          ("CAP_AUDIT_READ" . ((number "37" 11029 . 11031)))
+          ("_LINUX_CAPABILITY_VERSION_2" . ((number "0x20071026" 1058 . 1068)))
+          ("CAP_IPC_LOCK" . ((number "14" 6235 . 6237)))
+          ("_LINUX_CAPABILITY_VERSION_3" . ((number "0x20080522" 1173 . 1183)))
+          ("CAP_KILL" . ((number "5" 4130 . 4131)))
+          ("CAP_NET_BROADCAST" . ((number "11" 5263 . 5265)))
+          ("CAP_NET_ADMIN" . ((number "12" 5889 . 5891)))
+          ("CAP_SYS_ADMIN" . ((number "21" 8454 . 8456)))
+          ("CAP_SYS_RESOURCE" . ((number "24" 9408 . 9410)))
+          ("_UAPI_LINUX_CAPABILITY_H")
+          ("CAP_FOWNER" . ((number "3" 3471 . 3472)))
+          ("CAP_MAC_ADMIN" . ((number "33" 10669 . 10671)))
+          ("CAP_WAKE_ALARM" . ((number "35" 10864 . 10866)))
+          ("CAP_LAST_CAP" . ((symbol "CAP_AUDIT_READ" 11063 . 11077)))
+          ("CAP_LEASE" . ((number "28" 9810 . 9812)))
+          ("CAP_AUDIT_WRITE" . ((number "29" 9905 . 9907)))
+          ("CAP_SYSLOG" . ((number "34" 10766 . 10768)))
+          ("VFS_CAP_U32_1" . ((number "1" 1705 . 1706)))
+          ("CAP_DAC_OVERRIDE" . ((number "1" 2993 . 2994)))
+          ("CAP_SETUID" . ((number "7" 4426 . 4427)))
+          ("CAP_NET_RAW" . ((number "13" 6069 . 6071)))
+          ("CAP_SYS_MODULE" . ((number "16" 6407 . 6409)))
+          ("cap_valid" (spp-arg-list ("x") 11096 . 11099) . ((semantic-list "((x) >= 0 && (x) <= CAP_LAST_CAP)" 11100 . 11133)))
+          ("CAP_TO_MASK" (spp-arg-list ("x") 11313 . 11316) . ((semantic-list "(1 << ((x) & 31))" 11322 . 11339)))
+          ("VFS_CAP_FLAGS_EFFECTIVE" . ((number "0x000001" 1625 . 1633)))
+          ("VFS_CAP_U32_2" . ((number "2" 1849 . 1850)))
+          ("CAP_SYS_TIME" . ((number "25" 9554 . 9556)))
+          ("VFS_CAP_REVISION_SHIFT" . ((number "24" 1540 . 1542)))
+          ("VFS_CAP_REVISION" . ((symbol "VFS_CAP_REVISION_2" 2042 . 2060)))
+          ("CAP_LINUX_IMMUTABLE" . ((number "9" 5057 . 5058)))
+          ("CAP_SYS_PACCT" . ((number "20" 6751 . 6753)))
+          ("CAP_SYS_TTY_CONFIG" . ((number "26" 9658 . 9660)))
+          ("CAP_SYS_CHROOT" . ((number "18" 6599 . 6601)))
+          ("CAP_MAC_OVERRIDE" . ((number "32" 10309 . 10311)))
+          )
+)
+    (semanticdb-table "limits.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_LINUX_LIMITS_H" variable (:constant-flag t) nil [33 48])
+            ("NR_OPEN" variable (:constant-flag t) nil [58 65])
+            ("NGROUPS_MAX" variable (:constant-flag t) nil [88 99])
+            ("ARG_MAX" variable (:constant-flag t) nil [160 167])
+            ("LINK_MAX" variable (:constant-flag t) nil [232 240])
+            ("MAX_CANON" variable (:constant-flag t) nil [291 300])
+            ("MAX_INPUT" variable (:constant-flag t) nil [360 369])
+            ("NAME_MAX" variable (:constant-flag t) nil [425 433])
+            ("PATH_MAX" variable (:constant-flag t) nil [483 491])
+            ("PIPE_BUF" variable (:constant-flag t) nil [555 563])
+            ("XATTR_NAME_MAX" variable (:constant-flag t) nil [624 638])
+            ("XATTR_SIZE_MAX" variable (:constant-flag t) nil [697 711])
+            ("XATTR_LIST_MAX" variable (:constant-flag t) nil [774 788])
+            ("RTSIG_MAX" variable (:constant-flag t) nil [852 861]))          
+      :file "limits.h"
+      :pointmax 875
+      :fsize 874
+      :lastmodtime '(22567 40897 822848 688000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("NR_OPEN" . ((number "1024" 74 . 78)))
+          ("MAX_INPUT" . ((number "255" 377 . 380)))
+          ("XATTR_SIZE_MAX" . ((number "65536" 712 . 717)))
+          ("XATTR_LIST_MAX" . ((number "65536" 789 . 794)))
+          ("PIPE_BUF" . ((number "4096" 571 . 575)))
+          ("ARG_MAX" . ((number "131072" 174 . 180)))
+          ("MAX_CANON" . ((number "255" 308 . 311)))
+          ("XATTR_NAME_MAX" . ((number "255" 641 . 644)))
+          ("NAME_MAX" . ((number "255" 442 . 445)))
+          ("PATH_MAX" . ((number "4096" 499 . 503)))
+          ("_LINUX_LIMITS_H")
+          ("LINK_MAX" . ((number "127" 249 . 252)))
+          ("RTSIG_MAX" . ((number "32" 864 . 866)))
+          ("NGROUPS_MAX" . ((number "65536" 103 . 108)))
+          )
+)
+    (semanticdb-table "ioctl.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_LINUX_IOCTL_H" variable (:constant-flag t) nil [32 46])
+            ("asm/ioctl.h" include (:system-flag t) nil [48 70]))          
+      :file "ioctl.h"
+      :pointmax 101
+      :fsize 100
+      :lastmodtime '(22567 40897 822848 688000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_LINUX_IOCTL_H")
+          )
+)
+    (semanticdb-table "dqblk_xfs.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_LINUX_DQBLK_XFS_H" variable (:constant-flag t) nil [784 802])
+            ("linux/types.h" include (:system-flag t) nil [804 828])
+            ("XQM_CMD" variable (:constant-flag t) nil [916 923])
+            ("XQM_COMMAND" variable (:constant-flag t) nil [988 999])
+            ("XQM_USRQUOTA" variable (:constant-flag t) nil [1066 1078])
+            ("XQM_GRPQUOTA" variable (:constant-flag t) nil [1123 1135])
+            ("XQM_PRJQUOTA" variable (:constant-flag t) nil [1181 1193])
+            ("XQM_MAXQUOTAS" variable (:constant-flag t) nil [1241 1254])
+            ("Q_XQUOTAON" variable (:constant-flag t) nil [1266 1276])
+            ("Q_XQUOTAOFF" variable (:constant-flag t) nil [1332 1343])
+            ("Q_XGETQUOTA" variable (:constant-flag t) nil [1400 1411])
+            ("Q_XSETQLIM" variable (:constant-flag t) nil [1463 1473])
+            ("Q_XGETQSTAT" variable (:constant-flag t) nil [1515 1526])
+            ("Q_XQUOTARM" variable (:constant-flag t) nil [1579 1589])
+            ("Q_XQUOTASYNC" variable (:constant-flag t) nil [1646 1658])
+            ("Q_XGETQSTATV" variable (:constant-flag t) nil [1715 1727])
+            ("Q_XGETNEXTQUOTA" variable (:constant-flag t) nil [1780 1795])
+            ("FS_DQUOT_VERSION" variable (:constant-flag t) nil [2058 2074])
+            ("fs_disk_quota" type
+               (:members 
+                  ( ("d_version" variable (:type ("__s8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2139 2155])
+                    ("d_flags" variable (:type ("__s8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2189 2203])
+                    ("d_fieldmask" variable (:type ("__u16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2238 2257])
+                    ("d_id" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2281 2293])
+                    ("d_blk_hardlimit" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2329 2352])
+                    ("d_blk_softlimit" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2387 2410])
+                    ("d_ino_hardlimit" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2446 2469])
+                    ("d_ino_softlimit" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2503 2526])
+                    ("d_bcount" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2555 2571])
+                    ("d_icount" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2611 2627])
+                    ("d_itimer" variable (:type ("__s32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2662 2678])
+                    ("d_btimer" variable (:type ("__s32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2751 2767])
+                    ("d_iwarns" variable (:type ("__u16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2809 2827])
+                    ("d_bwarns" variable (:type ("__u16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2874 2892])
+                    ("d_padding2" variable (:type ("__s32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2940 2958])
+                    ("d_rtb_hardlimit" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2992 3015])
+                    ("d_rtb_softlimit" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3054 3077])
+                    ("d_rtbcount" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3116 3134])
+                    ("d_rtbtimer" variable (:type ("__s32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3166 3184])
+                    ("d_rtbwarns" variable (:type ("__u16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3227 3247])
+                    ("d_padding3" variable (:type ("__s16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [3294 3312])
+                    ("d_padding4" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [3347 3367]))                  
+                :type "struct")
+                nil [2107 3409])
+            ("fs_disk_quota_t" type
+               (:typedef ("fs_disk_quota" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [2107 3409])
+            ("FS_DQ_ISOFT" variable (:constant-flag t) nil [3504 3515])
+            ("FS_DQ_IHARD" variable (:constant-flag t) nil [3531 3542])
+            ("FS_DQ_BSOFT" variable (:constant-flag t) nil [3558 3569])
+            ("FS_DQ_BHARD" variable (:constant-flag t) nil [3585 3596])
+            ("FS_DQ_RTBSOFT" variable (:constant-flag t) nil [3613 3626])
+            ("FS_DQ_RTBHARD" variable (:constant-flag t) nil [3642 3655])
+            ("FS_DQ_LIMIT_MASK" variable (:constant-flag t) nil [3671 3687])
+            ("FS_DQ_BTIMER" variable (:constant-flag t) nil [4132 4144])
+            ("FS_DQ_ITIMER" variable (:constant-flag t) nil [4160 4172])
+            ("FS_DQ_RTBTIMER" variable (:constant-flag t) nil [4188 4202])
+            ("FS_DQ_TIMER_MASK" variable (:constant-flag t) nil [4219 4235])
+            ("FS_DQ_BWARNS" variable (:constant-flag t) nil [4708 4720])
+            ("FS_DQ_IWARNS" variable (:constant-flag t) nil [4736 4748])
+            ("FS_DQ_RTBWARNS" variable (:constant-flag t) nil [4765 4779])
+            ("FS_DQ_WARNS_MASK" variable (:constant-flag t) nil [4796 4812])
+            ("FS_DQ_BCOUNT" variable (:constant-flag t) nil [5010 5022])
+            ("FS_DQ_ICOUNT" variable (:constant-flag t) nil [5040 5052])
+            ("FS_DQ_RTBCOUNT" variable (:constant-flag t) nil [5070 5084])
+            ("FS_DQ_ACCT_MASK" variable (:constant-flag t) nil [5102 5117])
+            ("FS_QUOTA_UDQ_ACCT" variable (:constant-flag t) nil [5223 5240])
+            ("FS_QUOTA_UDQ_ENFD" variable (:constant-flag t) nil [5285 5302])
+            ("FS_QUOTA_GDQ_ACCT" variable (:constant-flag t) nil [5355 5372])
+            ("FS_QUOTA_GDQ_ENFD" variable (:constant-flag t) nil [5418 5435])
+            ("FS_QUOTA_PDQ_ACCT" variable (:constant-flag t) nil [5489 5506])
+            ("FS_QUOTA_PDQ_ENFD" variable (:constant-flag t) nil [5554 5571])
+            ("FS_USER_QUOTA" variable (:constant-flag t) nil [5628 5641])
+            ("FS_PROJ_QUOTA" variable (:constant-flag t) nil [5680 5693])
+            ("FS_GROUP_QUOTA" variable (:constant-flag t) nil [5735 5749])
+            ("FS_QSTAT_VERSION" variable (:constant-flag t) nil [6045 6061])
+            ("fs_qfilestat" type
+               (:members 
+                  ( ("qfs_ino" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6181 6196])
+                    ("qfs_nblks" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6217 6234])
+                    ("qfs_nextents" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6270 6290]))                  
+                :type "struct")
+                nil [6150 6332])
+            ("fs_qfilestat_t" type
+               (:typedef ("fs_qfilestat" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [6150 6332])
+            ("fs_quota_stat" type
+               (:members 
+                  ( ("qs_version" variable (:type ("__s8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6366 6383])
+                    ("qs_flags" variable (:type ("__u16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6425 6441])
+                    ("qs_pad" variable (:type ("__s8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6480 6493])
+                    ("qs_uquota" variable (:type ("fs_qfilestat_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6509 6534])
+                    ("qs_gquota" variable (:type ("fs_qfilestat_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6573 6598])
+                    ("qs_incoredqs" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6638 6658])
+                    ("qs_btimelimit" variable (:type ("__s32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6690 6711])
+                    ("qs_itimelimit" variable (:type ("__s32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6742 6763])
+                    ("qs_rtbtimelimit" variable (:type ("__s32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6796 6819])
+                    ("qs_bwarnlimit" variable (:type ("__u16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6851 6872])
+                    ("qs_iwarnlimit" variable (:type ("__u16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [6903 6924]))                  
+                :type "struct")
+                nil [6334 6972])
+            ("fs_quota_stat_t" type
+               (:typedef ("fs_quota_stat" type (:type "struct") nil nil)
+                :type "typedef")
+                nil [6334 6972])
+            ("FS_QSTATV_VERSION1" variable (:constant-flag t) nil [7834 7852])
+            ("fs_qfilestatv" type
+               (:members 
+                  ( ("qfs_ino" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [7989 8004])
+                    ("qfs_nblks" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8025 8042])
+                    ("qfs_nextents" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8078 8098])
+                    ("qfs_pad" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8124 8139]))                  
+                :type "struct")
+                nil [7965 8173])
+            ("fs_quota_statv" type
+               (:members 
+                  ( ("qs_version" variable (:type ("__s8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8200 8218])
+                    ("qs_pad1" variable (:type ("__u8" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8253 8268])
+                    ("qs_flags" variable (:type ("__u16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8300 8317])
+                    ("qs_incoredqs" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8343 8364])
+                    ("qs_uquota" variable (:type ("fs_qfilestatv" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [8396 8427])
+                    ("qs_gquota" variable (:type ("fs_qfilestatv" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [8458 8489])
+                    ("qs_pquota" variable (:type ("fs_qfilestatv" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [8521 8552])
+                    ("qs_btimelimit" variable (:type ("__s32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8586 8608])
+                    ("qs_itimelimit" variable (:type ("__s32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8638 8660])
+                    ("qs_rtbtimelimit" variable (:type ("__s32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8692 8716])
+                    ("qs_bwarnlimit" variable (:type ("__u16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8747 8769])
+                    ("qs_iwarnlimit" variable (:type ("__u16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [8800 8822])
+                    ("qs_pad2" variable
+                       (:dereference 1
+                        :type ("__u64" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [8853 8872]))                  
+                :type "struct")
+                nil [8175 8901]))          
+      :file "dqblk_xfs.h"
+      :pointmax 8935
+      :fsize 8934
+      :lastmodtime '(22567 40897 814845 504000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("Q_XGETQSTATV" . ((symbol "XQM_CMD" 1728 . 1735) (semantic-list "(8)" 1735 . 1738)))
+          ("FS_DQ_TIMER_MASK" . ((semantic-list "(FS_DQ_BTIMER | FS_DQ_ITIMER | FS_DQ_RTBTIMER)" 4236 . 4282)))
+          ("FS_QUOTA_UDQ_ACCT" . ((semantic-list "(1<<0)" 5241 . 5247)))
+          ("Q_XGETQUOTA" . ((symbol "XQM_CMD" 1412 . 1419) (semantic-list "(3)" 1419 . 1422)))
+          ("FS_DQ_LIMIT_MASK" . ((semantic-list "(FS_DQ_ISOFT | FS_DQ_IHARD | FS_DQ_BSOFT | \\
+				 FS_DQ_BHARD | FS_DQ_RTBSOFT | FS_DQ_RTBHARD)" 3688 . 3782)))
+          ("FS_DQ_ITIMER" . ((semantic-list "(1<<7)" 4173 . 4179)))
+          ("FS_USER_QUOTA" . ((semantic-list "(1<<0)" 5643 . 5649)))
+          ("FS_QUOTA_GDQ_ENFD" . ((semantic-list "(1<<3)" 5436 . 5442)))
+          ("_LINUX_DQBLK_XFS_H")
+          ("FS_DQ_BTIMER" . ((semantic-list "(1<<6)" 4145 . 4151)))
+          ("FS_DQ_WARNS_MASK" . ((semantic-list "(FS_DQ_BWARNS | FS_DQ_IWARNS | FS_DQ_RTBWARNS)" 4813 . 4859)))
+          ("FS_QUOTA_PDQ_ENFD" . ((semantic-list "(1<<5)" 5572 . 5578)))
+          ("XQM_CMD" (spp-arg-list ("x") 923 . 926) . ((semantic-list "(('X'<<8)+(x))" 927 . 941)))
+          ("XQM_MAXQUOTAS" . ((number "3" 1255 . 1256)))
+          ("Q_XQUOTAON" . ((symbol "XQM_CMD" 1277 . 1284) (semantic-list "(1)" 1284 . 1287)))
+          ("FS_DQ_RTBWARNS" . ((semantic-list "(1<<11)" 4780 . 4787)))
+          ("XQM_USRQUOTA" . ((number "0" 1079 . 1080)))
+          ("FS_DQ_RTBSOFT" . ((semantic-list "(1<<4)" 3627 . 3633)))
+          ("FS_DQ_RTBHARD" . ((semantic-list "(1<<5)" 3656 . 3662)))
+          ("FS_DQ_ICOUNT" . ((semantic-list "(1<<13)" 5054 . 5061)))
+          ("FS_QUOTA_UDQ_ENFD" . ((semantic-list "(1<<1)" 5303 . 5309)))
+          ("Q_XQUOTAOFF" . ((symbol "XQM_CMD" 1344 . 1351) (semantic-list "(2)" 1351 . 1354)))
+          ("Q_XSETQLIM" . ((symbol "XQM_CMD" 1474 . 1481) (semantic-list "(4)" 1481 . 1484)))
+          ("Q_XGETQSTAT" . ((symbol "XQM_CMD" 1527 . 1534) (semantic-list "(5)" 1534 . 1537)))
+          ("Q_XGETNEXTQUOTA" . ((symbol "XQM_CMD" 1796 . 1803) (semantic-list "(9)" 1803 . 1806)))
+          ("XQM_COMMAND" (spp-arg-list ("x") 999 . 1002) . ((semantic-list "(((x) & (0xff<<8)) == ('X'<<8))" 1003 . 1034)))
+          ("FS_DQ_ISOFT" . ((semantic-list "(1<<0)" 3516 . 3522)))
+          ("FS_DQ_IHARD" . ((semantic-list "(1<<1)" 3543 . 3549)))
+          ("FS_DQ_BCOUNT" . ((semantic-list "(1<<12)" 5024 . 5031)))
+          ("FS_DQ_ACCT_MASK" . ((semantic-list "(FS_DQ_BCOUNT | FS_DQ_ICOUNT | FS_DQ_RTBCOUNT)" 5119 . 5165)))
+          ("FS_GROUP_QUOTA" . ((semantic-list "(1<<2)" 5751 . 5757)))
+          ("FS_QSTATV_VERSION1" . ((number "1" 7853 . 7854)))
+          ("XQM_PRJQUOTA" . ((number "2" 1194 . 1195)))
+          ("FS_DQ_RTBTIMER" . ((semantic-list "(1<<8)" 4204 . 4210)))
+          ("XQM_GRPQUOTA" . ((number "1" 1136 . 1137)))
+          ("FS_DQUOT_VERSION" . ((number "1" 2075 . 2076)))
+          ("FS_PROJ_QUOTA" . ((semantic-list "(1<<1)" 5695 . 5701)))
+          ("FS_DQ_IWARNS" . ((semantic-list "(1<<10)" 4749 . 4756)))
+          ("FS_QUOTA_GDQ_ACCT" . ((semantic-list "(1<<2)" 5373 . 5379)))
+          ("FS_QSTAT_VERSION" . ((number "1" 6062 . 6063)))
+          ("Q_XQUOTASYNC" . ((symbol "XQM_CMD" 1659 . 1666) (semantic-list "(7)" 1666 . 1669)))
+          ("FS_QUOTA_PDQ_ACCT" . ((semantic-list "(1<<4)" 5507 . 5513)))
+          ("Q_XQUOTARM" . ((symbol "XQM_CMD" 1590 . 1597) (semantic-list "(6)" 1597 . 1600)))
+          ("FS_DQ_BSOFT" . ((semantic-list "(1<<2)" 3570 . 3576)))
+          ("FS_DQ_BHARD" . ((semantic-list "(1<<3)" 3598 . 3604)))
+          ("FS_DQ_BWARNS" . ((semantic-list "(1<<9)" 4721 . 4727)))
+          ("FS_DQ_RTBCOUNT" . ((semantic-list "(1<<14)" 5086 . 5093)))
+          )
+)
+    (semanticdb-table "quota.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_UAPI_LINUX_QUOTA_" variable (:constant-flag t) nil [1740 1758])
+            ("linux/errno.h" include (:system-flag t) nil [1760 1784])
+            ("linux/types.h" include (:system-flag t) nil [1785 1809])
+            ("__DQUOT_VERSION__" variable (:constant-flag t) nil [1819 1836])
+            ("MAXQUOTAS" variable (:constant-flag t) nil [1860 1869])
+            ("USRQUOTA" variable (:constant-flag t) nil [1880 1888])
+            ("GRPQUOTA" variable (:constant-flag t) nil [1936 1944])
+            ("PRJQUOTA" variable (:constant-flag t) nil [1993 2001])
+            ("INITQFNAMES" variable (:constant-flag t) nil [2118 2129])
+            ("SUBCMDMASK" variable (:constant-flag t) nil [2475 2485])
+            ("SUBCMDSHIFT" variable (:constant-flag t) nil [2502 2513])
+            ("QCMD" variable (:constant-flag t) nil [2524 2528])
+            ("Q_SYNC" variable (:constant-flag t) nil [2599 2605])
+            ("Q_QUOTAON" variable (:constant-flag t) nil [2672 2681])
+            ("Q_QUOTAOFF" variable (:constant-flag t) nil [2721 2731])
+            ("Q_GETFMT" variable (:constant-flag t) nil [2771 2779])
+            ("Q_GETINFO" variable (:constant-flag t) nil [2847 2856])
+            ("Q_SETINFO" variable (:constant-flag t) nil [2915 2924])
+            ("Q_GETQUOTA" variable (:constant-flag t) nil [2983 2993])
+            ("Q_SETQUOTA" variable (:constant-flag t) nil [3042 3052])
+            ("Q_GETNEXTQUOTA" variable (:constant-flag t) nil [3101 3115])
+            ("QFMT_VFS_OLD" variable (:constant-flag t) nil [3200 3212])
+            ("QFMT_VFS_V0" variable (:constant-flag t) nil [3223 3234])
+            ("QFMT_OCFS2" variable (:constant-flag t) nil [3245 3255])
+            ("QFMT_VFS_V1" variable (:constant-flag t) nil [3266 3277])
+            ("QIF_DQBLKSIZE_BITS" variable (:constant-flag t) nil [3373 3391])
+            ("QIF_DQBLKSIZE" variable (:constant-flag t) nil [3403 3416])
+            ("" type
+               (:members 
+                  ( ("QIF_BLIMITS_B" variable
+                       (:constant-flag t
+                        :default-value (3607 3608)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3591 3608])
+                    ("QIF_SPACE_B" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3611 3623])
+                    ("QIF_ILIMITS_B" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3625 3639])
+                    ("QIF_INODES_B" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3641 3654])
+                    ("QIF_BTIME_B" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3656 3668])
+                    ("QIF_ITIME_B" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [3670 3682]))                  
+                :type "enum")
+                nil [3583 3685])
+            ("QIF_BLIMITS" variable (:constant-flag t) nil [3695 3706])
+            ("QIF_SPACE" variable (:constant-flag t) nil [3736 3745])
+            ("QIF_ILIMITS" variable (:constant-flag t) nil [3773 3784])
+            ("QIF_INODES" variable (:constant-flag t) nil [3814 3824])
+            ("QIF_BTIME" variable (:constant-flag t) nil [3853 3862])
+            ("QIF_ITIME" variable (:constant-flag t) nil [3890 3899])
+            ("QIF_LIMITS" variable (:constant-flag t) nil [3927 3937])
+            ("QIF_USAGE" variable (:constant-flag t) nil [3974 3983])
+            ("QIF_TIMES" variable (:constant-flag t) nil [4017 4026])
+            ("QIF_ALL" variable (:constant-flag t) nil [4059 4066])
+            ("if_dqblk" type
+               (:members 
+                  ( ("dqb_bhardlimit" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4125 4146])
+                    ("dqb_bsoftlimit" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4148 4169])
+                    ("dqb_curspace" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4171 4190])
+                    ("dqb_ihardlimit" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4192 4213])
+                    ("dqb_isoftlimit" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4215 4236])
+                    ("dqb_curinodes" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4238 4258])
+                    ("dqb_btime" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4260 4276])
+                    ("dqb_itime" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4278 4294])
+                    ("dqb_valid" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4296 4312]))                  
+                :type "struct")
+                nil [4106 4315])
+            ("if_nextdqblk" type
+               (:members 
+                  ( ("dqb_bhardlimit" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4340 4361])
+                    ("dqb_bsoftlimit" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4363 4384])
+                    ("dqb_curspace" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4386 4405])
+                    ("dqb_ihardlimit" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4407 4428])
+                    ("dqb_isoftlimit" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4430 4451])
+                    ("dqb_curinodes" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4453 4473])
+                    ("dqb_btime" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4475 4491])
+                    ("dqb_itime" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4493 4509])
+                    ("dqb_valid" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4511 4527])
+                    ("dqb_id" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [4529 4542]))                  
+                :type "struct")
+                nil [4317 4545])
+            ("IIF_BGRACE" variable (:constant-flag t) nil [4696 4706])
+            ("IIF_IGRACE" variable (:constant-flag t) nil [4717 4727])
+            ("IIF_FLAGS" variable (:constant-flag t) nil [4738 4747])
+            ("IIF_ALL" variable (:constant-flag t) nil [4758 4765])
+            ("" type
+               (:members 
+                  ( ("DQF_ROOT_SQUASH_B" variable
+                       (:constant-flag t
+                        :default-value (4834 4835)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4814 4835])
+                    ("DQF_SYS_FILE_B" variable
+                       (:constant-flag t
+                        :default-value (4855 4857)
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4838 4857])
+                    ("DQF_PRIVATE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [4912 4925]))                  
+                :type "enum")
+                nil [4806 4926])
+            ("DQF_ROOT_SQUASH" variable (:constant-flag t) nil [4984 4999])
+            ("DQF_SYS_FILE" variable (:constant-flag t) nil [5069 5081])
+            ("if_dqinfo" type
+               (:members 
+                  ( ("dqi_bgrace" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5125 5142])
+                    ("dqi_igrace" variable (:type ("__u64" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5144 5161])
+                    ("dqi_flags" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5163 5179])
+                    ("dqi_valid" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [5193 5209]))                  
+                :type "struct")
+                nil [5105 5212])
+            ("QUOTA_NL_NOWARN" variable (:constant-flag t) nil [5272 5287])
+            ("QUOTA_NL_IHARDWARN" variable (:constant-flag t) nil [5298 5316])
+            ("QUOTA_NL_ISOFTLONGWARN" variable (:constant-flag t) nil [5358 5380])
+            ("QUOTA_NL_ISOFTWARN" variable (:constant-flag t) nil [5423 5441])
+            ("QUOTA_NL_BHARDWARN" variable (:constant-flag t) nil [5483 5501])
+            ("QUOTA_NL_BSOFTLONGWARN" variable (:constant-flag t) nil [5543 5565])
+            ("QUOTA_NL_BSOFTWARN" variable (:constant-flag t) nil [5607 5625])
+            ("QUOTA_NL_IHARDBELOW" variable (:constant-flag t) nil [5667 5686])
+            ("QUOTA_NL_ISOFTBELOW" variable (:constant-flag t) nil [5736 5755])
+            ("QUOTA_NL_BHARDBELOW" variable (:constant-flag t) nil [5805 5824])
+            ("QUOTA_NL_BSOFTBELOW" variable (:constant-flag t) nil [5874 5893])
+            ("" type
+               (:members 
+                  ( ("QUOTA_NL_C_UNSPEC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5945 5963])
+                    ("QUOTA_NL_C_WARNING" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5965 5984])
+                    ("__QUOTA_NL_C_MAX" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [5986 6003]))                  
+                :type "enum")
+                nil [5937 6006])
+            ("QUOTA_NL_C_MAX" variable (:constant-flag t) nil [6015 6029])
+            ("" type
+               (:members 
+                  ( ("QUOTA_NL_A_UNSPEC" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [6062 6080])
+                    ("QUOTA_NL_A_QTYPE" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [6082 6099])
+                    ("QUOTA_NL_A_EXCESS_ID" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [6101 6122])
+                    ("QUOTA_NL_A_WARNING" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [6124 6143])
+                    ("QUOTA_NL_A_DEV_MAJOR" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [6145 6166])
+                    ("QUOTA_NL_A_DEV_MINOR" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [6168 6189])
+                    ("QUOTA_NL_A_CAUSED_ID" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [6191 6212])
+                    ("__QUOTA_NL_A_MAX" variable
+                       (:constant-flag t
+                        :type "int")
+                        (reparse-symbol enumsubparts) [6214 6231]))                  
+                :type "enum")
+                nil [6054 6234])
+            ("QUOTA_NL_A_MAX" variable (:constant-flag t) nil [6243 6257]))          
+      :file "quota.h"
+      :pointmax 6315
+      :fsize 6314
+      :lastmodtime '(22567 40897 834853 464000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("Q_QUOTAON" . ((number "0x800002" 2683 . 2691)))
+          ("QIF_DQBLKSIZE" . ((semantic-list "(1 << QIF_DQBLKSIZE_BITS)" 3417 . 3442)))
+          ("QIF_ILIMITS" . ((semantic-list "(1 << QIF_ILIMITS_B)" 3785 . 3805)))
+          ("QIF_ITIME" . ((semantic-list "(1 << QIF_ITIME_B)" 3900 . 3918)))
+          ("IIF_ALL" . ((semantic-list "(IIF_BGRACE | IIF_IGRACE | IIF_FLAGS)" 4767 . 4804)))
+          ("USRQUOTA" . ((number "0" 1890 . 1891)))
+          ("INITQFNAMES" . ((semantic-list "{ \\
+	\"user\",    /* USRQUOTA */ \\
+	\"group\",   /* GRPQUOTA */ \\
+	\"project\", /* PRJQUOTA */ \\
+	\"undefined\", \\
+}" 2130 . 2238) (punctuation ";" 2238 . 2239)))
+          ("QIF_DQBLKSIZE_BITS" . ((number "10" 3392 . 3394)))
+          ("DQF_SYS_FILE" . ((semantic-list "(1 << DQF_SYS_FILE_B)" 5082 . 5103)))
+          ("QUOTA_NL_IHARDWARN" . ((number "1" 5317 . 5318)))
+          ("QUOTA_NL_ISOFTWARN" . ((number "3" 5442 . 5443)))
+          ("QUOTA_NL_A_MAX" . ((semantic-list "(__QUOTA_NL_A_MAX - 1)" 6258 . 6280)))
+          ("Q_SYNC" . ((number "0x800001" 2610 . 2618)))
+          ("Q_GETQUOTA" . ((number "0x800007" 2994 . 3002)))
+          ("QIF_SPACE" . ((semantic-list "(1 << QIF_SPACE_B)" 3746 . 3764)))
+          ("Q_GETFMT" . ((number "0x800004" 2782 . 2790)))
+          ("QFMT_VFS_OLD" . ((number "1" 3213 . 3214)))
+          ("QIF_INODES" . ((semantic-list "(1 << QIF_INODES_B)" 3825 . 3844)))
+          ("QUOTA_NL_BHARDWARN" . ((number "4" 5502 . 5503)))
+          ("QUOTA_NL_BSOFTWARN" . ((number "6" 5626 . 5627)))
+          ("PRJQUOTA" . ((number "2" 2003 . 2004)))
+          ("IIF_FLAGS" . ((number "4" 4748 . 4749)))
+          ("QUOTA_NL_BHARDBELOW" . ((number "9" 5825 . 5826)))
+          ("QUOTA_NL_BSOFTBELOW" . ((number "10" 5894 . 5896)))
+          ("MAXQUOTAS" . ((number "3" 1870 . 1871)))
+          ("GRPQUOTA" . ((number "1" 1946 . 1947)))
+          ("Q_SETINFO" . ((number "0x800006" 2926 . 2934)))
+          ("QIF_BTIME" . ((semantic-list "(1 << QIF_BTIME_B)" 3863 . 3881)))
+          ("SUBCMDMASK" . ((number "0x00ff" 2487 . 2493)))
+          ("Q_GETINFO" . ((number "0x800005" 2858 . 2866)))
+          ("QFMT_VFS_V0" . ((number "2" 3235 . 3236)))
+          ("QIF_BLIMITS" . ((semantic-list "(1 << QIF_BLIMITS_B)" 3707 . 3727)))
+          ("QUOTA_NL_ISOFTLONGWARN" . ((number "2" 5381 . 5382)))
+          ("_UAPI_LINUX_QUOTA_")
+          ("Q_QUOTAOFF" . ((number "0x800003" 2732 . 2740)))
+          ("QFMT_OCFS2" . ((number "3" 3256 . 3257)))
+          ("QFMT_VFS_V1" . ((number "4" 3278 . 3279)))
+          ("QUOTA_NL_C_MAX" . ((semantic-list "(__QUOTA_NL_C_MAX - 1)" 6030 . 6052)))
+          ("QCMD" (spp-arg-list ("cmd" "type") 2528 . 2539) . ((semantic-list "(((cmd) << SUBCMDSHIFT) | ((type) & SUBCMDMASK))" 2541 . 2589)))
+          ("QIF_ALL" . ((semantic-list "(QIF_LIMITS | QIF_USAGE | QIF_TIMES)" 4068 . 4104)))
+          ("IIF_IGRACE" . ((number "2" 4728 . 4729)))
+          ("SUBCMDSHIFT" . ((number "8" 2514 . 2515)))
+          ("Q_GETNEXTQUOTA" . ((number "0x800009" 3116 . 3124)))
+          ("QIF_TIMES" . ((semantic-list "(QIF_BTIME | QIF_ITIME)" 4027 . 4050)))
+          ("DQF_ROOT_SQUASH" . ((semantic-list "(1 << DQF_ROOT_SQUASH_B)" 5000 . 5024)))
+          ("__DQUOT_VERSION__" . ((string "\"dquot_6.6.0\"" 1837 . 1850)))
+          ("QIF_USAGE" . ((semantic-list "(QIF_SPACE | QIF_INODES)" 3984 . 4008)))
+          ("IIF_BGRACE" . ((number "1" 4707 . 4708)))
+          ("QUOTA_NL_IHARDBELOW" . ((number "7" 5687 . 5688)))
+          ("QUOTA_NL_ISOFTBELOW" . ((number "8" 5756 . 5757)))
+          ("Q_SETQUOTA" . ((number "0x800008" 3053 . 3061)))
+          ("QIF_LIMITS" . ((semantic-list "(QIF_BLIMITS | QIF_ILIMITS)" 3938 . 3965)))
+          ("QUOTA_NL_NOWARN" . ((number "0" 5288 . 5289)))
+          ("QUOTA_NL_BSOFTLONGWARN" . ((number "5" 5566 . 5567)))
+          )
+)
+    (semanticdb-table "posix_types.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_LINUX_POSIX_TYPES_H" variable (:constant-flag t) nil [38 58])
+            ("linux/stddef.h" include (:system-flag t) nil [60 85])
+            ("__FD_SETSIZE" variable (:constant-flag t) nil [690 702])
+            ("__kernel_fd_set" type
+               (:typedef ("" type
+                     (:members 
+                        ( ("fds_bits" variable
+                             (:dereference 1
+                              :type "unsigned long")
+                              (reparse-symbol classsubparts) [727 785]))                        
+                      :type "struct")
+                      nil nil)
+                :type "typedef")
+                nil [709 804])
+            ("__kernel_sighandler_t" function
+               (:prototype-flag t
+                :function-pointer t
+                :arguments 
+                  ( ("" variable (:type "int") (reparse-symbol arg-sub-list) [877 881]))                  
+                :type "void")
+                nil [847 882])
+            ("__kernel_key_t" type
+               (:typedef ("int")
+                :type "typedef")
+                nil [915 942])
+            ("__kernel_mqd_t" type
+               (:typedef ("int")
+                :type "typedef")
+                nil [943 970])
+            ("asm/posix_types.h" include (:system-flag t) nil [972 1000]))          
+      :file "posix_types.h"
+      :pointmax 1036
+      :fsize 1035
+      :lastmodtime '(22567 40897 834853 464000)
+      :unmatched-syntax '((TYPEDEF 839 . 846))
+      :lexical-table 
+        '(("_LINUX_POSIX_TYPES_H")
+          ("__FD_SETSIZE" . ((number "1024" 703 . 707)))
+          )
+)
+    (semanticdb-table "stddef.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("linux/compiler.h" include (:system-flag t) nil [1 28]))          
+      :file "stddef.h"
+      :pointmax 92
+      :fsize 91
+      :lastmodtime '(22567 40897 838855 56000)
+      :unmatched-syntax nil)
+    (semanticdb-table "signal.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_UAPI_LINUX_SIGNAL_H" variable (:constant-flag t) nil [38 58])
+            ("asm/signal.h" include (:system-flag t) nil [60 83])
+            ("asm/siginfo.h" include (:system-flag t) nil [84 108])
+            ("SS_ONSTACK" variable (:constant-flag t) nil [118 128])
+            ("SS_DISABLE" variable (:constant-flag t) nil [139 149]))          
+      :file "signal.h"
+      :pointmax 187
+      :fsize 186
+      :lastmodtime '(22567 40897 838855 56000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("SS_DISABLE" . ((number "2" 150 . 151)))
+          ("_UAPI_LINUX_SIGNAL_H")
+          ("SS_ONSTACK" . ((number "1" 129 . 130)))
+          )
+)
+    (semanticdb-table "sem.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_UAPI_LINUX_SEM_H" variable (:constant-flag t) nil [35 52])
+            ("linux/ipc.h" include (:system-flag t) nil [54 76])
+            ("SEM_UNDO" variable (:constant-flag t) nil [104 112])
+            ("GETPID" variable (:constant-flag t) nil [204 210])
+            ("GETVAL" variable (:constant-flag t) nil [246 252])
+            ("GETALL" variable (:constant-flag t) nil [288 294])
+            ("GETNCNT" variable (:constant-flag t) nil [336 343])
+            ("GETZCNT" variable (:constant-flag t) nil [379 386])
+            ("SETVAL" variable (:constant-flag t) nil [422 428])
+            ("SETALL" variable (:constant-flag t) nil [464 470])
+            ("SEM_STAT" variable (:constant-flag t) nil [533 541])
+            ("SEM_INFO" variable (:constant-flag t) nil [553 561])
+            ("semid_ds" type
+               (:members 
+                  ( ("sem_perm" variable (:type ("ipc_perm" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [658 683])
+                    ("sem_otime" variable (:type ("__kernel_time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [717 743])
+                    ("sem_ctime" variable (:type ("__kernel_time_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [768 794])
+                    ("sem_base" variable
+                       (:pointer 1
+                        :type ("sem" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [820 841])
+                    ("sem_pending" variable
+                       (:pointer 1
+                        :type ("sem_queue" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [882 912])
+                    ("sem_pending_last" variable
+                       (:pointer 2
+                        :type ("sem_queue" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [956 992])
+                    ("undo" variable
+                       (:pointer 1
+                        :type ("sem_undo" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1023 1045])
+                    ("sem_nsems" variable (:type "unsigned short") (reparse-symbol classsubparts) [1083 1108]))                  
+                :type "struct")
+                nil [639 1145])
+            ("asm/sembuf.h" include (:system-flag t) nil [1190 1213])
+            ("sembuf" type
+               (:members 
+                  ( ("sem_num" variable (:type "unsigned short") (reparse-symbol classsubparts) [1282 1306])
+                    ("sem_op" variable (:type "short") (reparse-symbol classsubparts) [1339 1353])
+                    ("sem_flg" variable (:type "short") (reparse-symbol classsubparts) [1382 1397]))                  
+                :type "struct")
+                nil [1265 1422])
+            ("semun" type
+               (:members 
+                  ( ("val" variable (:type "int") (reparse-symbol classsubparts) [1474 1482])
+                    ("buf" variable
+                       (:pointer 1
+                        :type ("__user" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1525 1537])
+                    ("array" variable
+                       (:pointer 1
+                        :type ("__user" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1590 1604])
+                    ("__buf" variable
+                       (:pointer 1
+                        :type ("__user" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1653 1667])
+                    ("__pad" variable
+                       (:pointer 1
+                        :type ("__user" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [1700 1714]))                  
+                :type "union")
+                nil [1459 1717])
+            ("seminfo" type
+               (:members 
+                  ( ("semmap" variable (:type "int") (reparse-symbol classsubparts) [1738 1749])
+                    ("semmni" variable (:type "int") (reparse-symbol classsubparts) [1751 1762])
+                    ("semmns" variable (:type "int") (reparse-symbol classsubparts) [1764 1775])
+                    ("semmnu" variable (:type "int") (reparse-symbol classsubparts) [1777 1788])
+                    ("semmsl" variable (:type "int") (reparse-symbol classsubparts) [1790 1801])
+                    ("semopm" variable (:type "int") (reparse-symbol classsubparts) [1803 1814])
+                    ("semume" variable (:type "int") (reparse-symbol classsubparts) [1816 1827])
+                    ("semusz" variable (:type "int") (reparse-symbol classsubparts) [1829 1840])
+                    ("semvmx" variable (:type "int") (reparse-symbol classsubparts) [1842 1853])
+                    ("semaem" variable (:type "int") (reparse-symbol classsubparts) [1855 1866]))                  
+                :type "struct")
+                nil [1719 1869])
+            ("SEMMNI" variable (:constant-flag t) nil [2244 2250])
+            ("SEMMSL" variable (:constant-flag t) nil [2324 2330])
+            ("SEMMNS" variable (:constant-flag t) nil [2402 2408])
+            ("SEMOPM" variable (:constant-flag t) nil [2481 2487])
+            ("SEMVMX" variable (:constant-flag t) nil [2554 2560])
+            ("SEMAEM" variable (:constant-flag t) nil [2625 2631])
+            ("SEMUME" variable (:constant-flag t) nil [2702 2708])
+            ("SEMMNU" variable (:constant-flag t) nil [2776 2782])
+            ("SEMMAP" variable (:constant-flag t) nil [2849 2855])
+            ("SEMUSZ" variable (:constant-flag t) nil [2917 2923]))          
+      :file "sem.h"
+      :pointmax 2991
+      :fsize 2990
+      :lastmodtime '(22567 40897 838855 56000)
+      :unmatched-syntax '((VOID 1695 . 1699) (symbol 1645 . 1652) (STRUCT 1638 . 1644) (SHORT 1584 . 1589) (UNSIGNED 1575 . 1583) (symbol 1516 . 1524) (STRUCT 1509 . 1515))
+      :lexical-table 
+        '(("SEM_UNDO" . ((number "0x1000" 120 . 126)))
+          ("GETPID" . ((number "11" 212 . 214)))
+          ("SEMMNS" . ((semantic-list "(SEMMNI*SEMMSL)" 2410 . 2425)))
+          ("SEMAEM" . ((symbol "SEMVMX" 2633 . 2639)))
+          ("SEMMNU" . ((symbol "SEMMNS" 2784 . 2790)))
+          ("SETVAL" . ((number "16" 430 . 432)))
+          ("SETALL" . ((number "17" 472 . 474)))
+          ("SEMMNI" . ((number "32000" 2252 . 2257)))
+          ("SEMUME" . ((symbol "SEMOPM" 2710 . 2716)))
+          ("SEMUSZ" . ((number "20" 2925 . 2927)))
+          ("GETZCNT" . ((number "15" 387 . 389)))
+          ("SEMOPM" . ((number "500" 2489 . 2492)))
+          ("SEMVMX" . ((number "32767" 2562 . 2567)))
+          ("_UAPI_LINUX_SEM_H")
+          ("GETNCNT" . ((number "14" 344 . 346)))
+          ("SEM_INFO" . ((number "19" 562 . 564)))
+          ("SEMMSL" . ((number "32000" 2332 . 2337)))
+          ("SEM_STAT" . ((number "18" 542 . 544)))
+          ("SEMMAP" . ((symbol "SEMMNS" 2857 . 2863)))
+          ("GETVAL" . ((number "12" 254 . 256)))
+          ("GETALL" . ((number "13" 296 . 298)))
+          )
+)
+    (semanticdb-table "sysinfo.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_LINUX_SYSINFO_H" variable (:constant-flag t) nil [34 50])
+            ("linux/types.h" include (:system-flag t) nil [52 76])
+            ("SI_LOAD_SHIFT" variable (:constant-flag t) nil [86 99])
+            ("sysinfo" type
+               (:members 
+                  ( ("uptime" variable (:type ("__kernel_long_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [121 144])
+                    ("loads" variable
+                       (:dereference 1
+                        :type ("__kernel_ulong_t" type (:type "class") nil nil))
+                        (reparse-symbol classsubparts) [172 198])
+                    ("totalram" variable (:type ("__kernel_ulong_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [240 266])
+                    ("freeram" variable (:type ("__kernel_ulong_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [304 329])
+                    ("sharedram" variable (:type ("__kernel_ulong_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [359 386])
+                    ("bufferram" variable (:type ("__kernel_ulong_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [418 445])
+                    ("totalswap" variable (:type ("__kernel_ulong_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [476 503])
+                    ("freeswap" variable (:type ("__kernel_ulong_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [533 559])
+                    ("procs" variable (:type ("__u16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [594 606])
+                    ("pad" variable (:type ("__u16" type (:type "class") nil nil)) (reparse-symbol classsubparts) [647 657])
+                    ("totalhigh" variable (:type ("__kernel_ulong_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [696 723])
+                    ("freehigh" variable (:type ("__kernel_ulong_t" type (:type "class") nil nil)) (reparse-symbol classsubparts) [754 780])
+                    ("mem_unit" variable (:type ("__u32" type (:type "class") nil nil)) (reparse-symbol classsubparts) [815 830])
+                    ("_f" variable
+                       (:dereference 1
+                        :type "char")
+                        (reparse-symbol classsubparts) [866 919]))                  
+                :type "struct")
+                nil [103 955]))          
+      :file "sysinfo.h"
+      :pointmax 987
+      :fsize 986
+      :lastmodtime '(22567 40897 838855 56000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("SI_LOAD_SHIFT" . ((number "16" 100 . 102)))
+          ("_LINUX_SYSINFO_H")
+          )
+)
+    (semanticdb-table "sched.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_UAPI_LINUX_SCHED_H" variable (:constant-flag t) nil [37 56])
+            ("CSIGNAL" variable (:constant-flag t) nil [91 98])
+            ("CLONE_VM" variable (:constant-flag t) nil [156 164])
+            ("CLONE_FS" variable (:constant-flag t) nil [225 233])
+            ("CLONE_FILES" variable (:constant-flag t) nil [299 310])
+            ("CLONE_SIGHAND" variable (:constant-flag t) nil [379 392])
+            ("CLONE_PTRACE" variable (:constant-flag t) nil [468 480])
+            ("CLONE_VFORK" variable (:constant-flag t) nil [562 573])
+            ("CLONE_PARENT" variable (:constant-flag t) nil [661 673])
+            ("CLONE_THREAD" variable (:constant-flag t) nil [752 764])
+            ("CLONE_NEWNS" variable (:constant-flag t) nil [809 820])
+            ("CLONE_SYSVSEM" variable (:constant-flag t) nil [872 885])
+            ("CLONE_SETTLS" variable (:constant-flag t) nil [945 957])
+            ("CLONE_PARENT_SETTID" variable (:constant-flag t) nil [1014 1033])
+            ("CLONE_CHILD_CLEARTID" variable (:constant-flag t) nil [1085 1105])
+            ("CLONE_DETACHED" variable (:constant-flag t) nil [1158 1172])
+            ("CLONE_UNTRACED" variable (:constant-flag t) nil [1215 1229])
+            ("CLONE_CHILD_SETTID" variable (:constant-flag t) nil [1322 1340])
+            ("CLONE_NEWCGROUP" variable (:constant-flag t) nil [1391 1406])
+            ("CLONE_NEWUTS" variable (:constant-flag t) nil [1454 1466])
+            ("CLONE_NEWIPC" variable (:constant-flag t) nil [1515 1527])
+            ("CLONE_NEWUSER" variable (:constant-flag t) nil [1572 1585])
+            ("CLONE_NEWPID" variable (:constant-flag t) nil [1631 1643])
+            ("CLONE_NEWNET" variable (:constant-flag t) nil [1688 1700])
+            ("CLONE_IO" variable (:constant-flag t) nil [1749 1757])
+            ("SCHED_NORMAL" variable (:constant-flag t) nil [1832 1844])
+            ("SCHED_FIFO" variable (:constant-flag t) nil [1856 1866])
+            ("SCHED_RR" variable (:constant-flag t) nil [1878 1886])
+            ("SCHED_BATCH" variable (:constant-flag t) nil [1898 1909])
+            ("SCHED_IDLE" variable (:constant-flag t) nil [1971 1981])
+            ("SCHED_DEADLINE" variable (:constant-flag t) nil [1993 2007])
+            ("SCHED_RESET_ON_FORK" variable (:constant-flag t) nil [2107 2126])
+            ("SCHED_FLAG_RESET_ON_FORK" variable (:constant-flag t) nil [2197 2221]))          
+      :file "sched.h"
+      :pointmax 2261
+      :fsize 2260
+      :lastmodtime '(22567 40897 838855 56000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CLONE_NEWNS" . ((number "0x00020000" 821 . 831)))
+          ("CLONE_NEWIPC" . ((number "0x08000000" 1529 . 1539)))
+          ("CLONE_IO" . ((number "0x80000000" 1759 . 1769)))
+          ("CLONE_PTRACE" . ((number "0x00002000" 481 . 491)))
+          ("CLONE_PARENT_SETTID" . ((number "0x00100000" 1034 . 1044)))
+          ("CLONE_PARENT" . ((number "0x00008000" 674 . 684)))
+          ("CLONE_SETTLS" . ((number "0x00080000" 958 . 968)))
+          ("CLONE_CHILD_CLEARTID" . ((number "0x00200000" 1106 . 1116)))
+          ("CLONE_CHILD_SETTID" . ((number "0x01000000" 1341 . 1351)))
+          ("_UAPI_LINUX_SCHED_H")
+          ("CLONE_NEWNET" . ((number "0x40000000" 1702 . 1712)))
+          ("SCHED_IDLE" . ((number "5" 1983 . 1984)))
+          ("CLONE_THREAD" . ((number "0x00010000" 765 . 775)))
+          ("CLONE_UNTRACED" . ((number "0x00800000" 1231 . 1241)))
+          ("CLONE_NEWPID" . ((number "0x20000000" 1645 . 1655)))
+          ("SCHED_RR" . ((number "2" 1888 . 1889)))
+          ("CLONE_DETACHED" . ((number "0x00400000" 1174 . 1184)))
+          ("CLONE_NEWCGROUP" . ((number "0x02000000" 1408 . 1418)))
+          ("CLONE_NEWUTS" . ((number "0x04000000" 1468 . 1478)))
+          ("SCHED_BATCH" . ((number "3" 1911 . 1912)))
+          ("SCHED_DEADLINE" . ((number "6" 2009 . 2010)))
+          ("SCHED_RESET_ON_FORK" . ((number "0x40000000" 2131 . 2141)))
+          ("CLONE_FS" . ((number "0x00000200" 234 . 244)))
+          ("CLONE_VFORK" . ((number "0x00004000" 574 . 584)))
+          ("CSIGNAL" . ((number "0x000000ff" 100 . 110)))
+          ("CLONE_FILES" . ((number "0x00000400" 311 . 321)))
+          ("CLONE_SIGHAND" . ((number "0x00000800" 393 . 403)))
+          ("CLONE_SYSVSEM" . ((number "0x00040000" 886 . 896)))
+          ("CLONE_NEWUSER" . ((number "0x10000000" 1587 . 1597)))
+          ("CLONE_VM" . ((number "0x00000100" 165 . 175)))
+          ("SCHED_FIFO" . ((number "1" 1868 . 1869)))
+          ("SCHED_NORMAL" . ((number "0" 1846 . 1847)))
+          ("SCHED_FLAG_RESET_ON_FORK" . ((number "0x01" 2222 . 2226)))
+          )
+)
+    (semanticdb-table "param.h"
+      :file "param.h"
+      :fsize 78
+      :lastmodtime '(22567 40897 834853 464000))
+    (semanticdb-table "magic.h"
+      :file "magic.h"
+      :fsize 3003
+      :lastmodtime '(22567 40897 822848 688000))
+    (semanticdb-table "sysctl.h"
+      :file "sysctl.h"
+      :fsize 26174
+      :lastmodtime '(22567 40897 838855 56000))
+    (semanticdb-table "time.h"
+      :file "time.h"
+      :fsize 1587
+      :lastmodtime '(22567 40897 842856 648000))
+    (semanticdb-table "errno.h"
+      :file "errno.h"
+      :fsize 23
+      :lastmodtime '(22567 40897 814845 504000))
+    (semanticdb-table "timex.h"
+      :file "timex.h"
+      :fsize 6444
+      :lastmodtime '(22567 40897 842856 648000)))
+  :file "!home!sefo!devel!boards!ZedBoard!linux!include!uapi!linux!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

@@ -1,0 +1,1 @@
+(define-package "auto-complete-clang-async" "20130526.814" "Auto Completion source for clang for GNU Emacs" 'nil :commit "5d9c5cabbb6b31e0ac3637631c0c8b25184aa8b4" :keywords '("completion" "convenience"))

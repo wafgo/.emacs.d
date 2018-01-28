@@ -1,0 +1,121 @@
+;; Object sched/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sched/"
+  :tables
+  (list
+    (semanticdb-table "idle.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("linux/sched.h" include (:system-flag t) nil [52 76])
+            ("linux/cpu.h" include (:system-flag t) nil [77 99])
+            ("linux/cpuidle.h" include (:system-flag t) nil [100 126])
+            ("linux/cpuhotplug.h" include (:system-flag t) nil [127 156])
+            ("linux/tick.h" include (:system-flag t) nil [157 180])
+            ("linux/mm.h" include (:system-flag t) nil [181 202])
+            ("linux/stackprotector.h" include (:system-flag t) nil [203 236])
+            ("linux/suspend.h" include (:system-flag t) nil [237 263])
+            ("asm/tlb.h" include (:system-flag t) nil [265 285])
+            ("trace/events/power.h" include (:system-flag t) nil [287 318])
+            ("sched.h" include nil nil [320 338])
+            ("sched_idle_set_state" function
+               (:arguments 
+                  ( ("idle_state" variable
+                       (:pointer 1
+                        :type ("cpuidle_state" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [472 505]))                  
+                :type "void")
+                nil [446 549])
+            ("cpu_idle_force_poll" variable (:type ("__read_mostly" type (:type "class") nil nil)) nil [562 596])
+            ("cpu_idle_poll_ctrl" function
+               (:arguments 
+                  ( ("enable" variable (:type "bool") (reparse-symbol arg-sub-list) [622 634]))                  
+                :type "void")
+                nil [598 757])
+            ("cpu_idle_poll" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1108 1113]))                  
+                :type "int")
+                nil [1076 1453])
+            ("arch_cpu_idle_prepare" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1553 1558]))                  
+                :type ("__weak" type (:type "class") nil nil))
+                nil [1524 1562])
+            ("arch_cpu_idle_enter" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1595 1600]))                  
+                :type ("__weak" type (:type "class") nil nil))
+                nil [1568 1604])
+            ("arch_cpu_idle_exit" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1636 1641]))                  
+                :type ("__weak" type (:type "class") nil nil))
+                nil [1610 1645])
+            ("arch_cpu_idle_dead" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1677 1682]))                  
+                :type ("__weak" type (:type "class") nil nil))
+                nil [1651 1686])
+            ("arch_cpu_idle" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1713 1718]))                  
+                :type ("__weak" type (:type "class") nil nil))
+                nil [1692 1769])
+            ("default_idle_call" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1907 1912]))                  
+                :type "void")
+                nil [1884 2064])
+            ("call_cpuidle" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("drv" variable
+                       (:pointer 1
+                        :type ("cpuidle_driver" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2090 2117])
+                    ("dev" variable
+                       (:pointer 1
+                        :type ("cpuidle_device" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2118 2145])
+                    ("next_state" variable (:type "int") (reparse-symbol arg-sub-list) [2154 2169]))                  
+                :type "int")
+                nil [2066 2644])
+            ("cpuidle_idle_call" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2958 2963]))                  
+                :type "void")
+                nil [2928 4788])
+            ("cpu_idle_loop" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4894 4899]))                  
+                :type "void")
+                nil [4868 6577])
+            ("cpu_startup_entry" function
+               (:arguments 
+                  ( ("state" variable (:type ("cpuhp_state" type (:type "enum") nil nil)) (reparse-symbol arg-sub-list) [6602 6625]))                  
+                :type "void")
+                nil [6579 7258]))          
+      :file "idle.c"
+      :pointmax 7259
+      :fsize 7258
+      :lastmodtime '(22567 40898 147635 347000)
+      :unmatched-syntax nil)
+    (semanticdb-table "sched.h"
+      :file "sched.h"
+      :fsize 48033
+      :lastmodtime '(22567 40898 147635 347000)))
+  :file "!home!sefo!devel!boards!ZedBoard!linux!kernel!sched!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

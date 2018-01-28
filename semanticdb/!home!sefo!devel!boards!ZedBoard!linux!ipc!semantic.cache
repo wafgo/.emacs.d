@@ -1,0 +1,540 @@
+;; Object ipc/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "ipc/"
+  :tables
+  (list
+    (semanticdb-table "msg.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("linux/capability.h" include (:system-flag t) nil [727 756])
+            ("linux/msg.h" include (:system-flag t) nil [757 779])
+            ("linux/spinlock.h" include (:system-flag t) nil [780 807])
+            ("linux/init.h" include (:system-flag t) nil [808 831])
+            ("linux/mm.h" include (:system-flag t) nil [832 853])
+            ("linux/proc_fs.h" include (:system-flag t) nil [854 880])
+            ("linux/list.h" include (:system-flag t) nil [881 904])
+            ("linux/security.h" include (:system-flag t) nil [905 932])
+            ("linux/sched.h" include (:system-flag t) nil [933 957])
+            ("linux/syscalls.h" include (:system-flag t) nil [958 985])
+            ("linux/audit.h" include (:system-flag t) nil [986 1010])
+            ("linux/seq_file.h" include (:system-flag t) nil [1011 1038])
+            ("linux/rwsem.h" include (:system-flag t) nil [1039 1063])
+            ("linux/nsproxy.h" include (:system-flag t) nil [1064 1090])
+            ("linux/ipc_namespace.h" include (:system-flag t) nil [1091 1123])
+            ("asm/current.h" include (:system-flag t) nil [1125 1149])
+            ("linux/uaccess.h" include (:system-flag t) nil [1150 1176])
+            ("util.h" include nil nil [1177 1194])
+            ("msg_receiver" type
+               (:members 
+                  ( ("r_list" variable (:type ("list_head" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [1279 1303])
+                    ("r_tsk" variable
+                       (:pointer 1
+                        :type ("task_struct" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1305 1331])
+                    ("r_mode" variable (:type "int") (reparse-symbol classsubparts) [1334 1347])
+                    ("r_msgtype" variable (:type "long") (reparse-symbol classsubparts) [1349 1366])
+                    ("r_maxsize" variable (:type "long") (reparse-symbol classsubparts) [1368 1385])
+                    ("r_msg" variable
+                       (:typemodifiers ("volatile")
+                        :type "int")
+                        (reparse-symbol classsubparts) [1566 1581]))                  
+                :type "struct")
+                nil [1256 1584])
+            ("msg_sender" type
+               (:members 
+                  ( ("list" variable (:type ("list_head" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol classsubparts) [1653 1675])
+                    ("tsk" variable
+                       (:pointer 1
+                        :type ("task_struct" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [1677 1701]))                  
+                :type "struct")
+                nil [1632 1704])
+            ("SEARCH_ANY" variable (:constant-flag t) nil [1714 1724])
+            ("SEARCH_EQUAL" variable (:constant-flag t) nil [1736 1748])
+            ("SEARCH_NOTEQUAL" variable (:constant-flag t) nil [1760 1775])
+            ("SEARCH_LESSEQUAL" variable (:constant-flag t) nil [1787 1803])
+            ("SEARCH_NUMBER" variable (:constant-flag t) nil [1814 1827])
+            ("msg_ids" variable (:constant-flag t) nil [1840 1847])
+            ("msq_obtain_object" function
+               (:pointer 1
+                :typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("ns" variable
+                       (:pointer 1
+                        :type ("ipc_namespace" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1928 1953])
+                    ("id" variable (:type "int") (reparse-symbol arg-sub-list) [1954 1961]))                  
+                :type ("msg_queue" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1878 2138])
+            ("msq_obtain_object_check" function
+               (:pointer 1
+                :typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("ns" variable
+                       (:pointer 1
+                        :type ("ipc_namespace" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2196 2221])
+                    ("id" variable (:type "int") (reparse-symbol arg-sub-list) [2229 2236]))                  
+                :type ("msg_queue" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [2140 2413])
+            ("msg_rmid" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("ns" variable
+                       (:pointer 1
+                        :type ("ipc_namespace" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2443 2468])
+                    ("s" variable
+                       (:pointer 1
+                        :type ("msg_queue" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2469 2489]))                  
+                :type "void")
+                nil [2415 2530])
+            ("msg_rcu_free" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("head" variable
+                       (:pointer 1
+                        :type ("rcu_head" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2557 2579]))                  
+                :type "void")
+                nil [2532 2745])
+            ("newque" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ns" variable
+                       (:pointer 1
+                        :type ("ipc_namespace" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2938 2963])
+                    ("params" variable
+                       (:pointer 1
+                        :type ("ipc_params" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2964 2990]))                  
+                :type "int")
+                nil [2920 3888])
+            ("ss_add" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("msq" variable
+                       (:pointer 1
+                        :type ("msg_queue" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3916 3938])
+                    ("mss" variable
+                       (:pointer 1
+                        :type ("msg_sender" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3939 3962]))                  
+                :type "void")
+                nil [3890 4074])
+            ("ss_del" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("mss" variable
+                       (:pointer 1
+                        :type ("msg_sender" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4102 4125]))                  
+                :type "void")
+                nil [4076 4182])
+            ("ss_wakeup" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("h" variable
+                       (:pointer 1
+                        :type ("list_head" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4206 4226])
+                    ("kill" variable (:type "int") (reparse-symbol arg-sub-list) [4227 4236]))                  
+                :type "void")
+                nil [4184 4385])
+            ("expunge_all" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("msq" variable
+                       (:pointer 1
+                        :type ("msg_queue" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [4411 4433])
+                    ("res" variable (:type "int") (reparse-symbol arg-sub-list) [4434 4442]))                  
+                :type "void")
+                nil [4387 4919])
+            ("freeque" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ns" variable
+                       (:pointer 1
+                        :type ("ipc_namespace" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5285 5310])
+                    ("ipcp" variable
+                       (:pointer 1
+                        :type ("kern_ipc_perm" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5311 5338]))                  
+                :type "void")
+                nil [5265 5765])
+            ("msg_security" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("ipcp" variable
+                       (:pointer 1
+                        :type ("kern_ipc_perm" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5851 5878])
+                    ("msgflg" variable (:type "int") (reparse-symbol arg-sub-list) [5879 5890]))                  
+                :type "int")
+                nil [5820 6017])
+            ("SYSCALL_DEFINE2" function
+               (:arguments 
+                  ( ("" variable (:type ("msgget" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6035 6042])
+                    ("" variable (:type ("key_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6043 6049])
+                    ("" variable (:type ("key" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6050 6054])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [6055 6059])
+                    ("" variable (:type ("msgflg" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6060 6067]))                  
+                :type "int")
+                nil [6019 6364])
+            ("copy_msqid_to_user" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__user" variable (:type "void") (reparse-symbol arg-sub-list) [6413 6426])
+                    ("" variable (:type ("buf" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6426 6430])
+                    ("in" variable
+                       (:pointer 1
+                        :type ("msqid64_ds" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6431 6453])
+                    ("version" variable (:type "int") (reparse-symbol arg-sub-list) [6454 6466]))                  
+                :type "unsigned long")
+                nil [6366 7327])
+            ("copy_msqid_from_user" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("out" variable
+                       (:pointer 1
+                        :type ("msqid64_ds" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7378 7401])
+                    ("__user" variable (:type "void") (reparse-symbol arg-sub-list) [7402 7415])
+                    ("" variable (:type ("buf" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [7415 7419])
+                    ("version" variable (:type "int") (reparse-symbol arg-sub-list) [7420 7432]))                  
+                :type "unsigned long")
+                nil [7329 7979])
+            ("msgctl_down" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ns" variable
+                       (:pointer 1
+                        :type ("ipc_namespace" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [8183 8208])
+                    ("msqid" variable (:type "int") (reparse-symbol arg-sub-list) [8209 8219])
+                    ("cmd" variable (:type "int") (reparse-symbol arg-sub-list) [8220 8228])
+                    ("__user" variable (:type ("msqid_ds" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol arg-sub-list) [8238 8262])
+                    ("" variable (:type ("buf" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8262 8266])
+                    ("version" variable (:type "int") (reparse-symbol arg-sub-list) [8267 8279]))                  
+                :type "int")
+                nil [8160 9741])
+            ("msgctl_nolock" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("ns" variable
+                       (:pointer 1
+                        :type ("ipc_namespace" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9768 9793])
+                    ("msqid" variable (:type "int") (reparse-symbol arg-sub-list) [9794 9804])
+                    ("cmd" variable (:type "int") (reparse-symbol arg-sub-list) [9809 9817])
+                    ("version" variable (:type "int") (reparse-symbol arg-sub-list) [9818 9830])
+                    ("__user" variable (:type "void") (reparse-symbol arg-sub-list) [9831 9844])
+                    ("" variable (:type ("buf" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [9844 9848]))                  
+                :type "int")
+                nil [9743 12081])
+            ("SYSCALL_DEFINE3" function
+               (:arguments 
+                  ( ("" variable (:type ("msgctl" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12099 12106])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [12107 12111])
+                    ("" variable (:type ("msqid" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12112 12118])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [12119 12123])
+                    ("" variable (:type ("cmd" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12124 12128])
+                    ("__user" variable (:type ("msqid_ds" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol arg-sub-list) [12129 12153])
+                    ("" variable (:type ("buf" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [12155 12159]))                  
+                :type "int")
+                nil [12083 12620])
+            ("testmsg" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("msg" variable
+                       (:pointer 1
+                        :type ("msg_msg" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [12641 12661])
+                    ("type" variable (:type "long") (reparse-symbol arg-sub-list) [12662 12672])
+                    ("mode" variable (:type "int") (reparse-symbol arg-sub-list) [12673 12682]))                  
+                :type "int")
+                nil [12622 12982])
+            ("pipelined_send" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("msq" variable
+                       (:pointer 1
+                        :type ("msg_queue" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13017 13039])
+                    ("msg" variable
+                       (:pointer 1
+                        :type ("msg_msg" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [13040 13060]))                  
+                :type "int")
+                nil [12984 14048])
+            ("do_msgsnd" function
+               (:arguments 
+                  ( ("msqid" variable (:type "int") (reparse-symbol arg-sub-list) [14065 14075])
+                    ("mtype" variable (:type "long") (reparse-symbol arg-sub-list) [14076 14087])
+                    ("__user" variable (:type "void") (reparse-symbol arg-sub-list) [14088 14101])
+                    ("" variable (:type ("mtext" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14101 14107])
+                    ("msgsz" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14110 14123])
+                    ("msgflg" variable (:type "int") (reparse-symbol arg-sub-list) [14124 14135]))                  
+                :type "long")
+                nil [14050 16151])
+            ("SYSCALL_DEFINE4" function
+               (:arguments 
+                  ( ("" variable (:type ("msgsnd" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16169 16176])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [16177 16181])
+                    ("" variable (:type ("msqid" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16182 16188])
+                    ("__user" variable (:type ("msgbuf" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol arg-sub-list) [16189 16211])
+                    ("" variable (:type ("msgp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16213 16218])
+                    ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16219 16226])
+                    ("" variable (:type ("msgsz" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16227 16233])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [16236 16240])
+                    ("" variable (:type ("msgflg" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16241 16248]))                  
+                :type "int")
+                nil [16153 16381])
+            ("convert_mode" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("msgtyp" variable
+                       (:pointer 1
+                        :type "long")
+                        (reparse-symbol arg-sub-list) [16414 16427])
+                    ("msgflg" variable (:type "int") (reparse-symbol arg-sub-list) [16428 16439]))                  
+                :type "int")
+                nil [16383 16877])
+            ("do_msg_fill" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("__user" variable (:type "void") (reparse-symbol arg-sub-list) [16903 16916])
+                    ("" variable (:type ("dest" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16916 16921])
+                    ("msg" variable
+                       (:pointer 1
+                        :type ("msg_msg" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16922 16942])
+                    ("bufsz" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [16943 16956]))                  
+                :type "long")
+                nil [16879 17197])
+            ("prepare_copy" function
+               (:pointer 1
+                :typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__user" variable (:type "void") (reparse-symbol arg-sub-list) [17722 17735])
+                    ("" variable (:type ("buf" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17735 17739])
+                    ("bufsz" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17740 17753]))                  
+                :type ("msg_msg" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [17679 17783])
+            ("free_copy" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("copy" variable
+                       (:pointer 1
+                        :type ("msg_msg" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17814 17835]))                  
+                :type "void")
+                nil [17785 17839])
+            ("find_msg" function
+               (:pointer 1
+                :typemodifiers ("static")
+                :arguments 
+                  ( ("msq" variable
+                       (:pointer 1
+                        :type ("msg_queue" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [17880 17902])
+                    ("msgtyp" variable
+                       (:pointer 1
+                        :type "long")
+                        (reparse-symbol arg-sub-list) [17903 17916])
+                    ("mode" variable (:type "int") (reparse-symbol arg-sub-list) [17917 17926]))                  
+                :type ("msg_msg" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [17848 18424])
+            ("do_msgrcv" function
+               (:arguments 
+                  ( ("msqid" variable (:type "int") (reparse-symbol arg-sub-list) [18441 18451])
+                    ("__user" variable (:type "void") (reparse-symbol arg-sub-list) [18452 18465])
+                    ("" variable (:type ("buf" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18465 18469])
+                    ("bufsz" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18470 18483])
+                    ("msgtyp" variable (:type "long") (reparse-symbol arg-sub-list) [18484 18496])
+                    ("msgflg" variable (:type "int") (reparse-symbol arg-sub-list) [18497 18508])
+                    ("msg_handler" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("__user" variable (:type "void") (reparse-symbol arg-sub-list) [18535 18548])
+                            ("" variable
+                               (:pointer 1
+                                :type ("msg_msg" type
+                                     (:prototype t
+                                      :type "struct")
+                                      nil nil))
+                                (reparse-symbol arg-sub-list) [18550 18567])
+                            ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [18568 18575]))                          
+                        :type "long")
+                        nil nil))                  
+                :type "long")
+                nil [18426 23201])
+            ("SYSCALL_DEFINE5" function
+               (:arguments 
+                  ( ("" variable (:type ("msgrcv" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23219 23226])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [23227 23231])
+                    ("" variable (:type ("msqid" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23232 23238])
+                    ("__user" variable (:type ("msgbuf" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol arg-sub-list) [23239 23261])
+                    ("" variable (:type ("msgp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23263 23268])
+                    ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23269 23276])
+                    ("" variable (:type ("msgsz" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23277 23283])
+                    ("" variable (:type "long") (reparse-symbol arg-sub-list) [23286 23291])
+                    ("" variable (:type ("msgtyp" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23292 23299])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [23300 23304])
+                    ("" variable (:type ("msgflg" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [23305 23312]))                  
+                :type "int")
+                nil [23203 23384])
+            ("msg_init_ns" function
+               (:arguments 
+                  ( ("ns" variable
+                       (:pointer 1
+                        :type ("ipc_namespace" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [23404 23429]))                  
+                :type "void")
+                nil [23387 23613])
+            ("msg_init" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [24479 24484]))                  
+                :type ("__init" type (:type "class") nil nil))
+                nil [24463 24727]))          
+      :file "msg.c"
+      :pointmax 24728
+      :fsize 24726
+      :lastmodtime '(23133 6262 579415 537000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("SEARCH_NOTEQUAL" . ((number "3" 1777 . 1778)))
+          ("SEARCH_LESSEQUAL" . ((number "4" 1804 . 1805)))
+          ("SEARCH_NUMBER" . ((number "5" 1829 . 1830)))
+          ("SEARCH_ANY" . ((number "1" 1726 . 1727)))
+          ("msg_ids" (spp-arg-list ("ns") 1847 . 1851) . ((semantic-list "((ns)->ids[IPC_MSG_IDS])" 1852 . 1876)))
+          ("SEARCH_EQUAL" . ((number "2" 1750 . 1751)))
+          )
+)
+    (semanticdb-table "util.h"
+      :file "util.h"
+      :fsize 6559
+      :lastmodtime '(22567 40897 862864 609000)))
+  :file "!home!sefo!devel!boards!ZedBoard!linux!ipc!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

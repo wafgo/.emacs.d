@@ -1,0 +1,85 @@
+;; Object decompress/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "decompress/"
+  :tables
+  (list
+    (semanticdb-table "generic.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("DECOMPRESS_GENERIC_H" variable (:constant-flag t) nil [38 58])
+            ("decompress_fn" function
+               (:prototype-flag t
+                :function-pointer t
+                :arguments 
+                  ( ("inbuf" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [90 111])
+                    ("len" variable (:type "long") (reparse-symbol arg-sub-list) [112 121])
+                    ("fill" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [144 150])
+                            ("" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [151 165]))                          
+                        :type "long")
+                        nil nil)
+                    ("flush" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [190 196])
+                            ("" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [197 211]))                          
+                        :type "long")
+                        nil nil)
+                    ("outbuf" variable
+                       (:pointer 1
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [222 244])
+                    ("posp" variable
+                       (:pointer 1
+                        :type "long")
+                        (reparse-symbol arg-sub-list) [254 265])
+                    ("error" function
+                       (:function-pointer t
+                        :arguments 
+                          ( ("x" variable
+                               (:pointer 1
+                                :type "char")
+                                (reparse-symbol arg-sub-list) [288 296]))                          
+                        :type "void")
+                        nil nil))                  
+                :type "int")
+                nil [68 298])
+            ("decompress_method" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("inbuf" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "unsigned char")
+                        (reparse-symbol arg-sub-list) [1415 1442])
+                    ("len" variable (:type "long") (reparse-symbol arg-sub-list) [1443 1452])
+                    ("name" variable
+                       (:pointer 2
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [1457 1475]))                  
+                :type ("decompress_fn" type (:type "class") nil nil))
+                nil [1383 1476]))          
+      :file "generic.h"
+      :pointmax 1485
+      :fsize 1484
+      :lastmodtime '(22567 40897 518727 687000)
+      :unmatched-syntax '((TYPEDEF 60 . 67))
+      :lexical-table 
+        '(("DECOMPRESS_GENERIC_H")
+          )
+))
+  :file "!home!sefo!devel!boards!ZedBoard!linux!include!linux!decompress!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

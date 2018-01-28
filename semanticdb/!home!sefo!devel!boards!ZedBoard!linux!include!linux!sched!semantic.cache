@@ -1,0 +1,57 @@
+;; Object sched/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "sched/"
+  :tables
+  (list
+    (semanticdb-table "prio.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_SCHED_PRIO_H" variable (:constant-flag t) nil [31 44])
+            ("MAX_NICE" variable (:constant-flag t) nil [54 62])
+            ("MIN_NICE" variable (:constant-flag t) nil [74 82])
+            ("NICE_WIDTH" variable (:constant-flag t) nil [95 105])
+            ("MAX_USER_RT_PRIO" variable (:constant-flag t) nil [683 699])
+            ("MAX_RT_PRIO" variable (:constant-flag t) nil [712 723])
+            ("MAX_PRIO" variable (:constant-flag t) nil [751 759])
+            ("DEFAULT_PRIO" variable (:constant-flag t) nil [796 808])
+            ("NICE_TO_PRIO" variable (:constant-flag t) nil [970 982])
+            ("PRIO_TO_NICE" variable (:constant-flag t) nil [1021 1033])
+            ("USER_PRIO" variable (:constant-flag t) nil [1240 1249])
+            ("TASK_USER_PRIO" variable (:constant-flag t) nil [1280 1294])
+            ("MAX_USER_PRIO" variable (:constant-flag t) nil [1334 1347])
+            ("nice_to_rlimit" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("nice" variable (:type "long") (reparse-symbol arg-sub-list) [1474 1484]))                  
+                :type "long")
+                nil [1440 1519])
+            ("rlimit_to_nice" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("prio" variable (:type "long") (reparse-symbol arg-sub-list) [1624 1634]))                  
+                :type "long")
+                nil [1590 1669]))          
+      :file "prio.h"
+      :pointmax 1698
+      :fsize 1697
+      :lastmodtime '(22567 40897 686794 556000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MAX_USER_RT_PRIO" . ((number "100" 700 . 703)))
+          ("TASK_USER_PRIO" (spp-arg-list ("p") 1294 . 1297) . ((symbol "USER_PRIO" 1298 . 1307) (semantic-list "((p)->static_prio)" 1307 . 1325)))
+          ("MAX_USER_PRIO" . ((semantic-list "(USER_PRIO(MAX_PRIO))" 1349 . 1370)))
+          ("MAX_PRIO" . ((semantic-list "(MAX_RT_PRIO + NICE_WIDTH)" 761 . 787)))
+          ("_SCHED_PRIO_H")
+          ("MIN_NICE" . ((punctuation "-" 83 . 84) (number "20" 84 . 86)))
+          ("NICE_TO_PRIO" (spp-arg-list ("nice") 982 . 988) . ((semantic-list "((nice) + DEFAULT_PRIO)" 989 . 1012)))
+          ("NICE_WIDTH" . ((semantic-list "(MAX_NICE - MIN_NICE + 1)" 106 . 131)))
+          ("DEFAULT_PRIO" . ((semantic-list "(MAX_RT_PRIO + NICE_WIDTH / 2)" 810 . 840)))
+          ("MAX_RT_PRIO" . ((symbol "MAX_USER_RT_PRIO" 725 . 741)))
+          ("USER_PRIO" (spp-arg-list ("p") 1249 . 1252) . ((semantic-list "((p)-MAX_RT_PRIO)" 1254 . 1271)))
+          ("MAX_NICE" . ((number "19" 63 . 65)))
+          ("PRIO_TO_NICE" (spp-arg-list ("prio") 1033 . 1039) . ((semantic-list "((prio) - DEFAULT_PRIO)" 1040 . 1063)))
+          )
+))
+  :file "!home!sefo!devel!boards!ZedBoard!linux!include!linux!sched!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

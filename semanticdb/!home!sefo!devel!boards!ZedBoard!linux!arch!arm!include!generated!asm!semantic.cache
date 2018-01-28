@@ -1,0 +1,75 @@
+;; Object asm/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "asm/"
+  :tables
+  (list
+    (semanticdb-table "current.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("asm-generic/current.h" include (:system-flag t) nil [1 33]))          
+      :file "current.h"
+      :pointmax 34
+      :fsize 33
+      :lastmodtime '(22592 31801 53279 693000)
+      :unmatched-syntax nil)
+    (semanticdb-table "siginfo.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("asm-generic/siginfo.h" include (:system-flag t) nil [1 33]))          
+      :file "siginfo.h"
+      :pointmax 34
+      :fsize 33
+      :lastmodtime '(22592 31801 93279 729000)
+      :unmatched-syntax nil)
+    (semanticdb-table "rwsem.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("asm-generic/rwsem.h" include (:system-flag t) nil [1 31]))          
+      :file "rwsem.h"
+      :pointmax 32
+      :fsize 31
+      :lastmodtime '(22592 31801 81279 718000)
+      :unmatched-syntax nil)
+    (semanticdb-table "errno.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("asm-generic/errno.h" include (:system-flag t) nil [1 31]))          
+      :file "errno.h"
+      :pointmax 32
+      :fsize 31
+      :lastmodtime '(22592 31801 57279 696000)
+      :unmatched-syntax nil)
+    (semanticdb-table "param.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("asm-generic/param.h" include (:system-flag t) nil [1 31]))          
+      :file "param.h"
+      :pointmax 32
+      :fsize 31
+      :lastmodtime '(22592 31801 77279 714000)
+      :unmatched-syntax nil)
+    (semanticdb-table "preempt.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("asm-generic/preempt.h" include (:system-flag t) nil [1 33]))          
+      :file "preempt.h"
+      :pointmax 34
+      :fsize 33
+      :lastmodtime '(22592 31801 81279 718000)
+      :unmatched-syntax nil)
+    (semanticdb-table "ioctl.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("asm-generic/ioctl.h" include (:system-flag t) nil [1 31]))          
+      :file "ioctl.h"
+      :pointmax 32
+      :fsize 31
+      :lastmodtime '(22592 31801 57279 696000)
+      :unmatched-syntax nil)
+    (semanticdb-table "sembuf.h"
+      :file "sembuf.h"
+      :fsize 32
+      :lastmodtime '(22592 31801 85279 721000)))
+  :file "!home!sefo!devel!boards!ZedBoard!linux!arch!arm!include!generated!asm!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

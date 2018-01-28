@@ -1,0 +1,46 @@
+;; Object mm/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "mm/"
+  :tables
+  (list
+    (semanticdb-table "init-mm.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("linux/mm_types.h" include (:system-flag t) nil [1 28])
+            ("linux/rbtree.h" include (:system-flag t) nil [29 54])
+            ("linux/rwsem.h" include (:system-flag t) nil [55 79])
+            ("linux/spinlock.h" include (:system-flag t) nil [80 107])
+            ("linux/list.h" include (:system-flag t) nil [108 131])
+            ("linux/cpumask.h" include (:system-flag t) nil [132 158])
+            ("linux/atomic.h" include (:system-flag t) nil [160 185])
+            ("asm/pgtable.h" include (:system-flag t) nil [186 210])
+            ("asm/mmu.h" include (:system-flag t) nil [211 231])
+            ("INIT_MM_CONTEXT" variable (:constant-flag t) nil [265 280])
+            ("init_mm" variable
+               (:default-value "{
+	.mm_rb		= RB_ROOT,
+	.pgd		= swapper_pg_dir,
+	.mm_users	= ATOMIC_INIT(2),
+	.mm_count	= ATOMIC_INIT(1),
+	.mmap_sem	= __RWSEM_INITIALIZER(init_mm.mmap_sem),
+	.page_table_lock =  __SPIN_LOCK_UNLOCKED(init_mm.page_table_lock),
+	.mmlist		= LIST_HEAD_INIT(init_mm.mmlist),
+	INIT_MM_CONTEXT(init_mm)
+}"
+                :type ("mm_struct" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [295 619]))          
+      :file "init-mm.c"
+      :pointmax 620
+      :fsize 619
+      :lastmodtime '(22567 40898 416980 182000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("INIT_MM_CONTEXT" (spp-arg-list ("name") 280 . 286))
+          )
+))
+  :file "!home!sefo!devel!boards!ZedBoard!linux!mm!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

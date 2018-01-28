@@ -1,0 +1,1201 @@
+;; Object asm-generic/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "asm-generic/"
+  :tables
+  (list
+    (semanticdb-table "vmlinux.lds.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("LOAD_OFFSET" variable (:constant-flag t) nil [1259 1270])
+            ("linux/export.h" include (:system-flag t) nil [1281 1306])
+            ("ALIGN_FUNCTION" variable (:constant-flag t) nil [1389 1403])
+            ("STRUCT_ALIGNMENT" variable (:constant-flag t) nil [1519 1535])
+            ("STRUCT_ALIGN" variable (:constant-flag t) nil [1547 1559])
+            ("CPU_KEEP" variable (:constant-flag t) nil [1851 1859])
+            ("CPU_DISCARD" variable (:constant-flag t) nil [1873 1884])
+            ("MEM_KEEP" variable (:constant-flag t) nil [2023 2031])
+            ("MEM_DISCARD" variable (:constant-flag t) nil [2045 2056])
+            ("MCOUNT_REC" variable (:constant-flag t) nil [2283 2293])
+            ("LIKELY_PROFILE" variable (:constant-flag t) nil [2535 2549])
+            ("BRANCH_PROFILE" variable (:constant-flag t) nil [2761 2775])
+            ("KPROBE_BLACKLIST" variable (:constant-flag t) nil [3010 3026])
+            ("FTRACE_EVENTS" variable (:constant-flag t) nil [3371 3384])
+            ("TRACE_PRINTKS" variable (:constant-flag t) nil [3803 3816])
+            ("TRACEPOINT_STR" variable (:constant-flag t) nil [3827 3841])
+            ("TRACE_SYSCALLS" variable (:constant-flag t) nil [4076 4090])
+            ("EARLYCON_TABLE" variable (:constant-flag t) nil [4308 4322])
+            ("___OF_TABLE" variable (:constant-flag t) nil [4341 4352])
+            ("__OF_TABLE" variable (:constant-flag t) nil [4394 4404])
+            ("OF_TABLE" variable (:constant-flag t) nil [4447 4455])
+            ("_OF_TABLE_0" variable (:constant-flag t) nil [4513 4524])
+            ("_OF_TABLE_1" variable (:constant-flag t) nil [4539 4550])
+            ("CLKSRC_OF_TABLES" variable (:constant-flag t) nil [4701 4717])
+            ("IRQCHIP_OF_MATCH_TABLE" variable (:constant-flag t) nil [4763 4785])
+            ("CLK_OF_TABLES" variable (:constant-flag t) nil [4830 4843])
+            ("IOMMU_OF_TABLES" variable (:constant-flag t) nil [4888 4903])
+            ("RESERVEDMEM_OF_TABLES" variable (:constant-flag t) nil [4947 4968])
+            ("CPU_METHOD_OF_TABLES" variable (:constant-flag t) nil [5025 5045])
+            ("CPUIDLE_METHOD_OF_TABLES" variable (:constant-flag t) nil [5089 5113])
+            ("ACPI_PROBE_TABLE" variable (:constant-flag t) nil [5398 5414])
+            ("KERNEL_DTB" variable (:constant-flag t) nil [5437 5447])
+            ("DATA_DATA" variable (:constant-flag t) nil [5611 5620])
+            ("NOSAVE_DATA" variable (:constant-flag t) nil [6504 6515])
+            ("PAGE_ALIGNED_DATA" variable (:constant-flag t) nil [6695 6712])
+            ("READ_MOSTLY_DATA" variable (:constant-flag t) nil [6795 6811])
+            ("CACHELINE_ALIGNED_DATA" variable (:constant-flag t) nil [6910 6932])
+            ("INIT_TASK_DATA" variable (:constant-flag t) nil [7010 7024])
+            ("RO_DATA_SECTION" variable (:constant-flag t) nil [7120 7135])
+            ("RODATA" variable (:constant-flag t) nil [13020 13026])
+            ("RO_DATA" variable (:constant-flag t) nil [13066 13073])
+            ("SECURITY_INIT" variable (:constant-flag t) nil [13114 13127])
+            ("TEXT_TEXT" variable (:constant-flag t) nil [13505 13514])
+            ("SCHED_TEXT" variable (:constant-flag t) nil [13820 13830])
+            ("LOCK_TEXT" variable (:constant-flag t) nil [14119 14128])
+            ("KPROBES_TEXT" variable (:constant-flag t) nil [14282 14294])
+            ("ENTRY_TEXT" variable (:constant-flag t) nil [14452 14462])
+            ("IRQENTRY_TEXT" variable (:constant-flag t) nil [14862 14875])
+            ("SOFTIRQENTRY_TEXT" variable (:constant-flag t) nil [15153 15170])
+            ("HEAD_TEXT" variable (:constant-flag t) nil [15235 15244])
+            ("HEAD_TEXT_SECTION" variable (:constant-flag t) nil [15269 15286])
+            ("EXCEPTION_TABLE" variable (:constant-flag t) nil [15406 15421])
+            ("INIT_TASK_DATA_SECTION" variable (:constant-flag t) nil [15662 15684])
+            ("KERNEL_CTORS" variable (:constant-flag t) nil [16062 16074])
+            ("INIT_DATA" variable (:constant-flag t) nil [16130 16139])
+            ("INIT_TEXT" variable (:constant-flag t) nil [16703 16712])
+            ("EXIT_DATA" variable (:constant-flag t) nil [16777 16786])
+            ("EXIT_TEXT" variable (:constant-flag t) nil [16884 16893])
+            ("EXIT_CALL" variable (:constant-flag t) nil [16958 16967])
+            ("SBSS" variable (:constant-flag t) nil [17090 17094])
+            ("BSS_FIRST_SECTIONS" variable (:constant-flag t) nil [17374 17392])
+            ("BSS" variable (:constant-flag t) nil [17409 17412])
+            ("DWARF_DEBUG" variable (:constant-flag t) nil [17778 17789])
+            ("STABS_DEBUG" variable (:constant-flag t) nil [18810 18821])
+            ("BUG_TABLE" variable (:constant-flag t) nil [19364 19373])
+            ("TRACEDATA" variable (:constant-flag t) nil [19636 19645])
+            ("NOTES" variable (:constant-flag t) nil [19662 19667])
+            ("INIT_SETUP" variable (:constant-flag t) nil [19837 19847])
+            ("INIT_CALLS_LEVEL" variable (:constant-flag t) nil [20015 20031])
+            ("ALIGN" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("initsetup_align" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19883 19899]))                  
+                :type "int")
+                nil [19877 19900])
+            ("INIT_CALLS_LEVEL" variable (:constant-flag t) nil [20015 20031])
+            ("ALIGN" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("initsetup_align" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19883 19899]))                  
+                :type "int")
+                nil [19877 19900])
+            ("INIT_CALLS_LEVEL" variable (:constant-flag t) nil [20015 20031])
+            ("ALIGN" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("initsetup_align" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [19883 19899]))                  
+                :type "int")
+                nil [19877 19900])
+            ("INIT_CALLS_LEVEL" variable (:constant-flag t) nil [20015 20031])
+            ("INIT_CALLS" variable (:constant-flag t) nil [20176 20186])
+            ("CON_INITCALL" variable (:constant-flag t) nil [20573 20585])
+            ("SECURITY_INITCALL" variable (:constant-flag t) nil [20722 20739])
+            ("INIT_RAM_FS" variable (:constant-flag t) nil [21088 21099])
+            ("DISCARDS" variable (:constant-flag t) nil [21449 21457])
+            ("PERCPU_INPUT" variable (:constant-flag t) nil [21914 21926])
+            ("PERCPU_VADDR" variable (:constant-flag t) nil [23247 23259])
+            ("PERCPU_SECTION" variable (:constant-flag t) nil [24049 24063])
+            ("RW_DATA_SECTION" variable (:constant-flag t) nil [24885 24900])
+            ("INIT_TEXT_SECTION" variable (:constant-flag t) nil [25233 25250])
+            ("INIT_DATA_SECTION" variable (:constant-flag t) nil [25469 25486])
+            ("BSS_SECTION" variable (:constant-flag t) nil [25718 25729]))          
+      :file "vmlinux.lds.h"
+      :pointmax 25952
+      :fsize 25951
+      :lastmodtime '(22567 40897 486714 950000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("CPU_KEEP" (spp-arg-list ("sec") 1859 . 1864))
+          ("READ_MOSTLY_DATA" (spp-arg-list ("align") 6811 . 6818) . 
+              ((punctuation "." 6827 . 6828) (punctuation "=" 6829 . 6830) (symbol "ALIGN" 6831 . 6836) (semantic-list "(align)" 6836 . 6843) (punctuation ";" 6843 . 6844) (punctuation "*" 6853 . 6854) (semantic-list "(.data..read_mostly)" 6854 . 6874) (punctuation "." 6883 . 6884) (punctuation "=" 6885 . 6886) (symbol "ALIGN" 6887 . 6892) (semantic-list "(align)" 6892 . 6899) (punctuation ";" 6899 . 6900)))
+          ("HEAD_TEXT_SECTION" . 
+              ((punctuation "." 15296 . 15297) (symbol "head" 15297 . 15301) (punctuation "." 15301 . 15302) (symbol "text" 15302 . 15306) (punctuation ":" 15307 . 15308) (symbol "AT" 15309 . 15311) (semantic-list "(ADDR(.head.text) - LOAD_OFFSET)" 15311 . 15343) (semantic-list "{		\\
+		HEAD_TEXT						\\
+	}" 15344 . 15370)))
+          ("TRACEDATA")
+          ("INIT_CALLS_LEVEL" (spp-arg-list ("level") 20031 . 20038) . 
+              ((symbol "VMLINUX_SYMBOL" 20048 . 20062) (semantic-list "(__initcall##level##_start)" 20062 . 20089) (punctuation "=" 20090 . 20091) (punctuation "." 20092 . 20093) (punctuation ";" 20093 . 20094) (punctuation "*" 20100 . 20101) (semantic-list "(.initcall##level##.init)" 20101 . 20126) (punctuation "*" 20134 . 20135) (semantic-list "(.initcall##level##s.init)" 20135 . 20161)))
+          ("DATA_DATA" . 
+              ((punctuation "*" 5630 . 5631) (semantic-list "(.data)" 5631 . 5638) (punctuation "*" 5648 . 5649) (semantic-list "(.ref.data)" 5649 . 5660) (punctuation "*" 5670 . 5671) (semantic-list "(.data..shared_aligned)" 5671 . 5694) (symbol "MEM_KEEP" 5721 . 5729) (semantic-list "(init.data)" 5729 . 5740) (symbol "MEM_KEEP" 5749 . 5757) (semantic-list "(exit.data)" 5757 . 5768) (punctuation "*" 5777 . 5778) (semantic-list "(.data.unlikely)" 5778 . 5794) (symbol "STRUCT_ALIGN" 5803 . 5815) (semantic-list "()" 5815 . 5817) (punctuation ";" 5817 . 5818) (punctuation "*" 5828 . 5829) (semantic-list "(__tracepoints)" 5829 . 5844) (punctuation "." 5896 . 5897) (punctuation "=" 5898 . 5899) (symbol "ALIGN" 5900 . 5905) (semantic-list "(8)" 5905 . 5908) (punctuation ";" 5908 . 5909) (symbol "VMLINUX_SYMBOL" 5963 . 5977) (semantic-list "(__start___jump_table)" 5977 . 5999) (punctuation "=" 6000 . 6001) (punctuation "." 6002 . 6003) (punctuation ";" 6003 . 6004) (punctuation "*" 6030 . 6031) (semantic-list "(__jump_table)" 6031 . 6045) (symbol "VMLINUX_SYMBOL" 6097 . 6111) (semantic-list "(__stop___jump_table)" 6111 . 6132) (punctuation "=" 6133 . 6134) (punctuation "." 6135 . 6136) (punctuation ";" 6136 . 6137) (punctuation "." 6164 . 6165) (punctuation "=" 6166 . 6167) (symbol "ALIGN" 6168 . 6173) (semantic-list "(8)" 6173 . 6176) (punctuation ";" 6176 . 6177) (symbol "VMLINUX_SYMBOL" 6187 . 6201) (semantic-list "(__start___verbose)" 6201 . 6220) (punctuation "=" 6221 . 6222) (punctuation "." 6223 . 6224) (punctuation ";" 6224 . 6225) (punctuation "*" 6254 . 6255) (semantic-list "(__verbose)" 6255 . 6266) (symbol "VMLINUX_SYMBOL" 6321 . 6335) (semantic-list "(__stop___verbose)" 6335 . 6353) (punctuation "=" 6354 . 6355) (punctuation "." 6356 . 6357) (punctuation ";" 6357 . 6358) (symbol "LIKELY_PROFILE" 6365 . 6379) (semantic-list "()" 6379 . 6381) (symbol "BRANCH_PROFILE" 6397 . 6411) (semantic-list "()" 6411 . 6413) (symbol "TRACE_PRINTKS" 6422 . 6435) (semantic-list "()" 6435 . 6437) (symbol "TRACEPOINT_STR" 6447 . 6461) (semantic-list "()" 6461 . 6463)))
+          ("INIT_TASK_DATA" (spp-arg-list ("align") 7024 . 7031) . 
+              ((punctuation "." 7040 . 7041) (punctuation "=" 7042 . 7043) (symbol "ALIGN" 7044 . 7049) (semantic-list "(align)" 7049 . 7056) (punctuation ";" 7056 . 7057) (punctuation "*" 7066 . 7067) (semantic-list "(.data..init_task)" 7067 . 7085)))
+          ("INIT_SETUP" (spp-arg-list ("initsetup_align") 19847 . 19864) . 
+              ((punctuation "." 19873 . 19874) (punctuation "=" 19875 . 19876) (symbol "ALIGN" 19877 . 19882) (semantic-list "(initsetup_align)" 19882 . 19899) (punctuation ";" 19899 . 19900) (symbol "VMLINUX_SYMBOL" 19908 . 19922) (semantic-list "(__setup_start)" 19922 . 19937) (punctuation "=" 19938 . 19939) (punctuation "." 19940 . 19941) (punctuation ";" 19941 . 19942) (punctuation "*" 19949 . 19950) (semantic-list "(.init.setup)" 19950 . 19963) (symbol "VMLINUX_SYMBOL" 19973 . 19987) (semantic-list "(__setup_end)" 19987 . 20000) (punctuation "=" 20001 . 20002) (punctuation "." 20003 . 20004) (punctuation ";" 20004 . 20005)))
+          ("INIT_RAM_FS")
+          ("DISCARDS" . 
+              ((punctuation "/" 21467 . 21468) (symbol "DISCARD" 21468 . 21475) (punctuation "/" 21475 . 21476) (punctuation ":" 21477 . 21478) (semantic-list "{							\\
+	EXIT_TEXT							\\
+	EXIT_DATA							\\
+	EXIT_CALL							\\
+	*(.discard)							\\
+	*(.discard.*)							\\
+	}" 21479 . 21592)))
+          ("PERCPU_INPUT" (spp-arg-list ("cacheline") 21926 . 21937) . 
+              ((symbol "VMLINUX_SYMBOL" 21946 . 21960) (semantic-list "(__per_cpu_start)" 21960 . 21977) (punctuation "=" 21978 . 21979) (punctuation "." 21980 . 21981) (punctuation ";" 21981 . 21982) (punctuation "*" 21989 . 21990) (semantic-list "(.data..percpu..first)" 21990 . 22012) (punctuation "." 22021 . 22022) (punctuation "=" 22023 . 22024) (symbol "ALIGN" 22025 . 22030) (semantic-list "(PAGE_SIZE)" 22030 . 22041) (punctuation ";" 22041 . 22042) (punctuation "*" 22051 . 22052) (semantic-list "(.data..percpu..page_aligned)" 22052 . 22081) (punctuation "." 22089 . 22090) (punctuation "=" 22091 . 22092) (symbol "ALIGN" 22093 . 22098) (semantic-list "(cacheline)" 22098 . 22109) (punctuation ";" 22109 . 22110) (punctuation "*" 22119 . 22120) (semantic-list "(.data..percpu..read_mostly)" 22120 . 22148) (punctuation "." 22156 . 22157) (punctuation "=" 22158 . 22159) (symbol "ALIGN" 22160 . 22165) (semantic-list "(cacheline)" 22165 . 22176) (punctuation ";" 22176 . 22177) (punctuation "*" 22186 . 22187) (semantic-list "(.data..percpu)" 22187 . 22202) (punctuation "*" 22211 . 22212) (semantic-list "(.data..percpu..shared_aligned)" 22212 . 22243) (symbol "VMLINUX_SYMBOL" 22250 . 22264) (semantic-list "(__per_cpu_end)" 22264 . 22279) (punctuation "=" 22280 . 22281) (punctuation "." 22282 . 22283) (punctuation ";" 22283 . 22284)))
+          ("PAGE_ALIGNED_DATA" (spp-arg-list ("page_align") 6712 . 6724) . 
+              ((punctuation "." 6732 . 6733) (punctuation "=" 6734 . 6735) (symbol "ALIGN" 6736 . 6741) (semantic-list "(page_align)" 6741 . 6753) (punctuation ";" 6753 . 6754) (punctuation "*" 6763 . 6764) (semantic-list "(.data..page_aligned)" 6764 . 6785)))
+          ("SOFTIRQENTRY_TEXT")
+          ("KPROBE_BLACKLIST" (spp-arg-list nil 3026 . 3028))
+          ("IOMMU_OF_TABLES" (spp-arg-list nil 4903 . 4905) . ((symbol "OF_TABLE" 4906 . 4914) (semantic-list "(CONFIG_OF_IOMMU, iommu)" 4914 . 4938)))
+          ("CPUIDLE_METHOD_OF_TABLES" (spp-arg-list nil 5113 . 5115) . ((symbol "OF_TABLE" 5116 . 5124) (semantic-list "(CONFIG_CPU_IDLE, cpuidle_method)" 5124 . 5157)))
+          ("INIT_TEXT" . 
+              ((punctuation "*" 16722 . 16723) (semantic-list "(.init.text)" 16723 . 16735) (symbol "MEM_DISCARD" 16745 . 16756) (semantic-list "(init.text)" 16756 . 16767)))
+          ("BSS" (spp-arg-list ("bss_align") 17412 . 17423) . 
+              ((punctuation "." 17433 . 17434) (punctuation "=" 17435 . 17436) (symbol "ALIGN" 17437 . 17442) (semantic-list "(bss_align)" 17442 . 17453) (punctuation ";" 17453 . 17454) (punctuation "." 17463 . 17464) (symbol "bss" 17464 . 17467) (punctuation ":" 17468 . 17469) (symbol "AT" 17470 . 17472) (semantic-list "(ADDR(.bss) - LOAD_OFFSET)" 17472 . 17498) (semantic-list "{				\\
+		BSS_FIRST_SECTIONS					\\
+		*(.bss..page_aligned)					\\
+		*(.dynbss)						\\
+		*(.bss)							\\
+		*(COMMON)						\\
+	}" 17499 . 17622)))
+          ("DWARF_DEBUG" . 
+              ((punctuation "." 17823 . 17824) (symbol "debug" 17824 . 17829) (number "0" 17839 . 17840) (punctuation ":" 17841 . 17842) (semantic-list "{ *(.debug) }" 17843 . 17856) (punctuation "." 17863 . 17864) (symbol "line" 17864 . 17868) (number "0" 17879 . 17880) (punctuation ":" 17881 . 17882) (semantic-list "{ *(.line) }" 17883 . 17895) (punctuation "." 17938 . 17939) (symbol "debug_srcinfo" 17939 . 17952) (number "0" 17954 . 17955) (punctuation ":" 17956 . 17957) (semantic-list "{ *(.debug_srcinfo) }" 17958 . 17979) (punctuation "." 17985 . 17986) (symbol "debug_sfnames" 17986 . 17999) (number "0" 18001 . 18002) (punctuation ":" 18003 . 18004) (semantic-list "{ *(.debug_sfnames) }" 18005 . 18026) (punctuation "." 18067 . 18068) (symbol "debug_aranges" 18068 . 18081) (number "0" 18083 . 18084) (punctuation ":" 18085 . 18086) (semantic-list "{ *(.debug_aranges) }" 18087 . 18108) (punctuation "." 18114 . 18115) (symbol "debug_pubnames" 18115 . 18129) (number "0" 18130 . 18131) (punctuation ":" 18132 . 18133) (semantic-list "{ *(.debug_pubnames) }" 18134 . 18156) (punctuation "." 18185 . 18186) (symbol "debug_info" 18186 . 18196) (number "0" 18201 . 18202) (punctuation ":" 18203 . 18204) (semantic-list "{ *(.debug_info			\\
+				.gnu.linkonce.wi.*) }" 18205 . 18250) (punctuation "." 18257 . 18258) (symbol "debug_abbrev" 18258 . 18270) (number "0" 18273 . 18274) (punctuation ":" 18275 . 18276) (semantic-list "{ *(.debug_abbrev) }" 18277 . 18297) (punctuation "." 18303 . 18304) (symbol "debug_line" 18304 . 18314) (number "0" 18319 . 18320) (punctuation ":" 18321 . 18322) (semantic-list "{ *(.debug_line) }" 18323 . 18341) (punctuation "." 18348 . 18349) (symbol "debug_frame" 18349 . 18360) (number "0" 18364 . 18365) (punctuation ":" 18366 . 18367) (semantic-list "{ *(.debug_frame) }" 18368 . 18387) (punctuation "." 18394 . 18395) (symbol "debug_str" 18395 . 18404) (number "0" 18410 . 18411) (punctuation ":" 18412 . 18413) (semantic-list "{ *(.debug_str) }" 18414 . 18431) (punctuation "." 18438 . 18439) (symbol "debug_loc" 18439 . 18448) (number "0" 18454 . 18455) (punctuation ":" 18456 . 18457) (semantic-list "{ *(.debug_loc) }" 18458 . 18475) (punctuation "." 18482 . 18483) (symbol "debug_macinfo" 18483 . 18496) (number "0" 18498 . 18499) (punctuation ":" 18500 . 18501) (semantic-list "{ *(.debug_macinfo) }" 18502 . 18523) (punctuation "." 18569 . 18570) (symbol "debug_weaknames" 18570 . 18585) (number "0" 18586 . 18587) (punctuation ":" 18588 . 18589) (semantic-list "{ *(.debug_weaknames) }" 18590 . 18613) (punctuation "." 18619 . 18620) (symbol "debug_funcnames" 18620 . 18635) (number "0" 18636 . 18637) (punctuation ":" 18638 . 18639) (semantic-list "{ *(.debug_funcnames) }" 18640 . 18663) (punctuation "." 18669 . 18670) (symbol "debug_typenames" 18670 . 18685) (number "0" 18686 . 18687) (punctuation ":" 18688 . 18689) (semantic-list "{ *(.debug_typenames) }" 18690 . 18713) (punctuation "." 18719 . 18720) (symbol "debug_varnames" 18720 . 18734) (number "0" 18736 . 18737) (punctuation ":" 18738 . 18739) (semantic-list "{ *(.debug_varnames) }" 18740 . 18762)))
+          ("SECURITY_INITCALL" . 
+              ((symbol "VMLINUX_SYMBOL" 20749 . 20763) (semantic-list "(__security_initcall_start)" 20763 . 20790) (punctuation "=" 20791 . 20792) (punctuation "." 20793 . 20794) (punctuation ";" 20794 . 20795) (punctuation "*" 20801 . 20802) (semantic-list "(.security_initcall.init)" 20802 . 20827) (symbol "VMLINUX_SYMBOL" 20835 . 20849) (semantic-list "(__security_initcall_end)" 20849 . 20874) (punctuation "=" 20875 . 20876) (punctuation "." 20877 . 20878) (punctuation ";" 20878 . 20879)))
+          ("LIKELY_PROFILE" (spp-arg-list nil 2549 . 2551))
+          ("___OF_TABLE" (spp-arg-list ("cfg" "name") 4352 . 4363) . ((spp-symbol-merge ((symbol "_OF_TABLE_" 4364 . 4374) (symbol "cfg" 4376 . 4379)) 4364 . 4379) (semantic-list "(name)" 4379 . 4385)))
+          ("OF_TABLE" (spp-arg-list ("cfg" "name") 4455 . 4466) . ((symbol "__OF_TABLE" 4467 . 4477) (semantic-list "(config_enabled(cfg), name)" 4477 . 4504)))
+          ("_OF_TABLE_0" (spp-arg-list ("name") 4524 . 4530))
+          ("RESERVEDMEM_OF_TABLES" (spp-arg-list nil 4968 . 4970) . ((symbol "OF_TABLE" 4971 . 4979) (semantic-list "(CONFIG_OF_RESERVED_MEM, reservedmem)" 4979 . 5016)))
+          ("CPU_METHOD_OF_TABLES" (spp-arg-list nil 5045 . 5047) . ((symbol "OF_TABLE" 5048 . 5056) (semantic-list "(CONFIG_SMP, cpu_method)" 5056 . 5080)))
+          ("ACPI_PROBE_TABLE" (spp-arg-list ("name") 5414 . 5420))
+          ("KPROBES_TEXT" . 
+              ((symbol "ALIGN_FUNCTION" 14305 . 14319) (semantic-list "()" 14319 . 14321) (punctuation ";" 14321 . 14322) (symbol "VMLINUX_SYMBOL" 14331 . 14345) (semantic-list "(__kprobes_text_start)" 14345 . 14367) (punctuation "=" 14368 . 14369) (punctuation "." 14370 . 14371) (punctuation ";" 14371 . 14372) (punctuation "*" 14378 . 14379) (semantic-list "(.kprobes.text)" 14379 . 14394) (symbol "VMLINUX_SYMBOL" 14403 . 14417) (semantic-list "(__kprobes_text_end)" 14417 . 14437) (punctuation "=" 14438 . 14439) (punctuation "." 14440 . 14441) (punctuation ";" 14441 . 14442)))
+          ("EXIT_CALL" . ((punctuation "*" 16977 . 16978) (semantic-list "(.exitcall.exit)" 16978 . 16994)))
+          ("BRANCH_PROFILE" (spp-arg-list nil 2775 . 2777))
+          ("EARLYCON_TABLE" (spp-arg-list nil 4322 . 4324))
+          ("__OF_TABLE" (spp-arg-list ("cfg" "name") 4404 . 4415) . ((symbol "___OF_TABLE" 4416 . 4427) (semantic-list "(cfg, name)" 4427 . 4438)))
+          ("_OF_TABLE_1" (spp-arg-list ("name") 4550 . 4556) . 
+              ((punctuation "." 4565 . 4566) (punctuation "=" 4567 . 4568) (symbol "ALIGN" 4569 . 4574) (semantic-list "(8)" 4574 . 4577) (punctuation ";" 4577 . 4578) (symbol "VMLINUX_SYMBOL" 4588 . 4602) (semantic-list "(__##name##_of_table)" 4602 . 4623) (punctuation "=" 4624 . 4625) (punctuation "." 4626 . 4627) (punctuation ";" 4627 . 4628) (punctuation "*" 4634 . 4635) (semantic-list "(__##name##_of_table)" 4635 . 4656) (punctuation "*" 4665 . 4666) (semantic-list "(__##name##_of_table_end)" 4666 . 4691)))
+          ("EXCEPTION_TABLE" (spp-arg-list ("align") 15421 . 15428) . 
+              ((punctuation "." 15437 . 15438) (punctuation "=" 15439 . 15440) (symbol "ALIGN" 15441 . 15446) (semantic-list "(align)" 15446 . 15453) (punctuation ";" 15453 . 15454) (symbol "__ex_table" 15463 . 15473) (punctuation ":" 15474 . 15475) (symbol "AT" 15476 . 15478) (semantic-list "(ADDR(__ex_table) - LOAD_OFFSET)" 15478 . 15510) (semantic-list "{		\\
+		VMLINUX_SYMBOL(__start___ex_table) = .;			\\
+		*(__ex_table)						\\
+		VMLINUX_SYMBOL(__stop___ex_table) = .;			\\
+	}" 15511 . 15632)))
+          ("EXIT_DATA" . 
+              ((punctuation "*" 16796 . 16797) (semantic-list "(.exit.data)" 16797 . 16809) (symbol "MEM_DISCARD" 16819 . 16830) (semantic-list "(exit.data)" 16830 . 16841) (symbol "MEM_DISCARD" 16850 . 16861) (semantic-list "(exit.rodata)" 16861 . 16874)))
+          ("INIT_DATA_SECTION" (spp-arg-list ("initsetup_align") 25486 . 25503) . 
+              ((punctuation "." 25510 . 25511) (symbol "init" 25511 . 25515) (punctuation "." 25515 . 25516) (symbol "data" 25516 . 25520) (punctuation ":" 25521 . 25522) (symbol "AT" 25523 . 25525) (semantic-list "(ADDR(.init.data) - LOAD_OFFSET)" 25525 . 25557) (semantic-list "{		\\
+		INIT_DATA						\\
+		INIT_SETUP(initsetup_align)				\\
+		INIT_CALLS						\\
+		CON_INITCALL						\\
+		SECURITY_INITCALL					\\
+		INIT_RAM_FS						\\
+	}" 25558 . 25708)))
+          ("STRUCT_ALIGN" (spp-arg-list nil 1559 . 1561) . 
+              ((punctuation "." 1562 . 1563) (punctuation "=" 1564 . 1565) (symbol "ALIGN" 1566 . 1571) (semantic-list "(STRUCT_ALIGNMENT)" 1571 . 1589)))
+          ("IRQCHIP_OF_MATCH_TABLE" (spp-arg-list nil 4785 . 4787) . ((symbol "OF_TABLE" 4788 . 4796) (semantic-list "(CONFIG_IRQCHIP, irqchip)" 4796 . 4821)))
+          ("NOSAVE_DATA" . 
+              ((punctuation "." 6525 . 6526) (punctuation "=" 6527 . 6528) (symbol "ALIGN" 6529 . 6534) (semantic-list "(PAGE_SIZE)" 6534 . 6545) (punctuation ";" 6545 . 6546) (symbol "VMLINUX_SYMBOL" 6555 . 6569) (semantic-list "(__nosave_begin)" 6569 . 6585) (punctuation "=" 6586 . 6587) (punctuation "." 6588 . 6589) (punctuation ";" 6589 . 6590) (punctuation "*" 6597 . 6598) (semantic-list "(.data..nosave)" 6598 . 6613) (punctuation "." 6622 . 6623) (punctuation "=" 6624 . 6625) (symbol "ALIGN" 6626 . 6631) (semantic-list "(PAGE_SIZE)" 6631 . 6642) (punctuation ";" 6642 . 6643) (symbol "VMLINUX_SYMBOL" 6652 . 6666) (semantic-list "(__nosave_end)" 6666 . 6680) (punctuation "=" 6681 . 6682) (punctuation "." 6683 . 6684) (punctuation ";" 6684 . 6685)))
+          ("INIT_TASK_DATA_SECTION" (spp-arg-list ("align") 15684 . 15691) . 
+              ((punctuation "." 15699 . 15700) (punctuation "=" 15701 . 15702) (symbol "ALIGN" 15703 . 15708) (semantic-list "(align)" 15708 . 15715) (punctuation ";" 15715 . 15716) (punctuation "." 15725 . 15726) (symbol "data" 15726 . 15730) (punctuation "." 15730 . 15731) (punctuation "." 15731 . 15732) (symbol "init_task" 15732 . 15741) (punctuation ":" 15742 . 15743) (symbol "AT" 15745 . 15747) (semantic-list "(ADDR(.data..init_task) - LOAD_OFFSET)" 15747 . 15785) (semantic-list "{	\\
+		INIT_TASK_DATA(align)					\\
+	}" 15786 . 15822)))
+          ("BUG_TABLE")
+          ("RW_DATA_SECTION" (spp-arg-list ("cacheline" "pagealigned" "inittask") 24900 . 24934) . 
+              ((punctuation "." 24939 . 24940) (punctuation "=" 24941 . 24942) (symbol "ALIGN" 24943 . 24948) (semantic-list "(PAGE_SIZE)" 24948 . 24959) (punctuation ";" 24959 . 24960) (punctuation "." 24969 . 24970) (symbol "data" 24970 . 24974) (punctuation ":" 24975 . 24976) (symbol "AT" 24977 . 24979) (semantic-list "(ADDR(.data) - LOAD_OFFSET)" 24979 . 25006) (semantic-list "{				\\
+		INIT_TASK_DATA(inittask)				\\
+		NOSAVE_DATA						\\
+		PAGE_ALIGNED_DATA(pagealigned)				\\
+		CACHELINE_ALIGNED_DATA(cacheline)			\\
+		READ_MOSTLY_DATA(cacheline)				\\
+		DATA_DATA						\\
+		CONSTRUCTORS						\\
+	}" 25007 . 25223)))
+          ("MEM_DISCARD" (spp-arg-list ("sec") 2056 . 2061) . ((punctuation "*" 2062 . 2063) (semantic-list "(.mem##sec)" 2063 . 2074)))
+          ("TRACEPOINT_STR" (spp-arg-list nil 3841 . 3843))
+          ("RO_DATA" (spp-arg-list ("align") 13073 . 13080) . ((symbol "RO_DATA_SECTION" 13082 . 13097) (semantic-list "(align)" 13097 . 13104)))
+          ("ENTRY_TEXT" . 
+              ((symbol "ALIGN_FUNCTION" 14473 . 14487) (semantic-list "()" 14487 . 14489) (punctuation ";" 14489 . 14490) (symbol "VMLINUX_SYMBOL" 14499 . 14513) (semantic-list "(__entry_text_start)" 14513 . 14533) (punctuation "=" 14534 . 14535) (punctuation "." 14536 . 14537) (punctuation ";" 14537 . 14538) (punctuation "*" 14545 . 14546) (semantic-list "(.entry.text)" 14546 . 14559) (symbol "VMLINUX_SYMBOL" 14569 . 14583) (semantic-list "(__entry_text_end)" 14583 . 14601) (punctuation "=" 14602 . 14603) (punctuation "." 14604 . 14605) (punctuation ";" 14605 . 14606)))
+          ("NOTES" . 
+              ((punctuation "." 19678 . 19679) (symbol "notes" 19679 . 19684) (punctuation ":" 19685 . 19686) (symbol "AT" 19687 . 19689) (semantic-list "(ADDR(.notes) - LOAD_OFFSET)" 19689 . 19717) (semantic-list "{			\\
+		VMLINUX_SYMBOL(__start_notes) = .;			\\
+		*(.note.*)						\\
+		VMLINUX_SYMBOL(__stop_notes) = .;			\\
+	}" 19718 . 19827)))
+          ("CPU_DISCARD" (spp-arg-list ("sec") 1884 . 1889) . ((punctuation "*" 1890 . 1891) (semantic-list "(.cpu##sec)" 1891 . 1902)))
+          ("MCOUNT_REC" (spp-arg-list nil 2293 . 2295))
+          ("KERNEL_DTB" (spp-arg-list nil 5447 . 5449) . 
+              ((symbol "STRUCT_ALIGN" 5459 . 5471) (semantic-list "()" 5471 . 5473) (punctuation ";" 5473 . 5474) (symbol "VMLINUX_SYMBOL" 5484 . 5498) (semantic-list "(__dtb_start)" 5498 . 5511) (punctuation "=" 5512 . 5513) (punctuation "." 5514 . 5515) (punctuation ";" 5515 . 5516) (punctuation "*" 5523 . 5524) (semantic-list "(.dtb.init.rodata)" 5524 . 5542) (symbol "VMLINUX_SYMBOL" 5551 . 5565) (semantic-list "(__dtb_end)" 5565 . 5576) (punctuation "=" 5577 . 5578) (punctuation "." 5579 . 5580) (punctuation ";" 5580 . 5581)))
+          ("CACHELINE_ALIGNED_DATA" (spp-arg-list ("align") 6932 . 6939) . 
+              ((punctuation "." 6947 . 6948) (punctuation "=" 6949 . 6950) (symbol "ALIGN" 6951 . 6956) (semantic-list "(align)" 6956 . 6963) (punctuation ";" 6963 . 6964) (punctuation "*" 6973 . 6974) (semantic-list "(.data..cacheline_aligned)" 6974 . 7000)))
+          ("RO_DATA_SECTION" (spp-arg-list ("align") 7135 . 7142) . 
+              ((punctuation "." 7151 . 7152) (punctuation "=" 7153 . 7154) (symbol "ALIGN" 7155 . 7160) (semantic-list "((align))" 7160 . 7169) (punctuation ";" 7169 . 7170) (punctuation "." 7179 . 7180) (symbol "rodata" 7180 . 7186) (punctuation ":" 7197 . 7198) (symbol "AT" 7199 . 7201) (semantic-list "(ADDR(.rodata) - LOAD_OFFSET)" 7201 . 7230) (semantic-list "{		\\
+		VMLINUX_SYMBOL(__start_rodata) = .;			\\
+		*(.rodata) *(.rodata.*)					\\
+		*(.data..ro_after_init)	/* Read only after init */	\\
+		*(__vermagic)		/* Kernel version magic */	\\
+		. = ALIGN(8);						\\
+		VMLINUX_SYMBOL(__start___tracepoints_ptrs) = .;		\\
+		*(__tracepoints_ptrs)	/* Tracepoints: pointer array */\\
+		VMLINUX_SYMBOL(__stop___tracepoints_ptrs) = .;		\\
+		*(__tracepoints_strings)/* Tracepoints: strings */	\\
+	}" 7231 . 7654) (punctuation "." 7676 . 7677) (symbol "rodata1" 7677 . 7684) (punctuation ":" 7694 . 7695) (symbol "AT" 7696 . 7698) (semantic-list "(ADDR(.rodata1) - LOAD_OFFSET)" 7698 . 7728) (semantic-list "{		\\
+		*(.rodata1)						\\
+	}" 7729 . 7757) (symbol "BUG_TABLE" 7779 . 7788) (punctuation "." 7834 . 7835) (symbol "pci_fixup" 7835 . 7844) (punctuation ":" 7852 . 7853) (symbol "AT" 7854 . 7856) (semantic-list "(ADDR(.pci_fixup) - LOAD_OFFSET)" 7856 . 7888) (semantic-list "{	\\
+		VMLINUX_SYMBOL(__start_pci_fixups_early) = .;		\\
+		*(.pci_fixup_early)					\\
+		VMLINUX_SYMBOL(__end_pci_fixups_early) = .;		\\
+		VMLINUX_SYMBOL(__start_pci_fixups_header) = .;		\\
+		*(.pci_fixup_header)					\\
+		VMLINUX_SYMBOL(__end_pci_fixups_header) = .;		\\
+		VMLINUX_SYMBOL(__start_pci_fixups_final) = .;		\\
+		*(.pci_fixup_final)					\\
+		VMLINUX_SYMBOL(__end_pci_fixups_final) = .;		\\
+		VMLINUX_SYMBOL(__start_pci_fixups_enable) = .;		\\
+		*(.pci_fixup_enable)					\\
+		VMLINUX_SYMBOL(__end_pci_fixups_enable) = .;		\\
+		VMLINUX_SYMBOL(__start_pci_fixups_resume) = .;		\\
+		*(.pci_fixup_resume)					\\
+		VMLINUX_SYMBOL(__end_pci_fixups_resume) = .;		\\
+		VMLINUX_SYMBOL(__start_pci_fixups_resume_early) = .;	\\
+		*(.pci_fixup_resume_early)				\\
+		VMLINUX_SYMBOL(__end_pci_fixups_resume_early) = .;	\\
+		VMLINUX_SYMBOL(__start_pci_fixups_suspend) = .;		\\
+		*(.pci_fixup_suspend)					\\
+		VMLINUX_SYMBOL(__end_pci_fixups_suspend) = .;		\\
+		VMLINUX_SYMBOL(__start_pci_fixups_suspend_late) = .;	\\
+		*(.pci_fixup_suspend_late)				\\
+		VMLINUX_SYMBOL(__end_pci_fixups_suspend_late) = .;	\\
+	}" 7889 . 8970) (punctuation "." 9029 . 9030) (symbol "builtin_fw" 9030 . 9040) (punctuation ":" 9048 . 9049) (symbol "AT" 9050 . 9052) (semantic-list "(ADDR(.builtin_fw) - LOAD_OFFSET)" 9052 . 9085) (semantic-list "{	\\
+		VMLINUX_SYMBOL(__start_builtin_fw) = .;			\\
+		*(.builtin_fw)						\\
+		VMLINUX_SYMBOL(__end_builtin_fw) = .;			\\
+	}" 9086 . 9206) (symbol "TRACEDATA" 9228 . 9237) (symbol "__ksymtab" 9305 . 9314) (punctuation ":" 9323 . 9324) (symbol "AT" 9325 . 9327) (semantic-list "(ADDR(__ksymtab) - LOAD_OFFSET)" 9327 . 9358) (semantic-list "{		\\
+		VMLINUX_SYMBOL(__start___ksymtab) = .;			\\
+		*(SORT(___ksymtab+*))					\\
+		VMLINUX_SYMBOL(__stop___ksymtab) = .;			\\
+	}" 9359 . 9485) (symbol "__ksymtab_gpl" 9556 . 9569) (punctuation ":" 9574 . 9575) (symbol "AT" 9576 . 9578) (semantic-list "(ADDR(__ksymtab_gpl) - LOAD_OFFSET)" 9578 . 9613) (semantic-list "{	\\
+		VMLINUX_SYMBOL(__start___ksymtab_gpl) = .;		\\
+		*(SORT(___ksymtab_gpl+*))				\\
+		VMLINUX_SYMBOL(__stop___ksymtab_gpl) = .;		\\
+	}" 9614 . 9748) (symbol "__ksymtab_unused" 9823 . 9839) (punctuation ":" 9841 . 9842) (symbol "AT" 9843 . 9845) (semantic-list "(ADDR(__ksymtab_unused) - LOAD_OFFSET)" 9845 . 9883) (semantic-list "{	\\
+		VMLINUX_SYMBOL(__start___ksymtab_unused) = .;		\\
+		*(SORT(___ksymtab_unused+*))				\\
+		VMLINUX_SYMBOL(__stop___ksymtab_unused) = .;		\\
+	}" 9884 . 10027) (symbol "__ksymtab_unused_gpl" 10104 . 10124) (punctuation ":" 10125 . 10126) (symbol "AT" 10127 . 10129) (semantic-list "(ADDR(__ksymtab_unused_gpl) - LOAD_OFFSET)" 10129 . 10171) (semantic-list "{ \\
+		VMLINUX_SYMBOL(__start___ksymtab_unused_gpl) = .;	\\
+		*(SORT(___ksymtab_unused_gpl+*))			\\
+		VMLINUX_SYMBOL(__stop___ksymtab_unused_gpl) = .;	\\
+	}" 10172 . 10324) (symbol "__ksymtab_gpl_future" 10401 . 10421) (punctuation ":" 10422 . 10423) (symbol "AT" 10424 . 10426) (semantic-list "(ADDR(__ksymtab_gpl_future) - LOAD_OFFSET)" 10426 . 10468) (semantic-list "{ \\
+		VMLINUX_SYMBOL(__start___ksymtab_gpl_future) = .;	\\
+		*(SORT(___ksymtab_gpl_future+*))			\\
+		VMLINUX_SYMBOL(__stop___ksymtab_gpl_future) = .;	\\
+	}" 10469 . 10621) (symbol "__kcrctab" 10690 . 10699) (punctuation ":" 10708 . 10709) (symbol "AT" 10710 . 10712) (semantic-list "(ADDR(__kcrctab) - LOAD_OFFSET)" 10712 . 10743) (semantic-list "{		\\
+		VMLINUX_SYMBOL(__start___kcrctab) = .;			\\
+		*(SORT(___kcrctab+*))					\\
+		VMLINUX_SYMBOL(__stop___kcrctab) = .;			\\
+	}" 10744 . 10870) (symbol "__kcrctab_gpl" 10941 . 10954) (punctuation ":" 10959 . 10960) (symbol "AT" 10961 . 10963) (semantic-list "(ADDR(__kcrctab_gpl) - LOAD_OFFSET)" 10963 . 10998) (semantic-list "{	\\
+		VMLINUX_SYMBOL(__start___kcrctab_gpl) = .;		\\
+		*(SORT(___kcrctab_gpl+*))				\\
+		VMLINUX_SYMBOL(__stop___kcrctab_gpl) = .;		\\
+	}" 10999 . 11133) (symbol "__kcrctab_unused" 11208 . 11224) (punctuation ":" 11226 . 11227) (symbol "AT" 11228 . 11230) (semantic-list "(ADDR(__kcrctab_unused) - LOAD_OFFSET)" 11230 . 11268) (semantic-list "{	\\
+		VMLINUX_SYMBOL(__start___kcrctab_unused) = .;		\\
+		*(SORT(___kcrctab_unused+*))				\\
+		VMLINUX_SYMBOL(__stop___kcrctab_unused) = .;		\\
+	}" 11269 . 11412) (symbol "__kcrctab_unused_gpl" 11489 . 11509) (punctuation ":" 11510 . 11511) (symbol "AT" 11512 . 11514) (semantic-list "(ADDR(__kcrctab_unused_gpl) - LOAD_OFFSET)" 11514 . 11556) (semantic-list "{ \\
+		VMLINUX_SYMBOL(__start___kcrctab_unused_gpl) = .;	\\
+		*(SORT(___kcrctab_unused_gpl+*))			\\
+		VMLINUX_SYMBOL(__stop___kcrctab_unused_gpl) = .;	\\
+	}" 11557 . 11709) (symbol "__kcrctab_gpl_future" 11786 . 11806) (punctuation ":" 11807 . 11808) (symbol "AT" 11809 . 11811) (semantic-list "(ADDR(__kcrctab_gpl_future) - LOAD_OFFSET)" 11811 . 11853) (semantic-list "{ \\
+		VMLINUX_SYMBOL(__start___kcrctab_gpl_future) = .;	\\
+		*(SORT(___kcrctab_gpl_future+*))			\\
+		VMLINUX_SYMBOL(__stop___kcrctab_gpl_future) = .;	\\
+	}" 11854 . 12006) (symbol "__ksymtab_strings" 12076 . 12093) (punctuation ":" 12094 . 12095) (symbol "AT" 12096 . 12098) (semantic-list "(ADDR(__ksymtab_strings) - LOAD_OFFSET)" 12098 . 12137) (semantic-list "{	\\
+		*(__ksymtab_strings)					\\
+	}" 12138 . 12173) (symbol "__init_rodata" 12226 . 12239) (punctuation ":" 12240 . 12241) (symbol "AT" 12242 . 12244) (semantic-list "(ADDR(__init_rodata) - LOAD_OFFSET)" 12244 . 12279) (semantic-list "{		\\
+		*(.ref.rodata)						\\
+		MEM_KEEP(init.rodata)					\\
+		MEM_KEEP(exit.rodata)					\\
+	}" 12280 . 12371) (symbol "__param" 12433 . 12440) (punctuation ":" 12441 . 12442) (symbol "AT" 12443 . 12445) (semantic-list "(ADDR(__param) - LOAD_OFFSET)" 12445 . 12474) (semantic-list "{			\\
+		VMLINUX_SYMBOL(__start___param) = .;			\\
+		*(__param)						\\
+		VMLINUX_SYMBOL(__stop___param) = .;			\\
+	}" 12475 . 12588) (symbol "__modver" 12649 . 12657) (punctuation ":" 12658 . 12659) (symbol "AT" 12660 . 12662) (semantic-list "(ADDR(__modver) - LOAD_OFFSET)" 12662 . 12692) (semantic-list "{			\\
+		VMLINUX_SYMBOL(__start___modver) = .;			\\
+		*(__modver)						\\
+		VMLINUX_SYMBOL(__stop___modver) = .;			\\
+		. = ALIGN((align));					\\
+		VMLINUX_SYMBOL(__end_rodata) = .;			\\
+	}" 12693 . 12877) (punctuation "." 12888 . 12889) (punctuation "=" 12890 . 12891) (symbol "ALIGN" 12892 . 12897) (semantic-list "((align))" 12897 . 12906) (punctuation ";" 12906 . 12907)))
+          ("RODATA" . ((symbol "RO_DATA_SECTION" 13036 . 13051) (semantic-list "(4096)" 13051 . 13057)))
+          ("IRQENTRY_TEXT")
+          ("KERNEL_CTORS" (spp-arg-list nil 16074 . 16076))
+          ("SBSS" (spp-arg-list ("sbss_align") 17094 . 17106) . 
+              ((punctuation "." 17115 . 17116) (punctuation "=" 17117 . 17118) (symbol "ALIGN" 17119 . 17124) (semantic-list "(sbss_align)" 17124 . 17136) (punctuation ";" 17136 . 17137) (punctuation "." 17146 . 17147) (symbol "sbss" 17147 . 17151) (punctuation ":" 17152 . 17153) (symbol "AT" 17154 . 17156) (semantic-list "(ADDR(.sbss) - LOAD_OFFSET)" 17156 . 17183) (semantic-list "{				\\
+		*(.sbss)						\\
+		*(.scommon)						\\
+	}" 17184 . 17232)))
+          ("LOAD_OFFSET" . ((number "0" 1271 . 1272)))
+          ("TRACE_PRINTKS" (spp-arg-list nil 3816 . 3818))
+          ("TRACE_SYSCALLS" (spp-arg-list nil 4090 . 4092))
+          ("CLKSRC_OF_TABLES" (spp-arg-list nil 4717 . 4719) . ((symbol "OF_TABLE" 4720 . 4728) (semantic-list "(CONFIG_CLKSRC_OF, clksrc)" 4728 . 4754)))
+          ("CLK_OF_TABLES" (spp-arg-list nil 4843 . 4845) . ((symbol "OF_TABLE" 4847 . 4855) (semantic-list "(CONFIG_COMMON_CLK, clk)" 4855 . 4879)))
+          ("SECURITY_INIT" . 
+              ((punctuation "." 13137 . 13138) (symbol "security_initcall" 13138 . 13155) (punctuation "." 13155 . 13156) (symbol "init" 13156 . 13160) (punctuation ":" 13161 . 13162) (symbol "AT" 13163 . 13165) (semantic-list "(ADDR(.security_initcall.init) - LOAD_OFFSET)" 13165 . 13210) (semantic-list "{ \\
+		VMLINUX_SYMBOL(__security_initcall_start) = .;		\\
+		*(.security_initcall.init) 				\\
+		VMLINUX_SYMBOL(__security_initcall_end) = .;		\\
+	}" 13211 . 13354)))
+          ("SCHED_TEXT" . 
+              ((symbol "ALIGN_FUNCTION" 13841 . 13855) (semantic-list "()" 13855 . 13857) (punctuation ";" 13857 . 13858) (symbol "VMLINUX_SYMBOL" 13867 . 13881) (semantic-list "(__sched_text_start)" 13881 . 13901) (punctuation "=" 13902 . 13903) (punctuation "." 13904 . 13905) (punctuation ";" 13905 . 13906) (punctuation "*" 13913 . 13914) (semantic-list "(.sched.text)" 13914 . 13927) (symbol "VMLINUX_SYMBOL" 13937 . 13951) (semantic-list "(__sched_text_end)" 13951 . 13969) (punctuation "=" 13970 . 13971) (punctuation "." 13972 . 13973) (punctuation ";" 13973 . 13974)))
+          ("INIT_CALLS" . 
+              ((symbol "VMLINUX_SYMBOL" 20197 . 20211) (semantic-list "(__initcall_start)" 20211 . 20229) (punctuation "=" 20230 . 20231) (punctuation "." 20232 . 20233) (punctuation ";" 20233 . 20234) (punctuation "*" 20241 . 20242) (semantic-list "(.initcallearly.init)" 20242 . 20263) (symbol "INIT_CALLS_LEVEL" 20272 . 20288) (semantic-list "(0)" 20288 . 20291) (symbol "INIT_CALLS_LEVEL" 20300 . 20316) (semantic-list "(1)" 20316 . 20319) (symbol "INIT_CALLS_LEVEL" 20328 . 20344) (semantic-list "(2)" 20344 . 20347) (symbol "INIT_CALLS_LEVEL" 20356 . 20372) (semantic-list "(3)" 20372 . 20375) (symbol "INIT_CALLS_LEVEL" 20384 . 20400) (semantic-list "(4)" 20400 . 20403) (symbol "INIT_CALLS_LEVEL" 20412 . 20428) (semantic-list "(5)" 20428 . 20431) (symbol "INIT_CALLS_LEVEL" 20440 . 20456) (semantic-list "(rootfs)" 20456 . 20464) (symbol "INIT_CALLS_LEVEL" 20472 . 20488) (semantic-list "(6)" 20488 . 20491) (symbol "INIT_CALLS_LEVEL" 20500 . 20516) (semantic-list "(7)" 20516 . 20519) (symbol "VMLINUX_SYMBOL" 20528 . 20542) (semantic-list "(__initcall_end)" 20542 . 20558) (punctuation "=" 20559 . 20560) (punctuation "." 20561 . 20562) (punctuation ";" 20562 . 20563)))
+          ("CON_INITCALL" . 
+              ((symbol "VMLINUX_SYMBOL" 20596 . 20610) (semantic-list "(__con_initcall_start)" 20610 . 20632) (punctuation "=" 20633 . 20634) (punctuation "." 20635 . 20636) (punctuation ";" 20636 . 20637) (punctuation "*" 20643 . 20644) (semantic-list "(.con_initcall.init)" 20644 . 20664) (symbol "VMLINUX_SYMBOL" 20673 . 20687) (semantic-list "(__con_initcall_end)" 20687 . 20707) (punctuation "=" 20708 . 20709) (punctuation "." 20710 . 20711) (punctuation ";" 20711 . 20712)))
+          ("PERCPU_VADDR" (spp-arg-list ("cacheline" "vaddr" "phdr") 23259 . 23283) . 
+              ((symbol "VMLINUX_SYMBOL" 23290 . 23304) (semantic-list "(__per_cpu_load)" 23304 . 23320) (punctuation "=" 23321 . 23322) (punctuation "." 23323 . 23324) (punctuation ";" 23324 . 23325) (punctuation "." 23332 . 23333) (symbol "data" 23333 . 23337) (punctuation "." 23337 . 23338) (punctuation "." 23338 . 23339) (symbol "percpu" 23339 . 23345) (symbol "vaddr" 23346 . 23351) (punctuation ":" 23352 . 23353) (symbol "AT" 23354 . 23356) (semantic-list "(VMLINUX_SYMBOL(__per_cpu_load)		\\
+				- LOAD_OFFSET)" 23356 . 23409) (semantic-list "{			\\
+		PERCPU_INPUT(cacheline)					\\
+	}" 23410 . 23450) (symbol "phdr" 23451 . 23455) (punctuation "." 23466 . 23467) (punctuation "=" 23468 . 23469) (symbol "VMLINUX_SYMBOL" 23470 . 23484) (semantic-list "(__per_cpu_load)" 23484 . 23500) (punctuation "+" 23501 . 23502) (symbol "SIZEOF" 23503 . 23509) (semantic-list "(.data..percpu)" 23509 . 23524) (punctuation ";" 23524 . 23525)))
+          ("STRUCT_ALIGNMENT" . ((number "32" 1536 . 1538)))
+          ("FTRACE_EVENTS" (spp-arg-list nil 3384 . 3386))
+          ("HEAD_TEXT" . ((punctuation "*" 15246 . 15247) (semantic-list "(.head.text)" 15247 . 15259)))
+          ("EXIT_TEXT" . 
+              ((punctuation "*" 16903 . 16904) (semantic-list "(.exit.text)" 16904 . 16916) (symbol "MEM_DISCARD" 16926 . 16937) (semantic-list "(exit.text)" 16937 . 16948)))
+          ("STABS_DEBUG" . 
+              ((punctuation "." 18832 . 18833) (symbol "stab" 18833 . 18837) (number "0" 18838 . 18839) (punctuation ":" 18840 . 18841) (semantic-list "{ *(.stab) }" 18842 . 18854) (punctuation "." 18863 . 18864) (symbol "stabstr" 18864 . 18871) (number "0" 18872 . 18873) (punctuation ":" 18874 . 18875) (semantic-list "{ *(.stabstr) }" 18876 . 18891) (punctuation "." 18899 . 18900) (symbol "stab" 18900 . 18904) (punctuation "." 18904 . 18905) (symbol "excl" 18905 . 18909) (number "0" 18910 . 18911) (punctuation ":" 18912 . 18913) (semantic-list "{ *(.stab.excl) }" 18914 . 18931) (punctuation "." 18938 . 18939) (symbol "stab" 18939 . 18943) (punctuation "." 18943 . 18944) (symbol "exclstr" 18944 . 18951) (number "0" 18952 . 18953) (punctuation ":" 18954 . 18955) (semantic-list "{ *(.stab.exclstr) }" 18956 . 18976) (punctuation "." 18983 . 18984) (symbol "stab" 18984 . 18988) (punctuation "." 18988 . 18989) (symbol "index" 18989 . 18994) (number "0" 18995 . 18996) (punctuation ":" 18997 . 18998) (semantic-list "{ *(.stab.index) }" 18999 . 19017) (punctuation "." 19024 . 19025) (symbol "stab" 19025 . 19029) (punctuation "." 19029 . 19030) (symbol "indexstr" 19030 . 19038) (number "0" 19039 . 19040) (punctuation ":" 19041 . 19042) (semantic-list "{ *(.stab.indexstr) }" 19043 . 19064) (punctuation "." 19070 . 19071) (symbol "comment" 19071 . 19078) (number "0" 19079 . 19080) (punctuation ":" 19081 . 19082) (semantic-list "{ *(.comment) }" 19083 . 19098)))
+          ("PERCPU_SECTION" (spp-arg-list ("cacheline") 24063 . 24074) . 
+              ((punctuation "." 24082 . 24083) (punctuation "=" 24084 . 24085) (symbol "ALIGN" 24086 . 24091) (semantic-list "(PAGE_SIZE)" 24091 . 24102) (punctuation ";" 24102 . 24103) (punctuation "." 24112 . 24113) (symbol "data" 24113 . 24117) (punctuation "." 24117 . 24118) (punctuation "." 24118 . 24119) (symbol "percpu" 24119 . 24125) (punctuation ":" 24126 . 24127) (symbol "AT" 24128 . 24130) (semantic-list "(ADDR(.data..percpu) - LOAD_OFFSET)" 24130 . 24165) (semantic-list "{	\\
+		VMLINUX_SYMBOL(__per_cpu_load) = .;			\\
+		PERCPU_INPUT(cacheline)					\\
+	}" 24166 . 24246)))
+          ("LOCK_TEXT" . 
+              ((symbol "ALIGN_FUNCTION" 14139 . 14153) (semantic-list "()" 14153 . 14155) (punctuation ";" 14155 . 14156) (symbol "VMLINUX_SYMBOL" 14165 . 14179) (semantic-list "(__lock_text_start)" 14179 . 14198) (punctuation "=" 14199 . 14200) (punctuation "." 14201 . 14202) (punctuation ";" 14202 . 14203) (punctuation "*" 14210 . 14211) (semantic-list "(.spinlock.text)" 14211 . 14227) (symbol "VMLINUX_SYMBOL" 14236 . 14250) (semantic-list "(__lock_text_end)" 14250 . 14267) (punctuation "=" 14268 . 14269) (punctuation "." 14270 . 14271) (punctuation ";" 14271 . 14272)))
+          ("INIT_DATA" . 
+              ((punctuation "*" 16149 . 16150) (semantic-list "(.init.data)" 16150 . 16162) (symbol "MEM_DISCARD" 16172 . 16183) (semantic-list "(init.data)" 16183 . 16194) (symbol "KERNEL_CTORS" 16203 . 16215) (semantic-list "()" 16215 . 16217) (symbol "MCOUNT_REC" 16227 . 16237) (semantic-list "()" 16237 . 16239) (punctuation "*" 16249 . 16250) (semantic-list "(.init.rodata)" 16250 . 16264) (symbol "FTRACE_EVENTS" 16274 . 16287) (semantic-list "()" 16287 . 16289) (symbol "TRACE_SYSCALLS" 16299 . 16313) (semantic-list "()" 16313 . 16315) (symbol "KPROBE_BLACKLIST" 16324 . 16340) (semantic-list "()" 16340 . 16342) (symbol "MEM_DISCARD" 16351 . 16362) (semantic-list "(init.rodata)" 16362 . 16375) (symbol "CLK_OF_TABLES" 16383 . 16396) (semantic-list "()" 16396 . 16398) (symbol "RESERVEDMEM_OF_TABLES" 16408 . 16429) (semantic-list "()" 16429 . 16431) (symbol "CLKSRC_OF_TABLES" 16440 . 16456) (semantic-list "()" 16456 . 16458) (symbol "IOMMU_OF_TABLES" 16467 . 16482) (semantic-list "()" 16482 . 16484) (symbol "CPU_METHOD_OF_TABLES" 16493 . 16513) (semantic-list "()" 16513 . 16515) (symbol "CPUIDLE_METHOD_OF_TABLES" 16524 . 16548) (semantic-list "()" 16548 . 16550) (symbol "KERNEL_DTB" 16558 . 16568) (semantic-list "()" 16568 . 16570) (symbol "IRQCHIP_OF_MATCH_TABLE" 16580 . 16602) (semantic-list "()" 16602 . 16604) (symbol "ACPI_PROBE_TABLE" 16612 . 16628) (semantic-list "(irqchip)" 16628 . 16637) (symbol "ACPI_PROBE_TABLE" 16645 . 16661) (semantic-list "(clksrc)" 16661 . 16669) (symbol "EARLYCON_TABLE" 16677 . 16691) (semantic-list "()" 16691 . 16693)))
+          ("BSS_FIRST_SECTIONS")
+          ("INIT_TEXT_SECTION" (spp-arg-list ("inittext_align") 25250 . 25266) . 
+              ((punctuation "." 25273 . 25274) (punctuation "=" 25275 . 25276) (symbol "ALIGN" 25277 . 25282) (semantic-list "(inittext_align)" 25282 . 25298) (punctuation ";" 25298 . 25299) (punctuation "." 25307 . 25308) (symbol "init" 25308 . 25312) (punctuation "." 25312 . 25313) (symbol "text" 25313 . 25317) (punctuation ":" 25318 . 25319) (symbol "AT" 25320 . 25322) (semantic-list "(ADDR(.init.text) - LOAD_OFFSET)" 25322 . 25354) (semantic-list "{		\\
+		VMLINUX_SYMBOL(_sinittext) = .;				\\
+		INIT_TEXT						\\
+		VMLINUX_SYMBOL(_einittext) = .;				\\
+	}" 25355 . 25459)))
+          ("BSS_SECTION" (spp-arg-list ("sbss_align" "bss_align" "stop_align") 25729 . 25764) . 
+              ((punctuation "." 25770 . 25771) (punctuation "=" 25772 . 25773) (symbol "ALIGN" 25774 . 25779) (semantic-list "(sbss_align)" 25779 . 25791) (punctuation ";" 25791 . 25792) (symbol "VMLINUX_SYMBOL" 25801 . 25815) (semantic-list "(__bss_start)" 25815 . 25828) (punctuation "=" 25829 . 25830) (punctuation "." 25831 . 25832) (punctuation ";" 25832 . 25833) (symbol "SBSS" 25840 . 25844) (semantic-list "(sbss_align)" 25844 . 25856) (symbol "BSS" 25865 . 25868) (semantic-list "(bss_align)" 25868 . 25879) (punctuation "." 25889 . 25890) (punctuation "=" 25891 . 25892) (symbol "ALIGN" 25893 . 25898) (semantic-list "(stop_align)" 25898 . 25910) (punctuation ";" 25910 . 25911) (symbol "VMLINUX_SYMBOL" 25920 . 25934) (semantic-list "(__bss_stop)" 25934 . 25946) (punctuation "=" 25947 . 25948) (punctuation "." 25949 . 25950) (punctuation ";" 25950 . 25951)))
+          ("ALIGN_FUNCTION" (spp-arg-list nil 1403 . 1405) . 
+              ((punctuation "." 1407 . 1408) (punctuation "=" 1409 . 1410) (symbol "ALIGN" 1411 . 1416) (semantic-list "(8)" 1416 . 1419)))
+          ("MEM_KEEP" (spp-arg-list ("sec") 2031 . 2036))
+          ("TEXT_TEXT" . 
+              ((symbol "ALIGN_FUNCTION" 13525 . 13539) (semantic-list "()" 13539 . 13541) (punctuation ";" 13541 . 13542) (punctuation "*" 13551 . 13552) (semantic-list "(.text.hot .text .text.fixup .text.unlikely)" 13552 . 13596) (punctuation "*" 13602 . 13603) (semantic-list "(.ref.text)" 13603 . 13614) (symbol "MEM_KEEP" 13623 . 13631) (semantic-list "(init.text)" 13631 . 13642) (symbol "MEM_KEEP" 13651 . 13659) (semantic-list "(exit.text)" 13659 . 13670)))
+          )
+)
+    (semanticdb-table "atomic-long.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_ASM_GENERIC_ATOMIC_LONG_H" variable (:constant-flag t) nil [44 70])
+            ("asm/types.h" include (:system-flag t) nil [267 289])
+            ("atomic_long_t" type
+               (:typedef ("atomic_t" type (:type "class") nil nil)
+                :type "typedef")
+                nil [677 708])
+            ("ATOMIC_LONG_INIT" variable (:constant-flag t) nil [718 734])
+            ("ATOMIC_LONG_PFX" variable (:constant-flag t) nil [761 776])
+            ("ATOMIC_LONG_READ_OP" variable (:constant-flag t) nil [809 828])
+            ("atomic_long_read" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [1036 1057])
+            ("atomic_long_read_acquire" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [1058 1087])
+            ("ATOMIC_LONG_SET_OP" variable (:constant-flag t) nil [1125 1143])
+            ("atomic_long_set" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil)
+                    ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil))                  
+                :type "void")
+                nil [1341 1361])
+            ("atomic_long_set_release" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil)
+                    ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil))                  
+                :type "void")
+                nil [1362 1390])
+            ("ATOMIC_LONG_ADD_SUB_OP" variable (:constant-flag t) nil [1427 1449])
+            ("atomic_long_add_return" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil)
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [1691 1719])
+            ("atomic_long_add_return_relaxed" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil)
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [1720 1757])
+            ("atomic_long_add_return_acquire" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil)
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [1758 1795])
+            ("atomic_long_add_return_release" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil)
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [1796 1833])
+            ("atomic_long_sub_return" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil)
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [1834 1862])
+            ("atomic_long_sub_return_relaxed" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil)
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [1863 1900])
+            ("atomic_long_sub_return_acquire" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil)
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [1901 1938])
+            ("atomic_long_sub_return_release" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil)
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [1939 1976])
+            ("atomic_long_cmpxchg_relaxed" variable (:constant-flag t) nil [2017 2044])
+            ("atomic_long_cmpxchg_acquire" variable (:constant-flag t) nil [2157 2184])
+            ("atomic_long_cmpxchg_release" variable (:constant-flag t) nil [2297 2324])
+            ("atomic_long_cmpxchg" variable (:constant-flag t) nil [2437 2456])
+            ("atomic_long_xchg_relaxed" variable (:constant-flag t) nil [2552 2576])
+            ("atomic_long_xchg_acquire" variable (:constant-flag t) nil [2664 2688])
+            ("atomic_long_xchg_release" variable (:constant-flag t) nil [2776 2800])
+            ("atomic_long_xchg" variable (:constant-flag t) nil [2888 2904])
+            ("atomic_long_inc" function
+               (:arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3021 3038]))                  
+                :type "void")
+                nil [3000 3122])
+            ("atomic_long_dec" function
+               (:arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3168 3185]))                  
+                :type "void")
+                nil [3147 3269])
+            ("ATOMIC_LONG_OP" variable (:constant-flag t) nil [3279 3293])
+            ("atomic_long_add" function
+               (:arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil)
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "void")
+                nil [3506 3525])
+            ("atomic_long_sub" function
+               (:arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil)
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "void")
+                nil [3526 3545])
+            ("atomic_long_and" function
+               (:arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil)
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "void")
+                nil [3546 3565])
+            ("atomic_long_or" function
+               (:arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil)
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "void")
+                nil [3566 3584])
+            ("atomic_long_xor" function
+               (:arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil)
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "void")
+                nil [3585 3604])
+            ("atomic_long_andnot" function
+               (:arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) nil)
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "void")
+                nil [3605 3627])
+            ("atomic_long_sub_and_test" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) [3695 3702])
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3703 3720]))                  
+                :type "int")
+                nil [3652 3823])
+            ("atomic_long_dec_and_test" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3868 3885]))                  
+                :type "int")
+                nil [3825 3985])
+            ("atomic_long_inc_and_test" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4030 4047]))                  
+                :type "int")
+                nil [3987 4147])
+            ("atomic_long_add_negative" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("i" variable (:type "long") (reparse-symbol arg-sub-list) [4192 4199])
+                    ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4200 4217]))                  
+                :type "int")
+                nil [4149 4320])
+            ("ATOMIC_LONG_INC_DEC_OP" variable (:constant-flag t) nil [4330 4352])
+            ("atomic_long_inc_return" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [4584 4612])
+            ("atomic_long_inc_return_relaxed" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [4613 4650])
+            ("atomic_long_inc_return_acquire" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [4651 4688])
+            ("atomic_long_inc_return_release" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [4689 4726])
+            ("atomic_long_dec_return" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [4727 4755])
+            ("atomic_long_dec_return_relaxed" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [4756 4793])
+            ("atomic_long_dec_return_acquire" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [4794 4831])
+            ("atomic_long_dec_return_release" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) nil))                  
+                :type "long")
+                nil [4832 4869])
+            ("atomic_long_add_unless" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("l" variable
+                       (:pointer 1
+                        :type ("atomic_long_t" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4944 4961])
+                    ("a" variable (:type "long") (reparse-symbol arg-sub-list) [4962 4969])
+                    ("u" variable (:type "long") (reparse-symbol arg-sub-list) [4970 4977]))                  
+                :type "long")
+                nil [4902 5087])
+            ("atomic_long_inc_not_zero" variable (:constant-flag t) nil [5097 5121]))          
+      :file "atomic-long.h"
+      :pointmax 5231
+      :fsize 5230
+      :lastmodtime '(22567 40897 478711 765000)
+      :unmatched-syntax '((symbol "__inline" 3605 . 3627) (STATIC "static" 3605 . 3627) (symbol "__inline" 3585 . 3604) (STATIC "static" 3585 . 3604) (symbol "__inline" 3566 . 3584) (STATIC "static" 3566 . 3584) (symbol "__inline" 3546 . 3565) (STATIC "static" 3546 . 3565) (symbol "__inline" 3526 . 3545) (STATIC "static" 3526 . 3545) (symbol "__inline" 3506 . 3525) (STATIC "static" 3506 . 3525) (symbol "__inline" 3131 . 3146) (STATIC 3124 . 3130) (symbol "__inline" 2984 . 2999) (STATIC 2977 . 2983))
+      :lexical-table 
+        '(("atomic_long_cmpxchg_acquire" (spp-arg-list ("l" "old" "new") 2184 . 2197) . ((semantic-list "(ATOMIC_LONG_PFX(_cmpxchg_acquire)((ATOMIC_LONG_PFX(_t) *)(l), \\
+					   (old), (new)))" 2201 . 2288)))
+          ("atomic_long_cmpxchg_release" (spp-arg-list ("l" "old" "new") 2324 . 2337) . ((semantic-list "(ATOMIC_LONG_PFX(_cmpxchg_release)((ATOMIC_LONG_PFX(_t) *)(l), \\
+					   (old), (new)))" 2341 . 2428)))
+          ("ATOMIC_LONG_PFX" (spp-arg-list ("x") 776 . 779) . ((spp-symbol-merge ((symbol "atomic" 780 . 786) (symbol "x" 790 . 791)) 780 . 791)))
+          ("atomic_long_xchg_relaxed" (spp-arg-list ("v" "new") 2576 . 2584) . ((semantic-list "(ATOMIC_LONG_PFX(_xchg_relaxed)((ATOMIC_LONG_PFX(_t) *)(v), (new)))" 2588 . 2655)))
+          ("atomic_long_cmpxchg_relaxed" (spp-arg-list ("l" "old" "new") 2044 . 2057) . ((semantic-list "(ATOMIC_LONG_PFX(_cmpxchg_relaxed)((ATOMIC_LONG_PFX(_t) *)(l), \\
+					   (old), (new)))" 2061 . 2148)))
+          ("atomic_long_cmpxchg" (spp-arg-list ("l" "old" "new") 2456 . 2469) . ((semantic-list "(ATOMIC_LONG_PFX(_cmpxchg)((ATOMIC_LONG_PFX(_t) *)(l), (old), (new)))" 2473 . 2542)))
+          ("_ASM_GENERIC_ATOMIC_LONG_H")
+          ("atomic_long_xchg" (spp-arg-list ("v" "new") 2904 . 2912) . ((semantic-list "(ATOMIC_LONG_PFX(_xchg)((ATOMIC_LONG_PFX(_t) *)(v), (new)))" 2916 . 2975)))
+          ("atomic_long_inc_not_zero" (spp-arg-list ("l") 5121 . 5124) . 
+              ((symbol "ATOMIC_LONG_PFX" 5128 . 5143) (semantic-list "(_inc_not_zero)" 5143 . 5158) (semantic-list "((ATOMIC_LONG_PFX(_t) *)(l))" 5158 . 5186)))
+          ("ATOMIC_LONG_INIT" (spp-arg-list ("i") 734 . 737) . ((symbol "ATOMIC_INIT" 738 . 749) (semantic-list "(i)" 749 . 752)))
+          ("atomic_long_xchg_acquire" (spp-arg-list ("v" "new") 2688 . 2696) . ((semantic-list "(ATOMIC_LONG_PFX(_xchg_acquire)((ATOMIC_LONG_PFX(_t) *)(v), (new)))" 2700 . 2767)))
+          ("atomic_long_xchg_release" (spp-arg-list ("v" "new") 2800 . 2808) . ((semantic-list "(ATOMIC_LONG_PFX(_xchg_release)((ATOMIC_LONG_PFX(_t) *)(v), (new)))" 2812 . 2879)))
+          )
+)
+    (semanticdb-table "siginfo.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_ASM_GENERIC_SIGINFO_H" variable (:constant-flag t) nil [40 62])
+            ("uapi/asm-generic/siginfo.h" include (:system-flag t) nil [64 101])
+            ("__SI_MASK" variable (:constant-flag t) nil [111 120])
+            ("__SI_KILL" variable (:constant-flag t) nil [141 150])
+            ("__SI_TIMER" variable (:constant-flag t) nil [169 179])
+            ("__SI_POLL" variable (:constant-flag t) nil [198 207])
+            ("__SI_FAULT" variable (:constant-flag t) nil [226 236])
+            ("__SI_CHLD" variable (:constant-flag t) nil [255 264])
+            ("__SI_RT" variable (:constant-flag t) nil [283 290])
+            ("__SI_MESGQ" variable (:constant-flag t) nil [310 320])
+            ("__SI_SYS" variable (:constant-flag t) nil [339 347])
+            ("__SI_CODE" variable (:constant-flag t) nil [366 375])
+            ("siginfo" type
+               (:prototype t
+                :type "struct")
+                nil [405 420])
+            ("do_schedule_next_timer" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("info" variable
+                       (:pointer 1
+                        :type ("siginfo" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [449 470]))                  
+                :type "void")
+                nil [421 471])
+            ("linux/string.h" include (:system-flag t) nil [505 530])
+            ("copy_siginfo" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("to" variable
+                       (:pointer 1
+                        :type ("siginfo" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [564 583])
+                    ("from" variable
+                       (:pointer 1
+                        :type ("siginfo" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [584 605]))                  
+                :type "void")
+                nil [532 812])
+            ("copy_siginfo_to_user" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("__user" variable (:type ("siginfo" type
+                         (:prototype t
+                          :type "struct")
+                          nil nil)) (reparse-symbol arg-sub-list) [854 877])
+                    ("" variable (:type ("to" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [877 880])
+                    ("from" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("siginfo" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [881 908]))                  
+                :type "int")
+                nil [822 909]))          
+      :file "siginfo.h"
+      :pointmax 918
+      :fsize 917
+      :lastmodtime '(22567 40897 482713 358000)
+      :unmatched-syntax '((punctuation 876 . 877))
+      :lexical-table 
+        '(("__SI_RT" . ((semantic-list "(5 << 16)" 292 . 301)))
+          ("__SI_TIMER" . ((semantic-list "(1 << 16)" 180 . 189)))
+          ("__SI_KILL" . ((semantic-list "(0 << 16)" 151 . 160)))
+          ("__SI_SYS" . ((semantic-list "(7 << 16)" 348 . 357)))
+          ("__SI_CHLD" . ((semantic-list "(4 << 16)" 265 . 274)))
+          ("__SI_MASK" . ((symbol "0xffff0000u" 121 . 132)))
+          ("__SI_CODE" (spp-arg-list ("T" "N") 375 . 380) . ((semantic-list "((T) | ((N) & 0xffff))" 381 . 403)))
+          ("__SI_FAULT" . ((semantic-list "(3 << 16)" 237 . 246)))
+          ("__SI_POLL" . ((semantic-list "(2 << 16)" 208 . 217)))
+          ("__SI_MESGQ" . ((semantic-list "(6 << 16)" 321 . 330)))
+          ("_ASM_GENERIC_SIGINFO_H")
+          )
+)
+    (semanticdb-table "current.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__ASM_GENERIC_CURRENT_H" variable (:constant-flag t) nil [41 64])
+            ("linux/thread_info.h" include (:system-flag t) nil [66 96])
+            ("get_current" variable (:constant-flag t) nil [106 117])
+            ("current" variable (:constant-flag t) nil [158 165]))          
+      :file "current.h"
+      :pointmax 218
+      :fsize 217
+      :lastmodtime '(22567 40897 482713 358000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__ASM_GENERIC_CURRENT_H")
+          ("get_current" (spp-arg-list nil 117 . 119) . ((semantic-list "(current_thread_info()->task)" 120 . 149)))
+          ("current" . ((symbol "get_current" 166 . 177) (semantic-list "()" 177 . 179)))
+          )
+)
+    (semanticdb-table "bug.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_ASM_GENERIC_BUG_H" variable (:constant-flag t) nil [36 54])
+            ("linux/compiler.h" include (:system-flag t) nil [56 83])
+            ("linux/kernel.h" include (:system-flag t) nil [285 310])
+            ("BUG" variable (:constant-flag t) nil [4309 4312])
+            ("BUG_ON" variable (:constant-flag t) nil [4372 4378])
+            ("WARN_ON" variable (:constant-flag t) nil [4471 4478])
+            ("WARN" variable (:constant-flag t) nil [4605 4609])
+            ("WARN_ON_ONCE" variable (:constant-flag t) nil [4760 4772])
+            ("WARN_ONCE" variable (:constant-flag t) nil [4811 4820])
+            ("WARN_TAINT" variable (:constant-flag t) nil [4875 4885])
+            ("WARN_TAINT_ONCE" variable (:constant-flag t) nil [4947 4962])
+            ("WARN_ON_SMP" variable (:constant-flag t) nil [6012 6023]))          
+      :file "bug.h"
+      :pointmax 6078
+      :fsize 6077
+      :lastmodtime '(22567 40897 482713 358000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_ASM_GENERIC_BUG_H")
+          ("WARN_ON_ONCE" (spp-arg-list ("condition") 4772 . 4783) . ((symbol "WARN_ON" 4784 . 4791) (semantic-list "(condition)" 4791 . 4802)))
+          ("WARN_ONCE" (spp-arg-list ("condition" "format...") 4820 . 4842) . ((symbol "WARN" 4843 . 4847) (semantic-list "(condition, format)" 4847 . 4866)))
+          ("WARN_ON_SMP" (spp-arg-list ("x") 6023 . 6026) . ((semantic-list "({0;})" 6029 . 6035)))
+          ("WARN_ON" (spp-arg-list ("condition") 4478 . 4489) . ((semantic-list "({						\\
+	int __ret_warn_on = !!(condition);				\\
+	unlikely(__ret_warn_on);					\\
+})" 4490 . 4575)))
+          ("WARN" (spp-arg-list ("condition" "format...") 4609 . 4631) . ((semantic-list "({					\\
+	int __ret_warn_on = !!(condition);				\\
+	no_printk(format);						\\
+	unlikely(__ret_warn_on);					\\
+})" 4632 . 4743)))
+          ("WARN_TAINT_ONCE" (spp-arg-list ("condition" "taint" "format...") 4962 . 4991) . ((symbol "WARN" 4992 . 4996) (semantic-list "(condition, format)" 4996 . 5015)))
+          ("BUG" (spp-arg-list nil 4312 . 4314) . 
+              ((DO "do" 4315 . 4317) (semantic-list "{}" 4318 . 4320) (WHILE "while" 4321 . 4326) (semantic-list "(1)" 4327 . 4330)))
+          ("BUG_ON" (spp-arg-list ("condition") 4378 . 4389) . 
+              ((DO "do" 4390 . 4392) (semantic-list "{ if (condition) BUG(); }" 4393 . 4418) (WHILE "while" 4419 . 4424) (semantic-list "(0)" 4425 . 4428)))
+          ("WARN_TAINT" (spp-arg-list ("condition" "taint" "format...") 4885 . 4914) . ((symbol "WARN" 4915 . 4919) (semantic-list "(condition, format)" 4919 . 4938)))
+          )
+)
+    (semanticdb-table "rwsem.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_ASM_GENERIC_RWSEM_H" variable (:constant-flag t) nil [38 58])
+            ("RWSEM_ACTIVE_MASK" variable (:constant-flag t) nil [470 487])
+            ("RWSEM_UNLOCKED_VALUE" variable (:constant-flag t) nil [517 537])
+            ("RWSEM_ACTIVE_BIAS" variable (:constant-flag t) nil [559 576])
+            ("RWSEM_WAITING_BIAS" variable (:constant-flag t) nil [598 616])
+            ("RWSEM_ACTIVE_READ_BIAS" variable (:constant-flag t) nil [649 671])
+            ("RWSEM_ACTIVE_WRITE_BIAS" variable (:constant-flag t) nil [699 722])
+            ("__down_read" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("sem" variable
+                       (:pointer 1
+                        :type ("rw_semaphore" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [824 849]))                  
+                :type "void")
+                nil [793 966])
+            ("__down_read_trylock" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("sem" variable
+                       (:pointer 1
+                        :type ("rw_semaphore" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1006 1031]))                  
+                :type "int")
+                nil [968 1200])
+            ("__down_write_nested" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("sem" variable
+                       (:pointer 1
+                        :type ("rw_semaphore" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1268 1293])
+                    ("subclass" variable (:type "int") (reparse-symbol arg-sub-list) [1294 1307]))                  
+                :type "void")
+                nil [1229 1505])
+            ("__down_write" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("sem" variable
+                       (:pointer 1
+                        :type ("rw_semaphore" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1539 1564]))                  
+                :type "void")
+                nil [1507 1598])
+            ("__down_write_trylock" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("sem" variable
+                       (:pointer 1
+                        :type ("rw_semaphore" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1639 1664]))                  
+                :type "int")
+                nil [1600 1809])
+            ("__up_read" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("sem" variable
+                       (:pointer 1
+                        :type ("rw_semaphore" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [1871 1896]))                  
+                :type "void")
+                nil [1842 2059])
+            ("__up_write" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("sem" variable
+                       (:pointer 1
+                        :type ("rw_semaphore" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2122 2147]))                  
+                :type "void")
+                nil [2092 2281])
+            ("rwsem_atomic_add" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("delta" variable (:type "long") (reparse-symbol arg-sub-list) [2364 2375])
+                    ("sem" variable
+                       (:pointer 1
+                        :type ("rw_semaphore" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2376 2401]))                  
+                :type "void")
+                nil [2328 2460])
+            ("__downgrade_write" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("sem" variable
+                       (:pointer 1
+                        :type ("rw_semaphore" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [2543 2568]))                  
+                :type "void")
+                nil [2506 3008])
+            ("rwsem_atomic_update" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("delta" variable (:type "long") (reparse-symbol arg-sub-list) [3100 3111])
+                    ("sem" variable
+                       (:pointer 1
+                        :type ("rw_semaphore" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [3112 3137]))                  
+                :type "long")
+                nil [3061 3210]))          
+      :file "rwsem.h"
+      :pointmax 3270
+      :fsize 3269
+      :lastmodtime '(22567 40897 482713 358000)
+      :unmatched-syntax '((string 90 . 165) (symbol 84 . 89) (punctuation 83 . 84))
+      :lexical-table 
+        '(("RWSEM_WAITING_BIAS" . ((semantic-list "(-RWSEM_ACTIVE_MASK-1)" 618 . 640)))
+          ("_ASM_GENERIC_RWSEM_H")
+          ("RWSEM_ACTIVE_READ_BIAS" . ((symbol "RWSEM_ACTIVE_BIAS" 673 . 690)))
+          ("RWSEM_ACTIVE_WRITE_BIAS" . ((semantic-list "(RWSEM_WAITING_BIAS + RWSEM_ACTIVE_BIAS)" 724 . 764)))
+          ("RWSEM_ACTIVE_MASK" . ((number "0x0000ffffL" 489 . 500)))
+          ("RWSEM_UNLOCKED_VALUE" . ((number "0x00000000L" 539 . 550)))
+          ("RWSEM_ACTIVE_BIAS" . ((number "0x00000001L" 578 . 589)))
+          )
+)
+    (semanticdb-table "barrier.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__ASM_GENERIC_BARRIER_H" variable (:constant-flag t) nil [616 639])
+            ("linux/compiler.h" include (:system-flag t) nil [663 690])
+            ("nop" variable (:constant-flag t) nil [712 715])
+            ("mb" variable (:constant-flag t) nil [942 944])
+            ("rmb" variable (:constant-flag t) nil [985 988])
+            ("wmb" variable (:constant-flag t) nil [1024 1027])
+            ("dma_rmb" variable (:constant-flag t) nil [1067 1074])
+            ("dma_wmb" variable (:constant-flag t) nil [1115 1122])
+            ("read_barrier_depends" variable (:constant-flag t) nil [1176 1196])
+            ("__smp_mb" variable (:constant-flag t) nil [1250 1258])
+            ("__smp_rmb" variable (:constant-flag t) nil [1300 1309])
+            ("__smp_wmb" variable (:constant-flag t) nil [1352 1361])
+            ("__smp_read_barrier_depends" variable (:constant-flag t) nil [1421 1447])
+            ("smp_mb" variable (:constant-flag t) nil [1812 1818])
+            ("smp_rmb" variable (:constant-flag t) nil [1863 1870])
+            ("smp_wmb" variable (:constant-flag t) nil [1915 1922])
+            ("smp_read_barrier_depends" variable (:constant-flag t) nil [1984 2008])
+            ("__smp_store_mb" variable (:constant-flag t) nil [2092 2106])
+            ("__smp_mb__before_atomic" variable (:constant-flag t) nil [2221 2244])
+            ("__smp_mb__after_atomic" variable (:constant-flag t) nil [2305 2327])
+            ("__smp_store_release" variable (:constant-flag t) nil [2385 2404])
+            ("__smp_load_acquire" variable (:constant-flag t) nil [2577 2595])
+            ("smp_store_mb" variable (:constant-flag t) nil [3277 3289])
+            ("smp_mb__before_atomic" variable (:constant-flag t) nil [3401 3422])
+            ("smp_mb__after_atomic" variable (:constant-flag t) nil [3480 3500])
+            ("smp_store_release" variable (:constant-flag t) nil [3555 3572])
+            ("smp_load_acquire" variable (:constant-flag t) nil [3743 3759])
+            ("virt_mb" variable (:constant-flag t) nil [3999 4006])
+            ("virt_rmb" variable (:constant-flag t) nil [4028 4036])
+            ("virt_wmb" variable (:constant-flag t) nil [4059 4067])
+            ("virt_read_barrier_depends" variable (:constant-flag t) nil [4090 4115])
+            ("virt_store_mb" variable (:constant-flag t) nil [4155 4168])
+            ("virt_mb__before_atomic" variable (:constant-flag t) nil [4216 4238])
+            ("virt_mb__after_atomic" variable (:constant-flag t) nil [4275 4296])
+            ("virt_store_release" variable (:constant-flag t) nil [4332 4350])
+            ("virt_load_acquire" variable (:constant-flag t) nil [4391 4408]))          
+      :file "barrier.h"
+      :pointmax 4499
+      :fsize 4498
+      :lastmodtime '(22567 40897 478711 765000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__smp_mb__before_atomic" (spp-arg-list nil 2244 . 2246) . ((symbol "__smp_mb" 2247 . 2255) (semantic-list "()" 2255 . 2257)))
+          ("smp_store_mb" (spp-arg-list ("var" "value") 3289 . 3301) . 
+              ((DO "do" 3303 . 3305) (semantic-list "{ WRITE_ONCE(var, value); barrier(); }" 3306 . 3344) (WHILE "while" 3345 . 3350) (semantic-list "(0)" 3351 . 3354)))
+          ("wmb" (spp-arg-list nil 1027 . 1029) . ((symbol "mb" 1030 . 1032) (semantic-list "()" 1032 . 1034)))
+          ("__smp_mb" (spp-arg-list nil 1258 . 1260) . ((symbol "mb" 1261 . 1263) (semantic-list "()" 1263 . 1265)))
+          ("smp_rmb" (spp-arg-list nil 1870 . 1872) . ((symbol "barrier" 1873 . 1880) (semantic-list "()" 1880 . 1882)))
+          ("virt_read_barrier_depends" (spp-arg-list nil 4115 . 4117) . ((symbol "__smp_read_barrier_depends" 4118 . 4144) (semantic-list "()" 4144 . 4146)))
+          ("read_barrier_depends" (spp-arg-list nil 1196 . 1198) . 
+              ((DO "do" 1200 . 1202) (semantic-list "{ }" 1203 . 1206) (WHILE "while" 1207 . 1212) (semantic-list "(0)" 1213 . 1216)))
+          ("__smp_wmb" (spp-arg-list nil 1361 . 1363) . ((symbol "wmb" 1364 . 1367) (semantic-list "()" 1367 . 1369)))
+          ("__smp_store_mb" (spp-arg-list ("var" "value") 2106 . 2118) . 
+              ((DO "do" 2120 . 2122) (semantic-list "{ WRITE_ONCE(var, value); __smp_mb(); }" 2123 . 2162) (WHILE "while" 2163 . 2168) (semantic-list "(0)" 2169 . 2172)))
+          ("smp_load_acquire" (spp-arg-list ("p") 3759 . 3762) . ((semantic-list "({									\\
+	typeof(*p) ___p1 = READ_ONCE(*p);				\\
+	compiletime_assert_atomic_type(*p);				\\
+	barrier();							\\
+	___p1;								\\
+})" 3770 . 3904)))
+          ("nop" (spp-arg-list nil 715 . 717) . 
+              ((symbol "asm" 718 . 721) (VOLATILE "volatile" 722 . 730) (semantic-list "(\"nop\")" 731 . 738)))
+          ("virt_wmb" (spp-arg-list nil 4067 . 4069) . ((symbol "__smp_wmb" 4070 . 4079) (semantic-list "()" 4079 . 4081)))
+          ("dma_rmb" (spp-arg-list nil 1074 . 1076) . ((symbol "rmb" 1077 . 1080) (semantic-list "()" 1080 . 1082)))
+          ("__smp_mb__after_atomic" (spp-arg-list nil 2327 . 2329) . ((symbol "__smp_mb" 2330 . 2338) (semantic-list "()" 2338 . 2340)))
+          ("__smp_load_acquire" (spp-arg-list ("p") 2595 . 2598) . ((semantic-list "({									\\
+	typeof(*p) ___p1 = READ_ONCE(*p);				\\
+	compiletime_assert_atomic_type(*p);				\\
+	__smp_mb();							\\
+	___p1;								\\
+})" 2606 . 2741)))
+          ("virt_mb" (spp-arg-list nil 4006 . 4008) . ((symbol "__smp_mb" 4009 . 4017) (semantic-list "()" 4017 . 4019)))
+          ("virt_mb__before_atomic" (spp-arg-list nil 4238 . 4240) . ((symbol "__smp_mb__before_atomic" 4241 . 4264) (semantic-list "()" 4264 . 4266)))
+          ("virt_store_release" (spp-arg-list ("p" "v") 4350 . 4356) . ((symbol "__smp_store_release" 4357 . 4376) (semantic-list "(p, v)" 4376 . 4382)))
+          ("__ASM_GENERIC_BARRIER_H")
+          ("smp_wmb" (spp-arg-list nil 1922 . 1924) . ((symbol "barrier" 1925 . 1932) (semantic-list "()" 1932 . 1934)))
+          ("__smp_store_release" (spp-arg-list ("p" "v") 2404 . 2410) . 
+              ((DO "do" 2417 . 2419) (semantic-list "{									\\
+	compiletime_assert_atomic_type(*p);				\\
+	__smp_mb();							\\
+	WRITE_ONCE(*p, v);						\\
+}" 2420 . 2523) (WHILE "while" 2524 . 2529) (semantic-list "(0)" 2530 . 2533)))
+          ("rmb" (spp-arg-list nil 988 . 990) . ((symbol "mb" 991 . 993) (semantic-list "()" 993 . 995)))
+          ("smp_read_barrier_depends" (spp-arg-list nil 2008 . 2010) . 
+              ((DO "do" 2011 . 2013) (semantic-list "{ }" 2014 . 2017) (WHILE "while" 2018 . 2023) (semantic-list "(0)" 2024 . 2027)))
+          ("virt_store_mb" (spp-arg-list ("var" "value") 4168 . 4180) . ((symbol "__smp_store_mb" 4181 . 4195) (semantic-list "(var, value)" 4195 . 4207)))
+          ("virt_mb__after_atomic" (spp-arg-list nil 4296 . 4298) . ((symbol "__smp_mb__after_atomic" 4299 . 4321) (semantic-list "()" 4321 . 4323)))
+          ("mb" (spp-arg-list nil 944 . 946) . ((symbol "barrier" 947 . 954) (semantic-list "()" 954 . 956)))
+          ("__smp_read_barrier_depends" (spp-arg-list nil 1447 . 1449) . ((symbol "read_barrier_depends" 1450 . 1470) (semantic-list "()" 1470 . 1472)))
+          ("__smp_rmb" (spp-arg-list nil 1309 . 1311) . ((symbol "rmb" 1312 . 1315) (semantic-list "()" 1315 . 1317)))
+          ("smp_mb__after_atomic" (spp-arg-list nil 3500 . 3502) . ((symbol "barrier" 3503 . 3510) (semantic-list "()" 3510 . 3512)))
+          ("smp_mb" (spp-arg-list nil 1818 . 1820) . ((symbol "barrier" 1821 . 1828) (semantic-list "()" 1828 . 1830)))
+          ("smp_store_release" (spp-arg-list ("p" "v") 3572 . 3578) . 
+              ((DO "do" 3586 . 3588) (semantic-list "{									\\
+	compiletime_assert_atomic_type(*p);				\\
+	barrier();							\\
+	WRITE_ONCE(*p, v);						\\
+}" 3589 . 3691) (WHILE "while" 3692 . 3697) (semantic-list "(0)" 3698 . 3701)))
+          ("dma_wmb" (spp-arg-list nil 1122 . 1124) . ((symbol "wmb" 1125 . 1128) (semantic-list "()" 1128 . 1130)))
+          ("smp_mb__before_atomic" (spp-arg-list nil 3422 . 3424) . ((symbol "barrier" 3425 . 3432) (semantic-list "()" 3432 . 3434)))
+          ("virt_rmb" (spp-arg-list nil 4036 . 4038) . ((symbol "__smp_rmb" 4039 . 4048) (semantic-list "()" 4048 . 4050)))
+          ("virt_load_acquire" (spp-arg-list ("p") 4408 . 4411) . ((symbol "__smp_load_acquire" 4412 . 4430) (semantic-list "(p)" 4430 . 4433)))
+          )
+)
+    (semanticdb-table "int-ll64.h"
+      :file "int-ll64.h"
+      :fsize 893
+      :lastmodtime '(22567 40897 482713 358000))
+    (semanticdb-table "memory_model.h"
+      :file "memory_model.h"
+      :fsize 2170
+      :lastmodtime '(22567 40897 482713 358000))
+    (semanticdb-table "param.h"
+      :file "param.h"
+      :fsize 328
+      :lastmodtime '(22567 40897 482713 358000))
+    (semanticdb-table "preempt.h"
+      :file "preempt.h"
+      :fsize 1929
+      :lastmodtime '(22567 40897 482713 358000))
+    (semanticdb-table "cmpxchg-local.h"
+      :file "cmpxchg-local.h"
+      :fsize 1425
+      :lastmodtime '(22567 40897 482713 358000))
+    (semanticdb-table "cmpxchg.h"
+      :file "cmpxchg.h"
+      :fsize 2247
+      :lastmodtime '(22567 40897 482713 358000))
+    (semanticdb-table "percpu.h"
+      :file "percpu.h"
+      :fsize 12285
+      :lastmodtime '(22567 40897 482713 358000))
+    (semanticdb-table "ioctl.h"
+      :file "ioctl.h"
+      :fsize 467
+      :lastmodtime '(22567 40897 482713 358000))
+    (semanticdb-table "getorder.h"
+      :file "getorder.h"
+      :fsize 1448
+      :lastmodtime '(22567 40897 482713 358000))
+    (semanticdb-table "topology.h"
+      :file "topology.h"
+      :fsize 2163
+      :lastmodtime '(22567 40897 486714 950000)))
+  :file "!home!sefo!devel!boards!ZedBoard!linux!include!asm-generic!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

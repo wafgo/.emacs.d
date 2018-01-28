@@ -1,0 +1,176 @@
+;; Object kernel/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "kernel/"
+  :tables
+  (list
+    (semanticdb-table "time.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("linux/clockchips.h" include (:system-flag t) nil [288 317])
+            ("linux/interrupt.h" include (:system-flag t) nil [318 346])
+            ("linux/i8253.h" include (:system-flag t) nil [347 371])
+            ("linux/time.h" include (:system-flag t) nil [372 395])
+            ("linux/export.h" include (:system-flag t) nil [396 421])
+            ("asm/vsyscall.h" include (:system-flag t) nil [423 448])
+            ("asm/x86_init.h" include (:system-flag t) nil [449 474])
+            ("asm/i8259.h" include (:system-flag t) nil [475 497])
+            ("asm/timer.h" include (:system-flag t) nil [498 520])
+            ("asm/hpet.h" include (:system-flag t) nil [521 542])
+            ("asm/time.h" include (:system-flag t) nil [543 564])
+            ("profile_pc" function
+               (:arguments 
+                  ( ("regs" variable
+                       (:pointer 1
+                        :type ("pt_regs" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [700 721]))                  
+                :type "unsigned long")
+                nil [675 1228])
+            ("EXPORT_SYMBOL" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type ("profile_pc" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1243 1254]))                  
+                :type "int")
+                nil [1229 1255])
+            ("timer_interrupt" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("irq" variable (:type "int") (reparse-symbol arg-sub-list) [1347 1355])
+                    ("dev_id" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1356 1369]))                  
+                :type ("irqreturn_t" type (:type "class") nil nil))
+                nil [1312 1450])
+            ("irq0" variable
+               (:typemodifiers ("static")
+                :default-value "{
+	.handler = timer_interrupt,
+	.flags = IRQF_NOBALANCING | IRQF_IRQPOLL | IRQF_TIMER,
+	.name = \"timer\"
+}"
+                :type ("irqaction" type
+                     (:prototype t
+                      :type "struct")
+                      nil nil))
+                nil [1452 1590])
+            ("setup_default_timer_irq" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1628 1633]))                  
+                :type ("__init" type (:type "class") nil nil))
+                nil [1597 1693])
+            ("hpet_time_init" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1756 1761]))                  
+                :type ("__init" type (:type "class") nil nil))
+                nil [1734 1835])
+            ("x86_late_time_init" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1875 1880]))                  
+                :type "void")
+                nil [1851 1928])
+            ("time_init" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2061 2066]))                  
+                :type ("__init" type (:type "class") nil nil))
+                nil [2044 2108]))          
+      :file "time.c"
+      :pointmax 2109
+      :fsize 2108
+      :lastmodtime '(22567 40894 75060 938000)
+      :unmatched-syntax '((VOID 2039 . 2043) (symbol 1844 . 1850) (STATIC 1837 . 1843) (VOID 1729 . 1733) (VOID 1592 . 1596)))
+    (semanticdb-table "head64.c"
+      :major-mode 'c-mode
+      :tags 
+        '( ("linux/init.h" include (:system-flag t) nil [105 128])
+            ("linux/linkage.h" include (:system-flag t) nil [129 155])
+            ("linux/types.h" include (:system-flag t) nil [156 180])
+            ("linux/kernel.h" include (:system-flag t) nil [181 206])
+            ("linux/string.h" include (:system-flag t) nil [207 232])
+            ("linux/percpu.h" include (:system-flag t) nil [233 258])
+            ("linux/start_kernel.h" include (:system-flag t) nil [259 290])
+            ("linux/io.h" include (:system-flag t) nil [291 312])
+            ("linux/memblock.h" include (:system-flag t) nil [313 340])
+            ("asm/processor.h" include (:system-flag t) nil [342 368])
+            ("asm/proto.h" include (:system-flag t) nil [369 391])
+            ("asm/smp.h" include (:system-flag t) nil [392 412])
+            ("asm/setup.h" include (:system-flag t) nil [413 435])
+            ("asm/desc.h" include (:system-flag t) nil [436 457])
+            ("asm/pgtable.h" include (:system-flag t) nil [458 482])
+            ("asm/tlbflush.h" include (:system-flag t) nil [483 508])
+            ("asm/sections.h" include (:system-flag t) nil [509 534])
+            ("asm/kdebug.h" include (:system-flag t) nil [535 558])
+            ("asm/e820.h" include (:system-flag t) nil [559 580])
+            ("asm/bios_ebda.h" include (:system-flag t) nil [581 607])
+            ("asm/bootparam_utils.h" include (:system-flag t) nil [608 640])
+            ("asm/microcode.h" include (:system-flag t) nil [641 667])
+            ("asm/kasan.h" include (:system-flag t) nil [668 690])
+            ("early_level4_pgt" variable
+               (:dereference 1
+                :typemodifiers ("extern")
+                :type ("pgd_t" type (:type "class") nil nil))
+                nil [736 780])
+            ("early_dynamic_pgts" variable
+               (:dereference 2
+                :typemodifiers ("extern")
+                :type ("pmd_t" type (:type "class") nil nil))
+                nil [781 854])
+            ("next_early_pgt" variable
+               (:default-value "2"
+                :type ("__initdata" type (:type "class") nil nil))
+                nil [875 905])
+            ("reset_early_page_tables" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [1093 1098]))                  
+                :type ("__init" type (:type "class") nil nil))
+                nil [1062 1229])
+            ("early_make_pgtable" function
+               (:arguments 
+                  ( ("address" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [1290 1312]))                  
+                :type ("__init" type (:type "class") nil nil))
+                nil [1264 2761])
+            ("clear_bss" function
+               (:arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [2886 2891]))                  
+                :type ("__init" type (:type "class") nil nil))
+                nil [2869 2986])
+            ("get_cmd_line_ptr" function
+               (:typemodifiers ("static")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3026 3031]))                  
+                :type "unsigned long")
+                nil [2988 3177])
+            ("copy_bootdata" function
+               (:arguments 
+                  ( ("real_mode_data" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3212 3233]))                  
+                :type ("__init" type (:type "class") nil nil))
+                nil [3191 3544])
+            ("x86_64_start_kernel" function
+               (:arguments 
+                  ( ("real_mode_data" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [3599 3621]))                  
+                :type ("__init" type (:type "class") nil nil))
+                nil [3572 4812])
+            ("x86_64_start_reservations" function
+               (:arguments 
+                  ( ("real_mode_data" variable
+                       (:pointer 1
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4852 4873]))                  
+                :type ("__init" type (:type "class") nil nil))
+                nil [4819 5177]))          
+      :file "head64.c"
+      :pointmax 5178
+      :fsize 5177
+      :lastmodtime '(22567 40894 67062 379000)
+      :unmatched-syntax '((VOID 4814 . 4818) (VOID 3567 . 3571) (symbol 3557 . 3566) (symbol 3546 . 3556) (VOID 3186 . 3190) (STATIC 3179 . 3185) (VOID 2864 . 2868) (STATIC 2857 . 2863) (INT 1260 . 1263) (VOID 1057 . 1061) (STATIC 1050 . 1056) (punctuation 981 . 982) (semantic-list 956 . 981) (punctuation 955 . 956) (punctuation 953 . 954) (symbol 933 . 952) (punctuation 931 . 932) (symbol 915 . 930) (symbol 906 . 914) (INT 871 . 874) (UNSIGNED 862 . 870) (STATIC 855 . 861))))
+  :file "!home!sefo!devel!boards!ZedBoard!linux!arch!x86!kernel!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
