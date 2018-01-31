@@ -73,8 +73,8 @@
 ; turn on ede mode 
 (global-ede-mode 1)
 ; create a project for our program.
-(ede-cpp-root-project "my project" :file "~/temp/demo/src/main.cpp"
-		      :include-path '("/../my_inc"))
+;(ede-cpp-root-project "my project" :file "~/temp/demo/src/main.cpp"
+;		      :include-path '("/../my_inc"))
 ; you can use system-include-path for setting up the system header file locations.
 ; turn on automatic reparsing of open buffers in semantic
 (global-semantic-idle-scheduler-mode 1)
@@ -102,3 +102,15 @@
 
 ;; function-args
 (require 'function-args)
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(custom-enabled-themes (quote (tango-dark))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
