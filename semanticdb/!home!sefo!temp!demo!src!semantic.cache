@@ -13,7 +13,7 @@
       :file "main.cpp"
       :pointmax 186
       :fsize 185
-      :lastmodtime '(23150 11731 4047 23000)
+      :lastmodtime '(23150 12639 306127 95000)
       :unmatched-syntax nil)
     (semanticdb-table "helper.h"
       :major-mode 'c-mode
