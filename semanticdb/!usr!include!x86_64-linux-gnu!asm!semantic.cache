@@ -1,48 +1,48 @@
-;; Object asm/
+;; Object semanticdb-project-database-file
 ;; SEMANTICDB Tags save file
-(semanticdb-project-database-file "asm/"
+(semanticdb-project-database-file "semanticdb-project-database-file"
   :tables
   (list
-    (semanticdb-table "setup.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags nil
       :file "setup.h"
       :pointmax 7
       :fsize 6
-      :lastmodtime '(23086 38557 0 0)
+      :lastmodtime '(23561 10636 0 0)
       :unmatched-syntax nil)
-    (semanticdb-table "types.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
-        '( ("_ASM_X86_TYPES_H" variable (:constant-flag t) nil [34 50])
-            ("asm-generic/types.h" include (:system-flag t) nil [52 82]))          
+        '( ("_ASM_X86_TYPES_H" variable (:constant-flag t) nil [73 89])
+            ("asm-generic/types.h" include (:system-flag t) nil [91 121]))          
       :file "types.h"
-      :pointmax 114
-      :fsize 113
-      :lastmodtime '(23086 38557 0 0)
+      :pointmax 153
+      :fsize 152
+      :lastmodtime '(23561 10636 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_ASM_X86_TYPES_H")
           )
 )
-    (semanticdb-table "unistd.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
         '( ("_ASM_X86_UNISTD_H" variable (:constant-flag t) nil [35 52])
             ("__X32_SYSCALL_BIT" variable (:constant-flag t) nil [89 106])
             ("asm/unistd_64.h" include (:system-flag t) nil [228 256]))          
       :file "unistd.h"
       :pointmax 297
-      :fsize 296
-      :lastmodtime '(23086 38557 0 0)
+      :fsize 359
+      :lastmodtime '(23561 10636 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_ASM_X86_UNISTD_H")
           ("__X32_SYSCALL_BIT" . ((number "0x40000000" 107 . 117)))
           )
 )
-    (semanticdb-table "signal.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
         '( ("_ASM_X86_SIGNAL_H" variable (:constant-flag t) nil [35 52])
             ("linux/types.h" include (:system-flag t) nil [75 99])
@@ -129,8 +129,8 @@
                 nil [2694 2779]))          
       :file "signal.h"
       :pointmax 2839
-      :fsize 2838
-      :lastmodtime '(23086 38557 0 0)
+      :fsize 2901
+      :lastmodtime '(23561 10636 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_ASM_X86_SIGNAL_H")
@@ -185,38 +185,38 @@
           ("MINSIGSTKSZ" . ((number "2048" 2041 . 2045)))
           )
 )
-    (semanticdb-table "siginfo.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
         '( ("_ASM_X86_SIGINFO_H" variable (:constant-flag t) nil [36 54])
             ("__ARCH_SI_PREAMBLE_SIZE" variable (:constant-flag t) nil [308 331])
             ("asm-generic/siginfo.h" include (:system-flag t) nil [366 398]))          
       :file "siginfo.h"
       :pointmax 432
-      :fsize 431
-      :lastmodtime '(23086 38557 0 0)
+      :fsize 494
+      :lastmodtime '(23561 10636 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("__ARCH_SI_PREAMBLE_SIZE" . ((semantic-list "(4 * sizeof(int))" 332 . 349)))
           ("_ASM_X86_SIGINFO_H")
           )
 )
-    (semanticdb-table "byteorder.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
         '( ("_ASM_X86_BYTEORDER_H" variable (:constant-flag t) nil [38 58])
             ("linux/byteorder/little_endian.h" include (:system-flag t) nil [60 102]))          
       :file "byteorder.h"
       :pointmax 138
-      :fsize 137
-      :lastmodtime '(23086 38557 0 0)
+      :fsize 176
+      :lastmodtime '(23561 10636 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_ASM_X86_BYTEORDER_H")
           )
 )
-    (semanticdb-table "ptrace.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
         '( ("_ASM_X86_PTRACE_H" variable (:constant-flag t) nil [35 52])
             ("asm/ptrace-abi.h" include (:system-flag t) nil [65 92])
@@ -248,24 +248,24 @@
                 nil [505 1346]))          
       :file "ptrace.h"
       :pointmax 1433
-      :fsize 1432
-      :lastmodtime '(23086 38557 0 0)
+      :fsize 1495
+      :lastmodtime '(23561 10636 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_ASM_X86_PTRACE_H")
           )
 )
-    (semanticdb-table "posix_types.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
-        '( ("asm/posix_types_64.h" include (:system-flag t) nil [120 153]))          
+        '( ("asm/posix_types_64.h" include (:system-flag t) nil [183 216]))          
       :file "posix_types.h"
-      :pointmax 162
-      :fsize 161
-      :lastmodtime '(23086 38557 0 0)
+      :pointmax 225
+      :fsize 224
+      :lastmodtime '(23561 10636 0 0)
       :unmatched-syntax nil)
-    (semanticdb-table "unistd_64.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
         '( ("_ASM_X86_UNISTD_64_H" variable (:constant-flag t) nil [38 58])
             ("__NR_read" variable (:constant-flag t) nil [70 79])
@@ -596,8 +596,8 @@
             ("__NR_mlock2" variable (:constant-flag t) nil [8650 8661]))          
       :file "unistd_64.h"
       :pointmax 8701
-      :fsize 8700
-      :lastmodtime '(23086 38558 0 0)
+      :fsize 8893
+      :lastmodtime '(23561 10636 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("__NR_shmget" . ((number "29" 748 . 750)))
@@ -929,26 +929,26 @@
           ("__NR_kcmp" . ((number "312" 8300 . 8303)))
           )
 )
-    (semanticdb-table "errno.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
         '( ("asm-generic/errno.h" include (:system-flag t) nil [1 31]))          
       :file "errno.h"
       :pointmax 32
       :fsize 31
-      :lastmodtime '(23086 38557 0 0)
+      :lastmodtime '(23561 10636 0 0)
       :unmatched-syntax nil)
-    (semanticdb-table "ioctl.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
         '( ("asm-generic/ioctl.h" include (:system-flag t) nil [1 31]))          
       :file "ioctl.h"
       :pointmax 32
       :fsize 31
-      :lastmodtime '(23086 38557 0 0)
+      :lastmodtime '(23561 10636 0 0)
       :unmatched-syntax nil)
-    (semanticdb-table "ptrace-abi.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
         '( ("_ASM_X86_PTRACE_ABI_H" variable (:constant-flag t) nil [39 60])
             ("FRAME_SIZE" variable (:constant-flag t) nil [1184 1194])
@@ -968,8 +968,8 @@
             ("linux/types.h" include (:system-flag t) nil [1907 1931]))          
       :file "ptrace-abi.h"
       :pointmax 1975
-      :fsize 1974
-      :lastmodtime '(23086 38557 0 0)
+      :fsize 2037
+      :lastmodtime '(23561 10636 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("PTRACE_GETREGS" . ((number "12" 1334 . 1336)))
@@ -989,8 +989,8 @@
           ("PTRACE_OLDSETOPTIONS" . ((number "21" 1557 . 1559)))
           )
 )
-    (semanticdb-table "processor-flags.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
         '( ("_ASM_X86_PROCESSOR_FLAGS_H" variable (:constant-flag t) nil [44 70])
             ("linux/const.h" include (:system-flag t) nil [133 157])
@@ -1111,8 +1111,8 @@
             ("CX86_RCR_BASE" variable (:constant-flag t) nil [5896 5909]))          
       :file "processor-flags.h"
       :pointmax 5957
-      :fsize 5956
-      :lastmodtime '(23086 38557 0 0)
+      :fsize 6623
+      :lastmodtime '(23561 10636 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_ASM_X86_PROCESSOR_FLAGS_H")
@@ -1233,54 +1233,54 @@
           ("CX86_CCR6" . ((number "0xea" 5764 . 5768)))
           )
 )
-    (semanticdb-table "posix_types_64.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
-        '( ("_ASM_X86_POSIX_TYPES_64_H" variable (:constant-flag t) nil [43 68])
+        '( ("_ASM_X86_POSIX_TYPES_64_H" variable (:constant-flag t) nil [106 131])
             ("__kernel_old_uid_t" type
                (:typedef ("unsigned short")
                 :type "typedef")
-                nil [248 290])
+                nil [311 353])
             ("__kernel_old_gid_t" type
                (:typedef ("unsigned short")
                 :type "typedef")
-                nil [291 333])
-            ("__kernel_old_uid_t" variable (:constant-flag t) nil [342 360])
+                nil [354 396])
+            ("__kernel_old_uid_t" variable (:constant-flag t) nil [405 423])
             ("__kernel_old_dev_t" type
                (:typedef ("unsigned long")
                 :type "typedef")
-                nil [381 422])
-            ("__kernel_old_dev_t" variable (:constant-flag t) nil [431 449])
-            ("asm-generic/posix_types.h" include (:system-flag t) nil [470 506]))          
+                nil [444 485])
+            ("__kernel_old_dev_t" variable (:constant-flag t) nil [494 512])
+            ("asm-generic/posix_types.h" include (:system-flag t) nil [533 569]))          
       :file "posix_types_64.h"
-      :pointmax 547
-      :fsize 546
-      :lastmodtime '(23086 38557 0 0)
+      :pointmax 610
+      :fsize 609
+      :lastmodtime '(23561 10636 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("_ASM_X86_POSIX_TYPES_64_H")
-          ("__kernel_old_uid_t" . ((symbol "__kernel_old_uid_t" 361 . 379)))
-          ("__kernel_old_dev_t" . ((symbol "__kernel_old_dev_t" 450 . 468)))
+          ("__kernel_old_uid_t" . ((symbol "__kernel_old_uid_t" 424 . 442)))
+          ("__kernel_old_dev_t" . ((symbol "__kernel_old_dev_t" 513 . 531)))
           )
 )
-    (semanticdb-table "bitsperlong.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
-        '( ("__ASM_X86_BITSPERLONG_H" variable (:constant-flag t) nil [41 64])
-            ("__BITS_PER_LONG" variable (:constant-flag t) nil [122 137])
-            ("asm-generic/bitsperlong.h" include (:system-flag t) nil [183 219]))          
+        '( ("__ASM_X86_BITSPERLONG_H" variable (:constant-flag t) nil [104 127])
+            ("__BITS_PER_LONG" variable (:constant-flag t) nil [185 200])
+            ("asm-generic/bitsperlong.h" include (:system-flag t) nil [246 282]))          
       :file "bitsperlong.h"
-      :pointmax 259
-      :fsize 258
-      :lastmodtime '(23086 38557 0 0)
+      :pointmax 322
+      :fsize 321
+      :lastmodtime '(23561 10636 0 0)
       :unmatched-syntax nil
       :lexical-table 
         '(("__ASM_X86_BITSPERLONG_H")
-          ("__BITS_PER_LONG" . ((number "64" 138 . 140)))
+          ("__BITS_PER_LONG" . ((number "64" 201 . 203)))
           )
 )
-    (semanticdb-table "swab.h"
-      :major-mode 'c-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
       :tags 
         '( ("_ASM_X86_SWAB_H" variable (:constant-flag t) nil [33 48])
             ("linux/types.h" include (:system-flag t) nil [50 74])
@@ -1298,15 +1298,24 @@
             ("__arch_swab64" variable (:constant-flag t) nil [604 617]))          
       :file "swab.h"
       :pointmax 662
-      :fsize 661
-      :lastmodtime '(23086 38557 0 0)
+      :fsize 724
+      :lastmodtime '(23561 10636 0 0)
       :unmatched-syntax '((symbol 236 . 246) (STATIC 229 . 235) (symbol 84 . 94) (STATIC 77 . 83))
       :lexical-table 
         '(("__arch_swab32" . ((symbol "__arch_swab32" 214 . 227)))
           ("_ASM_X86_SWAB_H")
           ("__arch_swab64" . ((symbol "__arch_swab64" 618 . 631)))
           )
-))
+)
+    (semanticdb-table "semanticdb-table"
+      :major-mode c-mode
+      :tags 
+        '( ("asm-generic/ioctls.h" include (:system-flag t) nil [1 32]))          
+      :file "ioctls.h"
+      :pointmax 33
+      :fsize 32
+      :lastmodtime '(23561 10636 0 0)
+      :unmatched-syntax nil))
   :file "!usr!include!x86_64-linux-gnu!asm!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

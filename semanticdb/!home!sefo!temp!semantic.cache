@@ -368,7 +368,8 @@
       :pointmax 194
       :fsize 193
       :lastmodtime '(23147 34570 147314 543000)
-      :unmatched-syntax nil))
+      :unmatched-syntax nil)
+)
   :file "!home!sefo!temp!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

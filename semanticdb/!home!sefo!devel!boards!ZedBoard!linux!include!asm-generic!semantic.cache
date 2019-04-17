@@ -1161,9 +1161,30 @@
       :fsize 893
       :lastmodtime '(22567 40897 482713 358000))
     (semanticdb-table "memory_model.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__ASM_MEMORY_MODEL_H" variable (:constant-flag t) nil [38 58])
+            ("linux/pfn.h" include (:system-flag t) nil [60 82])
+            ("__phys_to_pfn" variable (:constant-flag t) nil [1989 2002])
+            ("__phys_to_pfn" variable (:constant-flag t) nil [1989 2002])
+            ("__phys_to_pfn" variable (:constant-flag t) nil [1989 2002])
+            ("__pfn_to_phys" variable (:constant-flag t) nil [2034 2047])
+            ("__pfn_to_phys" variable (:constant-flag t) nil [2034 2047])
+            ("page_to_pfn" variable (:constant-flag t) nil [2076 2087])
+            ("pfn_to_page" variable (:constant-flag t) nil [2110 2121]))          
       :file "memory_model.h"
+      :pointmax 2171
       :fsize 2170
-      :lastmodtime '(22567 40897 482713 358000))
+      :lastmodtime '(22567 40897 482713 358000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("page_to_pfn" . ((symbol "__page_to_pfn" 2088 . 2101)))
+          ("__phys_to_pfn" (spp-arg-list ("paddr") 2002 . 2009) . ((symbol "PHYS_PFN" 2010 . 2018) (semantic-list "(paddr)" 2018 . 2025)))
+          ("__ASM_MEMORY_MODEL_H")
+          ("pfn_to_page" . ((symbol "__pfn_to_page" 2122 . 2135)))
+          ("__pfn_to_phys" (spp-arg-list ("pfn") 2047 . 2052) . ((symbol "PFN_PHYS" 2053 . 2061) (semantic-list "(pfn)" 2061 . 2066)))
+          )
+)
     (semanticdb-table "param.h"
       :file "param.h"
       :fsize 328
@@ -1195,7 +1216,64 @@
     (semanticdb-table "topology.h"
       :file "topology.h"
       :fsize 2163
-      :lastmodtime '(22567 40897 486714 950000)))
+      :lastmodtime '(22567 40897 486714 950000))
+    (semanticdb-table "module.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__ASM_GENERIC_MODULE_H" variable (:constant-flag t) nil [41 63])
+            ("__ASM_GENERIC_MODULE_H" variable (:constant-flag t) nil [41 63])
+            ("mod_arch_specific" type (:type "struct") nil [196 225])
+            ("Elf_Shdr" variable (:constant-flag t) nil [667 675])
+            ("Elf_Phdr" variable (:constant-flag t) nil [695 703])
+            ("Elf_Sym" variable (:constant-flag t) nil [723 730])
+            ("Elf_Dyn" variable (:constant-flag t) nil [750 757])
+            ("Elf_Ehdr" variable (:constant-flag t) nil [777 785])
+            ("Elf_Addr" variable (:constant-flag t) nil [805 813])
+            ("ELF_R_TYPE" variable (:constant-flag t) nil [971 981])
+            ("ELF_R_SYM" variable (:constant-flag t) nil [1009 1018]))          
+      :file "module.h"
+      :pointmax 1081
+      :fsize 1079
+      :lastmodtime '(22567 40897 482713 358000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__ASM_GENERIC_MODULE_H")
+          )
+)
+    (semanticdb-table "pgtable.h"
+      :file "pgtable.h"
+      :fsize 22749
+      :lastmodtime '(22567 40897 482713 358000))
+    (semanticdb-table "fixmap.h"
+      :file "fixmap.h"
+      :fsize 2904
+      :lastmodtime '(22567 40897 482713 358000))
+    (semanticdb-table "pgtable-nopud.h"
+      :file "pgtable-nopud.h"
+      :fsize 1822
+      :lastmodtime '(22567 40897 482713 358000))
+    (semanticdb-table "pgtable-nopmd.h"
+      :file "pgtable-nopmd.h"
+      :fsize 1903
+      :lastmodtime '(22567 40897 482713 358000))
+    (semanticdb-table "bitsperlong.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__ASM_GENERIC_BITS_PER_LONG" variable (:constant-flag t) nil [45 72])
+            ("uapi/asm-generic/bitsperlong.h" include (:system-flag t) nil [74 115])
+            ("BITS_PER_LONG" variable (:constant-flag t) nil [177 190])
+            ("BITS_PER_LONG_LONG" variable (:constant-flag t) nil [483 501]))          
+      :file "bitsperlong.h"
+      :pointmax 554
+      :fsize 553
+      :lastmodtime '(22567 40897 482713 358000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("BITS_PER_LONG_LONG" . ((number "64" 502 . 504)))
+          ("BITS_PER_LONG" . ((number "32" 191 . 193)))
+          ("__ASM_GENERIC_BITS_PER_LONG")
+          )
+))
   :file "!home!sefo!devel!boards!ZedBoard!linux!include!asm-generic!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

@@ -4,25 +4,1259 @@
   :tables
   (list
     (semanticdb-table "io.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__ASM_ARM_IO_H" variable (:constant-flag t) nil [821 835])
+            ("linux/string.h" include (:system-flag t) nil [856 881])
+            ("linux/types.h" include (:system-flag t) nil [882 906])
+            ("linux/blk_types.h" include (:system-flag t) nil [907 935])
+            ("asm/byteorder.h" include (:system-flag t) nil [936 962])
+            ("asm/memory.h" include (:system-flag t) nil [963 986])
+            ("asm-generic/pci_iomap.h" include (:system-flag t) nil [987 1021])
+            ("xen/xen.h" include (:system-flag t) nil [1022 1042])
+            ("isa_virt_to_bus" variable (:constant-flag t) nil [1126 1141])
+            ("isa_page_to_bus" variable (:constant-flag t) nil [1163 1178])
+            ("isa_bus_to_virt" variable (:constant-flag t) nil [1200 1215])
+            ("atomic_io_modify" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("__iomem" variable (:type "void") (reparse-symbol arg-sub-list) [1296 1310])
+                    ("" variable (:type ("reg" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1310 1314])
+                    ("mask" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1315 1324])
+                    ("set" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1325 1333]))                  
+                :type "void")
+                nil [1267 1334])
+            ("atomic_io_modify_relaxed" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("__iomem" variable (:type "void") (reparse-symbol arg-sub-list) [1372 1386])
+                    ("" variable (:type ("reg" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1386 1390])
+                    ("mask" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1391 1400])
+                    ("set" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1401 1409]))                  
+                :type "void")
+                nil [1335 1410])
+            ("__raw_writesb" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("__iomem" variable
+                       (:typemodifiers ("volatile")
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1580 1603])
+                    ("" variable (:type ("addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1603 1608])
+                    ("data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1609 1626])
+                    ("bytelen" variable (:type "int") (reparse-symbol arg-sub-list) [1627 1639]))                  
+                :type "void")
+                nil [1561 1640])
+            ("__raw_writesw" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("__iomem" variable
+                       (:typemodifiers ("volatile")
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1660 1683])
+                    ("" variable (:type ("addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1683 1688])
+                    ("data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1689 1706])
+                    ("wordlen" variable (:type "int") (reparse-symbol arg-sub-list) [1707 1719]))                  
+                :type "void")
+                nil [1641 1720])
+            ("__raw_writesl" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("__iomem" variable
+                       (:typemodifiers ("volatile")
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1740 1763])
+                    ("" variable (:type ("addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1763 1768])
+                    ("data" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1769 1786])
+                    ("longlen" variable (:type "int") (reparse-symbol arg-sub-list) [1787 1799]))                  
+                :type "void")
+                nil [1721 1800])
+            ("__raw_readsb" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("__iomem" variable
+                       (:typemodifiers ("volatile")
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1820 1849])
+                    ("" variable (:type ("addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1849 1854])
+                    ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1855 1866])
+                    ("bytelen" variable (:type "int") (reparse-symbol arg-sub-list) [1867 1879]))                  
+                :type "void")
+                nil [1802 1880])
+            ("__raw_readsw" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("__iomem" variable
+                       (:typemodifiers ("volatile")
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1899 1928])
+                    ("" variable (:type ("addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1928 1933])
+                    ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1934 1945])
+                    ("wordlen" variable (:type "int") (reparse-symbol arg-sub-list) [1946 1958]))                  
+                :type "void")
+                nil [1881 1959])
+            ("__raw_readsl" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("__iomem" variable
+                       (:typemodifiers ("volatile")
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [1978 2007])
+                    ("" variable (:type ("addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2007 2012])
+                    ("data" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [2013 2024])
+                    ("longlen" variable (:type "int") (reparse-symbol arg-sub-list) [2025 2037]))                  
+                :type "void")
+                nil [1960 2038])
+            ("__raw_readw" variable (:constant-flag t) nil [2274 2285])
+            ("__raw_writew" variable (:constant-flag t) nil [2364 2376])
+            ("__raw_writeb" variable (:constant-flag t) nil [3114 3126])
+            ("__raw_writeb" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("val" variable (:type ("u8" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3172 3179])
+                    ("__iomem" variable
+                       (:typemodifiers ("volatile")
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3180 3203])
+                    ("" variable (:type ("addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3203 3208]))                  
+                :type "void")
+                nil [3140 3300])
+            ("__raw_writel" variable (:constant-flag t) nil [3310 3322])
+            ("__raw_writel" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("val" variable (:type ("u32" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3368 3376])
+                    ("__iomem" variable
+                       (:typemodifiers ("volatile")
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3377 3400])
+                    ("" variable (:type ("addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3400 3405]))                  
+                :type "void")
+                nil [3336 3497])
+            ("__raw_readb" variable (:constant-flag t) nil [3507 3518])
+            ("__raw_readb" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__iomem" variable
+                       (:typemodifiers ("volatile")
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3560 3589])
+                    ("" variable (:type ("addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3589 3594]))                  
+                :type ("u8" type (:type "class") nil nil))
+                nil [3531 3715])
+            ("__raw_readl" variable (:constant-flag t) nil [3725 3736])
+            ("__raw_readl" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__iomem" variable
+                       (:typemodifiers ("volatile")
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [3779 3808])
+                    ("" variable (:type ("addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3808 3813]))                  
+                :type ("u32" type (:type "class") nil nil))
+                nil [3749 3935])
+            ("MT_DEVICE" variable (:constant-flag t) nil [3992 4001])
+            ("MT_DEVICE_NONSHARED" variable (:constant-flag t) nil [4013 4032])
+            ("MT_DEVICE_CACHED" variable (:constant-flag t) nil [4043 4059])
+            ("MT_DEVICE_WC" variable (:constant-flag t) nil [4070 4082])
+            ("__arm_ioremap_caller" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("" variable (:type ("phys_addr_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4491 4503])
+                    ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4504 4511])
+                    ("" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4512 4525])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4527 4534]))                  
+                :type ("__iomem" type (:type "class") nil nil))
+                nil [4461 4535])
+            ("__arm_ioremap_pfn" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [4575 4589])
+                    ("" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [4590 4604])
+                    ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4605 4612])
+                    ("" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4613 4626]))                  
+                :type ("__iomem" type (:type "class") nil nil))
+                nil [4548 4627])
+            ("__arm_ioremap_exec" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("" variable (:type ("phys_addr_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4668 4680])
+                    ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4681 4688])
+                    ("cached" variable (:type "bool") (reparse-symbol arg-sub-list) [4689 4701]))                  
+                :type ("__iomem" type (:type "class") nil nil))
+                nil [4640 4702])
+            ("__iounmap" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("__iomem" variable
+                       (:typemodifiers ("volatile")
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4725 4748])
+                    ("" variable (:type ("addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4748 4753]))                  
+                :type "void")
+                nil [4703 4754])
+            ("arch_ioremap_caller" function
+               (:prototype-flag t
+                :pointer 1
+                :function-pointer t
+                :arguments 
+                  ( ("" variable (:type ("phys_addr_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4801 4813])
+                    ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [4814 4821])
+                    ("" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4823 4836])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4837 4844]))                  
+                :type ("__iomem" type (:type "class") nil nil))
+                nil [4768 4845])
+            ("arch_iounmap" function
+               (:prototype-flag t
+                :function-pointer t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("__iomem" variable
+                       (:typemodifiers ("volatile")
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4874 4897]))                  
+                :type "void")
+                nil [4846 4899])
+            ("__readwrite_bug" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("fn" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [4966 4981]))                  
+                :type "void")
+                nil [4938 4982])
+            ("__typesafe_io" function
+               (:pointer 1
+                :arguments 
+                  ( ("addr" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [5061 5080]))                  
+                :type ("__iomem" type (:type "class") nil nil))
+                nil [5038 5114])
+            ("IOMEM" variable (:constant-flag t) nil [5124 5129])
+            ("__iormb" variable (:constant-flag t) nil [5308 5315])
+            ("__iowmb" variable (:constant-flag t) nil [5344 5351])
+            ("PCI_IO_VIRT_BASE" variable (:constant-flag t) nil [5416 5432])
+            ("PCI_IOBASE" variable (:constant-flag t) nil [5452 5462])
+            ("pci_ioremap_set_mem_type" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("mem_type" variable (:type "int") (reparse-symbol arg-sub-list) [5619 5632]))                  
+                :type "void")
+                nil [5575 5635])
+            ("pci_ioremap_io" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("offset" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [5670 5690])
+                    ("phys_addr" variable (:type ("phys_addr_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5691 5713]))                  
+                :type "int")
+                nil [5644 5714])
+            ("__io" variable (:constant-flag t) nil [5988 5992])
+            ("IO_SPACE_LIMIT" variable (:constant-flag t) nil [6822 6836])
+            ("outb" variable (:constant-flag t) nil [7806 7810])
+            ("outw" variable (:constant-flag t) nil [7866 7870])
+            ("outl" variable (:constant-flag t) nil [7962 7966])
+            ("inb" variable (:constant-flag t) nil [8059 8062])
+            ("inw" variable (:constant-flag t) nil [8129 8132])
+            ("inl" variable (:constant-flag t) nil [8235 8238])
+            ("outsb" variable (:constant-flag t) nil [8342 8347])
+            ("outsw" variable (:constant-flag t) nil [8391 8396])
+            ("outsl" variable (:constant-flag t) nil [8440 8445])
+            ("insb" variable (:constant-flag t) nil [8490 8494])
+            ("insw" variable (:constant-flag t) nil [8537 8541])
+            ("insl" variable (:constant-flag t) nil [8584 8588])
+            ("_memcpy_fromio" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8708 8715])
+                    ("__iomem" variable
+                       (:typemodifiers ("volatile")
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8716 8745])
+                    ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8747 8754]))                  
+                :type "void")
+                nil [8681 8755])
+            ("_memcpy_toio" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("__iomem" variable
+                       (:typemodifiers ("volatile")
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8781 8804])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8806 8819])
+                    ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8820 8827]))                  
+                :type "void")
+                nil [8756 8828])
+            ("_memset_io" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("__iomem" variable
+                       (:typemodifiers ("volatile")
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [8852 8875])
+                    ("" variable (:type "int") (reparse-symbol arg-sub-list) [8877 8881])
+                    ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [8882 8889]))                  
+                :type "void")
+                nil [8829 8890])
+            ("mmiowb" variable (:constant-flag t) nil [8900 8906])
+            ("readb_relaxed" variable (:constant-flag t) nil [9232 9245])
+            ("readw_relaxed" variable (:constant-flag t) nil [9294 9307])
+            ("readl_relaxed" variable (:constant-flag t) nil [9393 9406])
+            ("writeb_relaxed" variable (:constant-flag t) nil [9493 9507])
+            ("writew_relaxed" variable (:constant-flag t) nil [9539 9553])
+            ("writel_relaxed" variable (:constant-flag t) nil [9612 9626])
+            ("readb" variable (:constant-flag t) nil [9686 9691])
+            ("readw" variable (:constant-flag t) nil [9754 9759])
+            ("readl" variable (:constant-flag t) nil [9822 9827])
+            ("writeb" variable (:constant-flag t) nil [9891 9897])
+            ("writew" variable (:constant-flag t) nil [9950 9956])
+            ("writel" variable (:constant-flag t) nil [10009 10015])
+            ("readsb" variable (:constant-flag t) nil [10069 10075])
+            ("readsw" variable (:constant-flag t) nil [10112 10118])
+            ("readsl" variable (:constant-flag t) nil [10155 10161])
+            ("writesb" variable (:constant-flag t) nil [10199 10206])
+            ("writesw" variable (:constant-flag t) nil [10244 10251])
+            ("writesl" variable (:constant-flag t) nil [10289 10296])
+            ("memset_io" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__iomem" variable
+                       (:typemodifiers ("volatile")
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [10374 10397])
+                    ("" variable (:type ("dst" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10397 10401])
+                    ("c" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [10402 10413])
+                    ("count" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10415 10428]))                  
+                :type "void")
+                nil [10345 10525])
+            ("memset_io" variable (:constant-flag t) nil [10534 10543])
+            ("memcpy_fromio" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("to" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [10614 10623])
+                    ("__iomem" variable
+                       (:typemodifiers ("volatile")
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [10624 10653])
+                    ("" variable (:type ("from" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10653 10658])
+                    ("count" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10660 10673]))                  
+                :type "void")
+                nil [10581 10778])
+            ("memcpy_fromio" variable (:constant-flag t) nil [10787 10800])
+            ("memcpy_toio" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("__iomem" variable
+                       (:typemodifiers ("volatile")
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [10877 10900])
+                    ("" variable (:type ("to" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10900 10903])
+                    ("from" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [10904 10921])
+                    ("count" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [10923 10936]))                  
+                :type "void")
+                nil [10846 11035])
+            ("memcpy_toio" variable (:constant-flag t) nil [11044 11055])
+            ("ioremap" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("res_cookie" variable (:type ("resource_size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13205 13232])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13233 13245]))                  
+                :type ("__iomem" type (:type "class") nil nil))
+                nil [13188 13246])
+            ("ioremap" variable (:constant-flag t) nil [13255 13262])
+            ("ioremap_nocache" variable (:constant-flag t) nil [13279 13294])
+            ("ioremap_cache" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("res_cookie" variable (:type ("resource_size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13332 13359])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13360 13372]))                  
+                :type ("__iomem" type (:type "class") nil nil))
+                nil [13309 13373])
+            ("ioremap_cache" variable (:constant-flag t) nil [13382 13395])
+            ("ioremap_wc" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("res_cookie" variable (:type ("resource_size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13436 13463])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13464 13476]))                  
+                :type ("__iomem" type (:type "class") nil nil))
+                nil [13416 13477])
+            ("ioremap_wc" variable (:constant-flag t) nil [13486 13496])
+            ("ioremap_wt" variable (:constant-flag t) nil [13516 13526])
+            ("iounmap" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("__iomem" variable
+                       (:typemodifiers ("volatile")
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [13552 13575])
+                    ("" variable (:type ("iomem_cookie" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13575 13588]))                  
+                :type "void")
+                nil [13539 13589])
+            ("iounmap" variable (:constant-flag t) nil [13598 13605])
+            ("ioread16be" variable (:constant-flag t) nil [13666 13676])
+            ("ioread32be" variable (:constant-flag t) nil [13768 13778])
+            ("iowrite16be" variable (:constant-flag t) nil [13871 13882])
+            ("iowrite32be" variable (:constant-flag t) nil [13961 13972])
+            ("ioport_map" variable (:constant-flag t) nil [14071 14081])
+            ("ioport_map" function
+               (:prototype-flag t
+                :pointer 1
+                :arguments 
+                  ( ("port" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [14125 14144])
+                    ("nr" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [14145 14161]))                  
+                :type ("__iomem" type (:type "class") nil nil))
+                nil [14105 14162])
+            ("ioport_unmap" variable (:constant-flag t) nil [14199 14211])
+            ("ioport_unmap" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("__iomem" variable (:type "void") (reparse-symbol arg-sub-list) [14250 14264])
+                    ("" variable (:type ("addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14264 14269]))                  
+                :type "void")
+                nil [14225 14270])
+            ("pci_dev" type
+               (:prototype t
+                :type "struct")
+                nil [14279 14294])
+            ("pci_iounmap" variable (:constant-flag t) nil [14304 14315])
+            ("pci_iounmap" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("dev" variable
+                       (:pointer 1
+                        :type ("pci_dev" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14352 14372])
+                    ("__iomem" variable (:type "void") (reparse-symbol arg-sub-list) [14373 14387])
+                    ("" variable (:type ("addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [14387 14392]))                  
+                :type "void")
+                nil [14328 14393])
+            ("xlate_dev_mem_ptr" variable (:constant-flag t) nil [14491 14508])
+            ("xlate_dev_kmem_ptr" variable (:constant-flag t) nil [14595 14613])
+            ("asm-generic/io.h" include (:system-flag t) nil [14620 14647])
+            ("BIOVEC_MERGEABLE" variable (:constant-flag t) nil [14749 14765])
+            ("bio_vec" type
+               (:prototype t
+                :type "struct")
+                nil [14848 14863])
+            ("xen_biovec_phys_mergeable" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("vec1" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("bio_vec" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14902 14929])
+                    ("vec2" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("bio_vec" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [14940 14967]))                  
+                :type "bool")
+                nil [14864 14968])
+            ("BIOVEC_PHYS_MERGEABLE" variable (:constant-flag t) nil [14977 14998])
+            ("register_isa_ports" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("mmio" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [15491 15509])
+                    ("io" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [15510 15526])
+                    ("io_shift" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [15537 15559]))                  
+                :type "void")
+                nil [15460 15560]))          
       :file "io.h"
+      :pointmax 15614
       :fsize 15613
-      :lastmodtime '(22567 40893 207216 608000))
+      :lastmodtime '(22567 40893 207216 608000)
+      :unmatched-syntax '((punctuation 14386 . 14387) (punctuation 14263 . 14264) (VOID 14100 . 14104) (EXTERN 14093 . 14099) (punctuation 13574 . 13575) (VOID 13411 . 13415) (VOID 13304 . 13308) (VOID 13183 . 13187) (punctuation 10899 . 10900) (punctuation 10652 . 10653) (punctuation 10396 . 10397) (punctuation 8874 . 8875) (punctuation 8803 . 8804) (punctuation 8744 . 8745) (VOID 5033 . 5037) (INLINE 5026 . 5032) (STATIC 5019 . 5025) (punctuation 4896 . 4897) (VOID 4763 . 4767) (EXTERN 4756 . 4762) (punctuation 4747 . 4748) (VOID 4635 . 4639) (EXTERN 4628 . 4634) (VOID 4543 . 4547) (EXTERN 4536 . 4542) (VOID 4456 . 4460) (EXTERN 4449 . 4455) (punctuation 3807 . 3808) (punctuation 3588 . 3589) (punctuation 3399 . 3400) (punctuation 3202 . 3203) (punctuation 2006 . 2007) (punctuation 1927 . 1928) (punctuation 1848 . 1849) (punctuation 1762 . 1763) (punctuation 1682 . 1683) (punctuation 1602 . 1603) (punctuation 1385 . 1386) (punctuation 1309 . 1310))
+      :lexical-table 
+        '(("PCI_IOBASE" . ((semantic-list "((void __iomem *)PCI_IO_VIRT_BASE)" 5464 . 5498)))
+          ("outsb" (spp-arg-list ("p" "d" "l") 8347 . 8354) . ((symbol "__raw_writesb" 8356 . 8369) (semantic-list "(__io(p),d,l)" 8369 . 8382)))
+          ("readsb" (spp-arg-list ("p" "d" "l") 10075 . 10082) . ((symbol "__raw_readsb" 10084 . 10096) (semantic-list "(p,d,l)" 10096 . 10103)))
+          ("writesl" (spp-arg-list ("p" "d" "l") 10296 . 10303) . ((symbol "__raw_writesl" 10305 . 10318) (semantic-list "(p,d,l)" 10318 . 10325)))
+          ("ioremap_nocache" . ((symbol "ioremap" 13295 . 13302)))
+          ("__raw_writel" . ((symbol "__raw_writel" 3323 . 3335)))
+          ("__raw_readl" . ((symbol "__raw_readl" 3737 . 3748)))
+          ("IOMEM" (spp-arg-list ("x") 5129 . 5132) . ((semantic-list "((void __force __iomem *)(x))" 5133 . 5162)))
+          ("insl" (spp-arg-list ("p" "d" "l") 8588 . 8595) . ((symbol "__raw_readsl" 8597 . 8609) (semantic-list "(__io(p),d,l)" 8609 . 8622)))
+          ("memcpy_toio" (spp-arg-list ("to" "from" "count") 11055 . 11070) . ((symbol "memcpy_toio" 11071 . 11082) (semantic-list "(to,from,count)" 11082 . 11097)))
+          ("iowrite32be" (spp-arg-list ("v" "p") 13972 . 13977) . ((semantic-list "({ __iowmb(); __raw_writel((__force __u32)cpu_to_be32(v), p); })" 13978 . 14042)))
+          ("ioread32be" (spp-arg-list ("p") 13778 . 13781) . ((semantic-list "({ __u32 __v = be32_to_cpu((__force __be32)__raw_readl(p)); __iormb(); __v; })" 13783 . 13861)))
+          ("inw" (spp-arg-list ("p") 8132 . 8135) . ((semantic-list "({ __u16 __v = le16_to_cpu((__force __le16) \\
+			__raw_readw(__io(p))); __iormb(); __v; })" 8136 . 8226)))
+          ("readw_relaxed" (spp-arg-list ("c") 9307 . 9310) . ((semantic-list "({ u16 __r = le16_to_cpu((__force __le16) \\
+					__raw_readw(c)); __r; })" 9311 . 9384)))
+          ("writesb" (spp-arg-list ("p" "d" "l") 10206 . 10213) . ((symbol "__raw_writesb" 10215 . 10228) (semantic-list "(p,d,l)" 10228 . 10235)))
+          ("xlate_dev_mem_ptr" (spp-arg-list ("p") 14508 . 14511) . ((symbol "__va" 14512 . 14516) (semantic-list "(p)" 14516 . 14519)))
+          ("BIOVEC_PHYS_MERGEABLE" (spp-arg-list ("vec1" "vec2") 14998 . 15010) . ((semantic-list "(__BIOVEC_PHYS_MERGEABLE(vec1, vec2) &&				\\
+	 (!xen_domain() || xen_biovec_phys_mergeable(vec1, vec2)))" 15017 . 15121)))
+          ("isa_bus_to_virt" . ((symbol "phys_to_virt" 1216 . 1228)))
+          ("__raw_writeb" . ((symbol "__raw_writeb" 3127 . 3139)))
+          ("__raw_readb" . ((symbol "__raw_readb" 3519 . 3530)))
+          ("PCI_IO_VIRT_BASE" . ((number "0xfee00000" 5433 . 5443)))
+          ("IO_SPACE_LIMIT" . ((semantic-list "((resource_size_t)0)" 6837 . 6857)))
+          ("insb" (spp-arg-list ("p" "d" "l") 8494 . 8501) . ((symbol "__raw_readsb" 8503 . 8515) (semantic-list "(__io(p),d,l)" 8515 . 8528)))
+          ("writel_relaxed" (spp-arg-list ("v" "c") 9626 . 9631) . ((symbol "__raw_writel" 9632 . 9644) (semantic-list "((__force u32) cpu_to_le32(v),c)" 9644 . 9676)))
+          ("ioremap_wc" . ((symbol "ioremap_wc" 13497 . 13507)))
+          ("__ASM_ARM_IO_H")
+          ("inl" (spp-arg-list ("p") 8238 . 8241) . ((semantic-list "({ __u32 __v = le32_to_cpu((__force __le32) \\
+			__raw_readl(__io(p))); __iormb(); __v; })" 8242 . 8332)))
+          ("writeb_relaxed" (spp-arg-list ("v" "c") 9507 . 9512) . ((symbol "__raw_writeb" 9513 . 9525) (semantic-list "(v,c)" 9525 . 9530)))
+          ("xlate_dev_kmem_ptr" (spp-arg-list ("p") 14613 . 14616) . ((symbol "p" 14617 . 14618)))
+          ("__iormb" (spp-arg-list nil 5315 . 5317) . 
+              ((DO "do" 5319 . 5321) (semantic-list "{ }" 5322 . 5325) (WHILE "while" 5326 . 5331) (semantic-list "(0)" 5332 . 5335)))
+          ("outw" (spp-arg-list ("v" "p") 7870 . 7875) . ((semantic-list "({ __iowmb(); __raw_writew((__force __u16) \\
+					cpu_to_le16(v),__io(p)); })" 7876 . 7953)))
+          ("readw" (spp-arg-list ("c") 9759 . 9762) . ((semantic-list "({ u16 __v = readw_relaxed(c); __iormb(); __v; })" 9764 . 9813)))
+          ("ioremap" . ((symbol "ioremap" 13263 . 13270)))
+          ("mmiowb" (spp-arg-list nil 8906 . 8908))
+          ("writew" (spp-arg-list ("v" "c") 9956 . 9961) . ((semantic-list "({ __iowmb(); writew_relaxed(v,c); })" 9963 . 10000)))
+          ("memset_io" (spp-arg-list ("dst" "c" "count") 10543 . 10556) . ((symbol "memset_io" 10557 . 10566) (semantic-list "(dst,c,count)" 10566 . 10579)))
+          ("memcpy_fromio" (spp-arg-list ("to" "from" "count") 10800 . 10815) . ((symbol "memcpy_fromio" 10816 . 10829) (semantic-list "(to,from,count)" 10829 . 10844)))
+          ("BIOVEC_MERGEABLE" (spp-arg-list ("vec1" "vec2") 14765 . 14777) . ((semantic-list "((bvec_to_phys((vec1)) + (vec1)->bv_len) == bvec_to_phys((vec2)))" 14781 . 14846)))
+          ("isa_page_to_bus" . ((symbol "page_to_phys" 1179 . 1191)))
+          ("outl" (spp-arg-list ("v" "p") 7966 . 7971) . ((semantic-list "({ __iowmb(); __raw_writel((__force __u32) \\
+					cpu_to_le32(v),__io(p)); })" 7972 . 8049)))
+          ("inb" (spp-arg-list ("p") 8062 . 8065) . ((semantic-list "({ __u8 __v = __raw_readb(__io(p)); __iormb(); __v; })" 8066 . 8120)))
+          ("outsw" (spp-arg-list ("p" "d" "l") 8396 . 8403) . ((symbol "__raw_writesw" 8405 . 8418) (semantic-list "(__io(p),d,l)" 8418 . 8431)))
+          ("readl_relaxed" (spp-arg-list ("c") 9406 . 9409) . ((semantic-list "({ u32 __r = le32_to_cpu((__force __le32) \\
+					__raw_readl(c)); __r; })" 9410 . 9483)))
+          ("readl" (spp-arg-list ("c") 9827 . 9830) . ((semantic-list "({ u32 __v = readl_relaxed(c); __iormb(); __v; })" 9832 . 9881)))
+          ("readsw" (spp-arg-list ("p" "d" "l") 10118 . 10125) . ((symbol "__raw_readsw" 10127 . 10139) (semantic-list "(p,d,l)" 10139 . 10146)))
+          ("ioremap_wt" . ((symbol "ioremap_wc" 13527 . 13537)))
+          ("isa_virt_to_bus" . ((symbol "virt_to_phys" 1142 . 1154)))
+          ("MT_DEVICE_NONSHARED" . ((number "1" 4033 . 4034)))
+          ("readb_relaxed" (spp-arg-list ("c") 9245 . 9248) . ((semantic-list "({ u8  __r = __raw_readb(c); __r; })" 9249 . 9285)))
+          ("writel" (spp-arg-list ("v" "c") 10015 . 10020) . ((semantic-list "({ __iowmb(); writel_relaxed(v,c); })" 10022 . 10059)))
+          ("iowrite16be" (spp-arg-list ("v" "p") 13882 . 13887) . ((semantic-list "({ __iowmb(); __raw_writew((__force __u16)cpu_to_be16(v), p); })" 13888 . 13952)))
+          ("ioport_unmap" . ((symbol "ioport_unmap" 14212 . 14224)))
+          ("outsl" (spp-arg-list ("p" "d" "l") 8445 . 8452) . ((symbol "__raw_writesl" 8454 . 8467) (semantic-list "(__io(p),d,l)" 8467 . 8480)))
+          ("readsl" (spp-arg-list ("p" "d" "l") 10161 . 10168) . ((symbol "__raw_readsl" 10170 . 10182) (semantic-list "(p,d,l)" 10182 . 10189)))
+          ("ioread16be" (spp-arg-list ("p") 13676 . 13679) . ((semantic-list "({ __u16 __v = be16_to_cpu((__force __be16)__raw_readw(p)); __iormb(); __v; })" 13681 . 13759)))
+          ("ioport_map" . ((symbol "ioport_map" 14082 . 14092)))
+          ("MT_DEVICE_CACHED" . ((number "2" 4060 . 4061)))
+          ("__io" (spp-arg-list ("a") 5992 . 5995) . ((symbol "__typesafe_io" 5997 . 6010) (semantic-list "((a) & IO_SPACE_LIMIT)" 6010 . 6032)))
+          ("outb" (spp-arg-list ("v" "p") 7810 . 7815) . ((semantic-list "({ __iowmb(); __raw_writeb(v,__io(p)); })" 7816 . 7857)))
+          ("readb" (spp-arg-list ("c") 9691 . 9694) . ((semantic-list "({ u8  __v = readb_relaxed(c); __iormb(); __v; })" 9696 . 9745)))
+          ("writesw" (spp-arg-list ("p" "d" "l") 10251 . 10258) . ((symbol "__raw_writesw" 10260 . 10273) (semantic-list "(p,d,l)" 10273 . 10280)))
+          ("ioremap_cache" . ((symbol "ioremap_cache" 13396 . 13409)))
+          ("iounmap" . ((symbol "iounmap" 13606 . 13613)))
+          ("__raw_readw" (spp-arg-list ("a") 2285 . 2288) . ((semantic-list "(__chk_io_ptr(a), *(volatile unsigned short __force *)(a))" 2297 . 2355)))
+          ("__raw_writew" (spp-arg-list ("v" "a") 2376 . 2381) . ((semantic-list "((void)(__chk_io_ptr(a), *(volatile unsigned short __force *)(a) = (v)))" 2387 . 2459)))
+          ("MT_DEVICE" . ((number "0" 4003 . 4004)))
+          ("MT_DEVICE_WC" . ((number "3" 4084 . 4085)))
+          ("__iowmb" (spp-arg-list nil 5351 . 5353) . 
+              ((DO "do" 5355 . 5357) (semantic-list "{ }" 5358 . 5361) (WHILE "while" 5362 . 5367) (semantic-list "(0)" 5368 . 5371)))
+          ("insw" (spp-arg-list ("p" "d" "l") 8541 . 8548) . ((symbol "__raw_readsw" 8550 . 8562) (semantic-list "(__io(p),d,l)" 8562 . 8575)))
+          ("writew_relaxed" (spp-arg-list ("v" "c") 9553 . 9558) . ((symbol "__raw_writew" 9559 . 9571) (semantic-list "((__force u16) cpu_to_le16(v),c)" 9571 . 9603)))
+          ("writeb" (spp-arg-list ("v" "c") 9897 . 9902) . ((semantic-list "({ __iowmb(); writeb_relaxed(v,c); })" 9904 . 9941)))
+          ("pci_iounmap" . ((symbol "pci_iounmap" 14316 . 14327)))
+          )
+)
     (semanticdb-table "bugs.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__ASM_BUGS_H" variable (:constant-flag t) nil [303 315])
+            ("check_bugs" variable (:constant-flag t) nil [438 448]))          
       :file "bugs.h"
+      :pointmax 483
       :fsize 482
-      :lastmodtime '(22567 40893 207216 608000))
+      :lastmodtime '(22567 40893 207216 608000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("check_bugs" (spp-arg-list nil 448 . 450) . 
+              ((DO "do" 451 . 453) (semantic-list "{ }" 454 . 457) (WHILE "while" 458 . 463) (semantic-list "(0)" 464 . 467)))
+          ("__ASM_BUGS_H")
+          )
+)
     (semanticdb-table "setup.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__ASMARM_SETUP_H" variable (:constant-flag t) nil [438 454])
+            ("uapi/asm/setup.h" include (:system-flag t) nil [456 483])
+            ("__tag" variable (:constant-flag t) nil [494 499])
+            ("__tagtable" variable (:constant-flag t) nil [561 571])
+            ("arm_add_memory" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("start" variable (:type ("u64" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [675 685])
+                    ("size" variable (:type ("u64" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [686 695]))                  
+                :type "int")
+                nil [649 696])
+            ("early_print" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("str" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [721 737])
+                    ("..." variable (:type "vararg") (reparse-symbol arg-sub-list) [738 742]))                  
+                :type "void")
+                nil [697 743])
+            ("dump_machine_table" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [775 780]))                  
+                :type "void")
+                nil [744 781])
+            ("save_atags" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("tags" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type ("tag" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [892 915]))                  
+                :type "void")
+                nil [862 919]))          
       :file "setup.h"
+      :pointmax 935
       :fsize 934
-      :lastmodtime '(22567 40893 211215 891000))
+      :lastmodtime '(22567 40893 211215 891000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("__ASMARM_SETUP_H")
+          ("__tagtable" (spp-arg-list ("tag" "fn") 571 . 580) . 
+              ((STATIC "static" 583 . 589) (CONST "const" 590 . 595) (STRUCT "struct" 596 . 602) (symbol "tagtable" 603 . 611) (spp-symbol-merge ((symbol "__tagtable_" 612 . 623) (symbol "fn" 625 . 627)) 612 . 627) (symbol "__tag" 628 . 633) (punctuation "=" 634 . 635) (semantic-list "{ tag, fn }" 636 . 647)))
+          ("__tag" . 
+              ((symbol "__used" 500 . 506) (symbol "__attribute__" 507 . 520) (semantic-list "((__section__(\".taglist.init\")))" 520 . 552)))
+          )
+)
     (semanticdb-table "sections.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_ASM_ARM_SECTIONS_H" variable (:constant-flag t) nil [37 56])
+            ("asm-generic/sections.h" include (:system-flag t) nil [58 91])
+            ("_exiprom" variable
+               (:dereference 1
+                :typemodifiers ("extern")
+                :type "char")
+                nil [93 116]))          
       :file "sections.h"
+      :pointmax 151
       :fsize 150
-      :lastmodtime '(22567 40893 211215 891000))
+      :lastmodtime '(22567 40893 211215 891000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("_ASM_ARM_SECTIONS_H")
+          )
+)
     (semanticdb-table "cacheflush.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_ASMARM_CACHEFLUSH_H" variable (:constant-flag t) nil [317 337])
+            ("linux/mm.h" include (:system-flag t) nil [339 360])
+            ("asm/glue-cache.h" include (:system-flag t) nil [362 389])
+            ("asm/shmparam.h" include (:system-flag t) nil [390 415])
+            ("asm/cachetype.h" include (:system-flag t) nil [416 442])
+            ("asm/outercache.h" include (:system-flag t) nil [443 470])
+            ("CACHE_COLOUR" variable (:constant-flag t) nil [480 492])
+            ("PG_dcache_clean" variable (:constant-flag t) nil [697 712])
+            ("cpu_cache_fns" type
+               (:members 
+                  ( ("flush_icache_all" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3194 3199]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3169 3200])
+                    ("flush_kern_all" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3225 3230]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3202 3231])
+                    ("flush_kern_louis" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3258 3263]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3233 3264])
+                    ("flush_user_all" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [3289 3294]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3266 3295])
+                    ("flush_user_range" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [3322 3336])
+                            ("" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [3337 3351])
+                            ("" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [3352 3365]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3297 3366])
+                    ("coherent_kern_range" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [3397 3411])
+                            ("" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [3412 3426]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3369 3427])
+                    ("coherent_user_range" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [3457 3471])
+                            ("" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [3472 3486]))                          
+                        :type "int")
+                        (reparse-symbol classsubparts) [3429 3487])
+                    ("flush_kern_dcache_area" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [3520 3527])
+                            ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3528 3535]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3489 3536])
+                    ("dma_map_area" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [3560 3573])
+                            ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3574 3581])
+                            ("" variable (:type "int") (reparse-symbol arg-sub-list) [3582 3586]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3539 3587])
+                    ("dma_unmap_area" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [3612 3625])
+                            ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [3626 3633])
+                            ("" variable (:type "int") (reparse-symbol arg-sub-list) [3634 3638]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3589 3639])
+                    ("dma_flush_range" function
+                       (:prototype-flag t
+                        :function-pointer t
+                        :arguments 
+                          ( ("" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [3666 3679])
+                            ("" variable
+                               (:pointer 1
+                                :constant-flag t
+                                :type "void")
+                                (reparse-symbol arg-sub-list) [3680 3693]))                          
+                        :type "void")
+                        (reparse-symbol classsubparts) [3642 3694]))                  
+                :type "struct")
+                nil [3145 3697])
+            ("__cpuc_flush_icache_all" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4605 4610]))                  
+                :type "void")
+                nil [4569 4611])
+            ("__cpuc_flush_kern_all" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4646 4651]))                  
+                :type "void")
+                nil [4612 4652])
+            ("__cpuc_flush_kern_louis" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4689 4694]))                  
+                :type "void")
+                nil [4653 4695])
+            ("__cpuc_flush_user_all" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [4730 4735]))                  
+                :type "void")
+                nil [4696 4736])
+            ("__cpuc_flush_user_range" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [4773 4787])
+                    ("" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [4788 4802])
+                    ("" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [4803 4816]))                  
+                :type "void")
+                nil [4737 4817])
+            ("__cpuc_coherent_kern_range" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [4857 4871])
+                    ("" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [4872 4886]))                  
+                :type "void")
+                nil [4818 4887])
+            ("__cpuc_coherent_user_range" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [4927 4941])
+                    ("" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [4942 4956]))                  
+                :type "int")
+                nil [4888 4957])
+            ("__cpuc_flush_dcache_area" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [4995 5002])
+                    ("" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [5003 5010]))                  
+                :type "void")
+                nil [4958 5011])
+            ("dmac_flush_range" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5267 5280])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5281 5294]))                  
+                :type "void")
+                nil [5238 5295])
+            ("copy_to_user_page" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("vm_area_struct" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5504 5528])
+                    ("" variable
+                       (:pointer 1
+                        :type ("page" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [5529 5543])
+                    ("" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [5545 5559])
+                    ("" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5560 5567])
+                    ("" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [5568 5581])
+                    ("" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [5582 5596]))                  
+                :type "void")
+                nil [5474 5597])
+            ("copy_from_user_page" variable (:constant-flag t) nil [5606 5625])
+            ("__flush_icache_all_generic" variable (:constant-flag t) nil [5804 5830])
+            ("__flush_icache_all_v7_smp" variable (:constant-flag t) nil [5946 5971])
+            ("__flush_icache_preferred" variable (:constant-flag t) nil [6604 6628])
+            ("__flush_icache_all" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [6702 6707]))                  
+                :type "void")
+                nil [6664 6753])
+            ("flush_cache_louis" variable (:constant-flag t) nil [6829 6846])
+            ("flush_cache_all" variable (:constant-flag t) nil [6885 6900])
+            ("vivt_flush_cache_mm" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("mm" variable
+                       (:pointer 1
+                        :type ("mm_struct" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [6968 6989]))                  
+                :type "void")
+                nil [6929 7079])
+            ("vivt_flush_cache_range" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("vma" variable
+                       (:pointer 1
+                        :type ("vm_area_struct" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7123 7150])
+                    ("start" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [7151 7171])
+                    ("end" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [7172 7190]))                  
+                :type "void")
+                nil [7081 7380])
+            ("vivt_flush_cache_page" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("vma" variable
+                       (:pointer 1
+                        :type ("vm_area_struct" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [7423 7450])
+                    ("user_addr" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [7451 7475])
+                    ("pfn" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [7476 7494]))                  
+                :type "void")
+                nil [7382 7718])
+            ("flush_cache_mm" variable (:constant-flag t) nil [7758 7772])
+            ("flush_cache_range" variable (:constant-flag t) nil [7813 7830])
+            ("flush_cache_page" variable (:constant-flag t) nil [7896 7912])
+            ("flush_cache_dup_mm" variable (:constant-flag t) nil [8240 8258])
+            ("flush_cache_user_range" variable (:constant-flag t) nil [8497 8519])
+            ("flush_icache_range" variable (:constant-flag t) nil [8711 8729])
+            ("clean_dcache_area" variable (:constant-flag t) nil [8893 8910])
+            ("ARCH_IMPLEMENTS_FLUSH_DCACHE_PAGE" variable (:constant-flag t) nil [9494 9527])
+            ("flush_dcache_page" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("page" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9560 9574]))                  
+                :type "void")
+                nil [9530 9575])
+            ("flush_kernel_vmap_range" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [9620 9631])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [9632 9641]))                  
+                :type "void")
+                nil [9577 9746])
+            ("invalidate_kernel_vmap_range" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [9795 9806])
+                    ("size" variable (:type "int") (reparse-symbol arg-sub-list) [9807 9816]))                  
+                :type "void")
+                nil [9747 9921])
+            ("ARCH_HAS_FLUSH_ANON_PAGE" variable (:constant-flag t) nil [9931 9955])
+            ("flush_anon_page" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("vma" variable
+                       (:pointer 1
+                        :type ("vm_area_struct" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [9991 10018])
+                    ("page" variable
+                       (:pointer 1
+                        :type ("page" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10023 10041])
+                    ("vmaddr" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [10042 10063]))                  
+                :type "void")
+                nil [9956 10222])
+            ("ARCH_HAS_FLUSH_KERNEL_DCACHE_PAGE" variable (:constant-flag t) nil [10232 10265])
+            ("flush_kernel_dcache_page" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable
+                       (:pointer 1
+                        :type ("page" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [10303 10317]))                  
+                :type "void")
+                nil [10266 10318])
+            ("flush_dcache_mmap_lock" variable (:constant-flag t) nil [10328 10350])
+            ("flush_dcache_mmap_unlock" variable (:constant-flag t) nil [10408 10432])
+            ("flush_icache_user_range" variable (:constant-flag t) nil [10493 10516])
+            ("flush_icache_page" variable (:constant-flag t) nil [10725 10742])
+            ("flush_cache_vmap" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("start" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [11154 11174])
+                    ("end" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [11175 11193]))                  
+                :type "void")
+                nil [11118 11387])
+            ("flush_cache_vunmap" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("start" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [11427 11447])
+                    ("end" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [11448 11466]))                  
+                :type "void")
+                nil [11389 11526])
+            ("__CACHE_WRITEBACK_ORDER" variable (:constant-flag t) nil [12536 12559])
+            ("__CACHE_WRITEBACK_GRANULE" variable (:constant-flag t) nil [12609 12634])
+            ("__cpuc_clean_dcache_area" variable (:constant-flag t) nil [12813 12837])
+            ("__sync_cache_range_w" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [13006 13023])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13024 13036]))                  
+                :type "void")
+                nil [12966 13148])
+            ("__sync_cache_range_r" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("p" variable
+                       (:pointer 1
+                        :typemodifiers ("volatile")
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [13437 13454])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [13455 13467]))                  
+                :type "void")
+                nil [13397 13915])
+            ("sync_cache_w" variable (:constant-flag t) nil [13925 13937])
+            ("sync_cache_r" variable (:constant-flag t) nil [13992 14004])
+            ("v7_exit_coherency_flush" variable (:constant-flag t) nil [15178 15201])
+            ("set_memory_ro" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("addr" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [16044 16063])
+                    ("numpages" variable (:type "int") (reparse-symbol arg-sub-list) [16064 16077]))                  
+                :type "int")
+                nil [16012 16091])
+            ("set_memory_rw" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("addr" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [16124 16143])
+                    ("numpages" variable (:type "int") (reparse-symbol arg-sub-list) [16144 16157]))                  
+                :type "int")
+                nil [16092 16171])
+            ("set_memory_x" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("addr" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [16203 16222])
+                    ("numpages" variable (:type "int") (reparse-symbol arg-sub-list) [16223 16236]))                  
+                :type "int")
+                nil [16172 16250])
+            ("set_memory_nx" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("addr" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [16283 16302])
+                    ("numpages" variable (:type "int") (reparse-symbol arg-sub-list) [16303 16316]))                  
+                :type "int")
+                nil [16251 16330])
+            ("set_kernel_text_rw" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [16472 16477]))                  
+                :type "void")
+                nil [16434 16481])
+            ("set_kernel_text_ro" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [16520 16525]))                  
+                :type "void")
+                nil [16482 16529])
+            ("flush_uprobe_xol_access" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("page" variable
+                       (:pointer 1
+                        :type ("page" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [16567 16585])
+                    ("uaddr" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [16586 16606])
+                    ("kaddr" variable
+                       (:pointer 1
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [16615 16627])
+                    ("len" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [16628 16646]))                  
+                :type "void")
+                nil [16538 16647])
+            ("secure_flush_area" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("addr" variable
+                       (:pointer 1
+                        :constant-flag t
+                        :type "void")
+                        (reparse-symbol arg-sub-list) [17026 17043])
+                    ("size" variable (:type ("size_t" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [17044 17056]))                  
+                :type "void")
+                nil [16989 17179]))          
       :file "cacheflush.h"
+      :pointmax 17188
       :fsize 17187
-      :lastmodtime '(22567 40893 207216 608000))
+      :lastmodtime '(22567 40893 207216 608000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("flush_cache_all" (spp-arg-list nil 6900 . 6902) . ((symbol "__cpuc_flush_kern_all" 6904 . 6925) (semantic-list "()" 6925 . 6927)))
+          ("flush_cache_dup_mm" (spp-arg-list ("mm") 8258 . 8262) . ((symbol "flush_cache_mm" 8263 . 8277) (semantic-list "(mm)" 8277 . 8281)))
+          ("ARCH_HAS_FLUSH_ANON_PAGE")
+          ("__CACHE_WRITEBACK_ORDER" . ((number "6" 12560 . 12561)))
+          ("flush_cache_mm" (spp-arg-list ("mm") 7772 . 7776) . ((symbol "vivt_flush_cache_mm" 7781 . 7800) (semantic-list "(mm)" 7800 . 7804)))
+          ("clean_dcache_area" (spp-arg-list ("start" "size") 8910 . 8922) . ((symbol "cpu_dcache_clean_area" 8923 . 8944) (semantic-list "(start, size)" 8944 . 8957)))
+          ("sync_cache_w" (spp-arg-list ("ptr") 13937 . 13942) . ((symbol "__sync_cache_range_w" 13943 . 13963) (semantic-list "(ptr, sizeof *(ptr))" 13963 . 13983)))
+          ("v7_exit_coherency_flush" (spp-arg-list ("level") 15201 . 15208) . 
+              ((symbol "asm" 15212 . 15215) (VOLATILE "volatile" 15216 . 15224) (semantic-list "( \\
+	\".arch	armv7-a \\n\\t\" \\
+	\"stmfd	sp!, {fp, ip} \\n\\t\" \\
+	\"mrc	p15, 0, r0, c1, c0, 0	@ get SCTLR \\n\\t\" \\
+	\"bic	r0, r0, #\"__stringify(CR_C)\" \\n\\t\" \\
+	\"mcr	p15, 0, r0, c1, c0, 0	@ set SCTLR \\n\\t\" \\
+	\"isb	\\n\\t\" \\
+	\"bl	v7_flush_dcache_\"__stringify(level)\" \\n\\t\" \\
+	\"mrc	p15, 0, r0, c1, c0, 1	@ get ACTLR \\n\\t\" \\
+	\"bic	r0, r0, #(1 << 6)	@ disable local coherency \\n\\t\" \\
+	\"mcr	p15, 0, r0, c1, c0, 1	@ set ACTLR \\n\\t\" \\
+	\"isb	\\n\\t\" \\
+	\"dsb	\\n\\t\" \\
+	\"ldmfd	sp!, {fp, ip}\" \\
+	: : : \"r0\",\"r1\",\"r2\",\"r3\",\"r4\",\"r5\",\"r6\",\"r7\", \\
+	      \"r9\",\"r10\",\"lr\",\"memory\" )" 15224 . 15775)))
+          ("flush_dcache_mmap_lock" (spp-arg-list ("mapping") 10350 . 10359) . ((symbol "spin_lock_irq" 10363 . 10376) (semantic-list "(&(mapping)->tree_lock)" 10376 . 10399)))
+          ("__cpuc_clean_dcache_area" . ((symbol "__cpuc_flush_dcache_area" 12838 . 12862)))
+          ("_ASMARM_CACHEFLUSH_H")
+          ("__flush_icache_all_v7_smp" (spp-arg-list nil 5971 . 5973) . 
+              ((symbol "asm" 5981 . 5984) (semantic-list "(\"mcr	p15, 0, %0, c7, c1, 0\"				\\
+	    : : \"r\" (0))" 5984 . 6035) (punctuation ";" 6035 . 6036)))
+          ("__flush_icache_preferred" . ((symbol "__flush_icache_all_generic" 6629 . 6655)))
+          ("flush_cache_range" (spp-arg-list ("vma" "start" "end") 7830 . 7845) . ((symbol "vivt_flush_cache_range" 7850 . 7872) (semantic-list "(vma,start,end)" 7872 . 7887)))
+          ("flush_cache_page" (spp-arg-list ("vma" "addr" "pfn") 7912 . 7926) . ((symbol "vivt_flush_cache_page" 7931 . 7952) (semantic-list "(vma,addr,pfn)" 7952 . 7966)))
+          ("flush_icache_range" (spp-arg-list ("s" "e") 8729 . 8734) . ((symbol "__cpuc_coherent_kern_range" 8736 . 8762) (semantic-list "(s,e)" 8762 . 8767)))
+          ("ARCH_HAS_FLUSH_KERNEL_DCACHE_PAGE")
+          ("flush_cache_louis" (spp-arg-list nil 6846 . 6848) . ((symbol "__cpuc_flush_kern_louis" 6850 . 6873) (semantic-list "()" 6873 . 6875)))
+          ("flush_icache_page" (spp-arg-list ("vma" "page") 10742 . 10752) . 
+              ((DO "do" 10753 . 10755) (semantic-list "{ }" 10756 . 10759) (WHILE "while" 10760 . 10765) (semantic-list "(0)" 10766 . 10769)))
+          ("ARCH_IMPLEMENTS_FLUSH_DCACHE_PAGE" . ((number "1" 9528 . 9529)))
+          ("PG_dcache_clean" . ((symbol "PG_arch_1" 713 . 722)))
+          ("__CACHE_WRITEBACK_GRANULE" . ((semantic-list "(1 << __CACHE_WRITEBACK_ORDER)" 12635 . 12665)))
+          ("CACHE_COLOUR" (spp-arg-list ("vaddr") 492 . 499) . ((semantic-list "((vaddr & (SHMLBA - 1)) >> PAGE_SHIFT)" 500 . 538)))
+          ("sync_cache_r" (spp-arg-list ("ptr") 14004 . 14009) . ((symbol "__sync_cache_range_r" 14010 . 14030) (semantic-list "(ptr, sizeof *(ptr))" 14030 . 14050)))
+          ("copy_from_user_page" (spp-arg-list ("vma" "page" "vaddr" "dst" "src" "len") 5625 . 5658) . 
+              ((DO "do" 5662 . 5664) (semantic-list "{							\\
+		memcpy(dst, src, len);				\\
+	}" 5665 . 5707) (WHILE "while" 5708 . 5713) (semantic-list "(0)" 5714 . 5717)))
+          ("__flush_icache_all_generic" (spp-arg-list nil 5830 . 5832) . 
+              ((symbol "asm" 5840 . 5843) (semantic-list "(\"mcr	p15, 0, %0, c7, c5, 0\"				\\
+	    : : \"r\" (0))" 5843 . 5894) (punctuation ";" 5894 . 5895)))
+          ("flush_cache_user_range" (spp-arg-list ("s" "e") 8519 . 8524) . ((symbol "__cpuc_coherent_user_range" 8525 . 8551) (semantic-list "(s,e)" 8551 . 8556)))
+          ("flush_dcache_mmap_unlock" (spp-arg-list ("mapping") 10432 . 10441) . ((symbol "spin_unlock_irq" 10445 . 10460) (semantic-list "(&(mapping)->tree_lock)" 10460 . 10483)))
+          ("flush_icache_user_range" (spp-arg-list ("vma" "page" "addr" "len") 10516 . 10535) . ((symbol "flush_dcache_page" 10539 . 10556) (semantic-list "(page)" 10556 . 10562)))
+          )
+)
     (semanticdb-table "delay.h"
       :major-mode 'c-mode
       :tags 
@@ -937,6 +2171,7 @@
             ("isb" variable (:constant-flag t) nil [1311 1314])
             ("dsb" variable (:constant-flag t) nil [1367 1370])
             ("dmb" variable (:constant-flag t) nil [1467 1470])
+            ("__arm_heavy_mb" variable (:constant-flag t) nil [1695 1709])
             ("__arm_heavy_mb" variable (:constant-flag t) nil [1695 1709])
             ("mb" variable (:constant-flag t) nil [2014 2016])
             ("rmb" variable (:constant-flag t) nil [2038 2041])
@@ -1978,7 +3213,235 @@
     (semanticdb-table "timex.h"
       :file "timex.h"
       :fsize 483
-      :lastmodtime '(22567 40893 211215 891000)))
+      :lastmodtime '(22567 40893 211215 891000))
+    (semanticdb-table "module.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_ASM_ARM_MODULE_H" variable (:constant-flag t) nil [35 52])
+            ("asm-generic/module.h" include (:system-flag t) nil [54 85])
+            ("unwind_table" type
+               (:prototype t
+                :type "struct")
+                nil [87 107])
+            ("mod_arch_specific" type (:type "struct") nil [280 537])
+            ("get_module_plt" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("mod" variable
+                       (:pointer 1
+                        :type ("module" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [558 577])
+                    ("loc" variable (:type "unsigned long") (reparse-symbol arg-sub-list) [578 596])
+                    ("val" variable (:type ("Elf32_Addr" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [597 612]))                  
+                :type ("u32" type (:type "class") nil nil))
+                nil [539 613])
+            ("MODULE_ARCH_VERMAGIC_ARMVSN" variable (:constant-flag t) nil [694 721])
+            ("MODULE_ARCH_VERMAGIC_P2V" variable (:constant-flag t) nil [903 927])
+            ("MODULE_ARCH_VERMAGIC_ARMTHUMB" variable (:constant-flag t) nil [1105 1134])
+            ("MODULE_ARCH_VERMAGIC" variable (:constant-flag t) nil [1154 1174]))          
+      :file "module.h"
+      :pointmax 1299
+      :fsize 1298
+      :lastmodtime '(22567 40893 211215 891000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("MODULE_ARCH_VERMAGIC" . 
+              ((symbol "MODULE_ARCH_VERMAGIC_ARMVSN" 1178 . 1205) (symbol "MODULE_ARCH_VERMAGIC_ARMTHUMB" 1209 . 1238) (symbol "MODULE_ARCH_VERMAGIC_P2V" 1242 . 1266)))
+          ("MODULE_ARCH_VERMAGIC_P2V" . ((string "\"\"" 928 . 930)))
+          ("_ASM_ARM_MODULE_H")
+          ("MODULE_ARCH_VERMAGIC_ARMTHUMB" . ((string "\"\"" 1135 . 1137)))
+          ("MODULE_ARCH_VERMAGIC_ARMVSN" . 
+              ((string "\"ARMv\"" 722 . 728) (symbol "__stringify" 729 . 740) (semantic-list "(__LINUX_ARM_ARCH__)" 740 . 760) (string "\" \"" 761 . 764)))
+          )
+)
+    (semanticdb-table "device.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("ASMARM_DEVICE_H" variable (:constant-flag t) nil [129 144])
+            ("dev_archdata" type
+               (:members 
+                  ( ("dma_ops" variable
+                       (:pointer 1
+                        :type ("dma_map_ops" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol classsubparts) [169 197])
+                    ("dma_coherent" variable (:type "bool") (reparse-symbol classsubparts) [417 435]))                  
+                :type "struct")
+                nil [146 438])
+            ("omap_device" type
+               (:prototype t
+                :type "struct")
+                nil [440 459])
+            ("pdev_archdata" type (:type "struct") nil [461 542])
+            ("to_dma_iommu_mapping" variable (:constant-flag t) nil [650 670]))          
+      :file "device.h"
+      :pointmax 696
+      :fsize 695
+      :lastmodtime '(22567 40893 207216 608000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("to_dma_iommu_mapping" (spp-arg-list ("dev") 670 . 675) . ((symbol "NULL" 676 . 680)))
+          ("ASMARM_DEVICE_H")
+          )
+)
+    (semanticdb-table "elf.h"
+      :file "elf.h"
+      :fsize 4425
+      :lastmodtime '(22567 40893 207216 608000))
+    (semanticdb-table "dma.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__ASM_ARM_DMA_H" variable (:constant-flag t) nil [33 48])
+            ("MAX_DMA_ADDRESS" variable (:constant-flag t) nil [153 168])
+            ("isa_dma_bridge_buggy" variable (:constant-flag t) nil [4180 4200]))          
+      :file "dma.h"
+      :pointmax 4245
+      :fsize 4244
+      :lastmodtime '(22567 40893 207216 608000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("isa_dma_bridge_buggy" . ((semantic-list "(0)" 4204 . 4207)))
+          ("MAX_DMA_ADDRESS" . ((symbol "0xffffffffUL" 169 . 181)))
+          ("__ASM_ARM_DMA_H")
+          )
+)
+    (semanticdb-table "irq.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("__ASM_ARM_IRQ_H" variable (:constant-flag t) nil [33 48])
+            ("NR_IRQS_LEGACY" variable (:constant-flag t) nil [58 72])
+            ("mach/irqs.h" include (:system-flag t) nil [103 125])
+            ("irq_canonicalize" variable (:constant-flag t) nil [204 220])
+            ("NO_IRQ" variable (:constant-flag t) nil [328 334])
+            ("irqaction" type
+               (:prototype t
+                :type "struct")
+                nil [385 402])
+            ("pt_regs" type
+               (:prototype t
+                :type "struct")
+                nil [403 418])
+            ("migrate_irqs" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [444 449]))                  
+                :type "void")
+                nil [419 450])
+            ("asm_do_IRQ" function
+               (:prototype-flag t
+                :typemodifiers ("extern")
+                :arguments 
+                  ( ("" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [475 488])
+                    ("" variable
+                       (:pointer 1
+                        :type ("pt_regs" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [489 506]))                  
+                :type "void")
+                nil [452 507])
+            ("handle_IRQ" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "unsigned int") (reparse-symbol arg-sub-list) [524 537])
+                    ("" variable
+                       (:pointer 1
+                        :type ("pt_regs" type
+                             (:prototype t
+                              :type "struct")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [538 555]))                  
+                :type "void")
+                nil [508 556])
+            ("init_IRQ" function
+               (:prototype-flag t
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [571 576]))                  
+                :type "void")
+                nil [557 577])
+            ("nr_legacy_irqs" function
+               (:typemodifiers ("static" "inline")
+                :arguments 
+                  ( ("" variable (:type "void") (reparse-symbol arg-sub-list) [920 925]))                  
+                :type "int")
+                nil [887 953]))          
+      :file "irq.h"
+      :pointmax 971
+      :fsize 970
+      :lastmodtime '(22567 40893 207216 608000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("NR_IRQS_LEGACY" . ((number "16" 73 . 75)))
+          ("NO_IRQ" . ((semantic-list "((unsigned int)(-1))" 335 . 355)))
+          ("__ASM_ARM_IRQ_H")
+          ("irq_canonicalize" (spp-arg-list ("i") 220 . 223) . ((semantic-list "(i)" 224 . 227)))
+          )
+)
+    (semanticdb-table "ftrace.h"
+      :file "ftrace.h"
+      :fsize 1271
+      :lastmodtime '(22567 40893 207216 608000))
+    (semanticdb-table "glue-cache.h"
+      :file "glue-cache.h"
+      :fsize 3647
+      :lastmodtime '(22567 40893 207216 608000))
+    (semanticdb-table "shmparam.h"
+      :file "shmparam.h"
+      :fsize 380
+      :lastmodtime '(22567 40893 211215 891000))
+    (semanticdb-table "cachetype.h"
+      :file "cachetype.h"
+      :fsize 1907
+      :lastmodtime '(22567 40893 207216 608000))
+    (semanticdb-table "outercache.h"
+      :file "outercache.h"
+      :fsize 3873
+      :lastmodtime '(22567 40893 211215 891000))
+    (semanticdb-table "mmu.h"
+      :file "mmu.h"
+      :fsize 694
+      :lastmodtime '(22567 40893 211215 891000))
+    (semanticdb-table "pgtable.h"
+      :file "pgtable.h"
+      :fsize 11536
+      :lastmodtime '(22567 40893 211215 891000))
+    (semanticdb-table "hardirq.h"
+      :file "hardirq.h"
+      :fsize 710
+      :lastmodtime '(22567 40893 207216 608000))
+    (semanticdb-table "uaccess.h"
+      :file "uaccess.h"
+      :fsize 16634
+      :lastmodtime '(22567 40893 215215 174000))
+    (semanticdb-table "pgalloc.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("_ASMARM_PGALLOC_H" variable (:constant-flag t) nil [311 328])
+            ("linux/pagemap.h" include (:system-flag t) nil [330 356])
+            ("asm/domain.h" include (:system-flag t) nil [358 381])
+            ("asm/pgtable-hwdef.h" include (:system-flag t) nil [382 412])
+            ("asm/processor.h" include (:system-flag t) nil [413 439])
+            ("asm/cacheflush.h" include (:system-flag t) nil [440 467])
+            ("asm/tlbflush.h" include (:system-flag t) nil [468 493])
+            ("check_pgt_cache" variable (:constant-flag t) nil [503 518]))          
+      :file "pgalloc.h"
+      :pointmax 3932
+      :fsize 3931
+      :lastmodtime '(22567 40893 211215 891000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("check_pgt_cache" (spp-arg-list nil 518 . 520) . 
+              ((DO "do" 522 . 524) (semantic-list "{ }" 525 . 528) (WHILE "while" 529 . 534) (semantic-list "(0)" 535 . 538)))
+          ("_ASMARM_PGALLOC_H")
+          )
+))
   :file "!home!sefo!devel!boards!ZedBoard!linux!arch!arm!include!asm!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")

@@ -1,0 +1,1 @@
+(define-package "magit-annex" "20180501.1837" "Control git-annex from Magit" '((cl-lib "0.3") (magit "2.12.0")) :commit "fae7c4b0082d8a6cb4b9aeeaa42c368526cf5b00" :keywords '("vc" "tools") :url "https://github.com/magit/magit-annex")

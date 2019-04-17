@@ -1,0 +1,20 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("cpu-exec.c"
+ (filename . "~/devel/github/qemu/accel/tcg/cpu-exec.c")
+ (front-context-string . "int cpu_exec(CPU")
+ (rear-context-string . "cution loop */\n\n")
+ (position . 20756))
+("init.el"
+ (filename . "~/.emacs.d/init.el")
+ (front-context-string . " ; start package")
+ (rear-context-string)
+ (position . 1))
+("mm-fault-x86"
+ (filename . "~/devel/boards/ZedBoard/linux/arch/x86/mm/fault.c")
+ (front-context-string . "handle_mm_fault(")
+ (rear-context-string . ".\n	 */\n	fault = ")
+ (position . 34043))
+)

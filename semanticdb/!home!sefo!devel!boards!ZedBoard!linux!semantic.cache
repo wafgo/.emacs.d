@@ -1,10 +1,10 @@
-;; Object linux/
+;; Object semanticdb-project-database-file
 ;; SEMANTICDB Tags save file
-(semanticdb-project-database-file "linux/"
+(semanticdb-project-database-file "semanticdb-project-database-file"
   :tables
   (list
-    (semanticdb-table "Makefile"
-      :major-mode 'makefile-gmake-mode
+    (semanticdb-table "semanticdb-table"
+      :major-mode makefile-gmake-mode
       :tags 
         '( ("VERSION" variable (:default-value ("4")) nil [1 13])
             ("PATCHLEVEL" variable (:default-value ("6")) nil [13 28])
@@ -382,7 +382,15 @@
       :pointmax 56230
       :fsize 56229
       :lastmodtime '(22567 40893 75240 272000)
-      :unmatched-syntax nil))
+      :unmatched-syntax nil)
+    (semanticdb-table "semanticdb-table"
+      :major-mode js-mode
+      :tags nil
+      :file "compile_commands.json"
+      :pointmax 4522459
+      :fsize 4522458
+      :lastmodtime '(23292 32265 952904 630000)
+      :unmatched-syntax '((BRACK_BLOCK 1 . 4522459))))
   :file "!home!sefo!devel!boards!ZedBoard!linux!semantic.cache"
   :semantic-tag-version "2.0"
   :semanticdb-version "2.2")
