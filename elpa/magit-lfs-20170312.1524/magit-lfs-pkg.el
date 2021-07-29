@@ -1,1 +1,0 @@
-(define-package "magit-lfs" "20170312.1524" "Magit plugin for Git LFS" '((emacs "24.4") (magit "2.10.3") (dash "2.13.0")) :commit "799282fce73b668d2cf6e4fa87f889fec8e25333" :keywords '("magit" "git" "lfs" "tools" "vc") :url "https://github.com/ailrun/magit-lfs")

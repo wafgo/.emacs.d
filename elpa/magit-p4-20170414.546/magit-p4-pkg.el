@@ -1,1 +1,0 @@
-(define-package "magit-p4" "20170414.546" "git-p4 plug-in for Magit" '((magit "2.1") (magit-popup "2.1") (p4 "12.0") (cl-lib "0.5")) :commit "c87de6d3f10fd35415a0c56e63747eb14ed5a113" :keywords '("vc" "tools") :url "https://github.com/qoocku/magit-p4")

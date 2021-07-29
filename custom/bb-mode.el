@@ -105,7 +105,7 @@ For detail, see `comment-dwim'."
          (5 font-lock-keyword-face)
          (6 font-lock-function-name-face)
          )
-
+        
         ;; addtask 2nd form: addtask FUNCTION_NAME (after|before) FUNCTION_NAME
         (,(concat "^"
                   "\\(addtask\\)"
@@ -187,10 +187,10 @@ For detail, see `comment-dwim'."
   "bb"
   "Major mode for editing bitbake files"
   :syntax-table bb-syntax-table
-
+  
   (setq font-lock-defaults '((bb-font-lock)))
   (define-key bb-mode-map [remap comment-dwim] 'bb-comment-dwim)
-
+  
   (setq bb-expr-white-space-regexp nil)
   (setq bb-function-name-opt-regexp nil)
   (setq bb-function-name-regexp nil)

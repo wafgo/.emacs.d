@@ -1,1 +1,0 @@
-(define-package "magit-imerge" "20180501.1505" "Magit extension for git-imerge" '((emacs "24.4") (magit "2.10.0")) :commit "546f76d14f16b114837f38d21c29ea6f6adfeaa7" :keywords '("vc" "tools") :url "https://github.com/magit/magit-imerge")

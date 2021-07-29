@@ -1,10 +1,12 @@
 ;;; bitbake-autoloads.el --- automatically extracted autoloads
 ;;
 ;;; Code:
-(add-to-list 'load-path (directory-file-name (or (file-name-directory #$) (car load-path))))
+
+(add-to-list 'load-path (directory-file-name
+                         (or (file-name-directory #$) (car load-path))))
+
 
-;;;### (autoloads nil "bitbake" "bitbake.el" (23728 54745 777157
-;;;;;;  257000))
+;;;### (autoloads nil "bitbake" "bitbake.el" (0 0 0 0))
 ;;; Generated autoloads from bitbake.el
 
 (put 'bitbake-server-host 'risky-local-variable t)
@@ -98,11 +100,14 @@ Keymap for bitbake-mode.")
 
 \(fn)" t nil)
 
+(register-definition-prefixes "bitbake" '("bitbake-" "wic-read-definition-file"))
+
 ;;;***
 
 ;; Local Variables:
 ;; version-control: never
 ;; no-byte-compile: t
 ;; no-update-autoloads: t
+;; coding: utf-8
 ;; End:
 ;;; bitbake-autoloads.el ends here
