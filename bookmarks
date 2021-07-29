@@ -1,20 +1,41 @@
-;;;; Emacs Bookmark Format Version 1 ;;;;
+;;;; Emacs Bookmark Format Version 1;;;; -*- coding: utf-8-emacs; mode: lisp-data -*-
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("cpu-exec.c"
- (filename . "~/devel/github/qemu/accel/tcg/cpu-exec.c")
- (front-context-string . "int cpu_exec(CPU")
- (rear-context-string . "cution loop */\n\n")
- (position . 20756))
-("init.el"
- (filename . "~/.emacs.d/init.el")
- (front-context-string . " ; start package")
- (rear-context-string)
- (position . 1))
-("mm-fault-x86"
- (filename . "~/devel/boards/ZedBoard/linux/arch/x86/mm/fault.c")
- (front-context-string . "handle_mm_fault(")
- (rear-context-string . ".\n	 */\n	fault = ")
- (position . 34043))
+(("ghs-cc-doc"
+ (filename . "/opt/ghs/7.1.6_2019.1.4/manuals/build_arm64.pdf")
+ (position . 1)
+ (page . 1)
+ (slice)
+ (size . fit-width)
+ (origin 0.0 . 0.0)
+ (handler . pdf-view-bookmark-jump-handler))
+("lshape-resource-tree"
+ (filename . "/srv/sw.sys.lshape_fdc_gc/bin_rsa-lshape-v1-tianma-deb/base/tool/proseco/out/system.png")
+ (position . 0)
+ (image-type . png)
+ (handler . image-bookmark-jump))
+("rcar-manual"
+ (filename . "/../srv/rcar3_man.pdf")
+ (position . 1)
+ (page . 1)
+ (slice)
+ (size . fit-page)
+ (origin 0.0 . 0.0)
+ (handler . pdf-view-bookmark-jump-handler))
+("devel-dired"
+ (filename . "~/devel/")
+ (front-context-string . "ar-merge\n  drwxr")
+ (rear-context-string . "96 Aug 24  2019 ")
+ (position . 218))
+("lshape-bsp-dired"
+ (filename . "/../srv/sw.pkg.ghsint_cmn_rcar3_gpr/")
+ (front-context-string . ".ccls-cache\n  dr")
+ (rear-context-string . "96 Sep 17 13:52 ")
+ (position . 232))
+("lshape-application-dired"
+ (filename . "/../srv/sw.sys.lshape_fdc_gc/")
+ (front-context-string . "bin_rsa-lshape-v")
+ (rear-context-string . "96 Sep 21 12:02 ")
+ (position . 240))
 )
