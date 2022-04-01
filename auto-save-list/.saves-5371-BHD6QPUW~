@@ -1,0 +1,14 @@
+/../srv/sw.sys.lshape_fdc_gc/src/dlt/dlt-daemon/src/shared/dlt_persistent_circular_buffer.c
+/../srv/sw.sys.lshape_fdc_gc/src/dlt/dlt-daemon/src/shared/#dlt_persistent_circular_buffer.c#
+/../srv/sw.sys.lshape_fdc_gc/src/dlt/dlt-daemon/src/daemon/dlt-daemon.c
+/../srv/sw.sys.lshape_fdc_gc/src/dlt/dlt-daemon/src/daemon/#dlt-daemon.c#
+/../srv/sw.sys.lshape_fdc_gc/src/elogd/lib/elogd.c
+/../srv/sw.sys.lshape_fdc_gc/src/elogd/lib/#elogd.c#
+/../srv/sw.sys.lshape_fdc_gc/src/dlt/dlt-daemon/src/daemon/dlt.conf
+/../srv/sw.sys.lshape_fdc_gc/src/dlt/dlt-daemon/src/daemon/#dlt.conf#
+/../srv/sw.sys.lshape_fdc_gc/src/elogd/main.c
+/../srv/sw.sys.lshape_fdc_gc/src/elogd/#main.c#
+/../srv/sw.sys.lshape_fdc_gc/src/tool/cc_translator/cc_convert.pl
+/../srv/sw.sys.lshape_fdc_gc/src/tool/cc_translator/#cc_convert.pl#
+/../srv/sw.sys.lshape_fdc_gc/src/dlt/dlt-daemon/src/daemon/dlt-daemon_cfg.h
+/../srv/sw.sys.lshape_fdc_gc/src/dlt/dlt-daemon/src/daemon/#dlt-daemon_cfg.h#

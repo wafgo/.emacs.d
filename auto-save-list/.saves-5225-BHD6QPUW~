@@ -1,0 +1,14 @@
+/home/local/devel/github-conti/qemu-lshape/hw/intc/arm_gic.c
+/home/local/devel/github-conti/qemu-lshape/hw/intc/#arm_gic.c#
+/home/local/devel/github-conti/qemu-lshape/include/hw/intc/arm_gic_common.h
+/home/local/devel/github-conti/qemu-lshape/include/hw/intc/#arm_gic_common.h#
+/home/local/devel/github-conti/qemu-lshape/hw/intc/gic_internal.h
+/home/local/devel/github-conti/qemu-lshape/hw/intc/#gic_internal.h#
+/home/local/devel/github-conti/qemu-lshape/MAINTAINERS
+/home/local/devel/github-conti/qemu-lshape/#MAINTAINERS#
+/home/local/devel/github-conti/qemu-lshape/target/arm/helper.c
+/home/local/devel/github-conti/qemu-lshape/target/arm/#helper.c#
+/home/local/devel/github-conti/qemu-lshape/hw/core/irq.c
+/home/local/devel/github-conti/qemu-lshape/hw/core/#irq.c#
+/home/local/.bashrc
+/home/local/#.bashrc#

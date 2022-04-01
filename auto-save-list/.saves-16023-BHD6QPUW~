@@ -1,0 +1,12 @@
+/srv/sw.sys.lshape_fdc_gc/src/base/pkg/altia/lshape/CMakeLists.txt
+/srv/sw.sys.lshape_fdc_gc/src/base/pkg/altia/lshape/#CMakeLists.txt#
+/srv/sw.sys.lshape_fdc_gc/src/base/pkg/gs/videoin/CMakeLists.txt
+/srv/sw.sys.lshape_fdc_gc/src/base/pkg/gs/videoin/#CMakeLists.txt#
+/srv/sw.sys.lshape_fdc_gc/src/base/pkg/gs/videoin/pkg/vdec/adapt/vdec3ca.cpp
+/srv/sw.sys.lshape_fdc_gc/src/base/pkg/gs/videoin/pkg/vdec/adapt/#vdec3ca.cpp#
+/srv/sw.sys.lshape_fdc_gc/src/base/pkg/midware/pkg/wdog/adapt/wdog1ca_security.cpp
+/srv/sw.sys.lshape_fdc_gc/src/base/pkg/midware/pkg/wdog/adapt/#wdog1ca_security.cpp#
+/srv/sw.sys.lshape_fdc_gc/src/base/prj/safegra/CMakeLists.txt
+/srv/sw.sys.lshape_fdc_gc/src/base/prj/safegra/#CMakeLists.txt#
+/srv/sw.sys.lshape_fdc_gc/src/base/prj/secgra/CMakeLists.txt
+/srv/sw.sys.lshape_fdc_gc/src/base/prj/secgra/#CMakeLists.txt#

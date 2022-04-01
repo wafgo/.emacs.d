@@ -1,0 +1,10 @@
+/home/local/.bashrc
+/home/local/#.bashrc#
+/srv/sw.pkg.ghsint_cmn_rcar3_gpr/0001_create_bsp_irq_statistics_in_gic_irq_handler.patch
+/srv/sw.pkg.ghsint_cmn_rcar3_gpr/#0001_create_bsp_irq_statistics_in_gic_irq_handler.patch#
+/srv/sw.sys.lshape_fdc_gc/src/base/pkg/integration_test/integration_test.cmk
+/srv/sw.sys.lshape_fdc_gc/src/base/pkg/integration_test/#integration_test.cmk#
+/srv/sw.sys.lshape_fdc_gc/src/base/pkg/integration_test/irq/src/irq_stats.c
+/srv/sw.sys.lshape_fdc_gc/src/base/pkg/integration_test/irq/src/#irq_stats.c#
+/srv/sw.sys.lshape_fdc_gc/src/base/pkg/integration_test/cpg/src/cpg_validate.c
+/srv/sw.sys.lshape_fdc_gc/src/base/pkg/integration_test/cpg/src/#cpg_validate.c#

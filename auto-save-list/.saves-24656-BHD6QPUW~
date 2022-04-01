@@ -1,0 +1,16 @@
+/srv/sw.sys.lshape_fdc_gc/src/base/pkg/ospm/adapt/ospm_debughelper_crhdl.c
+/srv/sw.sys.lshape_fdc_gc/src/base/pkg/ospm/adapt/#ospm_debughelper_crhdl.c#
+/home/local/devel/github-conti/qemu-lshape/hw/arm/rcar3.c
+/home/local/devel/github-conti/qemu-lshape/hw/arm/#rcar3.c#
+/home/local/devel/github-conti/qemu-lshape/hw/arm/lshape.c
+/home/local/devel/github-conti/qemu-lshape/hw/arm/#lshape.c#
+/home/local/devel/github-conti/qemu-lshape/include/tcg/tcg.h
+/home/local/devel/github-conti/qemu-lshape/include/tcg/#tcg.h#
+/home/local/devel/github-conti/qemu-lshape/include/tcg/tcg-op.h
+/home/local/devel/github-conti/qemu-lshape/include/tcg/#tcg-op.h#
+/home/local/devel/github-conti/qemu-lshape/target/arm/translate-a64.c
+/home/local/devel/github-conti/qemu-lshape/target/arm/#translate-a64.c#
+/home/local/devel/github-conti/qemu-lshape/.qemu_gdb_setup
+/home/local/devel/github-conti/qemu-lshape/#.qemu_gdb_setup#
+/home/local/.gdbinit
+/home/local/#.gdbinit#

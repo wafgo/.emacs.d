@@ -1,0 +1,12 @@
+/srv/sw.sys.lshape_fdc_gc/src/base/pkg/ethil/adapt/ethil.cmk
+/srv/sw.sys.lshape_fdc_gc/src/base/pkg/ethil/adapt/#ethil.cmk#
+/srv/sw.sys.lshape_fdc_gc/src/base/pkg/ethil/pkg/ethfwall/adapt/ethfwall1ce.h
+/srv/sw.sys.lshape_fdc_gc/src/base/pkg/ethil/pkg/ethfwall/adapt/#ethfwall1ce.h#
+/srv/sw.sys.lshape_fdc_gc/src/base/pkg/ethil/pkg/ethfwall/adapt/ethfwall1ca.h
+/srv/sw.sys.lshape_fdc_gc/src/base/pkg/ethil/pkg/ethfwall/adapt/#ethfwall1ca.h#
+/srv/sw.sys.lshape_fdc_gc/src/base/pkg/ethil/pkg/ethfwall/adapt/ethfwall1ca.c
+/srv/sw.sys.lshape_fdc_gc/src/base/pkg/ethil/pkg/ethfwall/adapt/#ethfwall1ca.c#
+/srv/sw.sys.lshape_fdc_gc/src/base/pkg/ethil/pkg/ethfwall/core/ethfwall_filter.c
+/srv/sw.sys.lshape_fdc_gc/src/base/pkg/ethil/pkg/ethfwall/core/#ethfwall_filter.c#
+/srv/sw.sys.lshape_fdc_gc/src/cmake/des.cmake
+/srv/sw.sys.lshape_fdc_gc/src/cmake/#des.cmake#

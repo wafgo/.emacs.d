@@ -1,0 +1,14 @@
+/etc/network/interfaces
+/etc/network/#interfaces#
+/etc/network/interfaces.d/bridge.cfg
+/etc/network/interfaces.d/#bridge.cfg#
+/etc/udev/rules.d/60-vboxadd.rules
+/etc/udev/rules.d/#60-vboxadd.rules#
+/etc/udev/udev.conf
+/etc/udev/#udev.conf#
+/srv/sw.sys.lshape_fdc_gc/src/tool/des-generator/sb_create.cmake
+/srv/sw.sys.lshape_fdc_gc/src/tool/des-generator/#sb_create.cmake#
+/srv/sw.sys.lshape_fdc_gc/src/tool/pdx_generator_tool/CMakeLists.txt
+/srv/sw.sys.lshape_fdc_gc/src/tool/pdx_generator_tool/#CMakeLists.txt#
+/srv/sw.sys.lshape_fdc_gc/src/tool/pdx_generator_tool/manifest_partial.ini.in
+/srv/sw.sys.lshape_fdc_gc/src/tool/pdx_generator_tool/#manifest_partial.ini.in#

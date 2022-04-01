@@ -1,0 +1,2 @@
+;;; Generated package description from /home/local/.emacs.d/elpa/camcorder-20190317.2138/camcorder.el  -*- no-byte-compile: t -*-
+(define-package "camcorder" "20190317.2138" "Record screencasts in gif or other formats." '((emacs "24") (names "20150000") (cl-lib "0.5")) :commit "b11ca61491a27681bb3131b72b51c105fd996bed" :authors '(("Artur Malabarba" . "bruce.connor.am@gmail.com")) :maintainer '("Artur Malabarba" . "bruce.connor.am@gmail.com") :keywords '("multimedia" "screencast") :url "http://github.com/Bruce-Connor/camcorder.el")

@@ -1,0 +1,14 @@
+/home/local/.bashrc
+/home/local/#.bashrc#
+/srv/sw.sys.lshape_fdc_gc/scripts/toolenv.sh
+/srv/sw.sys.lshape_fdc_gc/scripts/#toolenv.sh#
+/srv/sw.sys.lshape_fdc_gc/activate.sh
+/srv/sw.sys.lshape_fdc_gc/#activate.sh#
+/srv/sw.sys.lshape_fdc_gc/prepare_toolenv.sh
+/srv/sw.sys.lshape_fdc_gc/#prepare_toolenv.sh#
+/srv/sw.sys.lshape_fdc_gc/scripts/conanenv.py
+/srv/sw.sys.lshape_fdc_gc/scripts/#conanenv.py#
+/srv/sw.sys.lshape_fdc_gc/tmp/toolenv/venv/pyvenv.cfg
+/srv/sw.sys.lshape_fdc_gc/tmp/toolenv/venv/#pyvenv.cfg#
+/srv/sw.sys.lshape_fdc_gc/src/base/prj/kernel/CMakeLists.txt
+/srv/sw.sys.lshape_fdc_gc/src/base/prj/kernel/#CMakeLists.txt#

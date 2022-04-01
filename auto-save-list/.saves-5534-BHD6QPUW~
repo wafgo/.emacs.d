@@ -1,0 +1,8 @@
+/home/local/devel/github-conti/qemu-lshape/emmc.img
+/home/local/devel/github-conti/qemu-lshape/#emmc.img#
+/home/local/devel/github-conti/qemu-lshape/hw/sd/sd.c
+/home/local/devel/github-conti/qemu-lshape/hw/sd/#sd.c#
+/home/local/devel/github-conti/qemu-lshape/hw/sd/rcar3_sdhi.c
+/home/local/devel/github-conti/qemu-lshape/hw/sd/#rcar3_sdhi.c#
+/home/local/devel/github-conti/qemu-lshape/include/hw/sd/sd.h
+/home/local/devel/github-conti/qemu-lshape/include/hw/sd/#sd.h#
