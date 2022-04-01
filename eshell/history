@@ -1,0 +1,4 @@
+sudo DEBIAN_FRONTEND=readline apt-get --quiet install  virtualenvwrapper
+sudo DEBIAN_FRONTEND=readline apt-get --quiet remove  virtualenvwrapper
+sudo DEBIAN_FRONTEND=readline apt-get --quiet install  surfraw
+Ign:1 https://artifactory.geo.conti.de/artifactory/i_st_pd_debian_xde_r focal/main amd64 surfraw all 2.3.0-0.2
