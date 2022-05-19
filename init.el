@@ -45,7 +45,12 @@
 (require 'helm-ls-git)
 (require 'helm-dictionary)
 (require 'helm-descbinds)
+(require 'helm-fd)
 (require 'snails)
+(use-package pdf-view-restore
+  :after pdf-tools
+  :config
+  (add-hook 'pdf-view-mode-hook 'pdf-view-restore-mode))
 
 
 ;;(require 'powerline)
@@ -56,24 +61,33 @@
   :init
   (elpy-enable))
 
-(require 'yasnippet)
 (require 'sublimity)
-(require 'sublimity-scroll)
-(require 'sublimity-map) ;; experimental
-(setq sublimity-scroll-weight 10
-      sublimity-scroll-drift-length 5)
+(require 'yasnippet)
+(require 'saveplace-pdf-view)
+(save-place-mode 1)
+;;(require 'sublimity-scroll)
+;;(require 'sublimity-map) ;; experimental
+;; (setq sublimity-scroll-weight 10
+;;       sublimity-scroll-drift-length 5)
 (setq snails-show-with-frame nil)
 (helm-descbinds-mode)
+(setq pdf-view-restore-filename "~/.emacs.d/.pdf-view-restore")
 ;;(require 'sublimity-attractive)
 
 ;;(setq evil-want-integration t) ;; This is optional since it's already set to t by default.
 ;;(setq evil-want-keybinding nil)
-;;(require 'evil)
+;; (setq evil-want-integration t) ;; This is optional since it's already set to t by default.
+;; (setq evil-want-keybinding nil)
+;; (require 'evil)
+;; (when (require 'evil-collection nil t)
+;;   (evil-collection-init))
 
-;;(require 'key-chord)
-;;(evil-mode 1)
-;;;(key-chord-mode 1)
-;;(evil-collection-init)
+;; ;;(require 'key-chord)
+;; (evil-mode 1)
+;; (evil-set-initial-state 'dired-mode 'emacs)
+;; (evil-set-initial-state 'vterm-mode 'emacs)
+;; ;;;(key-chord-mode 1)
+;; (evil-collection-init)
 ;;(key-chord-define evil-insert-state-map  "jj" 'evil-normal-state)
 (yas-global-mode 1)
 ;;(global-display-line-numbers-mode 1)
@@ -205,6 +219,8 @@
  '(dap-lldb-debug-program '("lldb-vscode"))
  '(dap-print-io nil)
  '(dap-tooltip-mode t)
+ '(elpy-rpc-ignored-buffer-size 110400)
+ '(elpy-rpc-timeout 10)
  '(evil-collection-setup-minibuffer t)
  '(evil-emacs-state-modes
    '(n5x5-mode archive-mode bbdb-mode biblio-selection-mode blackbox-mode bookmark-bmenu-mode bookmark-edit-annotation-mode browse-kill-ring-mode bs-mode bubbles-mode bzr-annotate-mode calc-mode cfw:calendar-mode completion-list-mode Custom-mode custom-theme-choose-mode debugger-mode delicious-search-mode desktop-menu-blist-mode desktop-menu-mode doc-view-mode dun-mode dvc-bookmarks-mode dvc-diff-mode dvc-info-buffer-mode dvc-log-buffer-mode dvc-revlist-mode dvc-revlog-mode dvc-status-mode dvc-tips-mode ediff-mode ediff-meta-mode efs-mode Electric-buffer-menu-mode emms-browser-mode emms-mark-mode emms-metaplaylist-mode emms-playlist-mode ess-help-mode etags-select-mode fj-mode gc-issues-mode gdb-breakpoints-mode gdb-disassembly-mode gdb-frames-mode gdb-locals-mode gdb-memory-mode gdb-registers-mode gdb-threads-mode gist-list-mode git-rebase-mode gnus-article-mode gnus-browse-mode gnus-group-mode gnus-server-mode gnus-summary-mode gomoku-mode google-maps-static-mode ibuffer-mode jde-javadoc-checker-report-mode magit-cherry-mode magit-diff-mode magit-log-mode magit-log-select-mode magit-popup-mode magit-popup-sequence-mode magit-process-mode magit-reflog-mode magit-refs-mode magit-revision-mode magit-stash-mode magit-stashes-mode magit-status-mode mh-folder-mode monky-mode mpuz-mode mu4e-main-mode mu4e-headers-mode mu4e-view-mode notmuch-hello-mode notmuch-search-mode notmuch-show-mode notmuch-tree-mode occur-mode org-agenda-mode package-menu-mode proced-mode rcirc-mode rebase-mode recentf-dialog-mode reftex-select-bib-mode reftex-select-label-mode reftex-toc-mode sldb-mode slime-inspector-mode slime-thread-control-mode slime-xref-mode snake-mode solitaire-mode sr-buttons-mode sr-mode sr-tree-mode sr-virtual-mode tar-mode tetris-mode tla-annotate-mode tla-archive-list-mode tla-bconfig-mode tla-bookmarks-mode tla-branch-list-mode tla-browse-mode tla-category-list-mode tla-changelog-mode tla-follow-symlinks-mode tla-inventory-file-mode tla-inventory-mode tla-lint-mode tla-logs-mode tla-revision-list-mode tla-revlog-mode tla-tree-lint-mode tla-version-list-mode twittering-mode urlview-mode vc-annotate-mode vc-dir-mode vc-hg-log-view-mode vc-svn-log-view-mode vm-mode vm-summary-mode w3m-mode wab-compilation-mode xgit-annotate-mode xgit-changelog-mode xgit-diff-mode xgit-revlog-mode xhg-annotate-mode xhg-log-mode xhg-mode xhg-mq-mode xhg-mq-sub-mode xhg-status-extra-mode))
@@ -235,7 +251,7 @@
  '(lsp-ui-sideline-show-symbol t)
  '(message-log-max 100000)
  '(package-selected-packages
-   '(helm-wikipedia helm-descbinds helm-dictionary helm-ls-git evil-collection evil-escape evil elpy yasnippet-snippets helm-system-packages helm-c-yasnippet lsp-python-ms goto-last-change smart-hungry-delete company-jedi lsp-jedi jedi ein jupyter ztree google-translate 0xc meson-mode undo-tree camcorder command-log-mode minimap posframe dap-mode fasd dts-mode bison-mode bitbake company-lsp ninja-mode multi-vterm vterm-toggle vtm yasnippet-classic-snippets vterm helm-lsp smartscan expand-region vlf smartparens pdf-tools beacon ccls zenburn-theme ace-jump-mode jump-char helm-swoop swoop multiple-cursors hungry-delete shell-pop flycheck lsp-ui lsp-mode helm-dash cmake-mode dashboard helm-projectile projectile magit helm-rg helm))
+   '(saveplace-pdf-view pdf-view-restore helm-wikipedia helm-descbinds helm-dictionary helm-ls-git evil-collection evil-escape evil elpy yasnippet-snippets helm-system-packages helm-c-yasnippet lsp-python-ms goto-last-change smart-hungry-delete company-jedi lsp-jedi jedi ein jupyter ztree google-translate 0xc meson-mode undo-tree camcorder command-log-mode minimap posframe dap-mode fasd dts-mode bison-mode bitbake company-lsp ninja-mode multi-vterm vterm-toggle vtm yasnippet-classic-snippets vterm helm-lsp smartscan expand-region vlf smartparens pdf-tools beacon ccls zenburn-theme ace-jump-mode jump-char helm-swoop swoop multiple-cursors hungry-delete shell-pop flycheck lsp-ui lsp-mode helm-dash cmake-mode dashboard helm-projectile projectile magit helm-rg helm))
  '(projectile-git-command "git ls-files -zco --exclude-standard")
  '(projectile-globally-ignored-directories
    '(".idea" ".vscode" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" ".ccls-cache" ".clangd"))
@@ -366,12 +382,15 @@
   (define-key map (kbd "M-ö") 'helm-projectile-find-file-dwim)
   (define-key map (kbd "C-M-j") 'next-buffer)
   (define-key map (kbd "C-M-l") 'previous-buffer)
+  (define-key map (kbd "C-S-j") 'multi-vterm-next)
+  (define-key map (kbd "C-S-l") 'multi-vterm-prev)
   (define-key map (kbd "M-o") 'mode-line-other-buffer)
   (define-key map (kbd "C-x b") 'helm-bookmarks)
   (define-key map (kbd "M-q") 'helm-fasd)
   (define-key map (kbd "M-j") 'helm-browse-project)
   (define-key map (kbd "C-x C-d") 'helm-browse-project)
   (define-key map (kbd "C-x r p") 'helm-projects-history)
+  (define-key map (kbd "C-c l") 'linum-mode)
   map)
 "wmu-keys-minor-mode keymap.")
 
@@ -473,3 +492,5 @@ Version 2020-02-17"
       (setq $tempStr (replace-regexp-in-string "\\`#" "" $tempStr )) ; CSS …
       )
     (message "input 「%s」, Hexadecimal 「%s」 is 「%d」" $inputStr $tempStr (string-to-number $tempStr 16))))
+(setq elpy-rpc-timeout 50)
+(setq ztree-diff-options ’("-w" "-i" "--strip-trailing-cr"))

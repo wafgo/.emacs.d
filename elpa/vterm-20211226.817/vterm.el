@@ -505,7 +505,7 @@ Only background is used."
 (defvar-local vterm--delete-region-function (symbol-function #'delete-region))
 (defvar-local vterm--undecoded-bytes nil)
 
-(defvar vterm-timer-delay 0.1
+(defvar vterm-timer-delay 0.01
   "Delay for refreshing the buffer after receiving updates from libvterm.
 
 A larger delary improves performance when receiving large bursts

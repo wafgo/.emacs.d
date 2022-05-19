@@ -1,0 +1,2 @@
+;;; Generated package description from saveplace-pdf-view.el  -*- no-byte-compile: t -*-
+(define-package "saveplace-pdf-view" "20210217.1312" "Save place in pdf-view buffers" '((emacs "24.1")) :commit "54ed966b842501c3c092dbf57b372e37b033c578" :authors '(("Nicolai Singh <nicolaisingh at pm.me>")) :maintainer '("Nicolai Singh <nicolaisingh at pm.me>") :keywords '("files" "convenience") :url "https://github.com/nicolaisingh/saveplace-pdf-view")

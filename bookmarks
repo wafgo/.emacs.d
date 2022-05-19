@@ -2,7 +2,12 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("ghs-cc-doc"
+(("gcc"
+ (filename . "/srv/sw.sys.lshape_fdc_gc_sweet400/src/base/pkg/ospm/core/ospm_measurehooks_kernel.c")
+ (front-context-string . "\nextern void	__w")
+ (rear-context-string . "nitialize(void);")
+ (position . 1580))
+("ghs-cc-doc"
  (filename . "/opt/ghs/7.1.6_2019.1.4/manuals/build_arm64.pdf")
  (position . 1)
  (page . 1)

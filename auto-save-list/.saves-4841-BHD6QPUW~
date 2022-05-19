@@ -1,4 +1,8 @@
-/srv/sw.sys.lshape_fdc_gc/src/tool/cc_translator/CMakeLists.txt
-/srv/sw.sys.lshape_fdc_gc/src/tool/cc_translator/#CMakeLists.txt#
-/srv/sw.sys.lshape_fdc_gc/conf/conanfile.txt
-/srv/sw.sys.lshape_fdc_gc/conf/#conanfile.txt#
+/home/local/devel/sandbox/canonical_module/q2_mod.c
+/home/local/devel/sandbox/canonical_module/#q2_mod.c#
+/home/local/devel/github/linux/include/linux/list.h
+/home/local/devel/github/linux/include/linux/#list.h#
+/home/local/devel/github/linux/security/device_cgroup.c
+/home/local/devel/github/linux/security/#device_cgroup.c#
+/home/local/devel/github/linux/kernel/kthread.c
+/home/local/devel/github/linux/kernel/#kthread.c#

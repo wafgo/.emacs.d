@@ -1,6 +1,7 @@
 ((magit-blame
   ("-w"))
- (magit-commit nil)
+ (magit-commit nil
+               ("--signoff"))
  (magit-diff
   ("--no-ext-diff" "--stat")
   (("--" "base/prj/basesys/CMakeLists.txt")
@@ -13,26 +14,30 @@
  (magit-gitignore nil)
  (magit-log
   ("-n256" "--graph" "--decorate")
+  ("-n256" "--date-order" "--graph" "--color" "--decorate")
   ("-n256" "--date-order" "--graph" "--decorate")
+  ("-n256" "--author=Samuel Holland <samuel@sholland.org>" "--graph" "--decorate")
+  ("-n256" "--author=Alexander Graf <graf@amazon.com>" "--graph" "--decorate")
+  ("-n256" "--author=Anup Patel <anup@brainfault.org>" "--graph" "--decorate")
   ("-n256" "--author=Wadim Mueller <wadim.mueller@continental-corporation.com>" "--graph" "--decorate")
   ("-n256" "--author=Mueller Wadim (uia67865) <uia67865@bhl6zntu.conti.de>" "--graph" "--decorate")
   ("-n256" "--author=Mueller Wadim (uia67865) <wadim.mueller@continental-corporation.com>" "--graph" "--decorate")
-  ("-n256" "--author=Roman Bitner <Roman.Bitner@continental-corporation.com>" "--graph" "--decorate")
-  ("-n256" "--grep=IIP" "--date-order" "--graph" "--decorate")
-  ("-n256" "--author=ESPARZA LOPEZ JOCELYNE (uib52784) <jocelyne.esparza.lopez@continental-corporation.com>" "--graph" "--decorate")
-  ("-n256" "--author-date-order" "--graph" "--decorate")
-  nil)
+  ("-n256" "--author=Roman Bitner <Roman.Bitner@continental-corporation.com>" "--graph" "--decorate"))
  (magit-log:--grep "IIP")
  (magit-log:-G "qqqq")
  (magit-merge nil)
  (magit-patch nil)
  (magit-patch-create nil)
  (magit-push nil)
+ (magit-rebase
+  ("--autostash"))
+ (magit-reset nil)
  (magit-revert
   ("--edit"))
+ (magit-show-refs nil)
  (magit-stash nil
-              ("--all")
-              ("--include-untracked"))
+              ("--include-untracked")
+              ("--all"))
  (magit-tag nil)
  (magit:-- "base/prj/basesys/CMakeLists.txt" "" "src/base/pkg/rmon/src/rmon_vas_allocwrapper.c" "src/base/tool/il/adapt/ftp_media/lshape/images/bl-lshape-rcar_m3n-integrity.iio" "src/base/pkg/lifecycle/lc-rstp-sync/src/lc-rstp-sync.cpp" "src/base/pkg/reincarnate/cfg/reinarnate.sdh" "src/base/pkg/ospm/CMakeLists.txt" "scripts/build.py,")
- (magit:--author "Wadim Mueller <wadim.mueller@continental-corporation.com>" "Mueller Wadim (uia67865) <uia67865@bhl6zntu.conti.de>"))
+ (magit:--author "Samuel Holland <samuel@sholland.org>" "Alexander Graf <graf@amazon.com>" "Anup Patel <anup@brainfault.org>" "Wadim Mueller <wadim.mueller@continental-corporation.com>" "Mueller Wadim (uia67865) <uia67865@bhl6zntu.conti.de>"))
