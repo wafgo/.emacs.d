@@ -10,6 +10,12 @@
   (async-shell-command "cd /srv/scp-lshape-gc-flasher && export SCP_FLASH_BUILD=DEBUG && ./flasher.py --flash_gc")
   )
 
+(defun lshape-flash-hang()
+  "Flash the lshape traget with the scp flasher using hanging iio"
+  (interactive)
+  (async-shell-command "cd /srv/scp-lshape-gc-flasher && export SCP_FLASH_BUILD=DEBUG && ./flasher.py --flash_hang")
+  )
+
 (defun lshape-flash-monolith-tianma-release()
   "Flash the lshape traget with the scp flasher"
   (interactive)

@@ -493,4 +493,4 @@ Version 2020-02-17"
       )
     (message "input 「%s」, Hexadecimal 「%s」 is 「%d」" $inputStr $tempStr (string-to-number $tempStr 16))))
 (setq elpy-rpc-timeout 50)
-(setq ztree-diff-options ’("-w" "-i" "--strip-trailing-cr"))
+(setq ztree-diff-options '("-w" "-i" "--strip-trailing-cr"))
