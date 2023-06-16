@@ -1,0 +1,5 @@
+sudo DEBIAN_FRONTEND=readline apt-get --quiet install  flake8
+sudo DEBIAN_FRONTEND=readline apt-get --quiet install  trans-de-en
+ll
+ls 
+sudo DEBIAN_FRONTEND=readline apt-get --quiet install  emms

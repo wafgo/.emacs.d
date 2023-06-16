@@ -3,16 +3,19 @@
 
 (setq mc/cmds-to-run-for-all
       '(
-        c-electric-delete-forward
-        helm-M-x
-        helm-imenu
-        jump-char-forward
-        jump-char-process-char
-        mark-sexp
-        prelude-move-beginning-of-line
-        ))
+	c-electric-delete-forward
+	helm-M-x
+	helm-imenu
+	hungry-delete-forward
+	jump-char-forward
+	jump-char-process-char
+	keyboard-escape-quit
+	mark-sexp
+	prelude-move-beginning-of-line
+	smarter-move-beginning-of-line
+	))
 
 (setq mc/cmds-to-run-once
       '(
-        smart-hungry-delete-backward-char
-        ))
+	smart-hungry-delete-backward-char
+	))

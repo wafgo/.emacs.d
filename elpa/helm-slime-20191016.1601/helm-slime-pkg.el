@@ -1,0 +1,2 @@
+;;; Generated package description from helm-slime.el  -*- no-byte-compile: t -*-
+(define-package "helm-slime" "20191016.1601" "helm-sources and some utilities for SLIME." '((emacs "25") (helm "3.2") (slime "2.18") (cl-lib "0.5")) :commit "7886cc49906a87ebd73be3b71f5dd6b1433a9b7b" :authors '(("Takeshi Banse" . "takebi@laafc.net")) :maintainer '("Takeshi Banse" . "takebi@laafc.net") :keywords '("convenience" "helm" "slime") :url "https://github.com/emacs-helm/helm-slime")

@@ -1,4 +1,4 @@
-;;; ccls-autoloads.el --- automatically extracted autoloads
+;;; ccls-autoloads.el --- automatically extracted autoloads  -*- lexical-binding: t -*-
 ;;
 ;;; Code:
 
