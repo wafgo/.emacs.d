@@ -30,4 +30,17 @@
   (async-shell-command "ngsm-reset")
   )
 
+(defun t32_start()
+  "Start T32"
+  (interactive)
+  (async-shell-command "~/devel/tools/trace32/2021_09/bin/pc_linux64/t32marm64 -c ~/devel/tools/trace32/2021_09/config_usb.t32")
+  )
+
+
+(defun scp_kernel_dtb_to_s32g_target()
+  "Start T32"
+  (interactive)
+  (async-shell-command "/home/uia67865/devel/cadge/sandbox/scp_to_target.sh")
+  )
+
 (provide 'conti-build-stuff)

@@ -89,7 +89,7 @@
 (defun helm-find-fasd-add-file ()
   "Add file to fasd database."
   (unless (executable-find "fasd") (error "Helm-search-fasd: cannot find the fasd executable"))
-  (let ((file (if (string= major-mode "dired-mode") dired-directory (buffer-file-name))))
+  (let ((file (if (or (string= major-mode "dired-mode") (string= major-mode "sunrise-mode") ) dired-directory (buffer-file-name))))
     (start-process "*fasd*" nil "fasd" "--add" file)))
 
 ;;;###autoload

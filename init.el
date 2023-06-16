@@ -1,4 +1,5 @@
 (add-to-list 'load-path "~/.emacs.d/custom")
+(add-to-list 'load-path "~/.emacs.d/github/snails")
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
@@ -23,26 +24,67 @@
 (require 'smartparens-config)
 (require 'expand-region)
 (require 'conti-build-stuff)
-(require 'dap-mode)
-(require 'dap-gdb-lldb)
-(require 'debugging-stuff)
+;; (require 'dap-mode)
+;; (require 'dap-gdb-lldb)
+;; (require 'debugging-stuff)
 (require 'company)
-(require 'company-lsp)
+;;(require 'company-lsp)
 (require 'helm-projectile)
 (require 'wc-mode)
 (require 'bb-mode)
-
+;;(require 'lsp-python-ms)
+(require 'yasnippet)
+;;(require 'sunrise)
+(require 'company-auctex)
 (require 'helm-fasd)
+(require 'helm-ls-git)
+(require 'helm-dictionary)
+(require 'helm-descbinds)
+(require 'helm-slime)
+(require 'sublimity)
+;;(require 'sublimity-scroll)
+(require 'snails)
+(setq snails-show-with-frame nil)
+;;(require 'sublimity-map) ;; experimental
+;;(require 'sublimity-attractive)
+(sublimity-mode 1)
+(setq sublimity-scroll-weight 10
+      sublimity-scroll-drift-length 5)
+(global-helm-slime-mode)
+(helm-descbinds-mode)
 
+(use-package elpy
+  :ensure t
+  :init
+  (elpy-enable))
+(dolist (hook '(text-mode-hook latex-mode))
+  (add-hook hook (lambda () (flyspell-mode 1))))
+(dolist (hook '(change-log-mode-hook log-edit-mode-hook))
+  (add-hook hook (lambda () (flyspell-mode -1))))
+
+(add-hook 'prog-mode-hook
+          (lambda ()
+            (flyspell-prog-mode)
+            ))
+
+(use-package flycheck
+  :ensure t
+  :init (global-flycheck-mode))
+
+
+(lsp-treemacs-sync-mode 1)
+(yas-global-mode 1)
+;;(setq lsp-python-ms-auto-install-server t)
 (setq dap-auto-configure-mode t)
 (setq-default tab-with 4)
+
 
 (setq gdb-many-windows t
       gdb-use-separate-io-buffer t)
 (advice-add 'gdb-setup-windows :after
             (lambda () (set-window-dedicated-p (selected-window) t)))
 (defconst gud-window-register 123456)
- 
+
 (defun gud-quit ()
   (interactive)
   (gud-basic-call "quit"))
@@ -66,7 +108,7 @@
 (setq auto-mode-alist (cons '("\\.bbclass$" . bb-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.conf$" . bb-mode) auto-mode-alist))
 
-(setq ccls-executable "/home/local/devel/github/ccls/build/ccls")
+;;(setq ccls-executable "/home/uia67865/devel/github/ccls/Release/ccls")
 (defun ccls/callee () (interactive) (lsp-ui-peek-find-custom "$ccls/call" '(:callee t)))
 (defun ccls/caller () (interactive) (lsp-ui-peek-find-custom "$ccls/call"))
 (defun ccls/vars (kind) (lsp-ui-peek-find-custom "$ccls/vars" `(:kind ,kind)))
@@ -121,23 +163,40 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(bdf-directory-list
+   '("/usr/local/share/emacs/fonts/bdf" "/usr/share/fonts/truetype/dejavu"))
  '(c-default-style
    '((c-mode . "cc-mode")
      (java-mode . "java")
      (awk-mode . "awk")
      (other . "gnu")))
- '(ccls-executable "/home/local/devel/github/ccls/build/ccls")
+ '(ccls-executable "/home/uia67865/devel/github/ccls/Release/ccls")
+ '(company-clang-executable "/usr/bin/clang")
+ '(company-minimum-prefix-length 1)
  '(custom-safe-themes
    '("f2c35f8562f6a1e5b3f4c543d5ff8f24100fae1da29aeb1864bbc17758f52b70" default))
  '(helm-completion-style 'emacs)
  '(helm-rg-default-directory 'git-root)
- '(lsp-enable-file-watchers t)
+ '(langtool-default-language 'auto)
+ '(lsp-clangd-binary-path "/usr/bin/clangd")
+ '(lsp-enable-file-watchers nil)
  '(lsp-headerline-breadcrumb-enable t)
+ '(lsp-idle-delay 0.0)
+ '(lsp-imenu-index-function 'lsp-imenu-create-categorized-index)
+ '(lsp-lens-enable nil)
  '(lsp-pyls-plugins-flake8-enabled t)
  '(lsp-pyls-plugins-jedi-completion-fuzzy t)
+ '(lsp-ui-doc-header t)
+ '(lsp-ui-doc-include-signature t)
+ '(lsp-ui-doc-show-with-cursor t)
+ '(lsp-ui-sideline-actions-icon nil)
  '(lsp-ui-sideline-diagnostic-max-line-length 100)
+ '(lsp-ui-sideline-ignore-duplicate nil)
+ '(lsp-ui-sideline-show-code-actions nil)
+ '(lsp-ui-sideline-show-hover nil)
+ '(lsp-ui-sideline-show-symbol nil)
  '(package-selected-packages
-   '(camcorder command-log-mode minimap posframe dap-mode fasd dts-mode bison-mode bitbake company-lsp ninja-mode multi-vterm vterm-toggle vtm yasnippet-classic-snippets vterm helm-lsp smartscan expand-region vlf smartparens pdf-tools beacon ccls zenburn-theme ace-jump-mode jump-char helm-swoop swoop multiple-cursors hungry-delete shell-pop flycheck lsp-ui lsp-mode helm-dash cmake-mode dashboard helm-projectile projectile magit helm-rg helm))
+   '(clang-format dockerfile-mode sublimity helm-slime helm-descbinds helm-dictionary helm-ls-git evil-tutor helm-c-yasnippet helm-system-packages elpy company-auctex lsp-treemacs yasnippet-snippets lsp-python-ms meson-mode helm-lsp helm-z evil ccls google-this camcorder command-log-mode minimap posframe fasd dts-mode bison-mode bitbake ninja-mode multi-vterm vterm-toggle vtm yasnippet-classic-snippets vterm smartscan expand-region vlf smartparens pdf-tools beacon zenburn-theme ace-jump-mode jump-char helm-swoop swoop multiple-cursors hungry-delete shell-pop flycheck helm-dash cmake-mode dashboard helm-projectile projectile magit helm-rg helm))
  '(projectile-globally-ignored-directories
    '(".idea" ".vscode" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" ".ccls-cache" ".clangd"))
  '(projectile-indexing-method 'alien)
@@ -151,7 +210,7 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(lsp-ui-sideline-current-symbol ((t (:foreground "white" :box (:line-width (1 . -1) :color "white") :weight ultra-bold :height 0.99)))))
 (setq projectile-switch-project-action 'helm-projectile)
 (helm-projectile-on)
 
@@ -226,7 +285,7 @@
 (add-hook 'lsp-mode-hook 'lsp-ui-mode)
 
 (add-hook 'c-mode-common-hook #'lsp)
-(add-hook 'python-mode-hook #'lsp)
+;;(add-hook 'python-mode-hook #'lsp)
 (add-hook 'sh-mode-hook #'lsp)
 (add-hook 'cmake-mode-hook #'lsp)
 (add-hook 'cmake-mode-hook #'smartparens-mode)
@@ -250,7 +309,6 @@
   (define-key map (kbd "C-ö") 'helm-mini)
   (define-key map (kbd "C-M-ö") 'helm-projectile-switch-to-buffer)
   (define-key map (kbd "C-M-ä") 'helm-rg)
-  (define-key map (kbd "C-c C-j") 'term-line-mode)
   (define-key map (kbd "C-c C-k") 'term-char-mode)
   (define-key map (kbd "M-ä") 'helm-projectile-rg)
   (define-key map (kbd "M-ö") 'projectile-find-file)
@@ -258,7 +316,10 @@
   (define-key map (kbd "C-M-l") 'previous-buffer)
   (define-key map (kbd "M-o") 'mode-line-other-buffer)
   (define-key map (kbd "C-x b") 'helm-bookmarks)
-  (define-key map (kbd "M-q") 'helm-fasd-directories)
+  (define-key map (kbd "M-q") 'helm-fasd)
+  (define-key map (kbd "C-c C-j") 'yas-insert-snippet)
+  (define-key map (kbd "C-x C-d") 'helm-browse-project)
+  (define-key map (kbd "C-x r p") 'helm-projects-history)
   map)
 "wmu-keys-minor-mode keymap.")
 
@@ -267,9 +328,9 @@
 :init-value t
 :lighter " wmu-keys")
 
+
 (wmu-keys-minor-mode 1)
 (load-theme 'zenburn t)
-
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 (setq compilation-scroll-output 'first-error)
 (defun smarter-move-beginning-of-line (arg)
@@ -319,3 +380,17 @@ point reaches the beginning or end of the buffer, stop there."
 (setq shell-file-name "/bin/bash")
 (setq gc-cons-threshold 100000000)
 (setq read-process-output-max (* 1024 1024)) ;; 1mb
+(company-auctex-init)
+
+
+(defun fd-switch-dictionary()
+  (interactive)
+  (let* ((dic ispell-current-dictionary)
+    	 (change (if (string= dic "deutsch8") "english" "deutsch8")))
+    (ispell-change-dictionary change)
+    (message "Dictionary switched from %s to %s" dic change)
+    ))
+
+;; Clang stuff
+(require 'clang-format)
+(setq clang-format-style "file")
