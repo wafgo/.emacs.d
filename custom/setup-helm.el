@@ -1,7 +1,7 @@
 (use-package helm
   :init
   (progn
-    (require 'helm-config)
+;;    (require 'helm-config)
     (require 'helm-grep)
     ;; To fix error at compile:
     ;; Error (bytecomp): Forgot to expand macro with-helm-buffer in
