@@ -1,29 +1,11 @@
 * Default Workspace
-** python-asio
- - path :: ~/devel/sandbox/python-asio
-** kernel-module-seq-file
- - path :: ~/devel/sandbox/kernel-module-seq-file
-** dwarves
- - path :: ~/devel/github/dwarves
-** arm-trusted-firmware
- - path :: ~/devel/github/arm-trusted-firmware
-** u-boot
- - path :: ~/devel/github/u-boot
-** linux
- - path :: ~/devel/github-conti/linux
-** sil-kit-adapters-qemu
- - path :: ~/devel/github/sil-kit-adapters-qemu
-** sil-kit-adapters-tap
- - path :: ~/devel/github/sil-kit-adapters-tap
-** tap_adapter
- - path :: ~/devel/sandbox/virt_sandbox/tap_adapter
-** hpe_boot
- - path :: ~/devel/github-conti/car-bootloader-s32g/src/bootloader_s32g/hpe_boot
-** tresos_s32g
- - path :: ~/devel/github-conti/car-bootloader-s32g/tools/tresos_s32g
-** temp
- - path :: ~/devel/cadge-yocto-bsp-s32g/build_hdk11/tmp/work/cortexa53-crypto-conti-linux/switchtec-user/1.0-r0/temp
-** qemu
- - path :: ~/devel/github/qemu
-** stackbd
- - path :: ~/devel/github/stackbd
+** ccls
+ - path :: ~/devel/git/ccls
+** 36.0cd
+ - path :: ~/devel/tools/cadge-s32g/36.0cd
+** xen
+ - path :: ~/devel/git/xen
+** linux-s32
+ - path :: ~/devel/git/linux-s32
+** call_by_value
+ - path :: ~/devel/sandbox/call_by_value

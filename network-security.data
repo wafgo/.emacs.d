@@ -1,0 +1,4 @@
+;;;; -*- mode: lisp-data -*-
+(
+ (:id "sha1:706608f9b7fcfdea563351d49047f296d74a5a76" :fingerprints ("sha1:90:47:45:e7:49:cd:e3:76:85:67:38:c8:f7:cb:3b:d0:56:d8:1c:a1" "sha1:57:f1:8f:38:77:21:db:31:06:c3:54:3f:6f:b9:47:31:53:d7:b2:4d") :host "smtp.gmail.com:587" :conditions (:same-cert))
+)

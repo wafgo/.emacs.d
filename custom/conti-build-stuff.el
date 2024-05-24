@@ -1,21 +1,22 @@
 (require 'lshape-stuff)
 
-(defun rtags-clear-cache()
-  "Clear the rtags cache completely"
-  (interactive)
-  (async-shell-command "rm -r /home/local/.cache/rtags")
-  )
-
-(defun eclipse-start()
-  "start ecliose"
-  (interactive)
-  (async-shell-command "cd /home/local/Downloads/eclipse && ./eclipse")
-  )
 
 (defun ngsm-on()
   "ngsm output on"
   (interactive)
   (async-shell-command "ngsm-on")
+  )
+
+
+(defun caedge-ubuntu-net-boot-prepare()
+  "deploy all artifacts on tftp and setup nfs"
+  (interactive)
+  (shell-command "cp -L /home/uia67865/mnt/ext_ssd/cadge/bsp38/build_hdk11-ubuntu/tmp/deploy/images/hdk11-ubuntu/Image /home/uia67865/devel/tftp")
+  (shell-command "cp -L /home/uia67865/mnt/ext_ssd/cadge/bsp38/build_hdk11-ubuntu/tmp/deploy/images/hdk11-ubuntu/continental_hdk11.dtb /home/uia67865/devel/tftp")
+  (shell-command "sudo systemctl stop nfs-kernel-server.service")
+  (shell-command "sudo umount /home/uia67865/devel/nfs")
+  (shell-command "sudo systemctl start nfs-kernel-server.service")
+  (shell-command "sudo mount -o loop /home/uia67865/mnt/ext_ssd/cadge/bsp38/build_hdk11-ubuntu/tmp/deploy/images/hdk11-ubuntu/fsl-image-ubuntu-hdk11-ubuntu.ext4 /home/uia67865/devel/nfs")
   )
 
 (defun ngsm-off()

@@ -1,5 +1,6 @@
 (add-to-list 'load-path "~/.emacs.d/custom")
-(add-to-list 'load-path "~/.emacs.d/github/snails")
+;;(add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e")
+
 (require 'package)
 (setq package-enable-at-startup nil)
 (add-to-list 'package-archives '("melpa" . "http://melpa.org/packages/"))
@@ -9,10 +10,18 @@
   (package-refresh-contents)
   (package-install 'use-package))
 
+;; Enable transient mark mode
+(transient-mark-mode 1)
+
+
+;;;;Org mode configuration
+;; Enable Org mode
+(require 'org)
 (require 'dashboard)
 (require 'cmake-mode)
 (require 'ninja-mode)
-(require 'ccls)
+(require 'e-byzanz)
+;;(require 'ccls)
 (require 'setup-helm)
 (require 'projectile)
 (require 'lsp-mode)
@@ -42,9 +51,18 @@
 (require 'helm-descbinds)
 (require 'helm-slime)
 (require 'sublimity)
+(require 'nerd-icons)
+(require 'nerd-icons-dired)
+(require 'caedge-stuff)
+;; (require 'copilot)
+;; (require 'eglot)
+;; (add-to-list 'eglot-server-programs '((c++-mode c-mode) "clangd"))
+;; (add-hook 'c-mode-hook 'eglot-ensure)
+;; (add-hook 'c++-mode-hook 'eglot-ensure)
+;; (add-to-list 'eglot-server-programs '((c++-mode c-mode) "clangd"))
+;; (add-hook 'c-mode-hook 'eglot-ensure)
+;; (add-hook 'c++-mode-hook 'eglot-ensure)
 ;;(require 'sublimity-scroll)
-(require 'snails)
-(setq snails-show-with-frame nil)
 ;;(require 'sublimity-map) ;; experimental
 ;;(require 'sublimity-attractive)
 (sublimity-mode 1)
@@ -53,6 +71,8 @@
 (global-helm-slime-mode)
 (helm-descbinds-mode)
 
+(add-hook 'dired-mode-hook #'nerd-icons-dired-mode)
+(ffap-bindings)
 (use-package elpy
   :ensure t
   :init
@@ -72,7 +92,7 @@
   :init (global-flycheck-mode))
 
 
-(lsp-treemacs-sync-mode 1)
+;;(lsp-treemacs-sync-mode 1)
 (yas-global-mode 1)
 ;;(setq lsp-python-ms-auto-install-server t)
 (setq dap-auto-configure-mode t)
@@ -170,22 +190,28 @@
      (java-mode . "java")
      (awk-mode . "awk")
      (other . "gnu")))
- '(ccls-executable "/home/uia67865/devel/github/ccls/Release/ccls")
  '(company-clang-executable "/usr/bin/clang")
  '(company-minimum-prefix-length 1)
+ '(copilot-bin
+   "/home/uia67865/mnt/ext_ssd/wizardcoder-python/wizardcoder-python-34b-v1.0.Q5_K_M.llamafile")
  '(custom-safe-themes
    '("f2c35f8562f6a1e5b3f4c543d5ff8f24100fae1da29aeb1864bbc17758f52b70" default))
+ '(elpy-rpc-virtualenv-path 'default)
  '(helm-completion-style 'emacs)
  '(helm-rg-default-directory 'git-root)
  '(langtool-default-language 'auto)
  '(lsp-clangd-binary-path "/usr/bin/clangd")
  '(lsp-enable-file-watchers nil)
+ '(lsp-enable-indentation t)
  '(lsp-headerline-breadcrumb-enable t)
  '(lsp-idle-delay 0.0)
  '(lsp-imenu-index-function 'lsp-imenu-create-categorized-index)
- '(lsp-lens-enable nil)
+ '(lsp-lens-enable t)
+ '(lsp-log-io nil)
  '(lsp-pyls-plugins-flake8-enabled t)
  '(lsp-pyls-plugins-jedi-completion-fuzzy t)
+ '(lsp-semantic-tokens-enable t)
+ '(lsp-semantic-tokens-warn-on-missing-face nil)
  '(lsp-ui-doc-header t)
  '(lsp-ui-doc-include-signature t)
  '(lsp-ui-doc-show-with-cursor t)
@@ -196,7 +222,7 @@
  '(lsp-ui-sideline-show-hover nil)
  '(lsp-ui-sideline-show-symbol nil)
  '(package-selected-packages
-   '(clang-format dockerfile-mode sublimity helm-slime helm-descbinds helm-dictionary helm-ls-git evil-tutor helm-c-yasnippet helm-system-packages elpy company-auctex lsp-treemacs yasnippet-snippets lsp-python-ms meson-mode helm-lsp helm-z evil ccls google-this camcorder command-log-mode minimap posframe fasd dts-mode bison-mode bitbake ninja-mode multi-vterm vterm-toggle vtm yasnippet-classic-snippets vterm smartscan expand-region vlf smartparens pdf-tools beacon zenburn-theme ace-jump-mode jump-char helm-swoop swoop multiple-cursors hungry-delete shell-pop flycheck helm-dash cmake-mode dashboard helm-projectile projectile magit helm-rg helm))
+   '(nerd-icons-dired nerd-icons powershell robot-mode jenkinsfile-mode yaml-mode soong-mode kotlin-mode gradle-mode rustic chatgpt-shell org-arbeitszeit message-view-patch mu4e-alert go-mode lua-mode protobuf-mode fasd clang-format dockerfile-mode sublimity helm-slime helm-descbinds helm-dictionary helm-ls-git evil-tutor helm-c-yasnippet helm-system-packages elpy company-auctex lsp-treemacs yasnippet-snippets lsp-python-ms meson-mode helm-lsp helm-z evil ccls google-this camcorder command-log-mode minimap posframe dts-mode bison-mode bitbake ninja-mode multi-vterm vterm-toggle vtm yasnippet-classic-snippets vterm smartscan expand-region vlf smartparens pdf-tools beacon zenburn-theme ace-jump-mode jump-char helm-swoop swoop multiple-cursors hungry-delete shell-pop flycheck helm-dash cmake-mode dashboard helm-projectile projectile magit helm-rg helm))
  '(projectile-globally-ignored-directories
    '(".idea" ".vscode" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" ".ccls-cache" ".clangd"))
  '(projectile-indexing-method 'alien)
@@ -210,12 +236,15 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(default ((t (:inherit nil :extend nil :stipple nil :background "#3F3F3F" :foreground "#DCDCCC" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight regular :height 128 :width normal :family "FiraCodeNerdFontMono "))))
+ '(lsp-face-semhl-comment ((t (:inherit font-lock-comment-face))))
+ '(lsp-face-semhl-definition ((t (:inherit font-lock-function-name-face :weight bold))))
  '(lsp-ui-sideline-current-symbol ((t (:foreground "white" :box (:line-width (1 . -1) :color "white") :weight ultra-bold :height 0.99)))))
 (setq projectile-switch-project-action 'helm-projectile)
 (helm-projectile-on)
 
 (add-hook 'after-init-hook 'global-company-mode)
-(define-key c-mode-base-map (kbd "<C-tab>") (function company-complete))
+;;(define-key c-mode-base-map (kbd "<C-tab>") (function company-complete))
 
 (global-set-key (kbd "C-w") 'backward-kill-word)
 (if (fboundp 'scroll-bar-mode) (scroll-bar-mode -1))
@@ -285,8 +314,9 @@
 (add-hook 'lsp-mode-hook 'lsp-ui-mode)
 
 (add-hook 'c-mode-common-hook #'lsp)
+(add-hook 'rust-mode-hook #'lsp)
 ;;(add-hook 'python-mode-hook #'lsp)
-(add-hook 'sh-mode-hook #'lsp)
+;;(add-hook 'sh-mode-hook #'lsp)
 (add-hook 'cmake-mode-hook #'lsp)
 (add-hook 'cmake-mode-hook #'smartparens-mode)
 (add-hook 'prog-mode-hook #'smartparens-mode)
@@ -320,6 +350,7 @@
   (define-key map (kbd "C-c C-j") 'yas-insert-snippet)
   (define-key map (kbd "C-x C-d") 'helm-browse-project)
   (define-key map (kbd "C-x r p") 'helm-projects-history)
+  (define-key map (kbd "C-o") 'other-window)
   map)
 "wmu-keys-minor-mode keymap.")
 
@@ -383,6 +414,8 @@ point reaches the beginning or end of the buffer, stop there."
 (company-auctex-init)
 
 
+
+
 (defun fd-switch-dictionary()
   (interactive)
   (let* ((dic ispell-current-dictionary)
@@ -394,3 +427,124 @@ point reaches the beginning or end of the buffer, stop there."
 ;; Clang stuff
 (require 'clang-format)
 (setq clang-format-style "file")
+
+(setq auto-revert-buffer-list-filter
+      'magit-auto-revert-repository-buffer-p)
+
+(add-to-list 'auto-mode-alist '("/mutt" . mail-mode))
+(add-hook 'mail-mode-hook 'turn-on-auto-fill)
+  ;; Yes, you can do this same trick with the cool "It's All Text" firefox add-on :-)
+  (add-to-list 'auto-mode-alist '("/mutt-\\|itsalltext.*mail\\.google" . mail-mode))
+  (add-hook 'mail-mode-hook 'turn-on-auto-fill)
+  (add-hook
+   'mail-mode-hook
+   (lambda ()
+     (define-key mail-mode-map [(control c) (control c)]
+       (lambda ()
+         (interactive)
+         (save-buffer)
+         (server-edit)))))
+
+  (add-to-list 'auto-mode-alist '(".*mutt.*" . message-mode))                                                                   
+  (setq mail-header-separator "")                                                                                               
+  (add-hook 'message-mode-hook
+          'turn-on-auto-fill
+          (function
+           (lambda ()
+             (progn
+               (local-unset-key "\C-c\C-c")
+               (define-key message-mode-map "\C-c\C-c" '(lambda ()
+                                                          "save and exit quickly"
+                                                          (interactive)
+                                                          (save-buffer)
+                                                          (server-edit)))))))
+
+
+(add-to-list 'load-path "~/mnt/ext_ssd/git/mu/build/mu4e")
+(require 'mu4e)
+
+;;default
+(setq mu4e-maildir (expand-file-name "~/mnt/ext_ssd/Mail/gmail"))
+
+(setq mu4e-drafts-folder "/[Gmail].Drafts")
+(setq mu4e-sent-folder   "/[Gmail].Gesendet")
+(setq mu4e-trash-folder  "/[Gmail].Papierkorb")
+
+;; don't save message to Sent Messages, GMail/IMAP will take care of this
+(setq mu4e-sent-messages-behavior 'delete)
+
+;; setup some handy shortcuts
+(setq mu4e-maildir-shortcuts
+      '(("/INBOX"             . ?i)
+        ("/[Gmail].Gesendet" . ?s)
+        ("/[Gmail].Papierkorb"     . ?t)))
+
+
+(setq mu4e-html2text-command "w3m -T text/html" ; how to hanfle html-formatted emails
+      mu4e-update-interval 300                  ; seconds between each mail retrieval
+      mu4e-headers-auto-update t                ; avoid to type `g' to update
+      mu4e-view-show-images t                   ; show images in the view buffer
+      mu4e-compose-signature-auto-include nil   ; I don't want a message signature
+      mu4e-use-fancy-chars t)  
+;; allow for updating mail using 'U' in the main view:
+(setq mu4e-get-mail-command "offlineimap")
+
+;; something about ourselves
+;; I don't use a signature...
+(setq
+ user-mail-address "wafgo01@gmail.com"
+ user-full-name  "Wadim Mueller"
+ ;; message-signature
+ ;;  (concat
+ ;;    "Foo X. Bar\n"
+ ;;    "http://www.example.com\n")
+)
+(setq mu4e-compose-reply-ignore-address '("no-?reply" "wafgo01@gmail.com"))
+;; sending mail -- replace USERNAME with your gmail username
+;; also, make sure the gnutls command line utils are installed
+;; package 'gnutls-bin' in Debian/Ubuntu, 'gnutls' in Archlinux.
+(require 'smtpmail)
+
+(require 'smtpmail)
+(setq message-send-mail-function 'smtpmail-send-it
+   starttls-use-gnutls t
+   smtpmail-starttls-credentials '(("smtp.gmail.com" 587 nil nil))
+   smtpmail-auth-credentials
+      (expand-file-name "~/.authinfo.gpg")
+   smtpmail-default-smtp-server "smtp.gmail.com"
+   smtpmail-smtp-server "smtp.gmail.com"
+   smtpmail-smtp-service 587)
+
+;; alternatively, for emacs-24 you can use:
+;;(setq message-send-mail-function 'smtpmail-send-it
+;;     smtpmail-stream-type 'starttls
+;;     smtpmail-default-smtp-server "smtp.gmail.com"
+;;     smtpmail-smtp-server "smtp.gmail.com"
+;;     smtpmail-smtp-service 587)
+
+;; don't keep message buffers around
+(setq message-kill-buffer-on-exit t)
+
+;; Choose the style you prefer for desktop notifications
+;; If you are on Linux you can use
+;; 1. notifications - Emacs lisp implementation of the Desktop Notifications API
+;; 2. libnotify     - Notifications using the `notify-send' program, requires `notify-send' to be in PATH
+;;
+;; On Mac OSX you can set style to
+;; 1. notifier      - Notifications using the `terminal-notifier' program, requires `terminal-notifier' to be in PATH
+;; 1. growl         - Notifications using the `growl' program, requires `growlnotify' to be in PATH
+(mu4e-alert-set-default-style 'libnotify)
+(add-hook 'after-init-hook #'mu4e-alert-enable-notifications)
+(add-hook 'after-init-hook #'mu4e-alert-enable-mode-line-display)
+(add-hook 'gnus-part-display-hook 'message-view-patch-highlight)
+
+(setq remote-file-name-inhibit-cache nil)
+(setq vc-ignore-dir-regexp
+      (format "%s\\|%s"
+                    vc-ignore-dir-regexp
+                    tramp-file-name-regexp))
+(setq tramp-verbose 1)
+
+;; (setq url-proxy-services
+;;       '(("http" . "http://127.0.0.1:3128")
+;;         ("https" . "https://127.0.0.1:3128")))

@@ -4,8 +4,6 @@
 
 ;; Author: steckerhalter
 ;; URL: https://framagit.org/steckerhalter/emacs-fasd
-;; Package-Version: 20210104.738
-;; Package-Commit: c1d92553f33ebb018135c698db1a6d7f86731a26
 ;; Keywords: cli bash zsh autojump
 
 ;;; Commentary:

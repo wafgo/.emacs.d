@@ -1,2 +1,0 @@
-;;; Generated package description from /home/local/.emacs.d/elpa/bitbake-20190107.1155/bitbake.el  -*- no-byte-compile: t -*-
-(define-package "bitbake" "20190107.1155" "Running bitbake from emacs" '((emacs "24.1") (dash "2.6.0") (mmm-mode "0.5.4") (s "1.10.0")) :commit "4896ff48712a6be37009605ba697a7104462e2fd" :keywords '("convenience") :authors '(("Damien Merenne")) :maintainer '("Damien Merenne") :url "https://github.com/canatella/bitbake-el")

@@ -2,7 +2,13 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("ghs-cc-doc"
+(("cadge-todos.org"
+ (filename . "~/devel/doc/org/cadge-todos.org")
+ (front-context-string)
+ (rear-context-string . "arted with bsp38")
+ (position . 435)
+ (last-modified 25961 44912 292537 816000))
+("ghs-cc-doc"
  (filename . "/opt/ghs/7.1.6_2019.1.4/manuals/build_arm64.pdf")
  (position . 1)
  (page . 1)
