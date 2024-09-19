@@ -19,9 +19,14 @@
 (defun t32_start_l4re()
   "start l4re trace32 instance"
   (interactive)
-  (async-shell-command "cd /home/uia67865/mnt/ext_ssd/git/l4re/l4/t32 && /home/uia67865/devel/tools/t32/bin/pc_linux64/t32marm64 -c /home/uia67865/devel/tools/t32/config_usb.t32")
+  (async-shell-command "cd /home/uia67865/mnt/ext_ssd/cadge/ebhv/full_src/t32/vmm/board/adc435 && /home/uia67865/devel/tools/t32/bin/pc_linux64/t32marm64 -c /home/uia67865/devel/tools/t32/config_usb.t32")
   )
 
+(defun t32_start_hpe_boot()
+  "start l4re trace32 instance"
+  (interactive)
+  (async-shell-command "cd /home/uia67865/devel/git/hpe_boot/src/bootloader_s32g/hpe_boot/trace32 && /home/uia67865/devel/tools/t32/bin/pc_linux64/t32marm64 -c /home/uia67865/devel/tools/t32/config_usb.t32")
+  )
 
 (defun l4-build-and-deploy()
   "build and deploy l4"
@@ -58,6 +63,12 @@
   "hmp on"
   (interactive)
   (shell-command "python /home/uia67865/devel/tools/hmp/hmp_set_output.py -s /dev/serial/by-id/usb-HAMEG_HAMEG_HO720-if00-port0 on")
+  )
+
+(defun dtb_to_tftp()
+  "dtb to tftp"
+  (interactive)
+  (shell-command "cd /home/uia67865/devel/git/linux-s32 && make ARCH=arm64 LLVM=1 dtbs && cp /home/uia67865/devel/git/linux-s32/arch/arm64/boot/dts/freescale/continental_hdk11.dtb ~/devel/tftp")
   )
 
 

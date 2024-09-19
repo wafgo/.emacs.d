@@ -54,6 +54,8 @@
 (require 'nerd-icons)
 (require 'nerd-icons-dired)
 (require 'caedge-stuff)
+(require 'workgroups)
+(require 'lsp-bitbake)
 ;; (require 'copilot)
 ;; (require 'eglot)
 ;; (add-to-list 'eglot-server-programs '((c++-mode c-mode) "clangd"))
@@ -66,6 +68,7 @@
 ;;(require 'sublimity-map) ;; experimental
 ;;(require 'sublimity-attractive)
 (sublimity-mode 1)
+(workgroups-mode 1)
 (setq sublimity-scroll-weight 10
       sublimity-scroll-drift-length 5)
 (global-helm-slime-mode)
@@ -90,7 +93,6 @@
 (use-package flycheck
   :ensure t
   :init (global-flycheck-mode))
-
 
 ;;(lsp-treemacs-sync-mode 1)
 (yas-global-mode 1)
@@ -127,8 +129,10 @@
 (setq auto-mode-alist (cons '("\\.bbappend$" . bb-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.bbclass$" . bb-mode) auto-mode-alist))
 (setq auto-mode-alist (cons '("\\.conf$" . bb-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.ned$" . lua-mode) auto-mode-alist))
+(setq auto-mode-alist (cons '("\\.ts$" . js-mode) auto-mode-alist))
 
-;;(setq ccls-executable "/home/uia67865/devel/github/ccls/Release/ccls")
+;;(setq ccls-executable "/home/uia67865/devel/git/ccls/Release/ccls")
 (defun ccls/callee () (interactive) (lsp-ui-peek-find-custom "$ccls/call" '(:callee t)))
 (defun ccls/caller () (interactive) (lsp-ui-peek-find-custom "$ccls/call"))
 (defun ccls/vars (kind) (lsp-ui-peek-find-custom "$ccls/vars" `(:kind ,kind)))
@@ -190,6 +194,8 @@
      (java-mode . "java")
      (awk-mode . "awk")
      (other . "gnu")))
+ '(chatgpt-shell-additional-curl-options '("-x" "http://127.0.0.1:3128"))
+ '(chatgpt-shell-model-version 9)
  '(company-clang-executable "/usr/bin/clang")
  '(company-minimum-prefix-length 1)
  '(copilot-bin
@@ -207,7 +213,7 @@
  '(lsp-idle-delay 0.0)
  '(lsp-imenu-index-function 'lsp-imenu-create-categorized-index)
  '(lsp-lens-enable t)
- '(lsp-log-io nil)
+ '(lsp-log-io t)
  '(lsp-pyls-plugins-flake8-enabled t)
  '(lsp-pyls-plugins-jedi-completion-fuzzy t)
  '(lsp-semantic-tokens-enable t)
@@ -222,7 +228,7 @@
  '(lsp-ui-sideline-show-hover nil)
  '(lsp-ui-sideline-show-symbol nil)
  '(package-selected-packages
-   '(nerd-icons-dired nerd-icons powershell robot-mode jenkinsfile-mode yaml-mode soong-mode kotlin-mode gradle-mode rustic chatgpt-shell org-arbeitszeit message-view-patch mu4e-alert go-mode lua-mode protobuf-mode fasd clang-format dockerfile-mode sublimity helm-slime helm-descbinds helm-dictionary helm-ls-git evil-tutor helm-c-yasnippet helm-system-packages elpy company-auctex lsp-treemacs yasnippet-snippets lsp-python-ms meson-mode helm-lsp helm-z evil ccls google-this camcorder command-log-mode minimap posframe dts-mode bison-mode bitbake ninja-mode multi-vterm vterm-toggle vtm yasnippet-classic-snippets vterm smartscan expand-region vlf smartparens pdf-tools beacon zenburn-theme ace-jump-mode jump-char helm-swoop swoop multiple-cursors hungry-delete shell-pop flycheck helm-dash cmake-mode dashboard helm-projectile projectile magit helm-rg helm))
+   '(nerd-icons-dired nerd-icons powershell robot-mode jenkinsfile-mode yaml-mode soong-mode kotlin-mode gradle-mode rustic org-arbeitszeit message-view-patch mu4e-alert go-mode lua-mode protobuf-mode fasd clang-format dockerfile-mode sublimity helm-slime helm-descbinds helm-dictionary helm-ls-git evil-tutor helm-c-yasnippet helm-system-packages elpy company-auctex lsp-treemacs yasnippet-snippets lsp-python-ms meson-mode helm-lsp helm-z evil ccls google-this camcorder command-log-mode minimap posframe dts-mode bison-mode bitbake ninja-mode multi-vterm vterm-toggle vtm yasnippet-classic-snippets vterm smartscan expand-region vlf smartparens pdf-tools beacon zenburn-theme ace-jump-mode jump-char helm-swoop swoop multiple-cursors hungry-delete shell-pop flycheck helm-dash cmake-mode dashboard helm-projectile projectile magit helm-rg helm))
  '(projectile-globally-ignored-directories
    '(".idea" ".vscode" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" ".ccls-cache" ".clangd"))
  '(projectile-indexing-method 'alien)
@@ -315,6 +321,8 @@
 
 (add-hook 'c-mode-common-hook #'lsp)
 (add-hook 'rust-mode-hook #'lsp)
+(add-hook 'bb-mode-hook #'lsp)
+(add-hook 'js-mode-hook #'lsp)
 ;;(add-hook 'python-mode-hook #'lsp)
 ;;(add-hook 'sh-mode-hook #'lsp)
 (add-hook 'cmake-mode-hook #'lsp)
