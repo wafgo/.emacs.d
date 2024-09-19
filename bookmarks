@@ -2,46 +2,21 @@
 ;;; This format is meant to be slightly human-readable;
 ;;; nevertheless, you probably don't want to edit it.
 ;;; -*- End Of Bookmark File Format Version Stamp -*-
-(("cadge-todos.org"
+(("dev-cheat-sheet.org"
+ (filename . "~/mnt/ext_ssd/doc/dev-cheat-sheet.org")
+ (front-context-string . "DEV CC -*- mode:")
+ (rear-context-string)
+ (position . 1)
+ (last-modified 26239 5430 623004 875000))
+("cadge-todos.org"
  (filename . "~/devel/doc/org/cadge-todos.org")
  (front-context-string)
  (rear-context-string . "arted with bsp38")
  (position . 435)
  (last-modified 25961 44912 292537 816000))
-("ghs-cc-doc"
- (filename . "/opt/ghs/7.1.6_2019.1.4/manuals/build_arm64.pdf")
- (position . 1)
- (page . 1)
- (slice)
- (size . fit-width)
- (origin 0.0 . 0.0)
- (handler . pdf-view-bookmark-jump-handler))
-("lshape-resource-tree"
- (filename . "/srv/sw.sys.lshape_fdc_gc/bin_rsa-lshape-v1-tianma-deb/base/tool/proseco/out/system.png")
- (position . 0)
- (image-type . png)
- (handler . image-bookmark-jump))
-("rcar-manual"
- (filename . "/../srv/rcar3_man.pdf")
- (position . 1)
- (page . 1)
- (slice)
- (size . fit-page)
- (origin 0.0 . 0.0)
- (handler . pdf-view-bookmark-jump-handler))
 ("devel-dired"
  (filename . "~/devel/")
  (front-context-string . "ar-merge\n  drwxr")
  (rear-context-string . "96 Aug 24  2019 ")
  (position . 218))
-("lshape-bsp-dired"
- (filename . "/../srv/sw.pkg.ghsint_cmn_rcar3_gpr/")
- (front-context-string . ".ccls-cache\n  dr")
- (rear-context-string . "96 Sep 17 13:52 ")
- (position . 232))
-("lshape-application-dired"
- (filename . "/../srv/sw.sys.lshape_fdc_gc/")
- (front-context-string . "bin_rsa-lshape-v")
- (rear-context-string . "96 Sep 21 12:02 ")
- (position . 240))
 )

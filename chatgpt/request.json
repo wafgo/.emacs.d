@@ -1,0 +1,1 @@
+{"stream":true,"model":"gpt-3.5-turbo","messages":[{"role":"system","content":"You use markdown liberally to structure responses. Always show code snippets in markdown blocks with language labels."},{"role":"user","content":"hello"}]}
