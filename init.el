@@ -1,5 +1,4 @@
 (add-to-list 'load-path "~/.emacs.d/custom")
-;;(add-to-list 'load-path "/usr/share/emacs/site-lisp/mu4e")
 
 (require 'package)
 (setq package-enable-at-startup nil)
@@ -18,6 +17,7 @@
 ;; Enable Org mode
 (require 'org)
 (require 'dashboard)
+
 (require 'cmake-mode)
 (require 'ninja-mode)
 (require 'e-byzanz)
@@ -33,6 +33,7 @@
 (require 'smartparens-config)
 (require 'expand-region)
 (require 'conti-build-stuff)
+
 ;; (require 'dap-mode)
 ;; (require 'dap-gdb-lldb)
 ;; (require 'debugging-stuff)
@@ -56,7 +57,145 @@
 (require 'caedge-stuff)
 (require 'workgroups)
 (require 'lsp-bitbake)
-;; (require 'copilot)
+(use-package copilot-chat
+  :bind (:map global-map
+            ("C-c C-y" . copilot-chat-yank)
+            ("C-c M-y" . copilot-chat-yank-pop)
+            ("C-c C-M-y" . (lambda () (interactive) (copilot-chat-yank-pop -1))))
+  )
+
+(add-hook 'git-commit-setup-hook 'copilot-chat-insert-commit-message)
+;; With use-package:
+(use-package company-box
+  :hook (company-mode . company-box-mode))
+(defvar bootstrap-version)
+(let ((bootstrap-file
+       (expand-file-name
+        "straight/repos/straight.el/bootstrap.el"
+        (or (bound-and-true-p straight-base-dir)
+            user-emacs-directory)))
+      (bootstrap-version 7))
+  (unless (file-exists-p bootstrap-file)
+    (with-current-buffer
+        (url-retrieve-synchronously
+         "https://raw.githubusercontent.com/radian-software/straight.el/develop/install.el"
+         'silent 'inhibit-cookies) 
+      (goto-char (point-max))
+      (eval-print-last-sexp)))
+  (load bootstrap-file nil 'nomessage))
+
+
+(setq package-enable-at-startup nil)
+(use-package copilot
+  :straight (:host github :repo "copilot-emacs/copilot.el" :files ("*.el"))
+  :ensure t)
+(add-hook 'prog-mode-hook 'copilot-mode)
+
+(defun rk/no-copilot-mode ()
+  "Helper for `rk/no-copilot-modes'."
+  (copilot-mode -1))
+
+(defvar rk/no-copilot-modes '(shell-mode
+                              inferior-python-mode
+                              eshell-mode
+                              term-mode
+                              vterm-mode
+                              comint-mode
+                              compilation-mode
+                              debugger-mode
+                              dired-mode-hook
+                              compilation-mode-hook
+                              flutter-mode-hook
+                              minibuffer-mode-hook)
+  "Modes in which copilot is inconvenient.")
+
+(defun rk/copilot-disable-predicate ()
+  "When copilot should not automatically show completions."
+  (or rk/copilot-manual-mode
+      (member major-mode rk/no-copilot-modes)
+      (company--active-p)))
+
+(add-to-list 'copilot-disable-predicates 'rk/copilot-disable-predicate)
+
+(defvar rk/copilot-manual-mode nil
+  "When `t' will only show completions when manually triggered, e.g. via M-C-<return>.")
+
+(defun rk/copilot-change-activation ()
+  "Switch between three activation modes:
+- automatic: copilot will automatically overlay completions
+- manual: you need to press a key (M-C-<return>) to trigger completions
+- off: copilot is completely disabled."
+  (interactive)
+  (if (and copilot-mode rk/copilot-manual-mode)
+      (progn
+        (message "deactivating copilot")
+        (global-copilot-mode -1)
+        (setq rk/copilot-manual-mode nil))
+    (if copilot-mode
+        (progn
+          (message "activating copilot manual mode")
+          (setq rk/copilot-manual-mode t))
+      (message "activating copilot mode")
+      (global-copilot-mode))))
+
+(define-key global-map (kbd "M-C-<escape>") #'rk/copilot-change-activation)
+
+(defun rk/copilot-complete-or-accept ()
+  "Command that either triggers a completion or accepts one if one
+is available. Useful if you tend to hammer your keys like I do."
+  (interactive)
+  (if (copilot--overlay-visible)
+      (progn
+        (copilot-accept-completion)
+        (open-line 1)
+        (next-line))
+    (copilot-complete)))
+
+(define-key copilot-mode-map (kbd "M-C-<next>") #'copilot-next-completion)
+(define-key copilot-mode-map (kbd "M-C-<prior>") #'copilot-previous-completion)
+(define-key copilot-mode-map (kbd "M-C-<right>") #'copilot-accept-completion-by-word)
+(define-key copilot-mode-map (kbd "M-C-<down>") #'copilot-accept-completion-by-line)
+(define-key global-map (kbd "M-C-<return>") #'rk/copilot-complete-or-accept)
+
+(defun rk/copilot-quit ()
+  "Run `copilot-clear-overlay' or `keyboard-quit'. If copilot is
+cleared, make sure the overlay doesn't come back too soon."
+  (interactive)
+  (condition-case err
+      (when copilot--overlay
+        (lexical-let ((pre-copilot-disable-predicates copilot-disable-predicates))
+          (setq copilot-disable-predicates (list (lambda () t)))
+          (copilot-clear-overlay)
+          (run-with-idle-timer
+           1.0
+           nil
+           (lambda ()
+             (setq copilot-disable-predicates pre-copilot-disable-predicates)))))
+    (error handler)))
+
+(advice-add 'keyboard-quit :before #'rk/copilot-quit)
+
+(defun company-yasnippet-or-completion ()
+  (interactive)
+  (let ((yas-fallback-behavior nil))
+    (unless (yas-expand)
+      (call-interactively #'company-complete-common))))
+
+(add-hook 'company-mode-hook (lambda ()
+  (substitute-key-definition 'company-complete-common
+                             'company-yasnippet-or-completion
+                             company-active-map)))
+
+(defun rk/copilot-tab ()
+  "Tab command that will complet with copilot if a completion is
+available. Otherwise will try company, yasnippet or normal
+tab-indent."
+  (interactive)
+  (or (copilot-accept-completion)
+      (company-yasnippet-or-completion)
+      (indent-for-tab-command)))
+
+(define-key global-map (kbd "<tab>") #'rk/copilot-tab)
 ;; (require 'eglot)
 ;; (add-to-list 'eglot-server-programs '((c++-mode c-mode) "clangd"))
 ;; (add-hook 'c-mode-hook 'eglot-ensure)
@@ -187,12 +326,12 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
+ '(auth-source-save-behavior nil)
  '(bdf-directory-list
-   '("/usr/local/share/emacs/fonts/bdf" "/usr/share/fonts/truetype/dejavu"))
+   '("/usr/local/share/emacs/fonts/bdf"
+     "/usr/share/fonts/truetype/dejavu"))
  '(c-default-style
-   '((c-mode . "cc-mode")
-     (java-mode . "java")
-     (awk-mode . "awk")
+   '((c-mode . "cc-mode") (java-mode . "java") (awk-mode . "awk")
      (other . "gnu")))
  '(chatgpt-shell-additional-curl-options '("-x" "http://127.0.0.1:3128"))
  '(chatgpt-shell-model-version 9)
@@ -200,8 +339,10 @@
  '(company-minimum-prefix-length 1)
  '(copilot-bin
    "/home/uia67865/mnt/ext_ssd/wizardcoder-python/wizardcoder-python-34b-v1.0.Q5_K_M.llamafile")
+ '(copilot-version "1.272.0")
  '(custom-safe-themes
-   '("f2c35f8562f6a1e5b3f4c543d5ff8f24100fae1da29aeb1864bbc17758f52b70" default))
+   '("f2c35f8562f6a1e5b3f4c543d5ff8f24100fae1da29aeb1864bbc17758f52b70"
+     default))
  '(elpy-rpc-virtualenv-path 'default)
  '(helm-completion-style 'emacs)
  '(helm-rg-default-directory 'git-root)
@@ -228,10 +369,48 @@
  '(lsp-ui-sideline-show-hover nil)
  '(lsp-ui-sideline-show-symbol nil)
  '(package-selected-packages
-   '(nerd-icons-dired nerd-icons powershell robot-mode jenkinsfile-mode yaml-mode soong-mode kotlin-mode gradle-mode rustic org-arbeitszeit message-view-patch mu4e-alert go-mode lua-mode protobuf-mode fasd clang-format dockerfile-mode sublimity helm-slime helm-descbinds helm-dictionary helm-ls-git evil-tutor helm-c-yasnippet helm-system-packages elpy company-auctex lsp-treemacs yasnippet-snippets lsp-python-ms meson-mode helm-lsp helm-z evil ccls google-this camcorder command-log-mode minimap posframe dts-mode bison-mode bitbake ninja-mode multi-vterm vterm-toggle vtm yasnippet-classic-snippets vterm smartscan expand-region vlf smartparens pdf-tools beacon zenburn-theme ace-jump-mode jump-char helm-swoop swoop multiple-cursors hungry-delete shell-pop flycheck helm-dash cmake-mode dashboard helm-projectile projectile magit helm-rg helm))
+   '(company-box copilot elpy nerd-icons-dired nerd-icons powershell
+		 robot-mode jenkinsfile-mode yaml-mode soong-mode
+		 kotlin-mode gradle-mode rustic org-arbeitszeit
+		 message-view-patch mu5e-alert go-mode lua-mode
+		 protobuf-mode fasd clang-format dockerfile-mode
+		 sublimity helm-slime helm-descbinds helm-dictionary
+		 helm-ls-git evil-tutor helm-c-yasnippet
+		 helm-system-packages lsp-treemacs yasnippet-snippets
+		 lsp-python-ms meson-mode helm-lsp helm-z evil ccls
+		 google-this camcorder command-log-mode minimap
+		 posframe dts-mode bison-mode bitbake ninja-mode
+		 multi-vterm vterm-toggle vtm
+		 yasnippet-classic-snippets vterm smartscan
+		 expand-region vlf smartparens pdf-tools beacon
+		 zenburn-theme ace-jump-mode jump-char helm-swoop
+		 swoop multiple-cursors hungry-delete shell-pop
+		 flycheck helm-dash cmake-mode dashboard
+		 helm-projectile projectile magit helm-rg helm))
  '(projectile-globally-ignored-directories
-   '(".idea" ".vscode" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" ".ccls-cache" ".clangd"))
+   '(".idea" ".vscode" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout"
+     "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work"
+     ".ccls-cache" ".clangd"))
  '(projectile-indexing-method 'alien)
+ '(safe-local-variable-values
+   '((eval setq projectile-project-compilation-cmd
+	   (concat "cd "
+		   (locate-dominating-file default-directory
+					   ".dir-locals.el")
+		   "&& mkdir -p build && cd build && cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Debug .."
+		   " && cmake --build . && ctest --output-on-failure"))
+     (eval setq projectile-project-compilation-cmd
+	   (concat "cd "
+		   (locate-dominating-file default-directory
+					   ".dir-locals.el")
+		   " && cd build && cmake -G Ninja -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Debug .."
+		   " && cmake --build . && ctest --output-on-failure"))
+     (eval setq projectile-project-compilation-cmd
+	   (concat "cd "
+		   (locate-dominating-file default-directory
+					   ".dir-locals.el")
+		   " && cd build && cmake -DCMAKE_EXPORT_COMPILE_COMMANDS=ON -DCMAKE_BUILD_TYPE=Debug .."
+		   " && cmake --build . && ctest --output-on-failure"))))
  '(shell-pop-term-shell "/bin/bash")
  '(sublimity-mode t)
  '(vterm-shell "/bin/bash")
@@ -325,7 +504,7 @@
 (add-hook 'js-mode-hook #'lsp)
 ;;(add-hook 'python-mode-hook #'lsp)
 ;;(add-hook 'sh-mode-hook #'lsp)
-(add-hook 'cmake-mode-hook #'lsp)
+;;(add-hook 'cmake-mode-hook #'lsp)
 (add-hook 'cmake-mode-hook #'smartparens-mode)
 (add-hook 'prog-mode-hook #'smartparens-mode)
 (pdf-tools-install)
@@ -468,46 +647,6 @@ point reaches the beginning or end of the buffer, stop there."
                                                           (server-edit)))))))
 
 
-(add-to-list 'load-path "~/mnt/ext_ssd/git/mu/build/mu4e")
-(require 'mu4e)
-
-;;default
-(setq mu4e-maildir (expand-file-name "~/mnt/ext_ssd/Mail/gmail"))
-
-(setq mu4e-drafts-folder "/[Gmail].Drafts")
-(setq mu4e-sent-folder   "/[Gmail].Gesendet")
-(setq mu4e-trash-folder  "/[Gmail].Papierkorb")
-
-;; don't save message to Sent Messages, GMail/IMAP will take care of this
-(setq mu4e-sent-messages-behavior 'delete)
-
-;; setup some handy shortcuts
-(setq mu4e-maildir-shortcuts
-      '(("/INBOX"             . ?i)
-        ("/[Gmail].Gesendet" . ?s)
-        ("/[Gmail].Papierkorb"     . ?t)))
-
-
-(setq mu4e-html2text-command "w3m -T text/html" ; how to hanfle html-formatted emails
-      mu4e-update-interval 300                  ; seconds between each mail retrieval
-      mu4e-headers-auto-update t                ; avoid to type `g' to update
-      mu4e-view-show-images t                   ; show images in the view buffer
-      mu4e-compose-signature-auto-include nil   ; I don't want a message signature
-      mu4e-use-fancy-chars t)  
-;; allow for updating mail using 'U' in the main view:
-(setq mu4e-get-mail-command "offlineimap")
-
-;; something about ourselves
-;; I don't use a signature...
-(setq
- user-mail-address "wafgo01@gmail.com"
- user-full-name  "Wadim Mueller"
- ;; message-signature
- ;;  (concat
- ;;    "Foo X. Bar\n"
- ;;    "http://www.example.com\n")
-)
-(setq mu4e-compose-reply-ignore-address '("no-?reply" "wafgo01@gmail.com"))
 ;; sending mail -- replace USERNAME with your gmail username
 ;; also, make sure the gnutls command line utils are installed
 ;; package 'gnutls-bin' in Debian/Ubuntu, 'gnutls' in Archlinux.
@@ -541,9 +680,6 @@ point reaches the beginning or end of the buffer, stop there."
 ;; On Mac OSX you can set style to
 ;; 1. notifier      - Notifications using the `terminal-notifier' program, requires `terminal-notifier' to be in PATH
 ;; 1. growl         - Notifications using the `growl' program, requires `growlnotify' to be in PATH
-(mu4e-alert-set-default-style 'libnotify)
-(add-hook 'after-init-hook #'mu4e-alert-enable-notifications)
-(add-hook 'after-init-hook #'mu4e-alert-enable-mode-line-display)
 (add-hook 'gnus-part-display-hook 'message-view-patch-highlight)
 
 (setq remote-file-name-inhibit-cache nil)
@@ -556,3 +692,7 @@ point reaches the beginning or end of the buffer, stop there."
 ;; (setq url-proxy-services
 ;;       '(("http" . "http://127.0.0.1:3128")
 ;;         ("https" . "https://127.0.0.1:3128")))
+
+(defun cmblu-connect-yocto-klaus ()
+  (interactive)
+  (dired "/ssh:cmbluadmin@yoctoklaus-embedded.embedded.cmblu.dev:/home/cmbluadmin"))

@@ -1,0 +1,187 @@
+# -*- eval: (ethan-wspace-mode -1); -*-
+# openssl/crypto/x509/t_x509.c
+Certificate:
+Data:
+Version:
+Serial Number:
+#Signature Algorithm:
+Issuer:
+Validity:
+Subject:
+Subject Public Key Info:
+#Public Key Algorithm:
+Issuer Unique ID:
+Subject Unique ID:
+X509v3 extensions
+Subject OCSP hash:
+Public key OCSP hash:
+Trusted Uses:
+No Trusted Uses.
+Rejected Uses:
+No Rejected Uses.
+Alias:
+Key Id:
+keyid:
+Signature Value:
+
+# openssl/crypto/x509v3/v3_alt.c
+X400Name:
+EdiPartyName:
+DirName:
+Serial:
+IP Address:
+Registered ID:
+
+# openssl/crypto/x509/t_crl.c
+Certificate Revocation List (CRL):
+Last Update:
+# Next Update is treated special in x509-font-lock-keywords
+#Next Update:
+Revoked Certificates:
+Revocation Date:
+CRL extensions
+CRL entry extensions
+
+# openssl/crypto/x509v3/v3_cpols.c
+User Notice:
+Explicit Text:
+Full Name:
+CSP:
+Unknown Qualifier:
+Organization:
+Numbers:
+
+# Keys
+# openssl/crypto/rsa/rsa_ameth.c
+PSS parameter restrictions:
+Salt Length:
+Trailer Field:
+Private-Key:
+RSA Private-Key:
+RSA-PSS Private-Key:
+Public-Key:
+RSA Public-Key:
+RSA-PSS Public-Key:
+Modulus:
+Exponent:
+modulus:
+publicExponent:
+privateExponent:
+prime1:
+prime2:
+exponent1:
+exponent2:
+coefficient:
+# openssl/crypto/ec/ecx_meth.c
+priv:
+pub:
+# openssl/crypto/dsa/dsa_ameth.c
+P:
+Q:
+G:
+
+# keyword + constant
+#Hash Algorithm:
+#Mask Algorithm:
+
+# X509v3 extensions
+Invalidity Date:
+Netscape Comment:
+S/MIME Capabilities:
+X509v3 AC Targeting:
+X509v3 Any Policy:
+X509v3 Authority Key Identifier:
+X509v3 CRL Distribution Points:
+X509v3 CRL Number:
+X509v3 CRL Reason Code:
+X509v3 Certificate Issuer:
+X509v3 Certificate Policies:
+X509v3 Delta CRL Indicator:
+X509v3 Freshest CRL:
+X509v3 Inhibit Any Policy:
+X509v3 Issuer Alternative Name:
+X509v3 Issuing Distribution Point:
+X509v3 Key Usage:
+X509v3 Name Constraints:
+X509v3 No Revocation Available:
+X509v3 Policy Constraints:
+X509v3 Policy Mappings:
+X509v3 Private Key Usage Period:
+X509v3 Subject Alternative Name:
+X509v3 Subject Directory Attributes:
+X509v3 Subject Key Identifier:
+Microsoft certificate template:
+Microsoft Application Policies Extension:
+
+# PKIX Private Extensions
+Authority Information Access:
+Biometric Info:
+Subject Information Access:
+Proxy Certificate Information:
+TLS Feature:
+
+# access descriptors for authority info access extension
+OCSP
+CA Issuers
+AD Time Stamping
+ad dvcs
+CA Repository
+
+# openssl/crypto/dh/dh_ameth.c
+PKCS#3 DH Parameters:
+private-key:
+public-key:
+prime:
+generator:
+subgroup order:
+subgroup factor:
+seed:
+counter:
+recommended-private-length:
+
+# openssl/crypto/ec/eck_prn.c
+Field Type:
+Basis Type:
+Polynomial:
+Prime:
+Order:
+Cofactor:
+Seed:
+Generator (compressed):
+Generator (uncompressed):
+Generator (hybrid):
+
+# ???
+serial:
+DH Parameters:
+
+# encode_key2text.c
+EC-Parameters:
+GROUP:
+
+# eck_prn.c ECPKParameters_print
+# NOTE: There is SPC after these so that they are not matched in hex strings
+A: 
+B: 
+
+# openssl/crypto/x509v3/v3_bcons.c
+# X509V3_add_value_bool
+pathlen
+
+# req
+Certificate Request
+Attributes
+Requested Extensions
+
+# openssl/include/openssl/obj_mac.h
+CT Precertificate SCTs:
+
+# openssl/crypto/ct/ct_prn.c
+# Certificate Transparency
+Signed Certificate Timestamp:
+Version   :
+Log       :
+Log ID    :
+Timestamp :
+Extensions:
+Signature :

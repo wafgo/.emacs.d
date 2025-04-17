@@ -8,6 +8,7 @@
 	c-electric-lt-gt
 	c-electric-paren
 	c-electric-semi&comma
+	c-electric-slash
 	c-electric-star
 	helm-M-x
 	helm-imenu
@@ -20,6 +21,7 @@
 	mark-sexp
 	prelude-move-beginning-of-line
 	rectangle-number-lines
+	rk/copilot-tab
 	sh-case
 	smarter-move-beginning-of-line
 	wdired--self-insert

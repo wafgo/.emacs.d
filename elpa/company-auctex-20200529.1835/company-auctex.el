@@ -3,9 +3,8 @@
 ;; Copyright (C) 2012 Christopher Monsanto, 2014 Alexey Romanov
 
 ;; Author: Christopher Monsanto <chris@monsan.to>, Alexey Romanov <alexey.v.romanov@gmail.com>
-;; Version: 0.1
 ;; Package-Version: 20200529.1835
-;; Package-Commit: 9400a2ec7459dde8cbf1a5d50dfee4e300ed7e18
+;; Package-Revision: 9400a2ec7459
 ;; URL: https://github.com/alexeyr/company-auctex/
 ;; Package-Requires: ((yasnippet "0.8.0") (company "0.8.0") (auctex "11.87"))
 

@@ -1,4 +1,4 @@
-#!/home/uia67865/.emacs.d/elpy/rpc-venv/bin/python
+#!/home/sefo/.emacs.d/elpy/rpc-venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
