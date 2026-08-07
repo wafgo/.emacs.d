@@ -13,11 +13,14 @@ versenden.
 
 - Emacs 30.2, Paketverwaltung über `package.el` + `use-package` (`~/.emacs.d/init.el`)
 - Fedora 41 Workstation
-- `notmuch-0.38.3` installiert, aber unkonfiguriert
+- `notmuch-0.38.3` installiert, aber unkonfiguriert; das Emacs-Frontend
+  (`emacs-notmuch`) ist noch **nicht** installiert
 - neomutt greift direkt per IMAP auf Gmail zu, kein lokaler Maildir
 - Gmail-App-Passwort liegt GPG-verschlüsselt in `~/.config/neomutt/gmail-pass.gpg`
 - `git send-email` ist bereits konfiguriert (Gmail-SMTP, Port 587, TLS)
-- Kein `isync`, kein `msmtp`, kein `b4` installiert
+- Zu installieren aus den Fedora-Repos: `isync` (1.5.0), `msmtp` (1.8.25),
+  `b4` (0.14.2), `lei` (2.0.0), `emacs-notmuch` (0.38.3). `lei` ist ein eigenes
+  Paket, es steckt nicht in `public-inbox`.
 
 ## Entscheidungen
 
@@ -122,8 +125,8 @@ die dortige Adresse gebraucht wird, geschieht das über eine repository-lokale
 
 ### Emacs-Konfiguration
 
-- `notmuch` stammt aus dem Fedora-Paket, nicht aus MELPA. Aus MELPA kommen
-  `piem`, `piem-notmuch` und `piem-b4`.
+- `notmuch` stammt aus dem Fedora-Paket `emacs-notmuch`, nicht aus MELPA. Aus
+  MELPA kommen `piem`, `piem-notmuch` und `piem-b4`.
 - Mail-Hygiene für Kernel-Listen in `message-mode`: `text/plain` erzwungen,
   `format=flowed` deaktiviert, `fill-column` auf 72, kein
   Quoted-Printable-Umbruch von Patches, `message-send-mail-function` auf
