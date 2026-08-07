@@ -3,7 +3,8 @@
 
 # Packaging
 .cask
-elpa/
+# piem wird per package-vc-install aus einem Git-Repo installiert (nested .git)
+elpa/piem/
 
 # Backup files
 *~
