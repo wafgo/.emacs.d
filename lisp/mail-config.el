@@ -75,5 +75,30 @@
 
 (global-set-key (kbd "C-c m") #'notmuch)
 
+;;; piem — Patch-Serien aus Mails ins Repository holen
+
+(add-to-list 'load-path (expand-file-name "piem-source" user-emacs-directory))
+
+(require 'piem)
+(require 'piem-notmuch)
+(require 'piem-b4)
+
+(setq piem-inboxes
+      '(("linux-iio"
+         :url "https://lore.kernel.org/linux-iio/"
+         :address "linux-iio@vger.kernel.org"
+         :coderepo "/home/sefo/devel/git/linux-mainline/")
+        ("linux-kernel"
+         :url "https://lore.kernel.org/linux-kernel/"
+         :address "linux-kernel@vger.kernel.org"
+         :coderepo "/home/sefo/devel/git/linux-mainline/")))
+
+(setq piem-b4-b4-executable "b4"
+      piem-default-branch-function #'piem-name-branch-who-what-v)
+
+(piem-notmuch-mode 1)
+
+(global-set-key (kbd "C-c p") #'piem-dispatch)
+
 (provide 'mail-config)
 ;;; mail-config.el ends here
