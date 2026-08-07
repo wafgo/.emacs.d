@@ -79,28 +79,32 @@
 
 (require 'package)
 (unless (package-installed-p 'piem)
-  (package-vc-install '(piem :url "https://git.kyleam.com/piem")))
+  (condition-case err
+      (package-vc-install '(piem :url "https://git.kyleam.com/piem"))
+    (error (display-warning 'mail-config
+             (format "piem konnte nicht installiert werden: %S\nBitte manuell installieren: M-x package-vc-install RET (piem :url \"https://git.kyleam.com/piem\")"
+                     (error-message-string err))
+             :warning))))
 
-(require 'piem)
-(require 'piem-notmuch)
-(require 'piem-b4)
+(when (and (require 'piem nil t)
+           (require 'piem-notmuch nil t)
+           (require 'piem-b4 nil t))
+  (setq piem-inboxes
+        '(("linux-iio"
+           :url "https://lore.kernel.org/linux-iio/"
+           :address "linux-iio@vger.kernel.org"
+           :coderepo "/home/sefo/devel/git/linux-mainline/")
+          ("linux-kernel"
+           :url "https://lore.kernel.org/linux-kernel/"
+           :address "linux-kernel@vger.kernel.org"
+           :coderepo "/home/sefo/devel/git/linux-mainline/")))
 
-(setq piem-inboxes
-      '(("linux-iio"
-         :url "https://lore.kernel.org/linux-iio/"
-         :address "linux-iio@vger.kernel.org"
-         :coderepo "/home/sefo/devel/git/linux-mainline/")
-        ("linux-kernel"
-         :url "https://lore.kernel.org/linux-kernel/"
-         :address "linux-kernel@vger.kernel.org"
-         :coderepo "/home/sefo/devel/git/linux-mainline/")))
+  (setq piem-b4-b4-executable "b4"
+        piem-default-branch-function #'piem-name-branch-who-what-v)
 
-(setq piem-b4-b4-executable "b4"
-      piem-default-branch-function #'piem-name-branch-who-what-v)
+  (piem-notmuch-mode 1)
 
-(piem-notmuch-mode 1)
-
-(global-set-key (kbd "C-c p") #'piem-dispatch)
+  (global-set-key (kbd "C-c p") #'piem-dispatch))
 
 (provide 'mail-config)
 ;;; mail-config.el ends here
