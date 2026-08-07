@@ -57,6 +57,22 @@
       notmuch-archive-tags '("-inbox" "-unread")
       notmuch-show-all-tags-list t)
 
+;;; Gespeicherte Suchen — ersetzen die Ordner-Sidebar aus neomutt
+
+(setq notmuch-saved-searches
+      '((:name "Inbox"          :query "tag:inbox"                            :key "i")
+        (:name "Ungelesen"      :query "tag:inbox and tag:unread"             :key "u")
+        (:name "An mich"        :query "tag:to-me and tag:inbox"              :key "m")
+        (:name "IIO"            :query "tag:iio or tag:lore"                  :key "I")
+        (:name "IIO ungelesen"  :query "(tag:iio or tag:lore) and tag:unread" :key "U")
+        (:name "Patches"        :query "tag:patch and date:2weeks.."          :key "p")
+        (:name "LKML"           :query "tag:lkml and date:1week.."            :key "l")
+        (:name "Gesendet"       :query "tag:sent"                             :key "s")
+        (:name "Entwuerfe"      :query "folder:gmail/Drafts"                  :key "d")
+        (:name "Alles"          :query "*"                                    :key "a")))
+
+(setq notmuch-saved-search-sort-function nil)
+
 (global-set-key (kbd "C-c m") #'notmuch)
 
 (provide 'mail-config)
