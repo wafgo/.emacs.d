@@ -1,0 +1,17 @@
+[database]
+path=/home/sefo/Mail
+
+[user]
+name=Wadim Mueller
+primary_email=wafgo01@gmail.com
+other_email=wadim.mueller@cmblu.de
+
+[new]
+tags=new
+ignore=.mbsyncstate;.uidvalidity;.mbsyncstate.new;.mbsyncstate.journal
+
+[search]
+exclude_tags=deleted;spam
+
+[maildir]
+synchronize_flags=true

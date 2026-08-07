@@ -1,0 +1,12 @@
+# ~/.config/systemd/user/mailsync.timer
+[Unit]
+Description=Mail alle 5 Minuten synchronisieren
+
+[Timer]
+OnBootSec=2min
+OnUnitActiveSec=5min
+AccuracySec=30s
+Persistent=true
+
+[Install]
+WantedBy=timers.target

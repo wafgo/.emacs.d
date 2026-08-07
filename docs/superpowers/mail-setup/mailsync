@@ -1,0 +1,31 @@
+#!/bin/bash
+# ~/.local/bin/mailsync — holt Mail und aktualisiert den notmuch-Index.
+set -uo pipefail
+
+LOCK="${XDG_RUNTIME_DIR:-/tmp}/mailsync.lock"
+exec 9>"$LOCK"
+if ! flock -n 9; then
+    echo "mailsync laeuft bereits, Abbruch."
+    exit 0
+fi
+
+status=0
+
+echo "== mbsync =="
+if ! mbsync gmail; then
+    echo "mbsync fehlgeschlagen" >&2
+    status=1
+fi
+
+echo "== lei up =="
+if ! lei up --all; then
+    echo "lei up fehlgeschlagen (nicht kritisch)" >&2
+fi
+
+echo "== notmuch new =="
+if ! notmuch new; then
+    echo "notmuch new fehlgeschlagen" >&2
+    status=1
+fi
+
+exit $status

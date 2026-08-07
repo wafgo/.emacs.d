@@ -1,0 +1,52 @@
+# ~/.mbsyncrc — Gmail <-> ~/Mail/gmail
+
+IMAPAccount gmail
+Host imap.gmail.com
+Port 993
+User wafgo01@gmail.com
+PassCmd "gpg2 -dq ~/.config/neomutt/gmail-pass.gpg"
+TLSType IMAPS
+TLSVersions +1.2
+CertificateFile /etc/ssl/certs/ca-bundle.crt
+
+IMAPStore gmail-remote
+Account gmail
+
+MaildirStore gmail-local
+Path ~/Mail/gmail/
+Inbox ~/Mail/gmail/INBOX
+SubFolders Verbatim
+
+Channel gmail-inbox
+Far :gmail-remote:"INBOX"
+Near :gmail-local:"INBOX"
+Create Both
+Expunge Both
+SyncState *
+
+Channel gmail-sent
+Far :gmail-remote:"[Gmail]/Gesendet"
+Near :gmail-local:"Sent"
+Create Both
+Expunge Both
+SyncState *
+
+Channel gmail-drafts
+Far :gmail-remote:"[Gmail]/Entwürfe"
+Near :gmail-local:"Drafts"
+Create Both
+Expunge Both
+SyncState *
+
+Channel gmail-trash
+Far :gmail-remote:"[Gmail]/Papierkorb"
+Near :gmail-local:"Trash"
+Create Both
+Expunge Both
+SyncState *
+
+Group gmail
+Channel gmail-inbox
+Channel gmail-sent
+Channel gmail-drafts
+Channel gmail-trash

@@ -1,0 +1,36 @@
+#!/bin/bash
+# ~/Mail/.notmuch/hooks/post-new
+# Vergibt Tags fuer neu indizierte Nachrichten (Tag "new").
+set -euo pipefail
+
+# Alles Neue kommt zunaechst in die Inbox und gilt als ungelesen.
+notmuch tag +inbox +unread -- tag:new
+
+# Direkt an mich adressiert.
+notmuch tag +to-me -- tag:new and \
+  '(to:wafgo01@gmail.com or cc:wafgo01@gmail.com or to:wadim.mueller@cmblu.de or cc:wadim.mueller@cmblu.de)'
+
+# Eigene gesendete Nachrichten: nicht in der Inbox, nicht ungelesen.
+notmuch tag +sent -inbox -unread -- tag:new and \
+  '(from:wafgo01@gmail.com or from:wadim.mueller@cmblu.de)'
+
+# Papierkorb und Entwuerfe gehoeren nicht in die Inbox.
+# "deleted" steht in der notmuch-Konfiguration unter search.exclude_tags und
+# blendet die Nachrichten damit aus allen normalen Suchen aus.
+notmuch tag +deleted -inbox -unread -- tag:new and 'folder:gmail/Trash'
+notmuch tag +draft -inbox -unread -- tag:new and 'folder:gmail/Drafts'
+
+# Kernel-Listen.
+notmuch tag +lkml -- tag:new and \
+  '(to:linux-kernel@vger.kernel.org or cc:linux-kernel@vger.kernel.org)'
+notmuch tag +iio -- tag:new and \
+  '(to:linux-iio@vger.kernel.org or cc:linux-iio@vger.kernel.org)'
+
+# Patches erkennen: Betreff der Form "[PATCH ...]".
+notmuch tag +patch -- tag:new and 'subject:PATCH'
+
+# Nachrichten aus lore-Abfragen: nicht in die Inbox, sonst wird sie unbrauchbar.
+notmuch tag +lore -inbox -- tag:new and 'folder:/^lei/'
+
+# Verarbeitung abgeschlossen.
+notmuch tag -new -- tag:new

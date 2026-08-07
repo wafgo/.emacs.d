@@ -1,0 +1,9 @@
+# ~/.config/systemd/user/mailsync.service
+[Unit]
+Description=Mail synchronisieren (mbsync + lei + notmuch)
+After=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=%h/.local/bin/mailsync
+TimeoutStartSec=600
