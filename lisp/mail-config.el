@@ -68,7 +68,7 @@
         (:name "Patches"        :query "tag:patch and date:2weeks.."          :key "p")
         (:name "LKML"           :query "tag:lkml and date:1week.."            :key "l")
         (:name "Gesendet"       :query "tag:sent"                             :key "s")
-        (:name "Entwuerfe"      :query "folder:gmail/Drafts"                  :key "d")
+        (:name "Entwuerfe"      :query "tag:draft"                            :key "d")
         (:name "Alles"          :query "*"                                    :key "a")))
 
 (setq notmuch-saved-search-sort-function nil)
