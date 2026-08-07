@@ -309,7 +309,7 @@ Erwartet: `wafgo01@gmail.com`
 
 **Interfaces:**
 - Consumes: notmuch-Datenbank aus Task 3
-- Produces: die Tags `inbox`, `unread`, `to-me`, `sent`, `lkml`, `iio`, `patch`, `lore`; das Tag `new` existiert nach jedem Lauf nicht mehr
+- Produces: die Tags `inbox`, `unread`, `to-me`, `sent`, `deleted`, `draft`, `lkml`, `iio`, `patch`, `lore`; das Tag `new` existiert nach jedem Lauf nicht mehr
 
 - [ ] **Step 1: Prüfen, dass noch keine Tags vergeben sind**
 
@@ -341,6 +341,12 @@ notmuch tag +to-me -- tag:new and \
 # Eigene gesendete Nachrichten: nicht in der Inbox, nicht ungelesen.
 notmuch tag +sent -inbox -unread -- tag:new and \
   '(from:wafgo01@gmail.com or from:wadim.mueller@cmblu.de)'
+
+# Papierkorb und Entwuerfe gehoeren nicht in die Inbox.
+# "deleted" steht in der notmuch-Konfiguration unter search.exclude_tags und
+# blendet die Nachrichten damit aus allen normalen Suchen aus.
+notmuch tag +deleted -inbox -unread -- tag:new and 'folder:gmail/Trash'
+notmuch tag +draft -inbox -unread -- tag:new and 'folder:gmail/Drafts'
 
 # Kernel-Listen.
 notmuch tag +lkml -- tag:new and \
@@ -379,6 +385,16 @@ notmuch search --output=tags '*'
 
 Erwartet: `tag:new` ist 0, `tag:inbox` größer 0, und in der Tag-Liste stehen
 `inbox`, `unread`, `sent`.
+
+- [ ] **Step 4b: Prüfen, dass Papierkorb und Entwürfe nicht in der Inbox landen**
+
+```bash
+echo "Trash in inbox:  $(notmuch count 'tag:inbox and folder:gmail/Trash')"
+echo "Drafts in inbox: $(notmuch count 'tag:inbox and folder:gmail/Drafts')"
+```
+
+Erwartet: beide Zahlen sind 0. Andernfalls greifen die `+deleted`- und
+`+draft`-Regeln nicht.
 
 - [ ] **Step 5: Wirksamkeit bei neuen Nachrichten sicherstellen**
 
