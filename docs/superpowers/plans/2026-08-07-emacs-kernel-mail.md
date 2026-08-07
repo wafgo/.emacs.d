@@ -13,7 +13,7 @@
 - Absenderadresse für alle Kernel-Mails: `wafgo01@gmail.com`
 - Credential-Quelle ausschließlich: `gpg2 -dq ~/.config/neomutt/gmail-pass.gpg`
 - Maildir-Root: `~/Mail`; notmuch-Datenbank darunter in `~/Mail/.notmuch`
-- Gmail „All Mail" (`[Gmail]/All Mail`) wird niemals synchronisiert
+- Gmail „Alle Nachrichten" (`[Gmail]/Alle Nachrichten`) wird niemals synchronisiert
 - neomutt und seine Konfiguration bleiben unverändert und funktionsfähig
 - Emacs-Mail-Konfiguration liegt isoliert in `~/.emacs.d/lisp/mail-config.el`; `init.el` wird nur um eine einzige `require`-Zeile ergänzt
 - Kernel-Mail-Hygiene: `text/plain`, kein `format=flowed`, `fill-column` 72
@@ -126,8 +126,15 @@ chmod 700 ~/Mail
 
 `SubFolders Verbatim` sorgt dafür, dass Gmails Ordner mit Leerzeichen und
 eckigen Klammern nicht in eine Ordnerhierarchie zerlegt werden. Jeder Channel
-benennt genau einen Ordner — „All Mail" bleibt bewusst außen vor, weil Gmail
-dort jede Nachricht ein zweites Mal führt.
+benennt genau einen Ordner — „Alle Nachrichten" bleibt bewusst außen vor, weil
+Gmail dort jede Nachricht ein zweites Mal führt.
+
+**Das Konto ist deutschsprachig.** Die Spezialordner heißen serverseitig
+`[Gmail]/Gesendet`, `[Gmail]/Entwürfe` und `[Gmail]/Papierkorb`. Daneben
+existieren gleichnamige englische Labels (`[Gmail]/Sent Mail` mit 10
+Nachrichten gegenüber 202 in `[Gmail]/Gesendet`) — das sind Altlasten und nicht
+die echten Ordner. Wer hier die englischen Namen einträgt, synchronisiert am
+eigentlichen Postfach vorbei.
 
 ```
 # ~/.mbsyncrc — Gmail <-> ~/Mail/gmail
@@ -157,21 +164,21 @@ Expunge Both
 SyncState *
 
 Channel gmail-sent
-Far :gmail-remote:"[Gmail]/Sent Mail"
+Far :gmail-remote:"[Gmail]/Gesendet"
 Near :gmail-local:"Sent"
 Create Both
 Expunge Both
 SyncState *
 
 Channel gmail-drafts
-Far :gmail-remote:"[Gmail]/Drafts"
+Far :gmail-remote:"[Gmail]/Entwürfe"
 Near :gmail-local:"Drafts"
 Create Both
 Expunge Both
 SyncState *
 
 Channel gmail-trash
-Far :gmail-remote:"[Gmail]/Trash"
+Far :gmail-remote:"[Gmail]/Papierkorb"
 Near :gmail-local:"Trash"
 Create Both
 Expunge Both
@@ -211,13 +218,14 @@ ls ~/Mail/gmail/
 find ~/Mail/gmail/INBOX/cur -type f | wc -l
 ```
 
-Erwartet: die Ordner `INBOX`, `Sent`, `Drafts`, `Trash`; die Dateizahl in
+Erwartet: die Ordner `INBOX`, `Sent`, `Drafts`, `Trash`; `Sent` enthaelt rund
+200 Nachrichten (nicht ~10 - das waere das falsche englische Label); die Dateizahl in
 `INBOX/cur` ist größer 0.
 
 - [ ] **Step 7: Sicherstellen, dass „All Mail" nicht gelandet ist**
 
 ```bash
-ls ~/Mail/gmail/ | grep -i "all" && echo "FEHLER: All Mail wurde gesynct" || echo "ok"
+ls ~/Mail/gmail/ | grep -iE "all|alle" && echo "FEHLER: Alle Nachrichten wurde gesynct" || echo "ok"
 ```
 
 Erwartet: `ok`.
