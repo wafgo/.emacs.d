@@ -56,6 +56,30 @@
 (require 'caedge-stuff)
 (require 'workgroups)
 (require 'lsp-bitbake)
+
+(use-package copilot
+  :ensure t
+  :hook (prog-mode . copilot-mode)
+  :bind (:map copilot-completion-map
+              ("<tab>" . copilot-accept-completion)
+              ("TAB" . copilot-accept-completion)))
+
+;; copilot-chat package dir must precede copilot dir on load-path,
+;; because copilot ships its own copilot-chat.el that shadows the real one.
+(use-package copilot-chat
+  :ensure t
+  :after (copilot magit)
+  :init
+  (when-let* ((dir (car (directory-files (expand-file-name "elpa" user-emacs-directory)
+                                         t "\\`copilot-chat-[0-9]"))))
+    (setq load-path (cons dir (remove dir load-path))))
+  :bind (:map git-commit-mode-map
+              ("C-c C-g" . copilot-chat-insert-commit-message)))
+
+;; Copilot CLI in a vterm buffer — M-x copilot-shell
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(require 'copilot-shell)
+
 ;; (require 'copilot)
 ;; (require 'eglot)
 ;; (add-to-list 'eglot-server-programs '((c++-mode c-mode) "clangd"))
@@ -182,17 +206,21 @@
 
 (setq auto-mode-alist (cons '("\\.cmk$" . cmake-mode) auto-mode-alist))
 ;; (require 'use-package)
+
+;; Mail-Setup (notmuch, msmtp, piem)
+(add-to-list 'load-path (expand-file-name "lisp" user-emacs-directory))
+(require 'mail-config)
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(bdf-directory-list
-   '("/usr/local/share/emacs/fonts/bdf" "/usr/share/fonts/truetype/dejavu"))
+   '("/usr/local/share/emacs/fonts/bdf"
+     "/usr/share/fonts/truetype/dejavu"))
  '(c-default-style
-   '((c-mode . "cc-mode")
-     (java-mode . "java")
-     (awk-mode . "awk")
+   '((c-mode . "cc-mode") (java-mode . "java") (awk-mode . "awk")
      (other . "gnu")))
  '(chatgpt-shell-additional-curl-options '("-x" "http://127.0.0.1:3128"))
  '(chatgpt-shell-model-version 9)
@@ -201,10 +229,13 @@
  '(copilot-bin
    "/home/uia67865/mnt/ext_ssd/wizardcoder-python/wizardcoder-python-34b-v1.0.Q5_K_M.llamafile")
  '(custom-safe-themes
-   '("f2c35f8562f6a1e5b3f4c543d5ff8f24100fae1da29aeb1864bbc17758f52b70" default))
+   '("f2c35f8562f6a1e5b3f4c543d5ff8f24100fae1da29aeb1864bbc17758f52b70"
+     default))
  '(elpy-rpc-virtualenv-path 'default)
  '(helm-completion-style 'emacs)
+ '(helm-projectile-ignore-strategy 'search-tool)
  '(helm-rg-default-directory 'git-root)
+ '(helm-rg-default-extra-args nil)
  '(langtool-default-language 'auto)
  '(lsp-clangd-binary-path "/usr/bin/clangd")
  '(lsp-enable-file-watchers nil)
@@ -228,9 +259,29 @@
  '(lsp-ui-sideline-show-hover nil)
  '(lsp-ui-sideline-show-symbol nil)
  '(package-selected-packages
-   '(nerd-icons-dired nerd-icons powershell robot-mode jenkinsfile-mode yaml-mode soong-mode kotlin-mode gradle-mode rustic org-arbeitszeit message-view-patch mu4e-alert go-mode lua-mode protobuf-mode fasd clang-format dockerfile-mode sublimity helm-slime helm-descbinds helm-dictionary helm-ls-git evil-tutor helm-c-yasnippet helm-system-packages elpy company-auctex lsp-treemacs yasnippet-snippets lsp-python-ms meson-mode helm-lsp helm-z evil ccls google-this camcorder command-log-mode minimap posframe dts-mode bison-mode bitbake ninja-mode multi-vterm vterm-toggle vtm yasnippet-classic-snippets vterm smartscan expand-region vlf smartparens pdf-tools beacon zenburn-theme ace-jump-mode jump-char helm-swoop swoop multiple-cursors hungry-delete shell-pop flycheck helm-dash cmake-mode dashboard helm-projectile projectile magit helm-rg helm))
+   '(ace-jump-mode agent-shell ai-code beacon bison-mode bitbake
+		   camcorder ccls clang-format cmake-mode
+		   command-log-mode company-auctex copilot
+		   copilot-chat dap-mode dashboard docker
+		   dockerfile-mode dts-mode elpy evil-tutor
+		   expand-region fasd flycheck go-mode google-this
+		   gradle-mode helm-c-yasnippet helm-descbinds
+		   helm-dictionary helm-ls-git helm-lsp
+		   helm-projectile helm-rg helm-slime helm-swoop
+		   helm-system-packages hungry-delete jenkinsfile-mode
+		   jump-char kotlin-mode lsp-pyright lsp-python-ms
+		   lsp-ui lua-mode meson-mode message-view-patch
+		   minimap mu4e-alert multi-vterm multiple-cursors
+		   nerd-icons-dired ninja-mode pdf-tools pkg-info
+		   popup powershell protobuf-mode robot-mode rustic
+		   shell-pop smartparens smartscan soong-mode
+		   sublimity swoop use-package vlf vterm-toggle vtm
+		   websocket yaml-mode yasnippet-classic-snippets
+		   yasnippet-snippets zenburn-theme))
  '(projectile-globally-ignored-directories
-   '(".idea" ".vscode" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout" "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work" ".ccls-cache" ".clangd"))
+   '(".idea" ".vscode" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout"
+     "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work"
+     ".ccls-cache" ".clangd"))
  '(projectile-indexing-method 'alien)
  '(shell-pop-term-shell "/bin/bash")
  '(sublimity-mode t)
@@ -288,6 +339,23 @@
 (define-key vterm-mode-map (kbd "s-n")   'vterm-toggle-forward)
 ;Switch to previous vterm buffer
 (define-key vterm-mode-map (kbd "s-p")   'vterm-toggle-backward)
+
+;; Sichtbarer Cursor in vterm-copy-mode (vterm versteckt ihn sonst).
+;; Wichtig vor allem für TUIs wie Copilot CLI, die selber den Cursor verstecken.
+(with-eval-after-load 'vterm
+  (defun my/vterm-copy-mode-cursor ()
+    "Toggle visible cursor and current-line highlight with `vterm-copy-mode'."
+    (if vterm-copy-mode
+        (progn
+          (setq-local cursor-type 'box)
+          (hl-line-mode 1))
+      (setq-local cursor-type nil)
+      (hl-line-mode -1)))
+  (add-hook 'vterm-copy-mode-hook #'my/vterm-copy-mode-cursor)
+  ;; Mehr Scrollback für lange Copilot-CLI-Sessions
+  (setq vterm-max-scrollback 100000)
+  (setq vterm-kill-buffer-on-exit nil))
+
 (add-to-list 'display-buffer-alist
              '((lambda(bufname _) (with-current-buffer bufname (equal major-mode 'vterm-mode)))
                 (display-buffer-reuse-window display-buffer-at-bottom)
@@ -436,6 +504,27 @@ point reaches the beginning or end of the buffer, stop there."
 (require 'clang-format)
 (setq clang-format-style "file")
 
+;; agent-shell: auto-approve tool permissions when session mode is Autopilot.
+;; In Plan/Agent mode, the interactive permission dialog is still shown.
+;; Toggle modes with C-<tab> in an agent-shell buffer.
+(with-eval-after-load 'agent-shell
+  (defun my/agent-shell-autopilot-responder (permission)
+    "Auto-approve PERMISSION when current session mode contains \"autopilot\".
+Returns non-nil if handled (suppresses the UI dialog), nil to fall back to
+the interactive dialog."
+    (let* ((state (agent-shell--state))
+           (mode-id (and state (map-nested-elt state '(:session :mode-id)))))
+      (when (and mode-id (string-match-p "autopilot" mode-id))
+        (when-let ((choice (seq-find
+                            (lambda (option)
+                              (equal (map-elt option :kind) "allow_once"))
+                            (map-elt permission :options))))
+          (funcall (map-elt permission :respond)
+                   (map-elt choice :option-id))
+          t))))
+  (setq agent-shell-permission-responder-function
+        #'my/agent-shell-autopilot-responder))
+
 (setq auto-revert-buffer-list-filter
       'magit-auto-revert-repository-buffer-p)
 
@@ -468,46 +557,7 @@ point reaches the beginning or end of the buffer, stop there."
                                                           (server-edit)))))))
 
 
-(add-to-list 'load-path "~/mnt/ext_ssd/git/mu/build/mu4e")
-(require 'mu4e)
 
-;;default
-(setq mu4e-maildir (expand-file-name "~/mnt/ext_ssd/Mail/gmail"))
-
-(setq mu4e-drafts-folder "/[Gmail].Drafts")
-(setq mu4e-sent-folder   "/[Gmail].Gesendet")
-(setq mu4e-trash-folder  "/[Gmail].Papierkorb")
-
-;; don't save message to Sent Messages, GMail/IMAP will take care of this
-(setq mu4e-sent-messages-behavior 'delete)
-
-;; setup some handy shortcuts
-(setq mu4e-maildir-shortcuts
-      '(("/INBOX"             . ?i)
-        ("/[Gmail].Gesendet" . ?s)
-        ("/[Gmail].Papierkorb"     . ?t)))
-
-
-(setq mu4e-html2text-command "w3m -T text/html" ; how to hanfle html-formatted emails
-      mu4e-update-interval 300                  ; seconds between each mail retrieval
-      mu4e-headers-auto-update t                ; avoid to type `g' to update
-      mu4e-view-show-images t                   ; show images in the view buffer
-      mu4e-compose-signature-auto-include nil   ; I don't want a message signature
-      mu4e-use-fancy-chars t)  
-;; allow for updating mail using 'U' in the main view:
-(setq mu4e-get-mail-command "offlineimap")
-
-;; something about ourselves
-;; I don't use a signature...
-(setq
- user-mail-address "wafgo01@gmail.com"
- user-full-name  "Wadim Mueller"
- ;; message-signature
- ;;  (concat
- ;;    "Foo X. Bar\n"
- ;;    "http://www.example.com\n")
-)
-(setq mu4e-compose-reply-ignore-address '("no-?reply" "wafgo01@gmail.com"))
 ;; sending mail -- replace USERNAME with your gmail username
 ;; also, make sure the gnutls command line utils are installed
 ;; package 'gnutls-bin' in Debian/Ubuntu, 'gnutls' in Archlinux.
@@ -541,9 +591,7 @@ point reaches the beginning or end of the buffer, stop there."
 ;; On Mac OSX you can set style to
 ;; 1. notifier      - Notifications using the `terminal-notifier' program, requires `terminal-notifier' to be in PATH
 ;; 1. growl         - Notifications using the `growl' program, requires `growlnotify' to be in PATH
-(mu4e-alert-set-default-style 'libnotify)
-(add-hook 'after-init-hook #'mu4e-alert-enable-notifications)
-(add-hook 'after-init-hook #'mu4e-alert-enable-mode-line-display)
+
 (add-hook 'gnus-part-display-hook 'message-view-patch-highlight)
 
 (setq remote-file-name-inhibit-cache nil)
