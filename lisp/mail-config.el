@@ -77,7 +77,9 @@
 
 ;;; piem — Patch-Serien aus Mails ins Repository holen
 
-(add-to-list 'load-path (expand-file-name "piem-source" user-emacs-directory))
+(require 'package)
+(unless (package-installed-p 'piem)
+  (package-vc-install '(piem :url "https://git.kyleam.com/piem")))
 
 (require 'piem)
 (require 'piem-notmuch)

@@ -6,7 +6,7 @@
 
 **Architecture:** `mbsync` synchronisiert Gmail in den lokalen Maildir `~/Mail`, `lei` legt lore.kernel.org-Suchergebnisse daneben, `notmuch` indiziert beides, `notmuch-emacs` ist die Bedienoberfläche, `msmtp` versendet für Emacs und `git send-email` gleichermaßen, `piem` holt Patch-Serien aus Mails ins Kernel-Repo.
 
-**Tech Stack:** Fedora 41, Emacs 30.2 (`package.el` + `use-package`), notmuch 0.38.3, isync 1.5.0, msmtp 1.8.25, lei 2.0.0, b4 0.14.2, piem (MELPA)
+**Tech Stack:** Fedora 41, Emacs 30.2 (`package.el` + `use-package`), notmuch 0.38.3, isync 1.5.0, msmtp 1.8.25, lei 2.0.0, b4 0.14.2, piem (via `package-vc-install` von https://git.kyleam.com/piem — nicht in ELPA-Archiven verfügbar)
 
 ## Global Constraints
 
@@ -1102,11 +1102,11 @@ Erwartet: eine b4-Version und `piem: fehlt`.
 
 - [ ] **Step 2: piem installieren**
 
+Da piem in keinem ELPA-Archiv (weder MELPA noch GNU/NonGNU ELPA) verfügbar ist, nutzen wir `package-vc-install` direkt vom upstream-Repository:
+
 ```bash
-emacs --batch --eval '(progn (require (quote package))
-  (add-to-list (quote package-archives) (quote ("melpa" . "https://melpa.org/packages/")))
-  (package-initialize) (package-refresh-contents)
-  (package-install (quote piem)))' 2>&1 | tail -5
+emacs --batch --eval '(progn (require (quote package)) (package-initialize)
+  (package-vc-install (quote (piem :url "https://git.kyleam.com/piem"))))' 2>&1 | tail -5
 ```
 
 - [ ] **Step 3: Installation verifizieren**
@@ -1124,8 +1124,14 @@ Einfügen vor der Zeile `(provide 'mail-config)`. `piem-inboxes` verknüpft die
 Mailingliste mit dem lokalen Repository — daran erkennt piem, wohin ein Patch
 angewendet werden soll.
 
+Da piem nicht per `package-install` verfügbar ist, enthält die Konfiguration eine selbstheilende Installationsprüfung:
+
 ```elisp
 ;;; piem — Patch-Serien aus Mails ins Repository holen
+
+(require 'package)
+(unless (package-installed-p 'piem)
+  (package-vc-install '(piem :url "https://git.kyleam.com/piem")))
 
 (require 'piem)
 (require 'piem-notmuch)
