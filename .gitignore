@@ -48,3 +48,7 @@ elpy/
 .agent-shell/
 agent/
 network-security.data
+
+# Emacs Auto-Save- und Lock-Dateien
+\#*\#
+.\#*
