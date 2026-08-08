@@ -9,8 +9,10 @@ eln-cache/
 
 # Packaging
 .cask
-# piem wird per package-vc-install aus einem Git-Repo installiert (nested .git)
-elpa/piem/
+
+# Installierte Pakete werden nicht versioniert: package-selected-packages in
+# init.el listet sie, "M-x package-install-selected-packages" stellt sie her.
+elpa/
 
 # Laufzeitzustand: aendert sich staendig, gehoert nicht in die Versionierung
 projectile.cache
