@@ -278,6 +278,7 @@
 		   sublimity swoop use-package vlf vterm-toggle vtm
 		   websocket yaml-mode yasnippet-classic-snippets
 		   yasnippet-snippets zenburn-theme))
+ '(package-vc-selected-packages '((piem :url "https://git.kyleam.com/piem")))
  '(projectile-globally-ignored-directories
    '(".idea" ".vscode" ".ensime_cache" ".eunit" ".git" ".hg" ".fslckout"
      "_FOSSIL_" ".bzr" "_darcs" ".tox" ".svn" ".stack-work"
