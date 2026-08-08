@@ -44,7 +44,7 @@ semanticdb/*
 elpy/
 
 # Emacs-Artefakte und Agent-Laufzeitdaten
-" *temp*"
+ *temp*
 .agent-shell/
 agent/
 network-security.data
