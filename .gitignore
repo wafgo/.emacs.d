@@ -42,3 +42,9 @@ projectile-bookmarks.eld
 semanticdb/*
 # elpy legt hier ein Python-Virtualenv an (wird bei Bedarf neu erzeugt)
 elpy/
+
+# Emacs-Artefakte und Agent-Laufzeitdaten
+" *temp*"
+.agent-shell/
+agent/
+network-security.data
