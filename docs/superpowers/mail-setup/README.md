@@ -118,8 +118,12 @@ Das Passwort liegt ausschließlich in `~/.config/neomutt/gmail-pass.gpg` (GPG-ve
 **5. Löschen wirkt sich auf Gmail aus**  
 `Expunge Both` in `.mbsyncrc` bedeutet: was lokal gelöscht wird, verschwindet beim nächsten Sync auch bei Gmail. Das ist gewollt (bidirektionale Synchronisation).
 
-**6. notmuch löscht nichts**  
-`notmuch tag +deleted` entfernt nur aus der Ansicht. Tatsächliches Löschen erfordert Verschieben nach `~/Mail/gmail/Trash` (z.B. mit `mv` oder einem notmuch-Hook).
+**6. ACHTUNG: `notmuch tag +deleted` löscht serverseitig**  
+Das ist kein reines Ansichts-Tag. `~/.notmuch-config` setzt `synchronize_flags=true`: notmuch bildet den Tag `deleted` auf das Maildir-Flag `T` **aller Dateien** der Nachricht ab. mbsync überträgt das als `\Deleted`, und wegen `Expunge Both` wird die Nachricht beim nächsten Sync bei Gmail expunged — im Papierkorb bedeutet das **endgültige, unwiederbringliche Löschung**, in einem Label-Ordner das Entfernen des Labels.
+
+Gefährlich wird das bei Nachrichten, die in mehreren Ordnern liegen (Gmail-Labels erzeugen mehrere Dateien mit derselben Message-ID): ein `+deleted` würde auch die Datei in `INBOX` oder `Sent` als gelöscht markieren. Der Tagging-Hook setzt `+deleted` deshalb ausschließlich auf Nachrichten, die **nur** im Papierkorb und in keinem anderen Ordner liegen. Vergib den Tag niemals von Hand über eine breite Suche.
+
+Um eine Mail loszuwerden, verschiebe sie stattdessen nach `~/Mail/gmail/Trash`; der Hook markiert sie beim nächsten Lauf selbst — und nimmt `deleted` auch wieder zurück, wenn du sie aus dem Papierkorb zurückholst.
 
 ---
 

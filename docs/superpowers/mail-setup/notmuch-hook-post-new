@@ -1,7 +1,12 @@
 #!/bin/bash
 # ~/Mail/.notmuch/hooks/post-new
-# Vergibt Tags fuer neu indizierte Nachrichten (Tag "new").
+# Vergibt Tags fuer neu indizierte Nachrichten (Tag "new") und haelt
+# ausserdem die ordnerbasierte Klassifizierung (Inbox/Papierkorb/Entwuerfe)
+# bei JEDEM Lauf am aktuellen Ordnerstand aktuell, damit spaeter verschobene
+# Mails korrekt neu eingeordnet werden.
 set -euo pipefail
+
+# --- Inhaltsbasierte Regeln: gelten nur fuer frisch indizierte Nachrichten ---
 
 # Alles Neue kommt zunaechst in die Inbox und gilt als ungelesen.
 notmuch tag +inbox +unread -- tag:new
@@ -14,12 +19,6 @@ notmuch tag +to-me -- tag:new and \
 notmuch tag +sent -inbox -unread -- tag:new and \
   '(from:wafgo01@gmail.com or from:wadim.mueller@cmblu.de)'
 
-# Papierkorb und Entwuerfe gehoeren nicht in die Inbox.
-# "deleted" steht in der notmuch-Konfiguration unter search.exclude_tags und
-# blendet die Nachrichten damit aus allen normalen Suchen aus.
-notmuch tag +deleted -inbox -unread -- tag:new and 'folder:gmail/Trash'
-notmuch tag +draft -inbox -unread -- tag:new and 'folder:gmail/Drafts'
-
 # Kernel-Listen.
 notmuch tag +lkml -- tag:new and \
   '(to:linux-kernel@vger.kernel.org or cc:linux-kernel@vger.kernel.org)'
@@ -29,8 +28,52 @@ notmuch tag +iio -- tag:new and \
 # Patches erkennen: Betreff der Form "[PATCH ...]".
 notmuch tag +patch -- tag:new and 'subject:PATCH'
 
-# Nachrichten aus lore-Abfragen: nicht in die Inbox, sonst wird sie unbrauchbar.
-notmuch tag +lore -inbox -- tag:new and 'folder:/^lei/'
+# Nachrichten aus lore-Abfragen (lei): reines Archiv, gilt als GELESEN und
+# gehoert nicht in die Inbox. -unread mitsetzen, sonst wuerde jeder Import
+# tausende Nachrichten dauerhaft "ungelesen" machen und die gespeicherten
+# Unread-Suchen unbrauchbar machen.
+notmuch tag +lore -inbox -unread -- tag:new and 'folder:/^lei/'
+
+# --- Ordnerbasierte Reklassifizierung: laeuft bei JEDEM Hook-Lauf ueber den
+#     aktuellen Ordnerstand (NICHT an tag:new gebunden), damit nachtraeglich
+#     verschobene Nachrichten neu eingeordnet werden. ------------------------
+
+# Entwuerfe gehoeren nicht in die Inbox.
+notmuch tag +draft -inbox -unread -- 'folder:gmail/Drafts'
+
+# Papierkorb: raus aus der Inbox (der "inbox"-Tag wird NICHT ins Maildir
+# synchronisiert, dieses Entfernen ist daher gefahrlos und behebt den Fall,
+# dass eine bereits indizierte Inbox-Mail spaeter in den Papierkorb wandert).
+notmuch tag -inbox -unread -- 'folder:gmail/Trash'
+
+# Papierkorb: zum Loeschen markieren -- ABER NUR, wenn die Nachricht
+# AUSSCHLIESSLICH im Papierkorb liegt.
+#
+# WARUM diese strengen Einschraenkungen (synchronize_flags=true + "Expunge
+# Both" in mbsync):  notmuch bildet den Tag "deleted" auf das Maildir-Flag "T"
+# ALLER Dateien einer Nachricht ab. Hat dieselbe Message-ID noch eine Datei in
+# gmail/INBOX oder gmail/Sent, wuerde +deleted auch diese Datei mit "T"
+# markieren -> mbsync expunged sie serverseitig -> UNWIEDERBRINGLICHER Verlust
+# einer echten Mail. Liegt zusaetzlich eine lei/lore-Archivkopie vor, wuerde
+# deren Datei ebenfalls markiert und aus allen Suchen ausgeblendet.
+# Deshalb: +deleted ausschliesslich fuer Nachrichten, die WEDER in einem
+# anderen Gmail-Ordner NOCH im lei-Archiv eine Datei haben.
+notmuch tag +deleted -- \
+  'folder:gmail/Trash and not folder:gmail/INBOX' \
+  'and not folder:gmail/Sent and not folder:gmail/Drafts and not folder:/^lei/'
+
+# Archiv schuetzen: "deleted" darf niemals auf einer lei/lore-Archivkopie
+# haengen (das Archiv laesst sich zwar per "lei up" wiederherstellen, soll
+# aber nicht aus den IIO-Suchen verschwinden).
+notmuch tag -deleted -- 'tag:deleted and folder:/^lei/'
+
+# Aus dem Papierkorb zurueckgeholt: sobald eine Nachricht den Papierkorb
+# vollstaendig verlassen hat, "deleted" wieder entfernen (Gegenrichtung).
+# Sie erhaelt dabei bewusst KEINEN inbox-Tag zurueck: Gmail legt
+# wiederhergestellte Mails in "Alle Nachrichten"/das Label ab, nicht zwingend
+# in die Inbox -- eine Mail, die nie in der Inbox war, soll dort nicht
+# faelschlich auftauchen.
+notmuch tag -deleted -- 'tag:deleted and not folder:gmail/Trash'
 
 # Verarbeitung abgeschlossen.
 notmuch tag -new -- tag:new
