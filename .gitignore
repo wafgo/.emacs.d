@@ -1,16 +1,42 @@
 # Compiled
 *.elc
 
+# Nativ kompilierter Code (wird bei Bedarf neu erzeugt, hunderte MB)
+eln-cache/
+
+# Heruntergeladene Sprachserver-Binaries und LSP-Caches (hunderte MB)
+.cache/
+
 # Packaging
 .cask
 # piem wird per package-vc-install aus einem Git-Repo installiert (nested .git)
 elpa/piem/
 
+# Laufzeitzustand: aendert sich staendig, gehoert nicht in die Versionierung
+projectile.cache
+recentf
+projects
+transient/
+tramp
+games/
+session.*
+.lsp-session-v1
+.dap-breakpoints
+.mc-lists.el
+.vterm_starship_bash_init.sh
+request/
+straight/
+elfeed/
+
 # Backup files
 *~
+*.bak
+*.bak-*
 
 # Undo-tree save-files
 *.~undo-tree
 projectile-bookmarks.eld
 
 semanticdb/*
+# elpy legt hier ein Python-Virtualenv an (wird bei Bedarf neu erzeugt)
+elpy/
